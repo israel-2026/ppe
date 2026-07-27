@@ -57,78 +57,61 @@
       color:var(--muted);font-size:14.5px;
     }
 
-    /* ---------- Main player ---------- */
-    .stage{
+    /* ---------- Lightbox modal ---------- */
+    .modal[hidden]{display:none}
+    .modal{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
+    .modal-backdrop{position:absolute;inset:0;background:rgba(4,8,18,.78);backdrop-filter:blur(3px)}
+    .modal-box{
+      position:relative;z-index:1;width:min(960px,100%);max-height:92vh;overflow:auto;
       background:var(--bg-soft);border:1px solid var(--border);border-radius:18px;
-      overflow:hidden;box-shadow:var(--shadow);margin:34px 0 40px;
+      box-shadow:var(--shadow);
     }
-    .stage video{width:100%;display:block;background:#000;aspect-ratio:16/9;object-fit:contain}
-    .stage .placeholder{
-      aspect-ratio:16/9;display:grid;place-items:center;
-      background:repeating-linear-gradient(45deg,#0d1730,#0d1730 14px,#101d3a 14px,#101d3a 28px);
-      color:var(--muted);font-size:18px;text-align:center;padding:20px;
+    .modal-box video{width:100%;display:block;background:#000;aspect-ratio:16/9;object-fit:contain;
+      border-radius:18px 18px 0 0}
+    .modal-meta{padding:18px 22px 22px}
+    .modal-meta h2{margin:0 0 8px;font-size:clamp(19px,2.6vw,26px)}
+    .modal-meta p{margin:0;color:var(--muted);font-size:16px}
+    .modal-close{
+      position:absolute;top:10px;left:10px;z-index:2;
+      width:38px;height:38px;border-radius:10px;cursor:pointer;
+      background:rgba(11,18,32,.7);color:var(--text);border:1px solid var(--border);
+      font-size:17px;line-height:1;display:grid;place-items:center;
     }
-    .stage .meta{padding:20px 22px}
-    .stage .meta .kicker{color:var(--accent-2);font-size:13px;font-weight:700;letter-spacing:.4px}
-    .stage .meta h2{margin:4px 0 8px;font-size:clamp(20px,2.6vw,28px)}
-    .stage .meta p{margin:0;color:var(--muted);font-size:16px}
+    .modal-close:hover{background:var(--accent);border-color:var(--accent)}
 
     .section-title{display:flex;align-items:center;gap:10px;margin:0 0 22px;font-size:20px;color:var(--muted)}
     .section-title::before{content:"";flex:0 0 4px;height:24px;background:var(--accent);border-radius:4px}
 
-    /* ---------- Hierarchical tree ---------- */
-    .tree-fit{overflow:hidden;text-align:center;padding:6px 0 12px}
-    .tree{display:inline-block;transform-origin:top center;will-change:transform}
-    .tree ul{
-      display:flex;justify-content:center;position:relative;
-      padding-top:26px;margin:0;list-style:none;
+    /* ---------- Vertical text outline ---------- */
+    .outline{max-width:780px;margin:0 auto}
+    .outline ul{list-style:none;margin:0;padding:0}
+    /* nested levels: indent + guide line on the right (RTL) */
+    .outline .children{margin:2px 13px 6px 0;padding-right:20px;border-right:2px solid var(--line)}
+    .row{
+      display:flex;align-items:baseline;gap:11px;
+      padding:9px 12px;border-radius:10px;transition:background .15s ease;
     }
-    .tree li{
-      list-style:none;position:relative;
-      padding:26px 12px 0;text-align:center;
+    .row .mark{flex:0 0 auto;min-width:20px;text-align:center;font-size:13px;color:var(--muted)}
+    .row .body{min-width:0;flex:1}
+    .row .ttl{font-weight:600;line-height:1.35}
+    .row .desc{color:var(--muted);font-size:13.5px;margin-top:2px}
+    .row .soon-tag{
+      flex:0 0 auto;align-self:center;font-size:11px;font-weight:700;color:var(--muted);
+      background:rgba(147,164,196,.14);padding:2px 9px;border-radius:999px;
     }
-    /* connectors */
-    .tree li::before, .tree li::after{
-      content:'';position:absolute;top:0;width:50%;height:26px;
-      border-top:2px solid var(--line);
-    }
-    .tree li::before{right:50%;border-right:2px solid var(--line)}
-    .tree li::after{left:50%;border-left:2px solid var(--line)}
-    .tree li:only-child::before,.tree li:only-child::after{display:none}
-    .tree li:only-child{padding-top:0}
-    .tree li:first-child::before,.tree li:last-child::after{border:0}
-    .tree li:last-child::before{border-right:2px solid var(--line)}
-    .tree li:first-child::after{border-left:2px solid var(--line)}
-    .tree ul ul::before{
-      content:'';position:absolute;top:0;right:50%;
-      border-right:2px solid var(--line);width:0;height:26px;
-    }
-    .tree > ul{padding-top:0}
-    .tree > ul > li{padding-top:0}
-
-    /* nodes (rectangles) */
-    .node{
-      display:inline-flex;flex-direction:column;gap:6px;justify-content:center;
-      width:168px;min-height:86px;padding:13px 12px;
-      background:var(--card);border:1.5px solid var(--border);border-radius:14px;
-      color:inherit;font:inherit;cursor:pointer;text-align:center;
-      transition:transform .15s ease,background .15s ease,border-color .15s ease,box-shadow .15s ease;
-    }
-    .node:hover{background:var(--card-hover);transform:translateY(-3px);border-color:var(--accent)}
-    .node.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(59,130,246,.4) inset}
-    .node .badge{
-      align-self:center;font-size:11px;font-weight:700;letter-spacing:.4px;
-      padding:2px 10px;border-radius:999px;
-    }
-    .node .badge.ready{background:rgba(59,130,246,.18);color:var(--accent-2)}
-    .node .badge.soon{background:rgba(147,164,196,.14);color:var(--muted)}
-    .node h3{margin:0;font-size:15px;line-height:1.35}
-    .node.intro{width:240px;min-height:94px;border-color:var(--accent);
-      background:linear-gradient(180deg,rgba(59,130,246,.18),var(--card))}
-    .node.intro h3{font-size:17px}
-    .node.topic{width:196px}
-    .node.soon{opacity:.72;cursor:default}
-    .node.soon:hover{transform:none;background:var(--card);border-color:var(--border)}
+    /* clickable (ready) rows */
+    .row.ready{cursor:pointer}
+    .row.ready:hover{background:var(--card)}
+    .row.ready .mark{color:var(--accent-2)}
+    .row.ready .ttl{color:var(--accent-2)}
+    .row.ready:hover .ttl{text-decoration:underline}
+    /* level sizing */
+    .lvl-intro .ttl{font-size:22px}
+    .lvl-intro .mark{font-size:15px}
+    .lvl-topic .ttl{font-size:18px}
+    .lvl-sub .ttl{font-size:15.5px;font-weight:500}
+    .lvl-sub .desc{font-size:13px}
+    .row.soon .ttl{color:var(--text);opacity:.85}
 
     footer{text-align:center;color:var(--muted);font-size:13px;padding:34px 18px 10px;border-top:1px solid var(--border);margin-top:20px}
     .empty{padding:40px;text-align:center;color:var(--muted)}
@@ -143,80 +126,61 @@
   </header>
 
   <div class="wrap">
-    <div class="stage" id="stage">
-      <div id="player-slot"></div>
-      <div class="meta">
-        <div class="kicker" id="cur-kicker">צופים כעת</div>
-        <h2 id="cur-title"></h2>
-        <p id="cur-desc"></p>
-      </div>
-    </div>
-
     <h2 class="section-title">מפת הסרטונים</h2>
-    <div class="tree-fit" id="treeFit">
-      <div class="tree" id="tree"></div>
-    </div>
+    <div class="outline" id="outline"></div>
     <div class="empty" id="empty" hidden></div>
   </div>
 
   <footer>ישראל בסדר העולמי · מבוסס על עבודתו של פרופ' בני מילר, אוניברסיטת חיפה</footer>
 
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close aria-label="סגירה">✕</button>
+      <div id="modal-player"></div>
+      <div class="modal-meta">
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
   <script>
     const $ = s => document.querySelector(s);
 
-    function showIdle(){
-      $('#player-slot').innerHTML = '<div class="placeholder">בחרו סרטון מהמפה שלמטה כדי לצפות ▾</div>';
-      $('#cur-kicker').textContent = '';
-      $('#cur-title').textContent  = '';
-      $('#cur-desc').textContent   = 'לחצו על אחד המלבנים כדי לפתוח את הסרטון כאן.';
+    function openModal(item){
+      const slot = $('#modal-player');
+      slot.innerHTML = '<video controls autoplay preload="metadata" playsinline></video>';
+      const v = slot.querySelector('video');
+      v.src = item.file; v.load();
+      $('#modal-title').textContent = item.title || '';
+      $('#modal-desc').textContent  = item.description || '';
+      $('#modal').hidden = false;
+      document.body.style.overflow = 'hidden';
     }
-
-    function fitTree(){
-      const fit = document.getElementById('treeFit');
-      const tree = document.getElementById('tree');
-      if(!fit || !tree) return;
-      tree.style.transform = 'none';
-      const natural = tree.offsetWidth;
-      if(!natural) return;
-      const scale = Math.min(1, fit.clientWidth / natural);
-      tree.style.transform = 'scale(' + scale + ')';
-      fit.style.height = (tree.offsetHeight * scale) + 'px';
+    function closeModal(){
+      $('#modal-player').innerHTML = ''; // stops playback
+      $('#modal').hidden = true;
+      document.body.style.overflow = '';
     }
-    window.addEventListener('resize', ()=>{ clearTimeout(window.__ft); window.__ft = setTimeout(fitTree,120); });
+    document.addEventListener('click', e=>{ if(e.target.closest('[data-close]')) closeModal(); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape' && !$('#modal').hidden) closeModal(); });
 
-    function playInStage(item, kicker){
-      const slot = $('#player-slot');
-      if(item.file){
-        slot.innerHTML = '<video controls preload="metadata" playsinline></video>';
-        const v = slot.querySelector('video');
-        v.src = item.file; v.load();
-      }else{
-        slot.innerHTML = '<div class="placeholder">הסרטון יתווסף בהמשך 🎬</div>';
-      }
-      $('#cur-kicker').textContent = kicker || 'צופים כעת';
-      $('#cur-title').textContent = item.title || '';
-      $('#cur-desc').textContent  = item.description || '';
-      document.querySelectorAll('.node').forEach(n=>n.classList.remove('active'));
-      const el = document.querySelector('[data-key="'+item._key+'"]');
-      if(el) el.classList.add('active');
-    }
-
-    function makeNode(item, cls, kicker){
+    function rowLi(item, levelClass){
       const ready = !!item.file;
-      const btn = document.createElement('button');
-      btn.className = 'node ' + cls + (ready ? '' : ' soon');
-      btn.dataset.key = item._key;
-      const badge = ready ? '<span class="badge ready">▶ צפייה</span>'
-                          : '<span class="badge soon">בקרוב</span>';
-      btn.innerHTML = badge + '<h3></h3>';
-      btn.querySelector('h3').textContent = item.title || '';
-      if(ready){
-        btn.addEventListener('click', ()=>{
-          playInStage(item, kicker);
-          $('#stage').scrollIntoView({behavior:'smooth',block:'start'});
-        });
-      }
-      return btn;
+      const li = document.createElement('li');
+      const row = document.createElement('div');
+      row.className = 'row ' + levelClass + (ready ? ' ready' : ' soon');
+      row.innerHTML =
+        '<span class="mark">' + (ready ? '▶' : '•') + '</span>' +
+        '<div class="body"><div class="ttl"></div>' +
+        (item.description ? '<div class="desc"></div>' : '') + '</div>' +
+        (ready ? '' : '<span class="soon-tag">בקרוב</span>');
+      row.querySelector('.ttl').textContent = item.title || '';
+      if(item.description) row.querySelector('.desc').textContent = item.description;
+      if(ready) row.addEventListener('click', ()=>openModal(item));
+      li.appendChild(row);
+      return li;
     }
 
     function render(data){
@@ -233,49 +197,37 @@
       const intro  = data.intro || null;
       const topics = Array.isArray(data.topics) ? data.topics : [];
 
-      // assign keys
-      if(intro) intro._key = 'intro';
-      topics.forEach((t,i)=>{ t._key='t'+i; (t.sub||[]).forEach((s,j)=>{ s._key='t'+i+'s'+j; }); });
-
-      // ---- build tree ----
-      const tree = $('#tree');
+      // ---- build vertical outline ----
+      const outline = $('#outline');
       if(!intro && !topics.length){
-        tree.parentElement.hidden = true;
+        outline.hidden = true;
         $('#empty').hidden = false;
         $('#empty').textContent = 'עדיין אין סרטונים.';
         return;
       }
 
       const rootUl = document.createElement('ul');
-      const rootLi = document.createElement('li');
-      if(intro) rootLi.appendChild(makeNode(intro,'intro','פתיח'));
+      let introLi = null;
+      if(intro){ introLi = rowLi(intro, 'lvl-intro'); rootUl.appendChild(introLi); }
 
       if(topics.length){
         const topicsUl = document.createElement('ul');
+        topicsUl.className = 'children';
         topics.forEach(t=>{
-          const li = document.createElement('li');
-          li.appendChild(makeNode(t,'topic','נושא'));
+          const tli = rowLi(t, 'lvl-topic');
           const subs = t.sub || [];
           if(subs.length){
             const subUl = document.createElement('ul');
-            subs.forEach(s=>{
-              const sli = document.createElement('li');
-              sli.appendChild(makeNode(s,'sub','תת-נושא'));
-              subUl.appendChild(sli);
-            });
-            li.appendChild(subUl);
+            subUl.className = 'children';
+            subs.forEach(s=> subUl.appendChild(rowLi(s, 'lvl-sub')));
+            tli.appendChild(subUl);
           }
-          topicsUl.appendChild(li);
+          topicsUl.appendChild(tli);
         });
-        rootLi.appendChild(topicsUl);
+        // nest the topics under the intro so the hierarchy reads top-down
+        (introLi || rootUl).appendChild(topicsUl);
       }
-      rootUl.appendChild(rootLi);
-      tree.appendChild(rootUl);
-
-      // do NOT auto-open the intro; wait for the user to choose
-      showIdle();
-      fitTree();
-      setTimeout(fitTree, 300); // re-fit after fonts settle
+      outline.appendChild(rootUl);
     }
 
     fetch('videos.json', {cache:'no-store'})

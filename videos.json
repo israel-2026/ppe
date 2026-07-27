@@ -16,33 +16,30 @@
   },
   "topics": [
     {
-      "number": 1,
       "file": "videos/02-illiberal-peace.mp4",
       "title": "השלום האי-ליברלי",
-      "description": "על הפער בין שלום פורמלי לשלום יציב, ומשמעותו של 'שלום אי-ליברלי' עבור ישראל וסביבתה. (ערכו את התיאור לפי תוכן הסרטון.)",
+      "description": "",
       "sub": [
-        { "number": 4, "file": null, "title": "סרטון מס' 4", "description": "תת-נושא — יתווסף בהמשך." },
-        { "number": 5, "file": null, "title": "סרטון מס' 5", "description": "תת-נושא — יתווסף בהמשך." }
+        { "file": null, "title": "מה מייצב אזור", "description": "" },
+        { "file": null, "title": "הסכמים בין עמים / בין משטרים", "description": "" }
       ]
     },
     {
-      "number": 2,
       "file": null,
-      "title": "סרטון מס' 2",
-      "description": "נושא שני — יתווסף בהמשך.",
+      "title": "עולם שמשתנה — מחד-קוטביות לרב-קוטביות",
+      "description": "",
       "sub": [
-        { "number": 6, "file": null, "title": "סרטון מס' 6", "description": "תת-נושא — יתווסף בהמשך." },
-        { "number": 7, "file": null, "title": "סרטון מס' 7", "description": "תת-נושא — יתווסף בהמשך." }
+        { "file": null, "title": "ארה\"ב כבר לא", "description": "" },
+        { "file": null, "title": "ישראל לאן?", "description": "" }
       ]
     },
     {
-      "number": 3,
       "file": null,
-      "title": "סרטון מס' 3",
-      "description": "נושא שלישי — יתווסף בהמשך.",
+      "title": "קולוניה או אימפריה",
+      "description": "",
       "sub": [
-        { "number": 8, "file": null, "title": "סרטון מס' 8", "description": "תת-נושא — יתווסף בהמשך." },
-        { "number": 9, "file": null, "title": "סרטון מס' 9", "description": "תת-נושא — יתווסף בהמשך." }
+        { "file": null, "title": "חברה, כלכלה", "description": "" },
+        { "file": null, "title": "מדינת היהודים או כלל אזרחיה", "description": "" }
       ]
     }
   ]

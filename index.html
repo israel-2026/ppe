@@ -77,8 +77,8 @@
     .section-title::before{content:"";flex:0 0 4px;height:24px;background:var(--accent);border-radius:4px}
 
     /* ---------- Hierarchical tree ---------- */
-    .tree-scroll{overflow-x:auto;padding:6px 2px 12px}
-    .tree{min-width:760px}
+    .tree-fit{overflow:hidden;text-align:center;padding:6px 0 12px}
+    .tree{display:inline-block;transform-origin:top center;will-change:transform}
     .tree ul{
       display:flex;justify-content:center;position:relative;
       padding-top:26px;margin:0;list-style:none;
@@ -109,7 +109,7 @@
     /* nodes (rectangles) */
     .node{
       display:inline-flex;flex-direction:column;gap:6px;justify-content:center;
-      width:190px;min-height:88px;padding:14px 14px;
+      width:168px;min-height:86px;padding:13px 12px;
       background:var(--card);border:1.5px solid var(--border);border-radius:14px;
       color:inherit;font:inherit;cursor:pointer;text-align:center;
       transition:transform .15s ease,background .15s ease,border-color .15s ease,box-shadow .15s ease;
@@ -123,10 +123,10 @@
     .node .badge.ready{background:rgba(59,130,246,.18);color:var(--accent-2)}
     .node .badge.soon{background:rgba(147,164,196,.14);color:var(--muted)}
     .node h3{margin:0;font-size:15px;line-height:1.35}
-    .node.intro{width:260px;min-height:96px;border-color:var(--accent);
+    .node.intro{width:240px;min-height:94px;border-color:var(--accent);
       background:linear-gradient(180deg,rgba(59,130,246,.18),var(--card))}
     .node.intro h3{font-size:17px}
-    .node.topic{width:210px}
+    .node.topic{width:196px}
     .node.soon{opacity:.72;cursor:default}
     .node.soon:hover{transform:none;background:var(--card);border-color:var(--border)}
 
@@ -153,7 +153,7 @@
     </div>
 
     <h2 class="section-title">מפת הסרטונים</h2>
-    <div class="tree-scroll">
+    <div class="tree-fit" id="treeFit">
       <div class="tree" id="tree"></div>
     </div>
     <div class="empty" id="empty" hidden></div>
@@ -163,6 +163,26 @@
 
   <script>
     const $ = s => document.querySelector(s);
+
+    function showIdle(){
+      $('#player-slot').innerHTML = '<div class="placeholder">בחרו סרטון מהמפה שלמטה כדי לצפות ▾</div>';
+      $('#cur-kicker').textContent = '';
+      $('#cur-title').textContent  = '';
+      $('#cur-desc').textContent   = 'לחצו על אחד המלבנים כדי לפתוח את הסרטון כאן.';
+    }
+
+    function fitTree(){
+      const fit = document.getElementById('treeFit');
+      const tree = document.getElementById('tree');
+      if(!fit || !tree) return;
+      tree.style.transform = 'none';
+      const natural = tree.offsetWidth;
+      if(!natural) return;
+      const scale = Math.min(1, fit.clientWidth / natural);
+      tree.style.transform = 'scale(' + scale + ')';
+      fit.style.height = (tree.offsetHeight * scale) + 'px';
+    }
+    window.addEventListener('resize', ()=>{ clearTimeout(window.__ft); window.__ft = setTimeout(fitTree,120); });
 
     function playInStage(item, kicker){
       const slot = $('#player-slot');
@@ -252,9 +272,10 @@
       rootUl.appendChild(rootLi);
       tree.appendChild(rootUl);
 
-      // feature intro (or first ready item) in the stage
-      const first = intro || topics.find(t=>t.file) || topics[0];
-      if(first) playInStage(first, intro && first===intro ? 'פתיח' : 'צופים כעת');
+      // do NOT auto-open the intro; wait for the user to choose
+      showIdle();
+      fitTree();
+      setTimeout(fitTree, 300); // re-fit after fonts settle
     }
 
     fetch('videos.json', {cache:'no-store'})

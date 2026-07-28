@@ -44,6 +44,7 @@
       -webkit-background-clip:text;background-clip:text;color:transparent;
     }
     header.hero .sub{font-size:clamp(16px,2.4vw,22px);color:var(--accent-2);margin-top:4px;font-weight:600}
+    header.hero .byline{margin-top:6px;color:var(--muted);font-size:15px;letter-spacing:.3px}
     header.hero .lead{max-width:760px;margin:16px auto 0;color:var(--text);font-size:clamp(16px,2vw,19px)}
     .about{
       max-width:820px;margin:26px auto 0;
@@ -119,9 +120,9 @@
 </head>
 <body>
   <header class="hero">
-    <h1 id="p-title">ישראל בסדר העולמי</h1>
+    <h1 id="p-title">ישראל בסדר העולמי החדש</h1>
     <div class="sub" id="p-sub"></div>
-    <p class="lead" id="p-lead"></p>
+    <div class="byline" id="p-byline"></div>
     <div class="about" id="about"></div>
   </header>
 
@@ -131,7 +132,10 @@
     <div class="empty" id="empty" hidden></div>
   </div>
 
-  <footer>ישראל בסדר העולמי · מבוסס על עבודתו של פרופ' בני מילר, אוניברסיטת חיפה</footer>
+  <footer>
+    חינוך פוליטי ציבורי · Public Political Education<br>
+    עריכה, הגשה ויצירת תוכן — בהפקת בינה מלאכותית · מבוסס על פרופ' בנימין מילר וחוקרים נוספים
+  </footer>
 
   <div class="modal" id="modal" hidden>
     <div class="modal-backdrop" data-close></div>
@@ -185,9 +189,11 @@
 
     function render(data){
       const p = data.project || {};
-      if(p.title){ document.title = p.title + ' — גלריית סרטונים'; $('#p-title').textContent = p.title; }
-      $('#p-sub').textContent  = p.subtitle || '';
-      $('#p-lead').textContent = p.lead || '';
+      const setText = (sel,txt)=>{ const el = $(sel); if(el) el.textContent = txt; };
+      if(p.title){ document.title = p.title + ' — גלריית סרטונים'; setText('#p-title', p.title); }
+      setText('#p-sub',    p.subtitle || '');
+      setText('#p-byline', p.byline || '');
+      setText('#p-lead',   p.lead || '');
       const about = $('#about');
       about.innerHTML = '';
       (p.about || []).forEach(par=>{ const e=document.createElement('p'); e.textContent=par; about.appendChild(e); });

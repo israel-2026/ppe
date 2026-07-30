@@ -13,7 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>האם המגיבים מתחלקים לפי הזהות הפוליטית שלהם?</title>
-  <meta name="description" content="השוואה בין התפלגות העמדות בתגובות לפוסט של דפנה ליאל לבין חלוקת המחנות בסקר ערוץ 13 מ־29 ביולי 2026." />
+  <meta name="description" content="השוואה בין התפלגות העמדות והלייקים בתגובות לריל של דפנה ליאל לבין חלוקת המחנות בסקר ערוץ 13 מ־29 ביולי 2026." />
 
   <style>
     :root{
@@ -161,6 +161,69 @@
       background:var(--soft-blue);
       color:#234156;
       font-weight:700;
+    }
+
+    .audience-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .audience-card{
+      padding:22px 18px;
+      border:1px solid var(--line);
+      border-radius:17px;
+      background:#fbfcfd;
+      text-align:center;
+    }
+
+    .audience-card .audience-number{
+      display:block;
+      margin-bottom:8px;
+      color:var(--navy);
+      font-size:clamp(1.75rem,4vw,2.65rem);
+      font-weight:900;
+      line-height:1;
+    }
+
+    .audience-card .audience-label{
+      display:block;
+      font-weight:900;
+      line-height:1.35;
+    }
+
+    .audience-card .audience-note{
+      display:block;
+      margin-top:7px;
+      color:var(--muted);
+      font-size:.86rem;
+      line-height:1.45;
+    }
+
+    .likes-summary{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+
+    .likes-item{
+      padding:20px 18px;
+      border-radius:16px;
+      text-align:center;
+      border:1px solid var(--line);
+    }
+
+    .likes-item.support-like{background:var(--soft-green)}
+    .likes-item.oppose-like{background:var(--soft-red)}
+    .likes-item.unclear-like{background:#f3f5f7}
+
+    .likes-item strong{
+      display:block;
+      font-size:2rem;
+      line-height:1;
+      margin-bottom:8px;
     }
 
     .stats-grid{
@@ -474,7 +537,8 @@
       .page{width:min(100% - 16px,1060px);margin-top:8px}
       .hero{padding:38px 25px;border-radius:22px}
       .content-card{padding:28px 22px;border-radius:18px}
-      .stats-grid,.two-worlds,.logic-grid{grid-template-columns:1fr}
+      .audience-grid{grid-template-columns:repeat(2,1fr)}
+      .stats-grid,.two-worlds,.logic-grid,.likes-summary{grid-template-columns:1fr}
       .comparison{padding:21px 17px}
       .comparison-row{grid-template-columns:1fr 62px;gap:8px 10px}
       .row-label{grid-column:1/-1}
@@ -501,9 +565,9 @@
   <main class="page">
     <header class="hero">
       <div class="eyebrow">ניתוח תגובות · אינסטגרם · זהות פוליטית</div>
-      <h1>האם המגיבים באינxטגרם מתחלקים לפי הזהות הפוליטית שלהם?</h1>
+      <h1>האם המגיבים באינסטגרם מתחלקים לפי הזהות הפוליטית שלהם?</h1>
       <p class="subtitle">
-        תגובות לפוסט של דפנה ליאל על בחירת מבקר המדינה הושוו לחלוקת המחנות בסקר המנדטים האחרון של ערוץ 13, התוצאה דומה במידה שקשה לראות בה צירוף מקרים בלבד.
+        תגובות לריל של דפנה ליאל על בחירת מבקר המדינה הושוו לחלוקת המחנות בסקר פוליטי — ונמצאה ביניהן התאמה מספרית גבוהה במיוחד. הלייקים לתגובות מוסיפים גם את קולו של הקהל השקט.
       </p>
       <div class="byline">
         <span><strong>מאת:</strong> אמנון זוסמן</span>
@@ -517,7 +581,7 @@
         דפנה ליאל פרסמה באינסטגרם כתבה ויזואלית על הדרך שבה נבחר מבקר המדינה. במרכז הביקורת עמדה הטענה שהצבעה שאמורה הייתה להיות חשאית וחופשית זוהמה באמצעות לחץ פוליטי, תיעוד ההצבעה וקיום סיבוב נוסף לאחר שהתוצאה הראשונה לא תאמה את רצון הקואליציה.
       </p>
       <p>
-        הפוסט זכה ל־<strong>7,608 לייקים</strong> ול־<strong>1,608 תגובות</strong>. מן התגובות שהועתקו ונבדקו זוהו <strong>355 כותבים בעלי עמדה ברורה</strong>: חלקם קיבלו את הביקורת של ליאל, ואחרים דחו אותה או תקפו את עצם הצגתה.
+        נכון למועד איסוף הנתונים, הריל זכה ל־<strong>7,551 לייקים</strong>, ואינסטגרם הציג <strong>1,608 תגובות ותגובות־משנה</strong>. מקובץ התעבורה חולצו <strong>405 תגובות ראשיות ייחודיות</strong>; מתוכן <strong>384 הביעו עמדה ברורה</strong>: חלקן קיבלו את הביקורת של ליאל, ואחרות דחו אותה או תקפו את עצם הצגתה.
       </p>
       <div class="context-line">
         השאלה המעניינת אינה רק מה חשבו המגיבים על ההליך — אלא האם הם בחנו אותו לגופו, או פירשו אותו בהתאם למחנה הפוליטי שאליו הם משתייכים.
@@ -525,17 +589,47 @@
     </section>
 
     <section class="content-card">
-      <h2>התפלגות המגיבים</h2>
+      <h2>ארבעה מעגלים של השתתפות</h2>
+      <p>
+        הריל יצר כמה שכבות של קהל. אין לחבר את המספרים זה לזה כמספר אנשים ייחודיים: אותו אדם יכול לצפות, לתת לייק לריל, לכתוב תגובה ולתת לייק גם לכמה תגובות אחרות.
+      </p>
+
+      <div class="audience-grid">
+        <article class="audience-card">
+          <span class="audience-number">עשרות אלפיפ</span>
+          <span class="audience-label">צפו בריל</span>
+          <span class="audience-note">הערכה של מספר הצפיות.</span>
+        </article>
+        <article class="audience-card">
+          <span class="audience-number">7,551</span>
+          <span class="audience-label">נתנו לייק לריל</span>
+          <span class="audience-note">סימן לעניין או להזדהות, אך לא בהכרח להסכמה עם כל טענה.</span>
+        </article>
+        <article class="audience-card">
+          <span class="audience-number">405</span>
+          <span class="audience-label">תגובות ראשיות שנותחו</span>
+          <span class="audience-note">מתוך 1,608 תגובות ותגובות־משנה שהציג אינסטגרם.</span>
+        </article>
+        <article class="audience-card">
+          <span class="audience-number">2,240</span>
+          <span class="audience-label">לייקים לתגובות הראשיות</span>
+          <span class="audience-note">קולו של הקהל השקט שבחר להזדהות עם תגובה קיימת.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>התפלגות כותבי התגובות</h2>
       <div class="stats-grid">
         <article class="stat support">
-          <span class="number">65.6%</span>
+          <span class="number">64.3%</span>
           <span class="label">קיבלו את הביקורת של דפנה ליאל</span>
-          <span class="small">233 כותבים בעלי עמדה ברורה</span>
+          <span class="small">247 כותבים בעלי עמדה ברורה</span>
         </article>
         <article class="stat oppose">
-          <span class="number">34.4%</span>
+          <span class="number">35.7%</span>
           <span class="label">התנגדו לביקורת או להצגתה</span>
-          <span class="small">122 כותבים בעלי עמדה ברורה</span>
+          <span class="small">137 כותבים בעלי עמדה ברורה</span>
         </article>
       </div>
 
@@ -543,12 +637,44 @@
     </section>
 
     <section class="content-card">
-      <h2>ההשוואה לסקר ערוץ 13</h2>
+      <h2>הקהל השקט שהצביע בלייק</h2>
       <p>
-        בסקר ערוץ 13 שפורסם ב־29 ביולי 2026, ולאחר שהוצאו מן החישוב המפלגות הערביות והמפלגות הדתיות והחרדיות שאינן פעילות באינסטגרם סביב כתבה כזו, נותרו <strong>60 מנדטים למתנגדי הקואליציה</strong> ו־<strong>35 מנדטים לתומכיה</strong>.
+        405 התגובות הראשיות קיבלו יחד <strong>2,240 לייקים</strong>. בניגוד לחלוקה היחסית המאוזנת יותר בקרב הכותבים, ההזדהות השקטה הייתה חד־צדדית במידה יוצאת דופן.
+      </p>
+
+      <div class="likes-summary">
+        <article class="likes-item support-like">
+          <strong>2,187</strong>
+          <span>לייקים לתגובות שתמכו בביקורת</span>
+          <small>97.6% מכלל הלייקים</small>
+        </article>
+        <article class="likes-item oppose-like">
+          <strong>46</strong>
+          <span>לייקים לתגובות שהתנגדו לביקורת</span>
+          <small>2.1% מכלל הלייקים</small>
+        </article>
+        <article class="likes-item unclear-like">
+          <strong>7</strong>
+          <span>לייקים לתגובות ללא עמדה ברורה</span>
+          <small>0.3% מכלל הלייקים</small>
+        </article>
+      </div>
+
+      <p class="quote">
+        הכותבים התחלקו בדומה למפה הפוליטית — אך הקהל השקט שהביע הזדהות באמצעות לייק נטה כמעט כולו לצד שקיבל את הביקורת.
       </p>
       <p>
-        מתוך 95 המנדטים שנותרו, החלוקה היא 63.2% למתנגדי הקואליציה ו־36.8% לתומכיה. כאשר מציבים לצדה את התפלגות התגובות, מתקבלת תמונה כמעט חופפת.
+        אין פירוש הדבר ש־97.9% מן הציבור תומכים בביקורת. לייקים אינם אנשים ייחודיים, אותו משתמש יכול לסמן כמה תגובות, והאלגוריתם מעניק יתרון לתגובות שכבר צברו חשיפה. הנתון מלמד על <strong>עוצמת ההזדהות בתוך קהל הריל</strong>, לא על חלוקת המצביעים באוכלוסייה.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>ההשוואה לסקר ערוץ 13</h2>
+      <p>
+        בסקר ערוץ 13 שפורסם ב־29 ביולי 2026, ולאחר שהוצאו מן החישוב המפלגות הערביות והמפלגות הדתיות והחרדיות, נותרו <strong>60 מנדטים למתנגדי הקואליציה</strong> ו־<strong>35 מנדטים לתומכיה</strong>.
+      </p>
+      <p>
+        מתוך 95 המנדטים שנותרו, החלוקה היא 63.2% למתנגדי הקואליציה ו־36.8% לתומכיה. בקרב כותבי התגובות בעלי העמדה נמצאו 64.3% שתמכו בביקורת ו־35.7% שהתנגדו לה. אין זו השוואה ישירה בין סקר מייצג לבין קהל אינסטגרם, אך שתי ההתפלגויות כמעט חופפות.
       </p>
 
       <div class="comparison" aria-label="השוואה בין סקר ערוץ 13 לבין תגובות האינסטגרם">
@@ -562,14 +688,14 @@
 
         <div class="comparison-row">
           <div class="row-label">המגיבים לפוסט</div>
-          <div class="track"><div class="fill" style="width:65.6%">65.6%</div></div>
-          <div class="row-value">65.6%</div>
+          <div class="track"><div class="fill" style="width:64.3%">64.3%</div></div>
+          <div class="row-value">64.3%</div>
         </div>
 
         <div class="gap-callout">
-          <div class="gap-number">2.4</div>
+          <div class="gap-number">1.1</div>
           <div class="gap-text">
-            נקודות אחוז בלבד מפרידות בין תוצאות הסקר לבין התפלגות המגיבים.
+            נקודות אחוז בלבד מפרידות בין שיעור מתנגדי הקואליציה בסקר לבין שיעור התומכים בביקורת בקרב המגיבים.
           </div>
         </div>
       </div>
@@ -611,7 +737,7 @@
     </section>
 
     <section class="content-card">
-      <h2>מדוע הדמיון אינו מקרי?</h2>
+      <h2>מדוע הדמיון עשוי להיות משמעותי?</h2>
       <p>
         אין כאן זהות מלאה בין שתי המדידות. הצבעה למפלגה אינה זהה לעמדה על אירוע נקודתי, ותומך קואליציה יכול בהחלט לבקר את ההליך. גם מתנגד קואליציה יכול להסתייג מן הסיקור של דפנה ליאל.
       </p>
@@ -708,7 +834,10 @@
         הוויכוח על בחירת מבקר המדינה נראה לכאורה כדיון נקודתי על תקינותו של הליך מסוים. בפועל, המגיבים התחלקו כמעט בדיוק בהתאם למפת המחנות הפוליטיים.
       </p>
       <p>
-        הדמיון בין 63.2% מתנגדי הקואליציה בסקר המותאם לבין 65.6% שתמכו בביקורת אינו הוכחה מדעית לזהותו הפוליטית של כל מגיב. אך הפער הקטן — 2.4 נקודות אחוז בלבד — מחזק את ההסבר שלפיו שני הנתונים משקפים אותו מבנה עומק פוליטי.
+        הדמיון בין 63.2% מתנגדי הקואליציה בסקר המותאם לבין 64.3% שתמכו בביקורת אינו הוכחה מדעית לזהותו הפוליטית של כל מגיב. אך הפער הזעיר — 1.1 נקודות אחוז בלבד — מחזק את האפשרות ששתי ההתפלגויות משקפות, בדרכים שונות, אותו מבנה עומק פוליטי.
+      </p>
+      <p>
+        נתוני הלייקים מוסיפים רובד שאינו מופיע בסקר: בעוד הכותבים התחלקו כמעט כמו המחנות הפוליטיים, 97.9% מן הלייקים שניתנו לתגובות בעלות עמדה ברורה הופנו לתגובות שקיבלו את הביקורת. אין זה מדד אלקטורלי, אך זהו סימן מובהק לעוצמת ההזדהות של הקהל השקט בתוך הזירה הזאת.
       </p>
       <p>
         האירוע לא נשפט רק לפי השאלה מה התרחש בהצבעה, אלא גם לפי השאלות מי הפעיל את הכוח, מי ביקר אותו, ובאיזה צד של המחלוקת נמצא המתבונן.
@@ -719,7 +848,7 @@
       </div>
 
       <p class="note">
-        הסתייגות מתודולוגית: הניתוח מבוסס על התגובות שהועתקו מן הפוסט, ולא על כל 1,608 התגובות המוצגות באינסטגרם. תגובות ברשת הן מדגם שבוחר את עצמו, וההשוואה לסקר נעשתה ברמת התפלגות הקבוצות — לא באמצעות זיהוי העמדה המפלגתית של כל מגיב. נתוני סקר ערוץ 13 המוצגים כאן מבוססים על החישוב המותאם שבוצע לאחר הוצאת המפלגות הערביות והדתיות והחרדיות.
+        הסתייגות מתודולוגית: אינסטגרם הציג 1,608 תגובות ותגובות־משנה. מקובץ התעבורה חולצו 405 תגובות ראשיות ייחודיות, ומהן 384 הביעו עמדה ברורה. תגובות ברשת הן מדגם שבוחר את עצמו; ההשוואה לסקר נעשתה ברמת התפלגות הקבוצות, לא באמצעות זיהוי ההצבעה של כל מגיב. הלייקים לתגובות הם פעולות ולא מספר משתמשים ייחודיים, והם מושפעים ממיקום התגובה וממנגנון החשיפה של אינסטגרם. נתוני סקר ערוץ 13 מבוססים על החישוב המותאם לאחר הוצאת המפלגות הערביות והמפלגות הדתיות והחרדיות.
       </p>
     </section>
 

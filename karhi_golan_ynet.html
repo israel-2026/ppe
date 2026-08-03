@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ניתוח תגובות ב-ynet — קרעי ויאיר גולן</title>
+  <style>
+    :root{
+      --ink:#17202a;
+      --muted:#5f6b76;
+      --paper:#ffffff;
+      --page:#f3f5f7;
+      --accent:#a61b1b;
+      --accent-dark:#741010;
+      --blue:#1f4f78;
+      --soft-red:#fff3f3;
+      --soft-blue:#eef5fb;
+      --line:#d9dee3;
+      --gold:#a66a00;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:var(--page);
+      color:var(--ink);
+      font-family:Arial,"Noto Sans Hebrew","Segoe UI",sans-serif;
+      line-height:1.75;
+    }
+
+    .article{
+      width:min(940px, calc(100% - 28px));
+      margin:28px auto;
+      background:var(--paper);
+      box-shadow:0 10px 32px rgba(0,0,0,.08);
+      border-radius:18px;
+      overflow:hidden;
+    }
+
+    header{
+      padding:46px 54px 34px;
+      background:
+        linear-gradient(135deg, rgba(166,27,27,.96), rgba(92,16,16,.98)),
+        #8b1717;
+      color:white;
+    }
+
+    .kicker{
+      margin:0 0 12px;
+      font-size:1rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      opacity:.9;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(2rem,5vw,3.65rem);
+      line-height:1.13;
+      letter-spacing:-.035em;
+    }
+
+    .headline-quote{
+      display:block;
+      margin-top:13px;
+      font-size:clamp(1.15rem,2.6vw,1.75rem);
+      font-weight:600;
+      line-height:1.45;
+      color:#fff4f4;
+    }
+
+    .subtitle{
+      margin:25px 0 0;
+      padding:18px 20px;
+      background:rgba(255,255,255,.12);
+      border-right:5px solid #fff;
+      border-radius:10px;
+      font-size:clamp(1.05rem,2.2vw,1.3rem);
+      line-height:1.55;
+    }
+
+    .subtitle strong{
+      color:#fff;
+      font-size:1.08em;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px 18px;
+      padding:17px 54px;
+      background:#f8f9fa;
+      border-bottom:1px solid var(--line);
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    main{
+      padding:38px 54px 48px;
+    }
+
+    p{
+      margin:0 0 1.15em;
+      font-size:1.09rem;
+    }
+
+    .lead{
+      font-size:1.19rem;
+      line-height:1.85;
+    }
+
+    .turn{
+      font-weight:800;
+      color:var(--accent-dark);
+    }
+
+    h2{
+      margin:38px 0 18px;
+      font-size:1.8rem;
+      line-height:1.25;
+      color:var(--accent-dark);
+      border-bottom:3px solid var(--accent);
+      padding-bottom:8px;
+    }
+
+    h3{
+      margin:30px 0 12px;
+      font-size:1.34rem;
+      color:var(--blue);
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+      margin:24px 0 30px;
+    }
+
+    .stat{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:22px;
+      background:#fff;
+    }
+
+    .stat.against{
+      background:var(--soft-red);
+      border-color:#efcaca;
+    }
+
+    .stat.support{
+      background:var(--soft-blue);
+      border-color:#cdddeb;
+    }
+
+    .stat-number{
+      display:block;
+      font-size:2.35rem;
+      font-weight:900;
+      line-height:1.05;
+      color:var(--accent-dark);
+    }
+
+    .stat.support .stat-number{
+      color:var(--blue);
+    }
+
+    .stat-label{
+      display:block;
+      margin-top:8px;
+      font-size:1.02rem;
+      font-weight:700;
+    }
+
+    .ratio{
+      margin:24px 0;
+      padding:22px;
+      border-radius:14px;
+      background:#171c21;
+      color:#fff;
+      text-align:center;
+      font-size:1.25rem;
+      font-weight:700;
+    }
+
+    .ratio strong{
+      color:#ffd6d6;
+      font-size:1.22em;
+    }
+
+    .clicks-highlight{
+      margin:24px 0 30px;
+      padding:30px 26px;
+      background:linear-gradient(135deg,#7e1111,#b92020);
+      color:white;
+      border-radius:16px;
+      text-align:center;
+      box-shadow:0 10px 24px rgba(166,27,27,.18);
+    }
+
+    .clicks-highlight .big{
+      display:block;
+      font-size:clamp(3rem,8vw,5.4rem);
+      line-height:1;
+      font-weight:900;
+      letter-spacing:-.04em;
+    }
+
+    .clicks-highlight .caption{
+      display:block;
+      margin-top:10px;
+      font-size:1.25rem;
+      font-weight:700;
+    }
+
+    .comparison{
+      margin:22px 0 30px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+    }
+
+    .row{
+      display:grid;
+      grid-template-columns:160px 1fr 90px;
+      align-items:center;
+      gap:14px;
+      padding:16px 18px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .row:last-child{border-bottom:0}
+
+    .label{font-weight:700}
+
+    .bar-wrap{
+      height:16px;
+      background:#e9edf0;
+      border-radius:999px;
+      overflow:hidden;
+    }
+
+    .bar{
+      height:100%;
+      border-radius:999px;
+      background:var(--accent);
+    }
+
+    .bar.support{background:var(--blue)}
+
+    .pct{
+      font-weight:900;
+      text-align:left;
+    }
+
+    .insight{
+      margin:26px 0;
+      padding:22px 24px;
+      border-right:6px solid var(--gold);
+      background:#fff8e8;
+      border-radius:10px 0 0 10px;
+      font-size:1.12rem;
+    }
+
+    .conclusion{
+      margin-top:30px;
+      padding:28px;
+      background:#f7f7f8;
+      border:1px solid var(--line);
+      border-radius:15px;
+    }
+
+    .conclusion p:last-child{margin-bottom:0}
+
+    .final-line{
+      margin-top:24px;
+      font-size:1.23rem;
+      font-weight:800;
+      color:var(--accent-dark);
+    }
+
+    .note{
+      margin-top:34px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.55;
+    }
+
+    footer{
+      padding:20px 54px 28px;
+      color:var(--muted);
+      background:#fafafa;
+      border-top:1px solid var(--line);
+      font-size:.9rem;
+    }
+
+    @media (max-width:700px){
+      .article{width:100%; margin:0; border-radius:0}
+      header, main{padding-right:22px; padding-left:22px}
+      .meta, footer{padding-right:22px; padding-left:22px}
+      .stats{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+      .pct{text-align:right}
+      .lead{font-size:1.1rem}
+    }
+
+    @media print{
+      body{background:white}
+      .article{width:100%; margin:0; box-shadow:none}
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJNJTZQF1F');
+  </script>
+</head>
+<body>
+  <article class="article">
+    <header>
+      <p class="kicker">ניתוח תגובות ב־ynet למאמר</p>
+      <h1>
+        קרעי:
+        <span class="headline-quote">„ראית סרטון שיאיר גולן ירה כדור אחד ב־7 באוקטובר? לא חושב שהציל מישהו”</span>
+      </h1>
+      <p class="subtitle">
+        מתוך <strong>1,392 תגובות</strong>, רק 50 תמכו בקרעי; מולן נרשמו
+        <strong>44,296 קליקים נגדו</strong> — כמעט 41 קליקים של דחייה
+        על כל קליק אחד של תמיכה.
+      </p>
+    </header>
+
+    <div class="meta">
+      <span><strong>מאת:</strong> אמנון זוסמן</span>
+      <span><strong>תאריך:</strong> 3 באוגוסט 2026</span>
+    </div>
+
+    <main>
+      <section>
+        <p class="lead">
+          ביממה האחרונה התחוללו כמה סערות פוליטיות, ובהן הדחת אלוף פיקוד המרכז
+          בידי שר הביטחון ישראל כ״ץ, וההתקפה האישית החריפה של השר שלמה קרעי על יאיר גולן.
+        </p>
+
+        <p>
+          בדקתי את תגובות גולשי ynet לשתי הפרשות. במקרה של כ״ץ, התוצאה הייתה צפויה למדי:
+          כ־85% מהתגובות התנגדו לשר, פחות מ־10% תמכו בו, והיתר לא הביעו עמדה ברורה.
+          כאשר בוחנים גם את הלייקים והדיסלייקים — המעורבות השקטה של הקוראים —
+          ההתנגדות נעשית חד־משמעית עוד יותר.
+        </p>
+
+        <p>
+          ממצאים כאלה ביחס לשרים בולטים בליכוד כבר אינם מפתיעים. אלא שבמקרה של יאיר גולן
+          ציפיתי לתמונה אחרת. גולן מזוהה במובהק עם השמאל הישראלי, ואינו בהכרח אהוד
+          על כלל מצביעי המרכז. לכן היה סביר להניח שההתקפה עליו תזכה לפחות לתמיכה מסוימת
+          מצד מגיבי הימין.
+        </p>
+
+        <p class="turn">אלא שהתוצאה הייתה שונה לחלוטין.</p>
+      </section>
+
+      <section>
+        <h2>הממצאים</h2>
+
+        <p>הכתבה צברה <strong>1,392 תגובות</strong>, והתוצאה הייתה חד־משמעית:</p>
+
+        <div class="stats">
+          <div class="stat against">
+            <span class="stat-number">1,342</span>
+            <span class="stat-label">תגובות נגד קרעי — 96.4%</span>
+          </div>
+          <div class="stat support">
+            <span class="stat-number">50</span>
+            <span class="stat-label">תגובות בעד קרעי — 3.6%</span>
+          </div>
+        </div>
+
+        <div class="ratio">
+          על כל תגובה אחת שתמכה בקרעי הופיעו כמעט <strong>27 תגובות נגדו</strong>.
+        </div>
+
+        <h3>המעורבות השקטה הייתה חריגה אף יותר</h3>
+
+        <p>
+          התגובות נגד קרעי לא רק היו רבות יותר — הן קיבלו כמות עצומה של לייקים.
+          במקביל, התגובות שתמכו בו זכו בעיקר לדיסלייקים.
+        </p>
+
+        <div class="clicks-highlight">
+          <span class="big">44,296</span>
+          <span class="caption">קליקים נגד קרעי — 97.6% מכלל המעורבות השקטה</span>
+        </div>
+
+        <div class="comparison">
+          <div class="row">
+            <div class="label">נגד קרעי</div>
+            <div class="bar-wrap"><div class="bar" style="width:97.6%"></div></div>
+            <div class="pct">97.6%</div>
+          </div>
+          <div class="row">
+            <div class="label">בעד קרעי</div>
+            <div class="bar-wrap"><div class="bar support" style="width:2.4%"></div></div>
+            <div class="pct">2.4%</div>
+          </div>
+        </div>
+
+        <p>
+          בסך הכול נרשמו <strong>44,296 קליקים נגד קרעי</strong>, לעומת
+          <strong>1,082 קליקים בעדו</strong>. על כל קליק שתמך בו נרשמו כמעט
+          <strong>41 קליקים נגדו</strong>.
+        </p>
+
+        <div class="insight">
+          המספר האבסולוטי חשוב כאן לא פחות מהאחוזים. יותר מ־44 אלף פעולות של קוראים
+          אינן רק תוצאה של כמה תגובות קולניות בראש הרשימה. הן מעידות על מעורבות רחבה
+          וחריגה של ציבור גדול, שרובו לא כתב תגובה בעצמו אך בחר לחזק את ההתנגדות לקרעי.
+        </div>
+
+        <h3>לא רק תגובות של אנשי שמאל</h3>
+
+        <p>
+          התוצאה אינה יכולה להיות מוסברת רק בכך שגולשי ynet מזוהים עם המרכז והשמאל.
+          גם בכתבות אחרות מופיעים מגיבים רבים מהימין, ולעיתים הם אף שולטים בשיח
+          ובמאזן הקליקים.
+        </p>
+
+        <p>
+          דווקא משום שיאיר גולן אינו דמות קונצנזואלית, ואינו זוכה לתמיכה אוטומטית
+          מצד כלל מצביעי המרכז, היה אפשר לצפות שההתקפה עליו תיצור מחלוקת משמעותית יותר.
+        </p>
+
+        <p class="turn">בפועל, היא כמעט לא יצרה מחלוקת. היא יצרה דחייה גורפת של קרעי.</p>
+      </section>
+
+      <section>
+        <h2>סיכום: יאיר גולן כנייר הלקמוס</h2>
+
+        <div class="conclusion">
+          <p>
+            התגובות אינן מעידות בהכרח על תמיכה פוליטית רחבה ביאיר גולן.
+            עיקרן הוא דחייה של קרעי — של סגנונו, של ההתקפה האישית ושל הפער בין
+            מי שמטיל ספק בגבורתם של אחרים לבין תרומתו שלו ביום המבחן.
+          </p>
+
+          <p>
+            דווקא משום שגולן מזוהה בבירור עם השמאל ואינו דמות קונצנזואלית גם במרכז,
+            התוצאה משמעותית במיוחד. המגיבים לא נדרשו לאמץ את השקפת עולמו כדי לקבוע
+            שההתקפה עליו חצתה גבול. במקרה הזה גולן היה נייר הלקמוס שחשף לא רק את היחס
+            אליו, אלא בעיקר את היחס לקרעי ולסוג הפוליטיקה שהוא מייצג.
+          </p>
+
+          <p>
+            מכאן אפשר להבין גם את הדיון בליכוד על הצורך „להשביח את הרשימה” ואת החשש
+            מפריימריז. פריימריז אינם בוחנים רק נאמנות למחנה או לראש המפלגה; הם מאפשרים
+            לחברי הליכוד לשפוט את איכות הנציגים עצמם — את יכולתם, סגנונם, הישגיהם
+            ומידת התאמתם לייצג מפלגת שלטון.
+          </p>
+
+          <p>
+            אלא שבמושג „השבחת הרשימה” טמון גם קוץ. עצם ההכרזה שיש צורך להשביח אותה
+            היא הודאה משתמעת בכך שהרשימה הנוכחית אינה טובה דיה. קשה להבטיח לציבור
+            נבחרת איכותית יותר בלי לעורר את השאלה כיצד נבחרה החבורה ששלטה כאן בשנים
+            האחרונות, מדוע קודמה, ומי נושא באחריות לאיכותה.
+          </p>
+
+          <p>
+            הסערה סביב דבריו של קרעי אינה מוכיחה לבדה כיצד יצביע הציבור בבחירות
+            או בפריימריז. היא כן מצביעה על בעיה עמוקה יותר: חלק מנציגי הליכוד כבר
+            אינם מעוררים רק התנגדות פוליטית — הם מעוררים דחייה אישית וציבורית חריגה,
+            שחוצה במידה מסוימת את גבולות המחנות.
+          </p>
+
+          <p class="final-line">
+            אם נתניהו אכן מבקש „להשביח” את הרשימה, ייתכן שהוא מזהה את אותה מציאות
+            שנחשפה כאן ב־1,392 תגובות וביותר מ־44 אלף קליקים נגד קרעי:
+            הבעיה אינה רק המסר שהליכוד משדר, אלא גם האנשים שנבחרו לשאת אותו.
+          </p>
+        </div>
+
+        <p class="note">
+          הערה: ניתוח תגובות באתר חדשות אינו סקר מייצג של כלל הציבור, אך הוא מאפשר
+          לבחון את כיוון השיח, את עוצמת המעורבות ואת האופן שבו קוראי הכתבה הגיבו
+          לאירוע המסוים.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 אמנון זוסמן
+    </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ניתוח תגובות קוראי ynet למעברו של ח״כ דן אילוז מהליכוד לישראל ביתנו, והקשר לציבור הימני שעוזב את הליכוד בלי לעזוב את הימין.">
+  <meta property="og:title" content="העולים החדשים של הפוליטיקה הישראלית">
+  <meta property="og:description" content="דן אילוז והציבור הימני שגילה כי הבית הפוליטי שלו כבר אינו אותו הבית.">
+  <meta property="og:type" content="article">
+  <title>העולים החדשים של הפוליטיקה הישראלית — דן אילוז והימין שעוזב את הליכוד</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJNJTZQF1F');
+  </script>
+
+  <style>
+    :root {
+      --bg: #f4f1eb;
+      --paper: #fffdf8;
+      --ink: #20242b;
+      --muted: #686b72;
+      --line: #ded7cb;
+      --blue: #173b68;
+      --blue-soft: #eaf1f9;
+      --green: #27664d;
+      --green-soft: #e7f3ec;
+      --red: #922f3c;
+      --red-soft: #f8e8eb;
+      --gold: #a56f15;
+      --gold-soft: #f8edd7;
+      --purple: #6c4e80;
+      --purple-soft: #f0e9f5;
+      --shadow: 0 18px 50px rgba(50, 43, 33, .12);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(23,59,104,.08), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(165,111,21,.08), transparent 28%),
+        var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.78;
+      font-size: 18px;
+    }
+
+    .page {
+      width: min(980px, calc(100% - 28px));
+      margin: 28px auto;
+      background: var(--paper);
+      border: 1px solid rgba(222,215,203,.85);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 62px 58px 46px;
+      background:
+        linear-gradient(135deg, rgba(23,59,104,.98), rgba(38,83,118,.94)),
+        var(--blue);
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -110px auto;
+      width: 270px;
+      height: 270px;
+      border: 42px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 6px 13px;
+      border: 1px solid rgba(255,255,255,.36);
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      background: rgba(255,255,255,.08);
+    }
+
+    h1 {
+      max-width: 820px;
+      margin: 0;
+      font-size: clamp(2.15rem, 6vw, 4rem);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+
+    .subtitle {
+      max-width: 780px;
+      margin: 22px 0 0;
+      color: rgba(255,255,255,.9);
+      font-size: clamp(1.08rem, 2.4vw, 1.42rem);
+      line-height: 1.55;
+    }
+
+    .byline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.22);
+      color: rgba(255,255,255,.84);
+      font-size: .92rem;
+    }
+
+    main { padding: 42px 58px 24px; }
+
+    p { margin: 0 0 1.25em; }
+
+    .lead {
+      font-size: 1.22rem;
+      line-height: 1.75;
+      color: #30353c;
+    }
+
+    .lead::first-letter {
+      float: right;
+      margin: 7px 0 0 10px;
+      color: var(--blue);
+      font-size: 4rem;
+      line-height: .75;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 2.15em 0 .75em;
+      color: var(--blue);
+      font-size: clamp(1.55rem, 3.2vw, 2.15rem);
+      line-height: 1.25;
+      letter-spacing: -.02em;
+    }
+
+    h3 {
+      margin: 1.5em 0 .55em;
+      font-size: 1.23rem;
+      color: #323740;
+    }
+
+    .pullquote {
+      margin: 34px 0;
+      padding: 27px 30px;
+      border-right: 6px solid var(--gold);
+      border-radius: 18px;
+      background: var(--gold-soft);
+      color: #513d1c;
+      font-size: 1.32rem;
+      font-weight: 750;
+      line-height: 1.55;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+
+    .stat {
+      min-height: 155px;
+      padding: 22px 18px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 8px 25px rgba(43,37,28,.06);
+    }
+
+    .stat .number {
+      display: block;
+      font-size: 2.25rem;
+      font-weight: 850;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .stat .label {
+      display: block;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .stat .small {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.45;
+    }
+
+    .stat.green .number { color: var(--green); }
+    .stat.blue .number { color: var(--blue); }
+    .stat.red .number { color: var(--red); }
+    .stat.purple .number { color: var(--purple); }
+
+    .chart-card,
+    .table-card,
+    .comparison-card,
+    .note-card {
+      margin: 28px 0;
+      padding: 25px 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(43,37,28,.06);
+    }
+
+    .chart-title {
+      margin-bottom: 5px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #2f343b;
+    }
+
+    .chart-subtitle {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: minmax(150px, 240px) 1fr 72px;
+      align-items: center;
+      gap: 12px;
+      margin: 14px 0;
+    }
+
+    .bar-label { font-size: .92rem; font-weight: 700; }
+
+    .track {
+      height: 27px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #ece8e1;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,.08);
+    }
+
+    .fill {
+      height: 100%;
+      min-width: 3px;
+      border-radius: inherit;
+    }
+
+    .fill.green { background: linear-gradient(90deg, #3a8466, var(--green)); }
+    .fill.blue { background: linear-gradient(90deg, #3873a8, var(--blue)); }
+    .fill.red { background: linear-gradient(90deg, #bd5b68, var(--red)); }
+    .fill.purple { background: linear-gradient(90deg, #9874ae, var(--purple)); }
+
+    .bar-value {
+      direction: ltr;
+      text-align: left;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: .94rem;
+    }
+
+    th, td {
+      padding: 13px 11px;
+      border-bottom: 1px solid #ebe6de;
+      text-align: right;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f4f6f8;
+      color: #303842;
+      font-weight: 800;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .num {
+      direction: ltr;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .positive { color: var(--green); font-weight: 800; }
+    .negative { color: var(--red); font-weight: 800; }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 26px 0;
+    }
+
+    .mini-card {
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+    }
+
+    .mini-card.support { background: var(--green-soft); }
+    .mini-card.oppose { background: var(--red-soft); }
+    .mini-card h3 { margin-top: 0; }
+
+    .big-ratio {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      margin: 28px 0;
+      padding: 24px;
+      border-radius: 22px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .big-ratio strong {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .comparison-item {
+      padding: 23px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .comparison-item.poll { background: var(--blue-soft); color: var(--blue); }
+    .comparison-item.comments { background: var(--green-soft); color: var(--green); }
+    .comparison-item .kicker { font-size: .88rem; font-weight: 800; }
+    .comparison-item .value { display: block; margin: 8px 0 5px; font-size: 2.7rem; font-weight: 900; line-height: 1; }
+    .comparison-item .explain { font-size: .88rem; line-height: 1.45; }
+
+    .equation {
+      margin: 28px 0;
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid #d9c9aa;
+      background: linear-gradient(135deg, #fff8e9, #f9edd6);
+      text-align: center;
+    }
+
+    .equation .line {
+      display: block;
+      font-size: clamp(1.45rem, 4vw, 2.25rem);
+      font-weight: 900;
+      color: #6f4c13;
+      direction: ltr;
+    }
+
+    .equation .caption {
+      display: block;
+      margin-top: 8px;
+      color: #735f3b;
+      font-size: .9rem;
+    }
+
+    details {
+      margin: 18px 0;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 18px 21px;
+      color: var(--blue);
+      font-weight: 850;
+      font-size: 1.05rem;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    summary::before {
+      content: "+";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 27px;
+      height: 27px;
+      margin-left: 10px;
+      border-radius: 50%;
+      background: var(--blue-soft);
+      font-size: 1.2rem;
+    }
+
+    details[open] summary::before { content: "−"; }
+
+    .details-body {
+      padding: 0 22px 20px;
+      color: #3d4249;
+    }
+
+    ul { padding-right: 1.25em; }
+    li { margin-bottom: .6em; }
+
+    .conclusion {
+      margin: 42px -18px 20px;
+      padding: 36px 38px;
+      border-radius: 27px;
+      background: linear-gradient(135deg, #173b68, #285878);
+      color: white;
+    }
+
+    .conclusion h2 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .conclusion p:last-child { margin-bottom: 0; }
+
+    .method {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-right: 4px solid #a8a29a;
+      background: #f3f1ed;
+      color: #5e5d5a;
+      font-size: .86rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 28px 58px 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .84rem;
+      background: #faf8f4;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .author { color: var(--ink); font-weight: 800; }
+
+    @media (max-width: 780px) {
+      body { font-size: 17px; }
+      .page { width: min(100% - 14px, 980px); margin: 7px auto; border-radius: 22px; }
+      .hero { padding: 40px 24px 32px; }
+      main { padding: 28px 22px 16px; }
+      footer { padding: 24px 22px 30px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .two-columns, .comparison-grid { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 1fr 62px; gap: 8px; }
+      .bar-label { grid-column: 1 / -1; }
+      .track { height: 24px; }
+      .table-card { padding: 18px 10px; overflow-x: auto; }
+      table { min-width: 660px; font-size: .86rem; }
+      .conclusion { margin: 34px 0 15px; padding: 28px 24px; }
+    }
+
+    @media (max-width: 470px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat { min-height: auto; }
+      h1 { font-size: 2.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header class="hero">
+      <div class="eyebrow">ניתוח תגובות ציבור ומפת הכוחות הפוליטית</div>
+      <h1>העולים החדשים של הפוליטיקה הישראלית</h1>
+      <p class="subtitle">דן אילוז והציבור הימני שגילה כי אפשר לעזוב את הליכוד — בלי לעזוב את הימין</p>
+      <div class="byline">
+        <span><strong>מאת:</strong> אמנון זוסמן</span>
+        <span><strong>תאריך:</strong> 6 באוגוסט 2026</span>
+      </div>
+    </header>
+
+    <main>
+      <p class="lead">חבר הכנסת דן אילוז הוא עולה מקנדה, עורך דין, חובש כיפה, מזרחי וציוני. כאשר הגיע לפוליטיקה הישראלית, הבחירה בליכוד נראתה טבעית: מפלגת העם, ממשיכת דרכו של בגין, בית לעולים, למסורתיים ולימין הציוני. אתמול הודיע אילוז כי הוא עוזב את הליכוד ומצטרף לישראל ביתנו של אביגדור ליברמן. בתגובות לכתבה בוינט אפשר לזהות לא רק יחס למעבר של חבר כנסת אחד, אלא ציבור שלם שעובר תהליך דומה.</p>
+
+      <p>אפשר לכנות אותו <strong>„העולים החדשים של הפוליטיקה הישראלית”</strong>. חלק מאנשיו הם עולים חדשים ממש, כמו אילוז. אחרים נולדו בישראל, אך נכנסו אל הפוליטיקה מתוך אמונה בתדמיות, בסמלים ובסיפור שמפלגה מספרת על עצמה. רק בהדרגה הם נחשפו למנגנוני הכוח, למשמעת המחנאית ולפער שבין המותג לבין המציאות.</p>
+
+      <div class="pullquote">הם אינם אומרים בהכרח: „עברנו מימין לשמאל”. הם אומרים: „נשארנו במקום — והליכוד הוא שהתרחק מאיתנו”.</div>
+
+      <h2>אילוז כמקרה מבחן</h2>
+      <p>אילוז נכנס לכנסת מטעם הליכוד, אך התבלט כאחד הבודדים בסיעה שניסה לשמור על מרחב עצמאי של עקרונות. עבור תומכיו, המעבר לישראל ביתנו אינו בגידה בזהות הימנית אלא ניסיון להציל אותה: ימין של ציונות, שירות, אחריות ציבורית, ממלכתיות ועמידה על מצפון אישי.</p>
+
+      <p>זהו גם הפתרון לדיסוננס הקוגניטיבי של ליכודניקים לשעבר. אדם אינו חייב להודות שכל השקפת עולמו הייתה טעות. הוא יכול לומר לעצמו כי הערכים נשארו, בעוד שהמפלגה ששימשה להם בית השתנתה.</p>
+
+      <h2>מה מצאנו ב־148 תגובות בעלות עמדה?</h2>
+      <p>לכתבה הופיעו 183 תגובות. בקובץ שנאסף היו 170 תגובות מלאות, ומתוכן 148 אפשרו סיווג ברור. בשכבה הראשונה נמצאו <strong>97 תגובות שתמכו במעבר</strong> ו־<strong>51 שהתנגדו לו</strong>. לאחר קריאה מדוקדקת יותר, פוצלה התמונה לארבע קבוצות.</p>
+
+      <section class="stats-grid" aria-label="ארבע קבוצות התגובות">
+        <article class="stat green">
+          <span class="number">21</span>
+          <span class="label">אנשי ימין־ליכוד שעזבו או עוזבים</span>
+          <span class="small">14.2% מכלל התגובות המסווגות</span>
+        </article>
+        <article class="stat blue">
+          <span class="number">75</span>
+          <span class="label">תומכים אחרים באילוז ובמעבר</span>
+          <span class="small">50.7% מכלל התגובות המסווגות</span>
+        </article>
+        <article class="stat red">
+          <span class="number">44</span>
+          <span class="label">מתנגדים מובהקים למעבר</span>
+          <span class="small">29.7% מכלל התגובות המסווגות</span>
+        </article>
+        <article class="stat purple">
+          <span class="number">8</span>
+          <span class="label">„נכון לעזוב — אבל מאוחר מדי”</span>
+          <span class="small">5.4% מכלל התגובות המסווגות</span>
+        </article>
+      </section>
+
+      <div class="chart-card">
+        <div class="chart-title">התפלגות הקבוצות במלל</div>
+        <div class="chart-subtitle">כל פס מייצג את חלקה של הקבוצה מתוך 148 תגובות בעלות עמדה ברורה</div>
+
+        <div class="bar-row">
+          <div class="bar-label">ימין־ליכוד שעזב או עוזב</div>
+          <div class="track"><div class="fill green" style="width:14.2%"></div></div>
+          <div class="bar-value">14.2%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">תומכים אחרים</div>
+          <div class="track"><div class="fill blue" style="width:50.7%"></div></div>
+          <div class="bar-value">50.7%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">מתנגדים למעבר</div>
+          <div class="track"><div class="fill red" style="width:29.7%"></div></div>
+          <div class="bar-value">29.7%</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">מאוחר מדי</div>
+          <div class="track"><div class="fill purple" style="width:5.4%"></div></div>
+          <div class="bar-value">5.4%</div>
+        </div>
+      </div>
+
+      <h2>הקליקים מחדדים את התמונה</h2>
+      <p>הלייקים והדיסלייקים אינם רק קישוט לצד התגובות. הם מייצגים קהל גדול יותר שאינו כותב, אך מביע תמיכה או דחייה. דווקא קבוצת אנשי הימין והליכוד לשעבר — הקטנה יחסית במספר הכותבים — עוררה את ההזדהות החזקה ביותר בממוצע.</p>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>קבוצה</th>
+              <th class="num">תגובות</th>
+              <th class="num">לייקים</th>
+              <th class="num">דיסלייקים</th>
+              <th class="num">סך הקליקים</th>
+              <th class="num">מאזן</th>
+              <th class="num">קליקים לתגובה</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ימין־ליכוד שעזב או עוזב</strong></td>
+              <td class="num">21</td>
+              <td class="num">1,228</td>
+              <td class="num">49</td>
+              <td class="num">1,277</td>
+              <td class="num positive">+1,179</td>
+              <td class="num">60.8</td>
+            </tr>
+            <tr>
+              <td><strong>תומכים אחרים</strong></td>
+              <td class="num">75</td>
+              <td class="num">3,562</td>
+              <td class="num">177</td>
+              <td class="num">3,739</td>
+              <td class="num positive">+3,385</td>
+              <td class="num">49.9</td>
+            </tr>
+            <tr>
+              <td><strong>מתנגדים למעבר</strong></td>
+              <td class="num">44</td>
+              <td class="num">69</td>
+              <td class="num">657</td>
+              <td class="num">726</td>
+              <td class="num negative">−588</td>
+              <td class="num">16.5</td>
+            </tr>
+            <tr>
+              <td><strong>„מאוחר מדי”</strong></td>
+              <td class="num">8</td>
+              <td class="num">66</td>
+              <td class="num">114</td>
+              <td class="num">180</td>
+              <td class="num negative">−48</td>
+              <td class="num">22.5</td>
+            </tr>
+            <tr>
+              <td><strong>סה״כ</strong></td>
+              <td class="num"><strong>148</strong></td>
+              <td class="num"><strong>4,925</strong></td>
+              <td class="num"><strong>997</strong></td>
+              <td class="num"><strong>5,922</strong></td>
+              <td class="num positive"><strong>+3,928</strong></td>
+              <td class="num">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="big-ratio">
+        <strong>96.2%</strong>
+        <span>מן הקליקים על תגובות אנשי הימין־ליכוד שעזבו או עוזבים היו לייקים</span>
+      </div>
+
+      <p>הקבוצה הזאת קיבלה בממוצע כמעט פי 3.7 קליקים לתגובה מקבוצת המתנגדים. ייתכן שזו עדות לכך שהיא מספרת סיפור שאנשים רבים מזהים בעצמם, גם כאשר אינם מוכנים עדיין לכתוב במפורש כי עזבו את הליכוד.</p>
+
+      <h2>שתי קבוצות של תמיכה</h2>
+      <div class="two-columns">
+        <section class="mini-card support">
+          <h3>המעגל הפנימי</h3>
+          <p>אנשים המדברים בשפת „הליכוד של פעם”: בגין, בית״ר, ציונות, שירות, ימין ממלכתי ועמידה מול השתמטות. חלקם מספרים שהצביעו לנתניהו, לליכוד או לאילוז בפריימריז. הם אינם חווים את המעבר כשינוי מחנה, אלא כחיפוש אחר בית ימני חלופי.</p>
+        </section>
+        <section class="mini-card oppose">
+          <h3>המעגל התומך מבחוץ</h3>
+          <p>מצביעי ישראל ביתנו, מרכז ושמאל ומתנגדי נתניהו. חלקם אינם מסכימים עם עמדותיו של אילוז, אך מעניקים לו הכשר מוסרי: הם מעריכים אדם שמוכן לוותר על הבית המפלגתי כאשר הוא אינו יכול עוד ליישב בינו לבין מצפונו.</p>
+        </section>
+      </div>
+
+      <details>
+        <summary>פירוט והרחבה — כיצד זוהו אנשי הימין־ליכוד?</summary>
+        <div class="details-body">
+          <p>הסיווג לקבוצה זו נעשה רק כאשר הופיע סימן מפורש או חזק להשתייכות לימין הליכודי: הצבעה קודמת לנתניהו או לליכוד, תמיכה באילוז בפריימריז, הזדהות כ„ליכודניק לשעבר”, או שימוש ברור במושגים כמו „הליכוד של בגין”, „בית״רי אמיתי”, „ימין ערכי” ו„הליכוד עזב את דרכו”. לכן 21 התגובות הן ככל הנראה אומדן שמרני ולא תקרה.</p>
+        </div>
+      </details>
+
+      <h2>המתנגדים: כמעט כולם נדחו בקליקים</h2>
+      <p>תגובות ההתנגדות הציגו את אילוז כבוגד, כפוי טובה או פוליטיקאי שמחפש מקום ריאלי לאחר שהבין שלא ישרוד את הפריימריז בליכוד. אחרות השתמשו בזהותו הדתית והמזרחית כדי לטעון שהוא עזב את „הבית הטבעי” שלו.</p>
+
+      <p>לאחר שהופרדו שמונה תגובות „מאוחר מדי”, נותרו 44 תגובות התנגדות מובהקות. הן קיבלו יחד רק 69 לייקים מול 657 דיסלייקים. כלומר, לא רק שהמתנגדים היו מיעוט במלל — הקהל השקט דחה את עמדתם בעוצמה גדולה בהרבה.</p>
+
+      <details>
+        <summary>פירוט והרחבה — קבוצת „מאוחר מדי”</summary>
+        <div class="details-body">
+          <p>שמונה מגיבים לא התנגדו בהכרח לעזיבת הליכוד. הטענה שלהם הייתה שאילוז תמך בממשלה ובהצבעותיה במשך זמן רב מדי, ולכן אינו יכול לקבל כעת מחילה אוטומטית. זו ביקורת המגיעה בעיקר ממתנגדי הממשלה, ולא מנאמני הליכוד.</p>
+          <p>הקבוצה קיבלה 66 לייקים ו־114 דיסלייקים. היא חושפת עמדה מורכבת: הכיוון נכון, אך החשבון עם העבר עדיין פתוח.</p>
+        </div>
+      </details>
+
+      <h2>האם התגובות מתאימות למפת המנדטים?</h2>
+      <p>בסקר חדשות 13 שפורסם ב־5 באוגוסט 2026, שמונה המפלגות שלהן יש קהל משמעותי יחסית בוינט קיבלו יחד 96 מנדטים:</p>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>מפלגה</th>
+              <th class="num">מנדטים</th>
+              <th>מיקום ביחס לקואליציה</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>ישר — גדי איזנקוט</td><td class="num">22</td><td>חלופה / אופוזיציה</td></tr>
+            <tr><td>הליכוד</td><td class="num">21</td><td>קואליציה</td></tr>
+            <tr><td>בנט</td><td class="num">13</td><td>חלופה / אופוזיציה</td></tr>
+            <tr><td>ישראל ביתנו</td><td class="num">11</td><td>אופוזיציה</td></tr>
+            <tr><td>הדמוקרטים</td><td class="num">11</td><td>אופוזיציה</td></tr>
+            <tr><td>עוצמה יהודית</td><td class="num">9</td><td>קואליציה</td></tr>
+            <tr><td>הציונות הדתית</td><td class="num">5</td><td>קואליציה</td></tr>
+            <tr><td>הנדל–טרופר</td><td class="num">4</td><td>חלופה / אופוזיציה</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="comparison-card">
+        <div class="chart-title">שתי מדידות שונות — חלוקה כמעט זהה</div>
+        <div class="chart-subtitle">הסקר מודד כוונת הצבעה; התגובות מודדות יחס למעבר של אילוז. אין זו השוואה ישירה, אך שתיהן משקפות את אותו קו שבר פוליטי.</div>
+        <div class="comparison-grid">
+          <div class="comparison-item poll">
+            <span class="kicker">סקר חדשות 13 — המפלגות הרלוונטיות לוינט</span>
+            <span class="value">63.5%</span>
+            <span class="explain">61 מתוך 96 מנדטים למפלגות האופוזיציה והחלופה לליכוד</span>
+          </div>
+          <div class="comparison-item comments">
+            <span class="kicker">הסיווג הראשוני של התגובות</span>
+            <span class="value">65.5%</span>
+            <span class="explain">97 מתוך 148 תגובות תמכו במעברו של אילוז</span>
+          </div>
+        </div>
+      </div>
+
+      <p>מן הצד השני, הליכוד, עוצמה יהודית והציונות הדתית מקבלות 35 מתוך 96 המנדטים — 36.5%. בתגובות, 51 מתוך 148 התנגדו בשלב הסיווג הראשוני למעבר — 34.5%. הפער בין שתי ההתפלגויות הוא כשתי נקודות אחוז בלבד.</p>
+
+      <h2>המספר המפתיע: 14.2% מול כ־14 מנדטים</h2>
+      <p>בבחירות 2022 קיבל הליכוד 32 מנדטים. בסקר הנוכחי הוא מקבל 21. לכאורה מדובר בירידה של 11 מנדטים. אלא שהמאזן בתוך גוש הימין מלמד שחלק מן הכוח הנוכחי של הליכוד עשוי להיות כוח חלופי שהגיע ממפלגות אחרות בגוש.</p>
+
+      <p>ש״ס ירדה מ־11 ל־7 מנדטים, יהדות התורה עלתה מ־7 ל־8, ואילו עוצמה יהודית והציונות הדתית שמרו יחד על 14 המנדטים שקיבלו ברשימה המשותפת ב־2022. לכן סביר שחלק מקולות ש״ס ומקולות דתיים אחרים עברו אל הליכוד, ובכך הסתירו חלק מן הנטישה של מצביעי הליכוד המקוריים.</p>
+
+      <p>ב־2022 קיבלו הליכוד ושותפותיו הדתיות והחרדיות 64 מנדטים. בסקר הן מקבלות יחד 50. מאזן הגוש כולו מצביע על אובדן של 14 מנדטים. מכאן נולד האומדן שלפיו אובדן מצביעי הליכוד המקוריים קרוב יותר ל־14 מנדטים מאשר לירידה הרשמית של 11.</p>
+
+      <div class="equation">
+        <span class="line">14 ÷ 96 = 14.6%</span>
+        <span class="caption">אומדן אובדן המנדטים מבסיס הליכוד, מתוך המפלגות הרלוונטיות לקהל וינט</span>
+      </div>
+
+      <div class="equation">
+        <span class="line">21 ÷ 148 = 14.2%</span>
+        <span class="caption">אנשי ימין־ליכוד שעזבו או עוזבים, מתוך התגובות המסווגות</span>
+      </div>
+
+      <p>הפער הוא ארבע עשיריות האחוז בלבד. אין בכך הוכחה שקהל המגיבים בוינט הוא מדגם מייצג, או שכל אחד מ־14 המנדטים שאבדו לליכוד נמצא בין המגיבים. אבל החפיפה מחזקת את האפשרות שהתגובות אינן רק רעש מקוון: הן מזהות קבוצה פוליטית ממשית, בגודל שמתאים בקירוב לשינוי הנראה בסקרים.</p>
+
+      <section class="conclusion">
+        <h2>המסקנות</h2>
+        <p>דן אילוז מייצג ציבור שאינו רואה את עצמו כמי שעבר מחנה. אנשיו ממשיכים להגדיר את עצמם ימנים, ציונים, מסורתיים או דתיים. הם אינם מבקשים להתקרב בהכרח לשמאל; הם מחפשים מפלגה ימנית באופוזיציה שבה יוכלו לשמור על הזהות הפוליטית שלהם בלי לשאת עוד את הדיסוננס שבין ערכיהם לבין התנהלות הליכוד.</p>
+        <p>„העולים החדשים של הפוליטיקה הישראלית” הם מי שנכנסו אליה דרך הסיפור הרשמי — ורק לאחר זמן למדו להכיר את המשחק עצמו. חלקם נשארים בבית הישן למרות הכול. חלקם מפסיקים להצביע. אחרים, כמו אילוז, מנסים לבנות לעצמם בית חדש.</p>
+        <p><strong>הסיפור המרכזי אינו שהימין נעלם. הוא שהימין משנה כתובת.</strong></p>
+      </section>
+
+      <div class="method">
+        <strong>הערת מסגרת:</strong> הניתוח מבוסס על 170 תגובות מלאות שנאספו מתוך 183 התגובות שהופיעו במונה הכתבה. 148 מהן אפשרו סיווג עמדה. הסקר והתגובות אינם מדידות זהות, והאומדן של אובדן כ־14 מנדטים מבסיס הליכוד הוא הסקה ממאזן המפלגות בגוש — לא נתון מעבר מצביעים ישיר.
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-row">
+        <span class="author">אמנון זוסמן</span>
+        <span>6 באוגוסט 2026</span>
+      </div>
+      <div style="margin-top:8px;">ניתוח תגובות ציבור בסיוע כלי בינה מלאכותית · Google Analytics משולב בדף לצורך מדידת שימוש כללית.</div>
+    </footer>
+  </article>
+</body>
+</html>

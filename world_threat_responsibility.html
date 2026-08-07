@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJNJTZQF1F');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ניתוח תגובות וקליקים ב-Ynet בעקבות תקיפת אם ובתה הישראליות בתאילנד: מול האיום מתגבשת לאומיות הגנתית; בשאלת האחריות חוזר הקיטוב הפוליטי.">
+  <meta property="og:title" content="האיום מאחד, האחריות מפלגת">
+  <meta property="og:description" content="מה מלמדות כ-400 תגובות לכתבה על תקיפת ישראליות בתאילנד על תפיסת האיום ועל שאלת האחריות למעמדה של ישראל בעולם?">
+  <title>האיום מאחד, האחריות מפלגת | אמנון זוסמן</title>
+
+  <style>
+    :root{
+      --bg:#f5f1e8;
+      --paper:#fffaf1;
+      --ink:#1d232d;
+      --muted:#69645d;
+      --line:#dfd3c0;
+      --blue:#173b68;
+      --blue-soft:#eaf1f9;
+      --red:#8b2635;
+      --red-soft:#f8e8eb;
+      --green:#2d6a4f;
+      --green-soft:#e7f3ec;
+      --gold:#a9761e;
+      --gold-soft:#f6edda;
+      --shadow:0 18px 45px rgba(45,35,22,.10);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Arial,"Noto Sans Hebrew","Segoe UI",sans-serif;
+      line-height:1.72;
+    }
+    .page{max-width:920px;margin:0 auto;padding:24px 16px 64px}
+    .hero{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:34px 34px 28px;
+      margin-bottom:20px;
+    }
+    .eyebrow{font-size:1rem;color:var(--red);font-weight:800;margin-bottom:8px}
+    h1{font-size:clamp(2.15rem,6vw,4rem);line-height:1.05;margin:0;color:var(--blue);letter-spacing:-.02em}
+    .subtitle{font-size:1.18rem;line-height:1.55;color:#40464f;margin:18px 0 0;max-width:790px}
+    .byline{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:.93rem;color:var(--muted)}
+    .lead{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px 26px;
+      margin-bottom:20px;
+      font-size:1.08rem;
+    }
+    .lead p{margin:0 0 12px}.lead p:last-child{margin:0}
+    section{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:26px;
+      margin:18px 0;
+    }
+    h2{font-size:1.65rem;color:var(--blue);margin:0 0 8px;line-height:1.2}
+    .section-deck{color:var(--muted);margin:0 0 18px;font-size:1rem}
+    .narratives{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 17px}
+    .card strong{display:block;color:var(--blue);font-size:1.05rem;margin-bottom:4px}
+    .card p{margin:0;color:#4e535a;font-size:.95rem}
+    .responsibility{
+      border:2px solid #cbb98f;
+      background:linear-gradient(180deg,#fffaf1 0%,#fff 100%);
+    }
+    .question{
+      font-size:1.25rem;
+      font-weight:800;
+      color:#252b32;
+      background:var(--gold-soft);
+      border-radius:14px;
+      padding:15px 17px;
+      margin:16px 0 18px;
+    }
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+    .stat{border-radius:16px;padding:18px;text-align:center;border:1px solid var(--line)}
+    .stat.yes{background:var(--green-soft)}
+    .stat.no{background:var(--red-soft)}
+    .stat .num{font-size:2.15rem;font-weight:900;line-height:1;color:#1f2933}
+    .stat .label{margin-top:7px;font-size:.94rem;color:#50545a}
+    .bar{height:26px;display:flex;border-radius:999px;overflow:hidden;background:#eee;margin:17px 0 10px;border:1px solid #ddd}
+    .bar .yes{width:66.5%;background:#6b9b79}
+    .bar .no{width:33.5%;background:#b66c77}
+    .caption{font-size:.9rem;color:var(--muted);margin:0}
+    .thesis{
+      font-size:1.2rem;
+      font-weight:800;
+      line-height:1.55;
+      border-right:5px solid var(--blue);
+      padding:10px 16px 10px 0;
+      margin:20px 0 0;
+    }
+    .conclusions p{margin:0 0 13px}.conclusions p:last-child{margin-bottom:0}
+    details{
+      margin-top:16px;
+      border-top:1px dashed var(--line);
+      padding-top:12px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color:var(--blue);
+      font-size:1.03rem;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"+";display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--blue-soft);margin-left:8px}
+    details[open] summary::before{content:"–"}
+    .detail-body{margin-top:12px;color:#4e535a;font-size:.96rem}
+    .detail-body p{margin:0 0 10px}
+    .note{background:#f7f4ee;border-right:4px solid var(--gold);padding:13px 15px;border-radius:10px;font-size:.91rem;color:#5b554c;margin-top:16px}
+    footer{text-align:center;color:var(--muted);font-size:.86rem;margin-top:26px}
+    @media(max-width:650px){
+      .page{padding:10px 10px 42px}
+      .hero{padding:24px 20px 20px;border-radius:18px}
+      .subtitle{font-size:1.05rem}
+      section,.lead{padding:20px 18px;border-radius:16px}
+      .narratives,.stats{grid-template-columns:1fr}
+      .stat .num{font-size:1.9rem}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">התנכלויות לישראלים בחו״ל — ומה הן מעוררות בציבור הישראלי</div>
+      <h1>האיום מאחד, האחריות מפלגת</h1>
+      <p class="subtitle">תגובות קוראי Ynet לתקיפת שתי הישראליות בתאילנד מציגות תמונה כפולה: מול האיום מבחוץ מתגבשת לאומיות הגנתית רחבה; כשעוברים לשאלת האחריות למעמדה של ישראל בעולם, חוזר הקיטוב הפוליטי.</p>
+      <div class="byline">אמנון זוסמן · 7 באוגוסט 2026</div>
+    </header>
+
+    <div class="lead">
+      <p>הכתבה על אם ובתה הישראליות שהותקפו בתאילנד לאחר שנשאלו מאין הן צברה בתוך שעות כ־400 תגובות ואלפי לחיצות לייק ודיסלייק. חומרת התקיפה כמעט שלא הייתה במחלוקת; הוויכוח עבר במהירות לשאלה רחבה יותר: <strong>מה האירוע הזה אומר על מצבם של ישראלים בעולם — ומי אחראי לכך?</strong></p>
+      <p>התגובות אינן מספרות סיפור פשוט של ימין מול שמאל. אותו קהל שמביע תחושת איום חזקה, דורש הגנה והרתעה ומזהה עוינות כלפי ישראלים, יכול במקביל להטיל על הממשלה אחריות להידרדרות במעמדה הבינלאומי של ישראל.</p>
+    </div>
+
+    <section>
+      <h2>ארבעה נרטיבים סביב אותה תקיפה</h2>
+      <p class="section-deck">הוויכוח התכנס במהירות לארבע מסגרות מרכזיות — ורק אחת מהן שואלת ישירות מי אחראי למצב.</p>
+      <div class="narratives">
+        <div class="card">
+          <strong>1. אנטישמיות ועוינות לישראלים</strong>
+          <p>האירוע נתפס כחלק מאיום רחב יותר על ישראלים ויהודים בעולם.</p>
+        </div>
+        <div class="card">
+          <strong>2. הרתעה, ענישה והגנה</strong>
+          <p>קריאות לתגובה תקיפה יותר, להגנה ולהחזרת תחושת ההרתעה.</p>
+        </div>
+        <div class="card">
+          <strong>3. זהירות והצנעת הישראליות</strong>
+          <p>גישה פרקטית: להיזהר בחו״ל, לצמצם חשיפה ולא למהר להזדהות כישראלים.</p>
+        </div>
+        <div class="card">
+          <strong>4. שאלת האחריות</strong>
+          <p>האם זה בעיקר "טיבו של עולם", או שמדיניות נתניהו והקואליציה תרמה להידרדרות במעמדה של ישראל?</p>
+        </div>
+      </div>
+      <details>
+        <summary>פירוט והרחבה</summary>
+        <div class="detail-body">
+          <p>שלושת הנרטיבים הראשונים מציירים יחד הלך רוח של <strong>לאומיות הגנתית</strong>. הם אינם שייכים למפלגה אחת: תחושת איום, רצון בהרתעה וסולידריות ישראלית יכולים להופיע בקרב מצביעי ימין, מרכז וחלקים מן המרכז־שמאל.</p>
+          <p>גם בזירת הטוקבקים עצמה ניכרת נטייה של ניסוחים חדים ופסקניים לצבור יותר תשומת לב. לכן שפה קיצונית אינה בהכרח עדות לכך שהקהל עצמו נמצא בקצוות.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="responsibility">
+      <h2>כשהדיון עובר לשאלת האחריות</h2>
+      <p class="section-deck">בתוך השרשור נוצר, כמעט בלי שתוכנן, מעין משאל על הסיבה למצבה הבינלאומי של ישראל.</p>
+      <div class="question">האם נתניהו והממשלה תרמו להידרדרות במעמדה הבינלאומי של ישראל ולכך שישראלים נעשו פגיעים יותר בחו״ל?</div>
+
+      <p>התגובות שהעלו את הנרטיב הזה באופן ברור ריכזו סביבן <strong>כ־1,400 לחיצות לייק ודיסלייק</strong>. בתוך תת־הדיון הזה התקבל יחס יציב של בערך שני שלישים מול שליש:</p>
+
+      <div class="stats">
+        <div class="stat yes">
+          <div class="num">66.5%</div>
+          <div class="label">תמיכה בטענת האחריות</div>
+        </div>
+        <div class="stat no">
+          <div class="num">33.5%</div>
+          <div class="label">התנגדות לטענת האחריות</div>
+        </div>
+      </div>
+      <div class="bar" aria-label="66.5 אחוז תמיכה מול 33.5 אחוז התנגדות"><div class="yes"></div><div class="no"></div></div>
+      <p class="caption">היחס מתאר את הקליקים על תגובות שעסקו במפורש בשאלת אחריות הממשלה; הוא אינו שיעור מכלל קוראי Ynet.</p>
+
+      <p class="thesis">בתפיסת האיום הקהל מתלכד סביב לאומיות הגנתית; בתפיסת האחריות הוא חוזר למבנה הפוליטי המוכר — ביקורת רחבה על הממשלה מול מיעוט המגן עליה.</p>
+
+      <details>
+        <summary>פירוט והרחבה</summary>
+        <div class="detail-body">
+          <p>אין כאן סתירה. קורא יכול לחשוב שהעוינות לישראלים אמיתית, לראות בה אנטישמיות או איום לאומי, לדרוש הגנה והרתעה — ובה בעת להאמין שהממשלה החריפה את בידודה של ישראל או תרמה להידרדרות במעמדה.</p>
+          <p>היתרון של השאלה הזו הוא שהיא אינה מבקשת מן הקורא לבחור פוליטיקאי אהוד, אלא להגיב לטענה סיבתית: <strong>מי אחראי למציאות שנוצרה?</strong></p>
+        </div>
+      </details>
+    </section>
+
+    <section class="conclusions">
+      <h2>המסקנות</h2>
+      <p class="section-deck">הממצא המעניין אינו רק היחס הנוכחי — אלא האפשרות לעקוב אחר השינוי בו לאורך זמן.</p>
+
+      <p><strong>1. הלאומיות ההגנתית רחבה מן המחנות הפוליטיים.</strong> בניתוחים חוזרים של תגובות Ynet, כאשר הנושא אינו אישיות פוליטית אלא נרטיב לאומי רחב — הגירה, איום על ישראלים או התחושה ש"העולם נגדנו" — קהל המגיבים והמקליקים אינו מתכנס אוטומטית למחנה מפלגתי אחד.</p>
+
+      <p><strong>2. שאלת האחריות מחזירה את הפוליטיקה.</strong> דווקא לאחר שהאיום כבר הוכר כאיום משותף, השאלה מי תרם להיווצרות המצב מפרידה מחדש בין המחנות. בדיון הזה מתקבל כרגע יחס של בקירוב <strong>שני שלישים מול שליש</strong> לטובת הטלת אחריות על נתניהו והממשלה.</p>
+
+      <p><strong>3. המשמעות האלקטורלית נמצאת במגמה.</strong> אין לראות בשרשור יחיד סקר בחירות. אבל אם נבודד שוב ושוב שאלות אחריות דומות בקרב אותו קהל ונעקוב אחר היחס ביניהן, שינוי מ־67:33 ל־60:40 — או להפך ל־75:25 — עשוי להיות אות מוקדם לשינוי במאזן הפוליטי לקראת הבחירות.</p>
+
+      <div class="note"><strong>הסתייגות:</strong> לייקים ודיסלייקים אינם מצביעים ייחודיים, ואותו אדם יכול להקליק על יותר מתגובה אחת. בנוסף, הכתבה הציגה כ־400 תגובות, בעוד שקובץ הנתונים שנאסף לצורך העיבוד מכיל רק את התגובות והקליקים שנשמרו בפועל. לכן יש להתייחס לתוצאה כמדד התנהגותי בתוך זירת Ynet — לא כמדגם סטטיסטי של כלל הציבור.</div>
+
+      <details>
+        <summary>למה בכל זאת אפשר ללמוד מזה?</summary>
+        <div class="detail-body">
+          <p>הערך אינו בטענה ש־66.5% מכלל הציבור חושבים כך. הערך הוא ביצירת <strong>מדד חוזר</strong>: אותה זירה, שאלות ציבוריות דומות, וסיווג עקבי של התמיכה וההתנגדות. כאשר תנאי המדידה נשמרים, שינוי בכיוון ובגודל היחס עשוי להיות אינפורמטיבי גם אם המדידה עצמה אינה סקר מייצג.</p>
+        </div>
+      </details>
+    </section>
+
+    <footer>© 2026 אמנון זוסמן · ניתוח תגובות וקליקים ב־Ynet</footer>
+  </main>
+</body>
+</html>

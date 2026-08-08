@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>מה הופך ראיון רחוב לוויראלי? שישה מרואיינים מתוך 72 סרטוני "קו ישר"</title>
+  <meta name="description" content="ניתוח 72 סרטוני קו ישר האחרונים בטיקטוק ובאינסטגרם: חמשת הסרטונים הנצפים ביותר ועוד חריג אחד של מעורבות וקיטוב.">
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --paper:#ffffff;
+      --ink:#152033;
+      --muted:#667085;
+      --line:#e6eaf0;
+      --accent:#1f6feb;
+      --accent2:#6f42c1;
+      --good:#18794e;
+      --warn:#b54708;
+      --bad:#b42318;
+      --soft:#eef4ff;
+      --shadow:0 12px 34px rgba(16,24,40,.08);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Arial,"Noto Sans Hebrew","Segoe UI",sans-serif;
+      line-height:1.72;
+    }
+    .page{
+      width:min(1040px, calc(100% - 28px));
+      margin:32px auto 70px;
+    }
+    .hero{
+      background:linear-gradient(135deg,#0f2b55 0%,#1f4f8e 55%,#6941c6 100%);
+      color:white;
+      border-radius:28px;
+      padding:46px 44px 38px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:260px;height:260px;
+      border-radius:50%;
+      background:rgba(255,255,255,.08);
+      left:-70px;top:-80px;
+    }
+    .eyebrow{
+      font-size:.9rem;
+      opacity:.86;
+      letter-spacing:.02em;
+      margin-bottom:10px;
+      font-weight:700;
+    }
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2rem,5vw,3.5rem);
+      line-height:1.12;
+      max-width:900px;
+    }
+    .dek{
+      margin:0;
+      max-width:860px;
+      font-size:1.14rem;
+      opacity:.94;
+    }
+    .hero-stats{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+    .hero-stat{
+      background:rgba(255,255,255,.11);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:16px;
+      padding:14px 16px;
+      backdrop-filter:blur(5px);
+    }
+    .hero-stat strong{display:block;font-size:1.35rem}
+    .hero-stat span{font-size:.84rem;opacity:.84}
+    main{
+      background:var(--paper);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      margin-top:24px;
+      padding:38px 42px 48px;
+    }
+    h2{
+      font-size:1.65rem;
+      margin:44px 0 14px;
+      line-height:1.25;
+    }
+    h3{
+      font-size:1.35rem;
+      margin:0 0 7px;
+      line-height:1.3;
+    }
+    p{margin:0 0 16px}
+    .lead{
+      font-size:1.12rem;
+      color:#344054;
+    }
+    .note{
+      background:#f8fafc;
+      border-right:4px solid var(--accent);
+      padding:14px 17px;
+      border-radius:12px;
+      color:#475467;
+      margin:20px 0 8px;
+    }
+    .summary-table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      margin:20px 0 28px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:16px;
+      font-size:.94rem;
+    }
+    .summary-table th,.summary-table td{
+      padding:11px 12px;
+      border-bottom:1px solid var(--line);
+      text-align:right;
+      vertical-align:middle;
+    }
+    .summary-table th{
+      background:#f8fafc;
+      color:#475467;
+      font-size:.84rem;
+    }
+    .summary-table tr:last-child td{border-bottom:none}
+    .rank{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:30px;height:30px;
+      border-radius:999px;
+      background:var(--soft);
+      color:#1849a9;
+      font-weight:800;
+      font-size:.82rem;
+    }
+    .profiles{
+      display:grid;
+      gap:26px;
+      margin-top:18px;
+    }
+    .profile{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:white;
+      box-shadow:0 8px 22px rgba(16,24,40,.055);
+    }
+    .profile-grid{
+      display:grid;
+      grid-template-columns:330px 1fr;
+      min-height:330px;
+    }
+    .photo-wrap{
+      position:relative;
+      min-height:330px;
+      background:linear-gradient(145deg,#e9eef7,#f6f8fb);
+      overflow:hidden;
+    }
+    .photo-wrap img{
+      width:100%;height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .photo-fallback{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#667085;
+      padding:24px;
+      font-weight:700;
+    }
+    .photo-tag{
+      position:absolute;
+      top:15px;right:15px;
+      background:rgba(17,24,39,.76);
+      color:#fff;
+      padding:7px 11px;
+      border-radius:999px;
+      font-size:.78rem;
+      z-index:2;
+    }
+    .profile-copy{padding:27px 29px}
+    .kicker{
+      display:inline-block;
+      color:var(--accent2);
+      background:#f4f0ff;
+      border-radius:999px;
+      padding:5px 10px;
+      font-size:.8rem;
+      font-weight:800;
+      margin-bottom:9px;
+    }
+    .metrics{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:13px 0 18px;
+    }
+    .metric{
+      background:#f8fafc;
+      border:1px solid var(--line);
+      border-radius:11px;
+      padding:7px 10px;
+      font-size:.82rem;
+      color:#475467;
+    }
+    .metric b{color:#101828}
+    .candidate-note{
+      margin:10px 0 14px;
+      padding:10px 12px;
+      border-right:3px solid #7f56d9;
+      background:#faf7ff;
+      color:#475467;
+      border-radius:10px;
+      font-size:.92rem;
+    }
+    .mechanism{
+      margin-top:17px;
+      background:#f8fafc;
+      border-radius:14px;
+      padding:14px 16px;
+      border:1px solid var(--line);
+    }
+    .mechanism b{color:#101828}
+    blockquote{
+      margin:16px 0 0;
+      padding:12px 16px;
+      border-right:3px solid #98a2b3;
+      background:#fbfcfd;
+      color:#475467;
+      border-radius:8px;
+      font-size:.95rem;
+    }
+    .bar-section{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px 20px 12px;
+      margin:18px 0 24px;
+      background:#fcfcfd;
+    }
+    .bar-row{
+      display:grid;
+      grid-template-columns:180px 1fr 75px;
+      gap:12px;
+      align-items:center;
+      margin:10px 0;
+      font-size:.9rem;
+    }
+    .track{
+      height:12px;
+      background:#eaecf0;
+      border-radius:999px;
+      overflow:hidden;
+    }
+    .fill{
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,#2e90fa,#7f56d9);
+    }
+    .compare{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin:18px 0 8px;
+    }
+    .compare-card{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      background:#fcfcfd;
+    }
+    .compare-card h3{font-size:1.05rem;margin-bottom:12px}
+    .split{
+      display:flex;
+      width:100%;
+      height:18px;
+      border-radius:999px;
+      overflow:hidden;
+      background:#eaecf0;
+      margin:10px 0 8px;
+    }
+    .against{background:#d92d20}
+    .for{background:#12b76a}
+    .legend{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      font-size:.82rem;
+      color:#667085;
+    }
+    .dot{
+      width:9px;height:9px;border-radius:50%;display:inline-block;margin-left:5px
+    }
+    .conclusion{
+      margin-top:34px;
+      padding:24px 25px;
+      background:linear-gradient(145deg,#f3f7ff,#f7f3ff);
+      border:1px solid #d9e2f4;
+      border-radius:18px;
+    }
+    details{
+      margin-top:28px;
+      border-top:1px solid var(--line);
+      padding-top:18px;
+      color:#475467;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color:#344054;
+    }
+    .foot{
+      margin-top:24px;
+      color:#667085;
+      font-size:.83rem;
+    }
+    @media (max-width:780px){
+      .page{width:min(100% - 16px,1040px);margin-top:12px}
+      .hero{padding:30px 22px}
+      .hero-stats{grid-template-columns:1fr 1fr}
+      main{padding:25px 18px 35px}
+      .profile-grid{grid-template-columns:1fr}
+      .photo-wrap{min-height:300px}
+      .compare{grid-template-columns:1fr}
+      .bar-row{grid-template-columns:125px 1fr 62px}
+      .summary-table{font-size:.84rem}
+      .summary-table th,.summary-table td{padding:9px 7px}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="eyebrow">ניתוח תגובות וקהל · 72 הסרטונים האחרונים שנאספו מ״קו ישר״</div>
+    <h1>מה הופך ראיון רחוב לוויראלי?</h1>
+    <p class="dek">
+      חמשת הסרטונים הנצפים ביותר מתוך 72 האחרונים — ועוד סרטון אחד חריג בעוצמת הוויכוח —
+      מציגים שישה מנגנונים שונים לגמרי של משיכת קהל: הערצה לאדם, הזדהות פוליטית,
+      שבירת סטריאוטיפ, חיבה אנושית, זהות קבוצתית וגיוס נגדי.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>72</strong><span>סרטונים במדגם</span></div>
+      <div class="hero-stat"><strong>5.57M</strong><span>צפיות TikTok מצטברות</span></div>
+      <div class="hero-stat"><strong>198.8K</strong><span>לייקים מוצגים ב-Instagram</span></div>
+      <div class="hero-stat"><strong>23.0K</strong><span>תגובות מוצגות ב-Instagram</span></div>
+    </div>
+  </header>
+
+  <main>
+    <p class="lead">
+      ״קו ישר״ בנוי לכאורה על פורמט פשוט: שאלות קצרות ומהירות לאנשים ברחוב.
+      דווקא המהירות הזאת מעניינת, מפני שהיא מקטינה את זמן העריכה העצמית של המרואיין
+      ומייצרת תשובות שנחוות אצל הצופה כספונטניות. בדקנו את 72 הסרטונים האחרונים שנאספו
+      בטיקטוק ובאינסטגרם וחיפשנו לא רק מי קיבל הכי הרבה צפיות — אלא גם מה בדיוק הקהל
+      עשה עם הדמות שפגש על המסך.
+    </p>
+
+    <div class="note">
+      חמשת הסרטונים הראשונים המוצגים כאן הם חמשת המובילים במדגם כולו במספר צפיות TikTok.
+      יחד הם צברו כ־1.97 מיליון צפיות — כ־35% מכלל הצפיות של 72 הסרטונים.
+      הסרטון השישי אינו בצמרת הצפיות, אך הוא חריג מאוד ביחס שבין צפייה, תגובות וקיטוב.
+      בדיעבד התברר כי בתוך ששת הסרטונים האלה הופיעו גם <strong>שלושה מועמדים לפריימריז של
+      מפלגת הדמוקרטים</strong>. במהלך החודש האחרון הם הסתובבו בשווקים ובמרחבים ציבוריים,
+      נענו לבקשת המראיינים והופיעו בסרטון כמעט כדמויות אנונימיות. כך, ברוב המקרים,
+      גם נתפסו בתחילה על ידי ציבור המגיבים — לא כמועמדים פוליטיים מוכרים אלא כאנשים
+      שנעצרו לרגע ברחוב והשיבו לשאלות.
+    </div>
+
+    <h2>חמשת המובילים — ועוד חריגה אחת</h2>
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>דמות</th>
+          <th>דירוג צפיות TikTok</th>
+          <th>צפיות TikTok</th>
+          <th>לייקים Instagram</th>
+          <th>תגובות Instagram</th>
+          <th>דירוג תגובות IG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>ערבי ישראלי מודרני</td><td><span class="rank">1</span></td><td>627,400</td><td>21,400</td><td>1,299</td><td>3</td></tr>
+        <tr><td>ערבייה דתייה וליברלית</td><td><span class="rank">2</span></td><td>449,300</td><td>15,600</td><td>3,541</td><td>1</td></tr>
+        <tr><td>דתי־מסורתי־שמרן</td><td><span class="rank">3</span></td><td>337,200</td><td>6,364</td><td>1,191</td><td>4</td></tr>
+        <tr><td>הדתי הרוחני</td><td><span class="rank">4</span></td><td>291,300</td><td>56,900</td><td>2,635</td><td>2</td></tr>
+        <tr><td>דתי מתון</td><td><span class="rank">5</span></td><td>264,500</td><td>6,149</td><td>260</td><td>24</td></tr>
+        <tr><td>מתנגדת משטר שמאלנית</td><td><span class="rank">29</span></td><td>52,300</td><td>1,262</td><td>769</td><td>5</td></tr>
+      </tbody>
+    </table>
+
+    <div class="bar-section">
+      <h3>צפיות TikTok בששת הסרטונים</h3>
+      <div class="bar-row"><span>ערבי ישראלי מודרני</span><div class="track"><div class="fill" style="width:100%"></div></div><b>627K</b></div>
+      <div class="bar-row"><span>ערבייה דתייה וליברלית</span><div class="track"><div class="fill" style="width:71.6%"></div></div><b>449K</b></div>
+      <div class="bar-row"><span>דתי־מסורתי־שמרן</span><div class="track"><div class="fill" style="width:53.8%"></div></div><b>337K</b></div>
+      <div class="bar-row"><span>הדתי הרוחני</span><div class="track"><div class="fill" style="width:46.4%"></div></div><b>291K</b></div>
+      <div class="bar-row"><span>דתי מתון</span><div class="track"><div class="fill" style="width:42.2%"></div></div><b>265K</b></div>
+      <div class="bar-row"><span>מתנגדת משטר שמאלנית</span><div class="track"><div class="fill" style="width:8.3%"></div></div><b>52K</b></div>
+    </div>
+
+    <h2>שש דמויות, שישה מנגנוני משיכה</h2>
+
+    <section class="profiles">
+
+      <article class="profile">
+        <div class="profile-grid">
+          <div class="photo-wrap">
+            <div class="photo-tag">pic1</div>
+            <div class="photo-fallback">הכנס כאן את התמונה pic1</div>
+            <img data-base="pic1" alt="ערבי ישראלי מודרני" onload="this.previousElementSibling.style.display='none'">
+          </div>
+          <div class="profile-copy">
+            <span class="kicker">שותפות ישראלית</span>
+            <h3>ערבי ישראלי מודרני — כשהזהות הערבית הופכת לסיפור של שייכות</h3>
+            <p class="candidate-note"><strong>זיהוי בדיעבד:</strong> המרואיין הוא <strong>גאלב סלמאנה</strong>, שהיה מועמד בפריימריז של הדמוקרטים. בסרטון עצמו הוא הופיע כאדם מן הרחוב, ורוב התגובות שקראנו התייחסו אליו תחילה כך.</p>
+            <div class="metrics">
+              <span class="metric"><b>627.4K</b> צפיות TikTok</span>
+              <span class="metric"><b>21.4K</b> לייקים IG</span>
+              <span class="metric"><b>1,299</b> תגובות IG</span>
+            </div>
+            <p>
+              זהו הסרטון הנצפה ביותר במדגם. המרואיין נשאר מזוהה כערבי, אבל אצל חלק גדול
+              מהקהל הזהות הזאת אינה הופכת למחסום אלא דווקא לסיפור של שותפות: שירות,
+              אהבת המדינה ושפה אזרחית משותפת.
+            </p>
+            <p>
+              בתגובות נוצרה תופעה מעניינת: האיש עצמו הופך לסמל. באינסטגרם הופיעו
+              משפטים כמו ״יותר ציוני מהליכוד״, ובטיקטוק התגובות הבולטות היללו אותו
+              כאדם וכישראלי.
+            </p>
+            <div class="mechanism"><b>מנגנון הוויראליות:</b> ״כך נראית שותפות ישראלית״ — שבירת סטריאוטיפ בלי למחוק את הזהות.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="profile">
+        <div class="profile-grid">
+          <div class="photo-wrap">
+            <div class="photo-tag">pic2</div>
+            <div class="photo-fallback">הכנס כאן את התמונה pic2</div>
+            <img data-base="pic2" alt="ערבייה דתייה וליברלית" onload="this.previousElementSibling.style.display='none'">
+          </div>
+          <div class="profile-copy">
+            <span class="kicker">אדם מול קבוצה</span>
+            <h3>ערבייה דתייה וליברלית — כשהפלטפורמה משנה את מי שהצופה רואה</h3>
+            <p class="candidate-note"><strong>זיהוי בדיעבד:</strong> המרואיינת היא <strong>סומיה בשיר</strong>, שהייתה מועמדת בפריימריז של הדמוקרטים. בטיקטוק היא נתפסה במידה רבה כאישה שנענתה לראיון רחוב; רק בחלק מן השיח הזהות הציבורית שלה נעשתה מרכזית.</p>
+            <div class="metrics">
+              <span class="metric"><b>449.3K</b> צפיות TikTok</span>
+              <span class="metric"><b>15.6K</b> לייקים IG</span>
+              <span class="metric"><b>3,541</b> תגובות IG</span>
+            </div>
+            <p>
+              המרואיינת היא השנייה בצפיות, אך הראשונה במספר התגובות המוצגות באינסטגרם.
+              זהו אחד המקרים המעניינים ביותר להשוואה בין פלטפורמות: בטיקטוק ניכרה
+              הערכה רבה לדמות עצמה; באינסטגרם הזהות הערבית קיבלה משקל גדול יותר,
+              והתגובות הפכו מחנאיות יותר.
+            </p>
+            <p>
+              זה מקרה מבחן לשאלה רחבה יותר: מתי הצופה מגיב לאדם הפרטי שמולו, ומתי
+              הוא מפסיק לראות את האדם ומתחיל להגיב לקבוצה שהוא חושב שהאדם מייצג?
+            </p>
+            <div class="mechanism"><b>מנגנון הוויראליות:</b> מאבק בין ״האדם״ לבין ״הקבוצה״ — והפלטפורמה משפיעה על התוצאה.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="profile">
+        <div class="profile-grid">
+          <div class="photo-wrap">
+            <div class="photo-tag">pic3</div>
+            <div class="photo-fallback">הכנס כאן את התמונה pic3</div>
+            <img data-base="pic3" alt="דתי־מסורתי־שמרן" onload="this.previousElementSibling.style.display='none'">
+          </div>
+          <div class="profile-copy">
+            <span class="kicker">הזדהות אידאולוגית</span>
+            <h3>דתי־מסורתי־שמרן — ״הוא אומר בדיוק את מה שאני חושב״</h3>
+            <div class="metrics">
+              <span class="metric"><b>337.2K</b> צפיות TikTok</span>
+              <span class="metric"><b>6,364</b> לייקים IG</span>
+              <span class="metric"><b>1,191</b> תגובות IG</span>
+            </div>
+            <p>
+              כאן האהדה היא פחות לאישיות מסתורית ויותר להזדהות פוליטית וחברתית.
+              אחת מתגובות הטיקטוק החזקות ביותר ניסחה זאת במפורש:
+              ״סוף סוף בן אדם שמייצג את הרוב״. תגובות אחרות אמרו למעשה אותו דבר —
+              הוא מייצג אותי, את הדעות שלי, את המחנה שלי.
+            </p>
+            <p>
+              באינסטגרם התמונה הייתה מקוטבת יותר, עם ויכוחים על דת, לימודי ליבה,
+              להט״ב וגיוס. כלומר: אותו אדם מצליח לייצר גם תחושת ייצוג וגם התנגדות
+              אידאולוגית פעילה.
+            </p>
+            <div class="mechanism"><b>מנגנון הוויראליות:</b> הזדהות — הצופה אינו רק אוהב את המרואיין; הוא משתמש בו כדי לומר ״זה אני״.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="profile">
+        <div class="profile-grid">
+          <div class="photo-wrap">
+            <div class="photo-tag">pic4</div>
+            <div class="photo-fallback">הכנס כאן את התמונה pic4</div>
+            <img data-base="pic4" alt="הדתי הרוחני" onload="this.previousElementSibling.style.display='none'">
+          </div>
+          <div class="profile-copy">
+            <span class="kicker">משיכה לדמות</span>
+            <h3>הדתי הרוחני — ״המשיח הוא ידע״</h3>
+            <div class="metrics">
+              <span class="metric"><b>291.3K</b> צפיות TikTok</span>
+              <span class="metric"><b>56.9K</b> לייקים IG</span>
+              <span class="metric"><b>2,635</b> תגובות IG</span>
+            </div>
+            <p>
+              זהו שיאן הלייקים באינסטגרם מכל 72 הסרטונים. הוא עונה לשאלה על זהות
+              דתית ב״שלושתם״, וכאשר נשאל על המשיח הוא משיב: ״המשיח זה ידע״.
+              במקום להיכנס למסגרת הדתית שהשאלה מציעה, הוא משנה את המסגרת.
+            </p>
+            <p>
+              הקהל מגיב פחות לעמדה מפלגתית ויותר לנוכחות: ״אדם מיוחד״, ״חכם״,
+              ״עמוק״, ״אפשר להקשיב לו עוד שעה״. אפילו הביקורת עליו מתייחסת לכך
+              שהוא מדבר בצורה מופשטת — לא למחנה פוליטי.
+            </p>
+            <div class="mechanism"><b>מנגנון הוויראליות:</b> ״אני רוצה להיות ליד אדם כזה״ — האדם גובר כמעט לחלוטין על הקטגוריה.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="profile">
+        <div class="profile-grid">
+          <div class="photo-wrap">
+            <div class="photo-tag">pic5</div>
+            <div class="photo-fallback">הכנס כאן את התמונה pic5</div>
+            <img data-base="pic5" alt="דתי מתון" onload="this.previousElementSibling.style.display='none'">
+          </div>
+          <div class="profile-copy">
+            <span class="kicker">חיבה אנושית</span>
+            <h3>דתי מתון — האיש שמרכך את הנושאים המקטבים</h3>
+            <div class="metrics">
+              <span class="metric"><b>264.5K</b> צפיות TikTok</span>
+              <span class="metric"><b>6,149</b> לייקים IG</span>
+              <span class="metric"><b>260</b> תגובות IG</span>
+              <span class="metric"><b>20.2K</b> לייקים TikTok</span>
+            </div>
+            <p>
+              הוא החמישי בצפיות בטיקטוק, אבל רק במקום ה־24 במספר התגובות
+              באינסטגרם. זהו בדיוק ההפך מסרטון מקטב: הרבה אנשים צופים ומסמנים אהדה,
+              ומעט יחסית מרגישים צורך להתווכח.
+            </p>
+            <p>
+              המילים שחוזרות הן ״טוב״, ״חמוד״, ״מתוק״, ״צנוע״, ״חכם״.
+              התגובה המובילה באינסטגרם — ״איש טוב, השאלות פחות״ — קיבלה 1,620 לייקים.
+              גם המשפט שלו על לימודי ליבה, ״אתה זוכר משהו מהליבה שאתה למדת?״,
+              הפך לרגע שהקהל מצטט ומשתף.
+            </p>
+            <div class="mechanism"><b>מנגנון הוויראליות:</b> האישיות מרככת את הקיטוב — ״הנה אדם דתי, אבל קודם כול אדם טוב״.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="profile">
+        <div class="profile-grid">
+          <div class="photo-wrap">
+            <div class="photo-tag">pic6</div>
+            <div class="photo-fallback">הכנס כאן את התמונה pic6</div>
+            <img data-base="pic6" alt="מתנגדת משטר שמאלנית" onload="this.previousElementSibling.style.display='none'">
+          </div>
+          <div class="profile-copy">
+            <span class="kicker">וויראליות שלילית</span>
+            <h3>מתנגדת משטר שמאלנית — כשלא הלייקים אלא ההתנגדות מפעילה את הסרטון</h3>
+            <p class="candidate-note"><strong>זיהוי בדיעבד:</strong> המרואיינת היא <strong>נאווה רוזוליו</strong>, שהייתה אף היא מועמדת בפריימריז של הדמוקרטים. בניגוד לשני המקרים האחרים, באינסטגרם כבר הופיעו תגובות שמזהות אותה בשמה ובהקשר הפוליטי שלה.</p>
+            <div class="metrics">
+              <span class="metric"><b>52.3K</b> צפיות TikTok</span>
+              <span class="metric"><b>1,262</b> לייקים IG</span>
+              <span class="metric"><b>769</b> תגובות IG</span>
+              <span class="metric"><b>270</b> תגובות TikTok</span>
+            </div>
+            <p>
+              המרואיינת היא רק במקום ה־29 בצפיות TikTok, אבל במקום החמישי במספר
+              התגובות המוצגות באינסטגרם. כלומר, היא אינה ״שיאנית צפייה״ —
+              היא שיאנית של צורך להגיב.
+            </p>
+            <p>
+              כאן מופיע מנגנון אחר: הצופים משתמשים במרואיינת כדי לחזק את המחנה
+              הנגדי. תגובות מסוג ״אחרי ששמעתי אותה — אצביע נתניהו״ אינן רק ביקורת;
+              הן הצהרת זהות פוליטית שמופעלת על ידי הסרטון.
+            </p>
+            <div class="mechanism"><b>מנגנון הוויראליות:</b> גיוס נגדי — הסרטון מפעיל את מי שמתנגד לדמות לא פחות, ולעיתים יותר, ממי שתומך בה.</div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <h2>אותו סרטון, שתי רשתות — שתי תמונות פוליטיות</h2>
+    <p>
+      המקרה של מתנגדת המשטר השמאלנית מאפשר למדוד את אפקט הפלטפורמה בצורה חריגה בבהירות.
+      בסיווג התגובות המובהקות שנאספו, בטיקטוק היה יתרון למתנגדים — אך נשאר גם מחנה
+      תומך גדול. באינסטגרם, לעומת זאת, התמונה הפכה כמעט חד־צדדית.
+    </p>
+
+    <div class="compare">
+      <div class="compare-card">
+        <h3>TikTok — מלל מובהק</h3>
+        <div class="split">
+          <div class="against" style="width:57.3%"></div>
+          <div class="for" style="width:42.7%"></div>
+        </div>
+        <div class="legend">
+          <span><i class="dot against"></i>57.3% נגד</span>
+          <span><i class="dot for"></i>42.7% בעד</span>
+        </div>
+      </div>
+      <div class="compare-card">
+        <h3>Instagram — מלל מובהק</h3>
+        <div class="split">
+          <div class="against" style="width:91.2%"></div>
+          <div class="for" style="width:8.8%"></div>
+        </div>
+        <div class="legend">
+          <span><i class="dot against"></i>91.2% נגד</span>
+          <span><i class="dot for"></i>8.8% בעד</span>
+        </div>
+      </div>
+      <div class="compare-card">
+        <h3>TikTok — לייקים לתגובות מובהקות</h3>
+        <div class="split">
+          <div class="against" style="width:73.2%"></div>
+          <div class="for" style="width:26.8%"></div>
+        </div>
+        <div class="legend">
+          <span><i class="dot against"></i>73.2% נגד</span>
+          <span><i class="dot for"></i>26.8% בעד</span>
+        </div>
+      </div>
+      <div class="compare-card">
+        <h3>Instagram — לייקים לתגובות מובהקות</h3>
+        <div class="split">
+          <div class="against" style="width:96.5%"></div>
+          <div class="for" style="width:3.5%"></div>
+        </div>
+        <div class="legend">
+          <span><i class="dot against"></i>96.5% נגד</span>
+          <span><i class="dot for"></i>3.5% בעד</span>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      זה אינו הבדל קטן בדגשים. אותה דמות ואותו סרטון מקבלים אקולוגיית תגובות שונה:
+      בטיקטוק מתקיימים שני מחנות משמעותיים; באינסטגרם, במדגם שנאסף, ההתנגדות כמעט מוחלטת.
+      לכן ״דעת הרשת״ אינה אוכלוסייה אחת. הפלטפורמה עצמה היא חלק מהתוצאה.
+    </p>
+
+    <h2>מה מלמדים שש הדמויות הבולטות?</h2>
+    <p>
+      הממצא החשוב ביותר אינו שיש סרטונים מצליחים יותר ופחות. הממצא הוא ש<strong>ויראליות אינה תופעה אחת</strong>.
+      אפשר להגיע למאות אלפי צפיות דרך מנגנונים פסיכולוגיים וחברתיים שונים לגמרי:
+      הערצה לדמות, חיבה אנושית, הזדהות עם עמדה, שבירת סטריאוטיפ, תגובת זהות קבוצתית —
+      או אפילו התנגדות חריפה.
+    </p>
+
+    <div class="conclusion">
+      <h3>שישה משפטים שמסכמים את ששת הסרטונים</h3>
+      <p><b>הדתי הרוחני:</b> ״אני רוצה להיות ליד אדם כזה״.</p>
+      <p><b>הדתי המתון:</b> ״אפשר להיות דתי — ועדיין להרגיש חם, אנושי ולא מאיים״.</p>
+      <p><b>הדתי־מסורתי־שמרן:</b> ״הוא אומר בדיוק את מה שאני חושב״.</p>
+      <p><b>הערבי הישראלי המודרני:</b> ״כך יכולה להיראות שותפות ישראלית״.</p>
+      <p><b>הערבייה הדתייה והליברלית:</b> ״האם אני רואה אדם — או נציגת קבוצה?״.</p>
+      <p><b>מתנגדת המשטר השמאלנית:</b> ״אני מגיב כדי להצהיר שאני בצד השני״.</p>
+    </div>
+
+    <p style="margin-top:24px">
+      כאן נמצא גם הערך המחקרי הרחב יותר של ״קו ישר״: לא רק לשאול מה אנשים ברחוב
+      חושבים, אלא לבדוק מה קורה לצופה כאשר אדם זר נכנס למסך. בתוך פחות מדקה הוא
+      עשוי להפוך ל״אחד משלנו״, ל״אחד מהם״ — או פשוט לאדם שהצופה רוצה להמשיך להקשיב לו.
+    </p>
+
+    <details>
+      <summary>הערה מתודולוגית</summary>
+      <p style="margin-top:12px">
+        הניתוח מבוסס על 72 הסרטונים האחרונים שנאספו במחקר. TikTok שימש כציר הסידור
+        המרכזי, ולכל סרטון הוצמדו נתוני צפייה בטיקטוק ונתוני לייקים ותגובות מוצגים
+        באינסטגרם. בחלק מהמקרים נותחו גם תגובות בפועל ולייקים על תגובות.
+      </p>
+      <p>
+        אין לראות במדגם סקר מייצג של הציבור הישראלי. בחירת המרואיינים, עריכת הסרטונים,
+        האלגוריתם של כל פלטפורמה והנטייה של אנשים מסוימים להגיב משפיעים על התוצאה.
+        בנוסף, Instagram מציג לעיתים הערות על תגובות שמקורן בפייסבוק, ולכן נתון
+        ״תגובות Instagram״ במאמר מתייחס למספר התגובות המוצג בממשק ולא בהכרח
+        למספר תגובות Instagram טהורות.
+      </p>
+      <p>
+        בסיווג מתנגדת המשטר השמאלנית חושבו אחוזי בעד/נגד רק מתוך תגובות שניתן היה לסווג
+        באופן מובהק. בטיקטוק מדובר במדגם של 147 תגובות שנשלפו מתוך 270; באינסטגרם
+        נותחו 160 תגובות קריאות מתוך הרשימה שנשלפה.
+      </p>
+    </details>
+
+    <div class="foot">
+      נתונים: מדגם מחקרי של 72 סרטוני ״קו ישר״ · TikTok + Instagram · אוגוסט 2026
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+  const exts = ['jpg','png','webp','jpeg'];
+  document.querySelectorAll('img[data-base]').forEach(img=>{
+    const base = img.dataset.base;
+    let i = 0;
+    function tryNext(){
+      if(i >= exts.length){
+        img.style.display='none';
+        return;
+      }
+      img.src = 'images/' + base + '.' + exts[i++];
+    }
+    img.addEventListener('error', tryNext);
+    tryNext();
+  });
+})();
+</script>
+</body>
+</html>

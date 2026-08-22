@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>כשהעולם נגדנו — את מי אנחנו מאשימים? | אמנון זוסמן</title>
+  <meta name="description" content="בדיקה השוואתית של תגובות גולשים במעריב וב-ynet בין מאי 2025 לאוגוסט 2026 מצביעה על שינוי באופן שבו לחץ בינלאומי על ישראל מתורגם פוליטית: מהאשמת העולם להאשמת הממשלה.">
+  <meta property="og:title" content="כשהעולם נגדנו — את מי אנחנו מאשימים?">
+  <meta property="og:description" content="מאות תגובות גולשים, שתי זירות תקשורתיות ושנה אחת של שינוי: כיצד לחץ בינלאומי על ישראל עבר ממסגרת של התלכדות פטריוטית למסגרת של ביקורת פנימית.">
+  <meta property="og:type" content="article">
+  <meta name="author" content="אמנון זוסמן">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJNJTZQF1F');
+  </script>
+
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --paper:#ffffff;
+      --ink:#172033;
+      --muted:#657086;
+      --line:#e4e9f1;
+      --blue:#285ea8;
+      --blue-soft:#edf4ff;
+      --red:#a93e3e;
+      --red-soft:#fff1f1;
+      --green:#2f7d5b;
+      --green-soft:#eef8f3;
+      --gold:#8a6b18;
+      --gold-soft:#fff8df;
+      --shadow:0 16px 45px rgba(27,39,60,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#eef3f9 0,#f8fafc 320px,#f4f7fb 100%);
+      color:var(--ink);
+      font-family:Arial,"Noto Sans Hebrew","Heebo",sans-serif;
+      line-height:1.72;
+      font-size:18px;
+    }
+    .wrap{
+      width:min(920px,calc(100% - 28px));
+      margin:34px auto 70px;
+    }
+    article{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    header{
+      padding:48px 54px 34px;
+      border-bottom:1px solid var(--line);
+      background:
+        radial-gradient(circle at 90% 0%, rgba(40,94,168,.10), transparent 34%),
+        radial-gradient(circle at 8% 10%, rgba(169,62,62,.06), transparent 27%),
+        #fff;
+    }
+    .kicker{
+      display:inline-block;
+      margin-bottom:13px;
+      padding:5px 11px;
+      border-radius:999px;
+      background:var(--blue-soft);
+      color:var(--blue);
+      font-size:.78rem;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    h1{
+      margin:0 0 13px;
+      font-size:clamp(2.05rem,5vw,3.55rem);
+      line-height:1.08;
+      letter-spacing:-.035em;
+    }
+    .subtitle{
+      max-width:780px;
+      margin:0 0 20px;
+      color:#465268;
+      font-size:1.13rem;
+      line-height:1.55;
+      font-weight:500;
+    }
+    .byline{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+    .byline strong{color:var(--ink)}
+    main{padding:38px 54px 50px}
+    p{margin:0 0 1.15em}
+    .lead{
+      font-size:1.16rem;
+      line-height:1.78;
+    }
+    .thesis{
+      margin:28px 0 34px;
+      padding:22px 24px;
+      border-right:5px solid var(--blue);
+      background:var(--blue-soft);
+      border-radius:13px;
+      font-size:1.08rem;
+      font-weight:700;
+    }
+    h2{
+      margin:38px 0 17px;
+      font-size:1.58rem;
+      line-height:1.25;
+      letter-spacing:-.02em;
+    }
+    .flow{
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      gap:16px;
+      align-items:center;
+      margin:22px 0 34px;
+    }
+    .flow-card{
+      padding:18px 20px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      min-height:122px;
+    }
+    .flow-card.old{background:var(--gold-soft)}
+    .flow-card.new{background:var(--green-soft)}
+    .flow-card strong{
+      display:block;
+      margin-bottom:7px;
+      font-size:1rem;
+    }
+    .arrow{
+      color:var(--muted);
+      font-size:1.8rem;
+      font-weight:700;
+    }
+    .timeline{
+      display:grid;
+      gap:14px;
+      margin:22px 0 30px;
+    }
+    .event{
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:18px;
+      padding:18px 20px;
+      border:1px solid var(--line);
+      border-radius:15px;
+      background:#fff;
+    }
+    .date{
+      font-weight:800;
+      color:var(--blue);
+      font-size:.94rem;
+    }
+    .event h3{
+      margin:0 0 6px;
+      font-size:1.05rem;
+    }
+    .event p{
+      margin:0;
+      color:#4d586d;
+      font-size:.94rem;
+      line-height:1.55;
+    }
+    .metrics{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin:20px 0 30px;
+    }
+    .metric{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:20px;
+      background:#fff;
+    }
+    .metric .num{
+      font-size:1.75rem;
+      line-height:1;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+    .metric p{
+      margin:0;
+      color:#556177;
+      font-size:.9rem;
+      line-height:1.48;
+    }
+    .metric.old .num{color:var(--gold)}
+    .metric.new .num{color:var(--green)}
+    .barbox{
+      margin:18px 0 31px;
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fbfcfe;
+    }
+    .barrow{margin:13px 0 18px}
+    .barlabel{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      font-size:.88rem;
+      margin-bottom:7px;
+      color:#4a556a;
+    }
+    .track{
+      height:12px;
+      background:#e8edf4;
+      border-radius:999px;
+      overflow:hidden;
+    }
+    .fill{
+      height:100%;
+      border-radius:999px;
+      background:currentColor;
+    }
+    .gold{color:#b18a22}
+    .green{color:#3b8d69}
+    .note{
+      margin:25px 0;
+      padding:18px 20px;
+      background:#f7f8fb;
+      border:1px solid var(--line);
+      border-radius:14px;
+      color:#4d586c;
+      font-size:.93rem;
+    }
+    .quote{
+      margin:23px 0;
+      padding:18px 22px;
+      border-right:4px solid var(--red);
+      background:var(--red-soft);
+      border-radius:12px;
+      font-size:1.05rem;
+      font-weight:700;
+    }
+    .conclusion{
+      margin-top:32px;
+      padding:25px 26px;
+      border-radius:17px;
+      background:#172033;
+      color:#fff;
+    }
+    .conclusion h2{
+      color:#fff;
+      margin-top:0;
+    }
+    .conclusion p:last-child{margin-bottom:0}
+    .small{
+      color:var(--muted);
+      font-size:.84rem;
+      line-height:1.55;
+    }
+    footer{
+      padding:22px 54px 30px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.82rem;
+      background:#fbfcfe;
+    }
+    @media (max-width:700px){
+      body{font-size:17px}
+      .wrap{margin-top:14px}
+      header,main,footer{padding-right:22px;padding-left:22px}
+      header{padding-top:34px}
+      .flow{grid-template-columns:1fr}
+      .arrow{transform:rotate(90deg);text-align:center}
+      .event{grid-template-columns:1fr;gap:5px}
+      .metrics{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <article>
+      <header>
+        <div class="kicker">דעת קהל · ישראל 2025–2026</div>
+        <h1>כשהעולם נגדנו — את מי אנחנו מאשימים?</h1>
+        <p class="subtitle">
+          מאות תגובות גולשים מצביעות על שינוי מעניין: לחץ בינלאומי על ישראל, שפעם עורר בעיקר התלכדות נגד העולם,
+          הופך אצל חלק מהקהל לכתב אישום נגד הממשלה עצמה.
+        </p>
+        <div class="byline"><strong>אמנון זוסמן</strong> · 22 באוגוסט 2026</div>
+      </header>
+
+      <main>
+        <p class="lead">
+          במשך שנים היה כמעט מובן מאליו כיצד ישראלים מגיבים ללחץ מבחוץ: העולם מאשים, הישראלים מתלכדים.
+          החרם, הסנקציות או הגינוי נתפסו כהוכחה לצביעות, לאנטישמיות או לעוינות כלפי ישראל. בדיקה של אוספי תגובות
+          ממעריב ומ־ynet, בין מאי 2025 לאוגוסט 2026, מעלה אפשרות שמשהו במנגנון הזה השתנה.
+        </p>
+
+        <div class="thesis">
+          השינוי אינו בהכרח ירידה בפטריוטיות. הוא עשוי להיות שינוי בכתובת שאליה הפטריוטיות מופנית:
+          מי שחושש למעמדה ולעתידה של ישראל, מאשים כעת יותר ויותר את הממשלה בכך שהיא מסכנת אותם.
+        </div>
+
+        <div class="flow" aria-label="השינוי במסגרת הפרשנות">
+          <div class="flow-card old">
+            <strong>המסגרת הישנה</strong>
+            העולם תוקף את ישראל → העולם עוין או צבוע → מתלכדים מול הביקורת.
+          </div>
+          <div class="arrow">←</div>
+          <div class="flow-card new">
+            <strong>המסגרת החדשה</strong>
+            ישראל נשחקת בעולם → זה מסוכן לישראל → הממשלה אחראית לבידוד.
+          </div>
+        </div>
+
+        <h2>מה רואים לאורך הזמן</h2>
+
+        <div class="timeline">
+          <section class="event">
+            <div class="date">מאי 2025<br>מעריב</div>
+            <div>
+              <h3>העולם אשם, והממשלה כמעט מחוץ לדיון</h3>
+              <p>
+                באוסף תגובות לכתבה על איום בסנקציות, המסגרת הדומיננטית הייתה אירופה נגד ישראל, השמאל מסייע לה,
+                וצריך להשיב מלחמה. תגובות שהאשימו את הממשלה היו מיעוט — ואף קיבלו במצטבר יותר דיסלייקים מלייקים.
+              </p>
+            </div>
+          </section>
+
+          <section class="event">
+            <div class="date">אוגוסט 2025<br>בן־דרור ימיני</div>
+            <div>
+              <h3>המסגרת החדשה מופיעה קודם אצל פרשן מרכזי</h3>
+              <p>
+                אצל בן־דרור ימיני כבר מופיע מעבר מהוויכוח על צביעות המערב לאזהרה מפני הפסד מערכתי:
+                בידוד, פגיעה ביצוא, סכנת “דרום אפריקה” והצורך “לעצור את הדימום”.
+              </p>
+            </div>
+          </section>
+
+          <section class="event">
+            <div class="date">אוקטובר 2025<br>ynet</div>
+            <div>
+              <h3>עדיין התלכדות כמעט מוחלטת</h3>
+              <p>
+                בכתבה על יהודים בעולם שקראו לסנקציות, התגובות המובילות היו “בוגדים”, “קאפו”, “אוטואנטישמים”
+                ו“לא יהודים”. עשר תגובות בולטות של הקו הזה קיבלו יחד כ־271 לייקים מול 14 דיסלייקים.
+              </p>
+            </div>
+          </section>
+
+          <section class="event">
+            <div class="date">יוני 2026<br>מעריב</div>
+            <div>
+              <h3>למעלה — המסגרת הישנה; מתחת — ויכוח חדש</h3>
+              <p>
+                בתגובות הראשיות צרפת עדיין הוצגה כאנטישמית, מוסלמית ועוינת. אבל בשכבת הוויכוח התמונה השתנתה:
+                מתוך 12 תגובות משנה גלויות, 9 ערערו על המסגרת הראשית ורק 3 חיזקו אותה.
+              </p>
+            </div>
+          </section>
+
+          <section class="event">
+            <div class="date">יולי–אוגוסט 2026<br>ynet</div>
+            <div>
+              <h3>הביקורת הפנימית עולה לראש הדף</h3>
+              <p>
+                עכשיו כבר לא צריך לחפש אותה בתוך השרשור. “הממשלה שלנו עוינת אותנו יותר מכל מדינה באירופה”,
+                “להיות נגד בן גביר זה לא נגדנו” ו“יש משהו שהממשלה הזאת לא נכשלה בו?” הן תגובות מובילות —
+                וזוכות לרוב גדול בלייקים.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <h2>לא רק מספר התגובות — גם מאזן הלייקים התהפך</h2>
+
+        <div class="metrics">
+          <div class="metric old">
+            <div class="num">95%</div>
+            <p>
+              שיעור התמיכה המשוער בעשר תגובות מובילות של המסגרת הפטריוטית ב־ynet באוקטובר 2025
+              (271 לייקים מול 14 דיסלייקים).
+            </p>
+          </div>
+          <div class="metric new">
+            <div class="num">86%–87%</div>
+            <p>
+              שיעור התמיכה בעשר תגובות מובילות שמפנות אחריות לממשלה ב־ynet ביולי ובאוגוסט 2026.
+            </p>
+          </div>
+        </div>
+
+        <div class="barbox">
+          <div class="barrow">
+            <div class="barlabel">
+              <span>אוקטובר 2025 · “המבקרים מבחוץ נגד ישראל”</span>
+              <strong>95%</strong>
+            </div>
+            <div class="track"><div class="fill gold" style="width:95%"></div></div>
+          </div>
+          <div class="barrow">
+            <div class="barlabel">
+              <span>יולי 2026 · “הממשלה הביאה עלינו את הלחץ”</span>
+              <strong>86%</strong>
+            </div>
+            <div class="track"><div class="fill green" style="width:86%"></div></div>
+          </div>
+          <div class="barrow">
+            <div class="barlabel">
+              <span>אוגוסט 2026 · “הממשלה הביאה את ישראל לבידוד”</span>
+              <strong>87%</strong>
+            </div>
+            <div class="track"><div class="fill green" style="width:87%"></div></div>
+          </div>
+        </div>
+
+        <h2>מה השתנה באמת?</h2>
+
+        <p>
+          הממצא המעניין ביותר אינו רק מעבר מצד אחד של הוויכוח לצד השני, אלא שינוי במעמד של כל עמדה בתוך השיחה.
+          באוקטובר 2025, מי שערער על ההתלכדות הפטריוטית נמצא לעיתים קרובות בתגובות המשנה. ביוני 2026 במעריב
+          כבר רואים רוב כזה בתוך שכבת הוויכוח — אבל לא בראש הרשימה. ביולי–אוגוסט ב־ynet הביקורת הפנימית
+          כבר יושבת למעלה ומגדירה את הטון.
+        </p>
+
+        <div class="quote">
+          השינוי הוא מהתגובה המשנית שמתנגדת לקונצנזוס — אל התגובה הראשית שמגדירה אותו.
+        </div>
+
+        <p>
+          גם התפתחות השיח אצל בן־דרור ימיני מתאימה לתהליך הזה. בין סוף 2023 לאמצע 2025 הוא עבר בהדרגה
+          ממאבק בהסברה ובמוסר הכפול של המערב, להכרה בכך שגם עולם מוטה הוא מציאות אסטרטגית שישראל אינה יכולה
+          להרשות לעצמה להתעלם ממנה. במילים אחרות: המסגרת החדשה נראית קודם אצל פרשן מרכזי, אחר כך בתוך הוויכוח,
+          ולבסוף בראש תגובות הקהל.
+        </p>
+
+        <h2>ומה לגבי בוטים וגורמים זרים?</h2>
+
+        <p>
+          נמצאו תגובות בודדות שנראות חריגות, וביולי–אוגוסט מגיבים אף האשימו זה את זה ב“בוטים איראניים”.
+          אבל אין בחומר שבדקתי סימן לכך שמעורבות זרה מסבירה את המגמה. רוב השיח עשיר בפרטים פנימיים מאוד
+          של הפוליטיקה הישראלית, מגיב באופן ישיר לטענות קודמות ונראה כמו ויכוח בין ישראלים מסוגים שונים.
+          פעילות לא אותנטית נקודתית אפשרית; הסבר מערכתי לשינוי — כרגע לא.
+        </p>
+
+        <div class="note">
+          <strong>חשוב:</strong> זה אינו סקר מייצג. האוספים נלקחו מכתבות שונות, מ־ynet וממעריב, והתגובות מוצגות
+          לפי “הפופולרי ביותר/הטוב ביותר”. לכן הממצאים מלמדים בעיקר על <strong>המסגרת השולטת בשיח הגלוי</strong>,
+          ולא על אחוז מדויק בציבור הישראלי. גם ההבדל בין קהלי האתרים עשוי להסביר חלק מהפער.
+        </div>
+
+        <section class="conclusion">
+          <h2>המסקנה</h2>
+          <p>
+            במאי–אוקטובר 2025 לחץ בינלאומי על ישראל עורר בעיקר תגובת התלכדות והאשמת העולם. עד קיץ 2026,
+            לפחות בשיח של ynet, אותה פגיעה במעמדה של ישראל הפכה אצל חלק גדול מהמגיבים לראיה נגד הממשלה עצמה.
+          </p>
+          <p>
+            אין כאן בהכרח פחות פטריוטיות. ייתכן שיש כאן פטריוטיות מסוג אחר: החשש לביטחונה, לכלכלתה ולמעמדה
+            של ישראל נשאר — אבל מי שנתפס כיום כאיום עליהם אינו רק העולם שבחוץ, אלא גם ההנהגה שבפנים.
+          </p>
+        </section>
+
+        <p class="small" style="margin-top:26px">
+          הבסיס לניתוח: אוספי תגובות שנאספו ידנית מכתבות מעריב ו־ynet, לצד השוואה איכותנית של מאמרי דעה
+          והתבטאויות של בן־דרור ימיני. המספרים המופיעים בטקסט הם קידוד השוואתי של האוספים שנבדקו ואינם מדגם סטטיסטי מייצג.
+        </p>
+      </main>
+
+      <footer>
+        אמנון זוסמן · חינוך פוליטי ציבורי / Public Political Education · 22.08.2026
+      </footer>
+    </article>
+  </div>
+</body>
+</html>

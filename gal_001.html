@@ -4,99 +4,169 @@
     <meta charset="UTF-8">
     <title>מסמך פנימי - תובנות ראשוניות מתגובות הציבור לסעיפי המצע</title>
     
-    <!-- Google Analytics (GA4) Tracking Code -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_MEASUREMENT_ID"></script>
+    <!-- Google Analytics 4 (GA4) - מפתח מעקב פעיל -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      // החלף את G-YOUR_MEASUREMENT_ID במפתח המעקב שלך לגוגל אנליטיקס
-      gtag('config', 'G-YOUR_MEASUREMENT_ID');
+      gtag('config', 'G-TJNJTZQF1F');
     </script>
 
     <style>
+        :root {
+            --bg: #f1f5f9;
+            --paper: #ffffff;
+            --ink: #1e293b;
+            --muted: #64748b;
+            --line: #cbd5e1;
+            --navy: #0f172a;
+            --blue-accent: #2563eb;
+            --blue-soft: #eff6ff;
+            --badge-red: #b91c1c;
+            --appendix-bg: #f8fafc;
+        }
+
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f1f5f9;
-            color: #1e293b;
-            line-height: 1.6;
+            font-family: Arial, "Noto Sans Hebrew", "Heebo", sans-serif;
+            background-color: var(--bg);
+            color: var(--ink);
+            line-height: 1.8;
             margin: 0;
             padding: 40px 20px;
         }
+
         .memo-container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
             overflow: hidden;
         }
+
         .memo-header {
-            background-color: #0f172a;
+            background-color: var(--navy);
             color: #ffffff;
-            padding: 30px;
-            text-align: right;
-            border-bottom: 4px solid #2563eb;
+            padding: 35px 40px;
+            border-bottom: 4px solid var(--blue-accent);
         }
+
         .internal-badge {
             display: inline-block;
-            background-color: #b91c1c;
+            background-color: var(--badge-red);
             color: white;
             font-size: 11px;
             font-weight: 700;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 4px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
+
         .memo-header h1 {
-            margin: 0 0 8px 0;
-            font-size: 22px;
+            margin: 0 0 10px 0;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            line-height: 1.2;
             font-weight: 700;
         }
+
         .memo-header p {
             margin: 0;
             color: #94a3b8;
-            font-size: 14px;
+            font-size: 1.05rem;
         }
+
         .memo-body {
-            padding: 35px;
+            padding: 40px;
         }
+
         h2 {
             color: #1e3a8a;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 8px;
-            margin-top: 28px;
-            font-size: 17px;
+            margin-top: 32px;
+            font-size: 1.3rem;
         }
+
+        h3 {
+            color: #0f172a;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin: 0 0 1.2em;
+        }
+
         .highlight-box {
-            background-color: #eff6ff;
-            border-right: 4px solid #2563eb;
-            padding: 16px;
-            margin: 20px 0;
-            border-radius: 0 6px 6px 0;
+            background-color: var(--blue-soft);
+            border-right: 5px solid var(--blue-accent);
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.05rem;
         }
+
         .highlight-box strong {
             color: #1e40af;
         }
+
         ul {
-            padding-right: 20px;
+            padding-right: 24px;
+            margin-top: 10px;
         }
+
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
+
         .talent-name {
             font-weight: 700;
-            color: #0f172a;
+            color: var(--navy);
         }
+
+        .appendix-section {
+            background-color: var(--appendix-bg);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .appendix-section h2 {
+            margin-top: 0;
+            color: #1e293b;
+            border-bottom: 2px solid var(--blue-accent);
+        }
+
+        .talent-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+
+        .talent-card p {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
         .signature {
-            margin-top: 45px;
+            margin-top: 40px;
             border-top: 1px solid #e2e8f0;
             padding-top: 20px;
-            font-weight: 600;
+            font-weight: 700;
             color: #334155;
+            font-size: 1.1rem;
+        }
+
+        @media(max-width: 600px) {
+            body { padding: 15px 10px; }
+            .memo-header, .memo-body { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -105,28 +175,49 @@
         <div class="memo-header">
             <span class="internal-badge">מסמך פנימי / בלעדי למטה</span>
             <h1>תובנות ראשוניות מתגובות הציבור לסעיפי המצע</h1>
-            <p>סקירה אופרטיבית להפעלת "הקומנדו האזרחי"</p>
+            <p>ניתוח אופרטיבי והצעה להפעלת "הקומנדו האזרחי"</p>
         </div>
         
         <div class="memo-body">
             <div class="highlight-box">
-                <strong>אקשן אייטם מיידי:</strong> בעקבות סקירה ראשונית של תגובות הציבור למצע, עולה הזדמנות אופרטיבית לגייס ולחבר טאלנטים איכותיים מתוך השטח לטובת חידוד מסרים מול קהלי יעד מתלבטים.
+                <strong>אקשן אייטם מיידי (מתוך הסקירה הראשונית):</strong> הפעלת <strong>"קומנדו אזרחי"</strong> מבוסס טאלנטים שנוטרו מתוך המגיבים, לצורך חידוד ודיוק מסרים מול קהלי יעד מתלבטים.
             </div>
 
-            <h2>הקמת "הקומנדו האזרחי" מתוך המגיבים</h2>
-            <p>מתוך ניתוח תגובות הציבור, התגלה פוטנציאל אנושי יוצא דופן: אזרחים שהצטיינו במקוריות הרעיונות, בקוהרנטיות גבוהה, ובנכונות אמיתית לסייע – בין אם באמירה מפורשת ובין אם מעצם השקעתם בתגובה מלומדת ומקצועית.</p>
+            <h2>הולדת מיזם "הקומנדו האזרחי"</h2>
+            <p>מתוך ניתוח תגובות הציבור לסעיפי המצע, התגלה פוטנציאל אנושי יוצא דופן. אזרחים רבים לא הסתפקו בהערות שטח פשוטות, אלא הפגינו מקוריות רעיונות, קוהרנטיות גבוהה, ונכונות אמיתית לסייע למפלגה – הן באמירה מפורשת והן מעצם השקעתם בתגובה מלומדת ומעמיקה.</p>
             
-            <p>אנשים ואיכויות בולטות במיוחד נמצאו אצל:</p>
+            <p>בין הטאלנטים שהצטיינו ונבחרו כגרעין ראשוני לפעילות בולטים:</p>
             <ul>
-                <li><span class="talent-name">עמוס שני</span> – שהציג תפיסת חקיקה מקיפה וכלים מתקדמים למנהל תקין ומאבק בפייק ניוז.</li>
-                <li><span class="talent-name">ד"ר צופיה יועד</span> – לשעבר בכירה במשרד החינוך, שהציעה רפורמה פדגוגית מעמיקה והביעה נכונות לתרומה פעילה.</li>
+                <li><span class="talent-name">עמוס שני</span> – שהציג תפיסת חקיקה מקיפה, קוהרנטית וכלים מתקדמים למנהל תקין ומאבק בפייק ניוז.</li>
+                <li><span class="talent-name">ד"ר צופיה יועד</span> – לשעבר בכירה במשרד החינוך, שהציעה רפורמה פדגוגית מעמיקה והביעה נכונות תרומה פעילה למערכת.</li>
             </ul>
 
             <h2>מתווה הפעילות המבצעי</h2>
+            <p>אותם טאלנטים שאותרו כבר עכשיו מהווים נכס אופרטיבי, וניתן לפנות אליהם כדי לרתום אותם למשימות הבאות:</p>
             <ul>
-                <li><strong>בטווח המיידי:</strong> פנייה אל הטאלנטים הללו לרתימתם לחידוד ודיוק מסרים מול קבוצת המתלבטים ב"גבול עם אייזנקוט" (קהל יעד שקרוב אידיאולוגית למחנה).</li>
-                <li><strong>בטווח ההמשכי:</strong> הרחבת הפעילות מול קבוצות מתלבטים נוספות, לרבות קהלים מרוחקים בהרבה מהגבול המפלגתי הטבעי.</li>
+                <li><strong>בטווח המיידי:</strong> רתימת הטאלנטים לחידוד, בנייה ודיוק מסרים מול קבוצת המתלבטים ב<strong>"גבול עם אייזנקוט"</strong> (קהל יעד שקרוב אידיאולוגית למחנה).</li>
+                <li><strong>בטווח ההמשכי:</strong> הרחבת הפעילות והפניית המסרים מול קבוצות מתלבטים נוספות, לרבות קהלים מרוחקים בהרבה מהגבול המפלגתי הטבעי.</li>
             </ul>
+
+            <!-- נספח מפורט -->
+            <div class="appendix-section">
+                <h2>נספח: פרופיל מקצועי והסבר על בחירת ה"טלנטים"</h2>
+                <p>להלן הפירוט המלא של התגובות והנימוקים המקצועיים שהובילו להגדרתם כנכס אסטרטגי לקמפיין:</p>
+
+                <div class="talent-card">
+                    <h3>1. עמוס שני (שם משתמש: עמוס שנ)</h3>
+                    <p><strong>פרטים ליצירת קשר:</strong> אימייל <code>shaniamos@gmail.com</code> | קטגוריה: מדיני-ביטחוני / חקיקה.</p>
+                    <p><strong>מה מסר בתגובתו:</strong> הגיש הצעה מקיפה הכוללת סדרה של 15 הצעות חוק מפורטות ומובנות (כגון: חוק יסוד הכרזת העצמאות, חוק השוויון בנטל, חוק חופש הדת ועוד). בנוסף, פיתח תפיסה ממוקדת להתמודדות עם תרבות השקר והפייק ניוז של אנשי ציבור, תוך התבססות מדעית-משפטית על מחקרו של ד"ר אלעד אורג מהאוניברסיטה העברית, הכוללת סעדים מנהליים והצעות רגולטוריות ברורות.</p>
+                    <p><strong>למה הוחלט שהוא "טלנט":</strong> עמוס פועל למעשה כחוקר מדיניות ציבורית לכל דבר. העובדה שניסח ארגז כלים משפטי וחקיקתי שלם מעידה על יכול-על בניתוח מערכתי. הוא מהווה נכס אסטרטגי לצוות התוכן והחקיקה של המטה, ויכול לסייע בחיבור הקריטי שבין מנהל תקין, טוהר מידות וביטחון לאומי.</p>
+                </div>
+
+                <div class="talent-card">
+                    <h3>2. דר' צופיה יועד</h3>
+                    <p><strong>פרטים ליצירת קשר:</strong> אימייל <code>zofiayd@gmail.com</code> | קטגוריה: חינוך.</p>
+                    <p><strong>מה מסרה בתגובתה:</strong> הציגה תשתית פדגוגית ברורה הדורשת מעבר ללמידה משמעותית, פיתוח חשיבה מסדר גבוה, ובניית מערך הערכה שאינו מתבסס על שינון. חתמה את פנייתה בהצהרה מפורשת וחד-משמעית: <em>"בעברי הייתי בתפקיד בכיר במשרד החינוך ואשמח לתרום אם משרד החינוך ישנה פניו, שינוי אמיתי"</em>.</p>
+                    <p><strong>למה הוחלט שהיא "טלנט":</strong> מדובר במומחית תוך-מערכתית (Insider) לשעבר במערכת החינוך, שמביאה איתה ניסיון ניהולי ומקצועי בכיר. העובדה שהרימה את היד באופן יזום והציעה להירתם לעבודה מעשית הופכת אותה לנכס מיידי לצוות המקצועי שבונה את תוכניות העבודה של המפלגה מול קהלי הורים ומערכת החינוך.</p>
+                </div>
+            </div>
 
             <div class="signature">
                 בברכה,<br>

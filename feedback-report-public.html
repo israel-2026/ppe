@@ -1,0 +1,398 @@
+<title>משוב הציבור על המצע</title>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TJNJTZQF1F');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;700&display=swap">
+
+<style>
+:root{
+  --paper:#F5F7F8;
+  --surface:#FFFFFF;
+  --surface-2:#EDF1F3;
+  --ink:#14202E;
+  --ink-2:#3D4C5C;
+  --muted:#6B7885;
+  --rule:#D7DEE3;
+  --navy:#2E5E8C;
+  --brick:#AC442A;
+  --teal:#2C7161;
+  --amber:#9C6511;
+  --bar:#2E5E8C;
+  --bar-soft:#C3D3E1;
+  --alert:#B01F14;
+  --alert-bg:#FBEDEB;
+  --shadow:0 1px 2px rgba(20,32,46,.06),0 8px 24px rgba(20,32,46,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F151C;
+    --surface:#161E27;
+    --surface-2:#1C2731;
+    --ink:#E6EBEF;
+    --ink-2:#B7C2CC;
+    --muted:#8A97A3;
+    --rule:#2A3844;
+    --navy:#7FB0DC;
+    --brick:#E0876B;
+    --teal:#6BBBA6;
+    --amber:#D8A245;
+    --bar:#5D93C4;
+    --bar-soft:#263949;
+    --alert:#FF8A73;
+    --alert-bg:#2A1614;
+    --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F151C;
+  --surface:#161E27;
+  --surface-2:#1C2731;
+  --ink:#E6EBEF;
+  --ink-2:#B7C2CC;
+  --muted:#8A97A3;
+  --rule:#2A3844;
+  --navy:#7FB0DC;
+  --brick:#E0876B;
+  --teal:#6BBBA6;
+  --amber:#D8A245;
+  --bar:#5D93C4;
+  --bar-soft:#263949;
+  --alert:#FF8A73;
+  --alert-bg:#2A1614;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  direction:rtl;
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Assistant","Segoe UI",system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.7;
+  font-weight:400;
+}
+.wrap{max-width:60rem;margin:0 auto;padding:clamp(1.5rem,4vw,3.5rem) clamp(1rem,4vw,2.5rem) 5rem}
+h1,h2,h3{font-family:"Frank Ruhl Libre",Georgia,serif;text-wrap:balance;margin:0}
+h1{font-weight:900;font-size:clamp(2rem,5vw,3.1rem);line-height:1.15;letter-spacing:-.01em}
+h2{font-weight:700;font-size:clamp(1.4rem,3vw,1.85rem);line-height:1.25}
+h3{font-weight:700;font-size:1.12rem;line-height:1.35}
+p{margin:0}
+a{color:var(--navy)}
+
+/* ---------- סימון מסך פנימי ---------- */
+.internal{
+  display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;
+  background:var(--surface-2);border:1px solid var(--rule);border-radius:3px;
+  padding:.6rem .9rem;margin-bottom:1.8rem;
+  font-family:"Heebo",sans-serif;font-size:.85rem;font-weight:700;color:var(--ink-2)
+}
+.internal .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--navy);flex:none}
+.internal span.note{font-weight:400}
+
+/* ---------- כותרת ---------- */
+.masthead{border-bottom:2px solid var(--ink);padding-bottom:1.6rem;margin-bottom:2.4rem}
+.byline{
+  margin-top:1.1rem;font-family:"Heebo",sans-serif;font-size:.9rem;color:var(--muted);
+  display:flex;gap:.75rem;align-items:baseline;flex-wrap:wrap
+}
+.byline b{font-weight:700;color:var(--ink-2)}
+.byline time{font-variant-numeric:tabular-nums}
+.eyebrow{
+  font-family:"Heebo",sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.16em;
+  color:var(--muted);text-transform:none;margin-bottom:.9rem;display:flex;gap:.9rem;flex-wrap:wrap
+}
+.eyebrow span:not(:last-child)::after{content:"·";margin-inline-start:.9rem;color:var(--rule)}
+.standfirst{margin-top:1rem;font-size:1.16rem;color:var(--ink-2);max-width:46rem}
+
+/* ---------- לוח מספרים ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin:2.5rem 0 3rem}
+.stat{background:var(--surface);padding:1.1rem 1.15rem;display:flex;flex-direction:column;gap:.2rem}
+.stat b{font-family:"Heebo",sans-serif;font-size:1.85rem;font-weight:700;line-height:1;
+  font-variant-numeric:tabular-nums;color:var(--ink)}
+.stat small{font-size:.83rem;color:var(--muted);line-height:1.4}
+.stat.hi b{color:var(--brick)}
+
+section{margin-block:3.2rem}
+.sec-head{display:flex;align-items:baseline;gap:.8rem;border-bottom:1px solid var(--rule);
+  padding-bottom:.6rem;margin-bottom:1.5rem}
+.sec-head .n{font-family:"Heebo",sans-serif;font-size:.8rem;font-weight:700;color:var(--muted);
+  font-variant-numeric:tabular-nums}
+
+/* ---------- ממצאים ---------- */
+.findings{display:flex;flex-direction:column;gap:1.1rem;counter-reset:f}
+.finding{background:var(--surface);border:1px solid var(--rule);border-radius:3px;
+  padding:1.1rem 1.3rem;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;gap:1rem}
+.finding::before{counter-increment:f;content:counter(f);font-family:"Heebo",sans-serif;
+  font-weight:700;font-size:.85rem;color:var(--surface);background:var(--navy);
+  width:1.6rem;height:1.6rem;border-radius:50%;display:grid;place-items:center;margin-top:.25rem}
+.finding h3{margin-bottom:.25rem}
+.finding p{color:var(--ink-2);font-size:.97rem}
+
+/* ---------- טבלת נושאים ---------- */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:right;padding:.55rem .7rem;border-bottom:1px solid var(--rule);vertical-align:middle}
+th{font-family:"Heebo",sans-serif;font-size:.78rem;font-weight:700;color:var(--muted);
+  letter-spacing:.04em;border-bottom:1.5px solid var(--ink)}
+td.num{font-family:"Heebo",sans-serif;font-variant-numeric:tabular-nums;font-weight:500;width:3.5rem}
+.barcell{width:44%;min-width:8rem}
+.bar{height:.62rem;border-radius:1px;background:var(--bar);display:block}
+.bar.soft{background:var(--bar-soft)}
+tbody tr:hover{background:var(--surface-2)}
+
+/* ---------- פערים ---------- */
+.gap{background:var(--surface);border:1px solid var(--rule);border-inline-start:3px solid var(--brick);
+  border-radius:3px;padding:1.2rem 1.35rem;margin-bottom:1.2rem;box-shadow:var(--shadow)}
+.gap-top{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
+.count{font-family:"Heebo",sans-serif;font-size:.8rem;font-weight:700;color:var(--brick);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.gap p{color:var(--ink-2);font-size:.97rem}
+blockquote{margin:.9rem 0 0;padding:.15rem 1rem .15rem 0;border-inline-start:2px solid var(--rule);
+  font-family:"Frank Ruhl Libre",Georgia,serif;font-size:1.02rem;line-height:1.55;color:var(--ink)}
+blockquote cite{display:block;font-family:"Heebo",sans-serif;font-style:normal;font-size:.8rem;
+  color:var(--muted);margin-top:.3rem}
+
+/* ---------- סיכון ---------- */
+.risk td:first-child{font-weight:600}
+.chip{display:inline-block;font-family:"Heebo",sans-serif;font-size:.72rem;font-weight:700;
+  padding:.12rem .5rem;border-radius:2px;white-space:nowrap}
+.chip.now{background:var(--brick);color:#fff}
+.chip.soon{background:var(--amber);color:#fff}
+.chip.pol{background:var(--navy);color:#fff}
+.chip.str{background:var(--teal);color:#fff}
+
+/* ---------- פעולות ---------- */
+.actions{display:flex;flex-direction:column;gap:.65rem}
+.action{display:grid;grid-template-columns:7rem 1fr;gap:1rem;align-items:start;
+  background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:.85rem 1.1rem}
+.action p{font-size:.97rem;color:var(--ink-2)}
+.action strong{color:var(--ink);font-weight:600}
+
+footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--rule);
+  font-size:.85rem;color:var(--muted)}
+footer p+p{margin-top:.5rem}
+@media (max-width:34rem){
+  .finding{grid-template-columns:1fr}
+  .finding::before{display:none}
+  .action{grid-template-columns:1fr;gap:.35rem}
+}
+</style>
+
+<div class="wrap">
+
+<div class="internal">
+  <span class="dot"></span>
+  שמות הפונים הוסרו מגרסה זו
+  <span class="note">הציטוטים מובאים כלשונם; הזיהוי נשמר בקובץ הפנימי בלבד</span>
+</div>
+
+<header class="masthead">
+  <div class="eyebrow"><span>מטה המפלגה הדמוקרטית</span><span>ניתוח משוב ציבורי</span></div>
+  <h1>268 אנשים קראו את המצע וכתבו לנו מה חסר בו</h1>
+  <p class="standfirst">כל הפניות שהתקבלו בטופס המשוב בין 4 ביוני ל-23 באוגוסט 2026, נקראו ותויגו במלואן. זהו קהל אוהד וקשוב — ורובו יוצא מהמצע בלי לדעת מה אנחנו מתכוונים לעשות.</p>
+  <p class="byline"><b>אמנון זוסמן</b><time datetime="2026-08-25">25 באוגוסט 2026</time></p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>268</b><small>פניות בסך הכול</small></div>
+  <div class="stat hi"><b>41%</b><small>אומרים "לא כתוב" או "לא ברור"</small></div>
+  <div class="stat"><b>130</b><small>הצעות מדיניות קונקרטיות</small></div>
+  <div class="stat hi"><b>140</b><small>ממתינים למענה אישי</small></div>
+  <div class="stat"><b>2%</b><small>בלבד פניות עוינות</small></div>
+  <div class="stat"><b>7</b><small>הצהירו שהקול שלהם על הכף</small></div>
+</div>
+
+<section>
+  <div class="sec-head"><span class="n">ממצאים</span><h2>שבעה דברים שעולים מהקריאה</h2></div>
+  <div class="findings">
+
+    <div class="finding"><div>
+      <h3>הנושא המדיני הוא הפצע הפתוח</h3>
+      <p>25 פניות — האשכול הגדול ביותר — דורשות אמירה מפורשת על עתיד השטחים. הנוסח החוזר: "אני מבין שמנסים להימנע מכך, אבל אי אפשר". 13 נוספות עוסקות בשלום ובחזון מדיני, מהן 5 שמצביעות על כך שהמילה "שלום" נעדרת מהמצע.</p>
+    </div></div>
+
+    <div class="finding"><div>
+      <h3>הגמלאים הם הקהל השני בגודלו — ובעוצמתו הרגשית</h3>
+      <p>29 פניות על קצבת זקנה, פנסיה והזדקנות בכבוד, רבות מהן אישיות עד כאב. זהו בסיס המצביעים ההיסטורי של המחנה, והוא מרגיש בלתי-נראה.</p>
+    </div></div>
+
+    <div class="finding"><div>
+      <h3>"לא מצאתי את המילה ערבים"</h3>
+      <p>18 פניות על מקומם של האזרחים הערבים, לא כשאלה אידיאולוגית אלא כתצפית טקסטואלית. מתפקדת אחת כתבה בעקבות זה שהיא "מתנדנדת".</p>
+    </div></div>
+
+    <div class="finding"><div>
+      <h3>14 פניות הן על אופן ההצגה, לא על התוכן</h3>
+      <p>"מכבסת מילים", "סיסמאות", "כללי מדי", "אי אפשר לשתף סרטון של 50 דקות". זו הבעיה היחידה ברשימה שאפשר לפתור בשבועיים בלי לשנות אף עמדה.</p>
+    </div></div>
+
+    <div class="finding"><div>
+      <h3>הקטגוריות בטופס לא עובדות</h3>
+      <p>פנייה על בריאות הנפש תויגה "סביבה ובעלי חיים"; פנייה על תאונות דרכים תויגה "ביטחון ומדיניות חוץ". כל ניתוח שיסתמך על שדה הקטגוריה בטופס יטעה. הקובץ המתויג מתקן זאת.</p>
+    </div></div>
+
+    <div class="finding"><div>
+      <h3>156 השאירו אימייל. אף אחד לא קיבל תשובה</h3>
+      <p>עמודות "סטטוס טיפול" ו"הערות" ריקות ב-100% מהשורות. 140 מהפניות מצדיקות מענה אישי — חוב פתוח מול אנשים שרבים מהם מתפקדים.</p>
+    </div></div>
+
+    <div class="finding"><div>
+      <h3>שבעה פונים הציעו את עצמם כמשאב</h3>
+      <p>בכירה לשעבר במשרד החינוך, מומחית לחקלאות מחדשת, פעיל בטיחות בדרכים, מפעיל תשתית וידאו עצמאית, ומציע להקים פורום ביטחוני מקצועי. איש מהם לא קיבל מענה.</p>
+    </div></div>
+
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="n">נפח</span><h2>הנושאים לפי מספר הפניות</h2></div>
+  <p style="color:var(--ink-2);font-size:.95rem;margin-bottom:1.2rem">פנייה הנוגעת בכמה נושאים נספרת בכל אחד מהם. העמודה השנייה סופרת רק פניות שזהו נושאן המרכזי — היא המדד הטוב יותר לעוצמה.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>נושא</th><th>אזכורים</th><th class="barcell">נפח</th><th>כנושא מרכזי</th></tr></thead>
+    <tbody>
+      <tr><td>הסדר מדיני ושתי מדינות</td><td class="num">25</td><td class="barcell"><span class="bar" style="width:60%"></span></td><td class="num">25</td></tr>
+      <tr><td>חינוך: כיתות, מורים ותוכן</td><td class="num">42</td><td class="barcell"><span class="bar" style="width:100%"></span></td><td class="num">20</td></tr>
+      <tr><td>אזרחים ותיקים וקצבאות זקנה</td><td class="num">29</td><td class="barcell"><span class="bar" style="width:69%"></span></td><td class="num">23</td></tr>
+      <tr><td>הפרדת דת ומדינה</td><td class="num">24</td><td class="barcell"><span class="bar" style="width:57%"></span></td><td class="num">15</td></tr>
+      <tr><td>יוקר מחיה, תחרות ודיור</td><td class="num">25</td><td class="barcell"><span class="bar" style="width:60%"></span></td><td class="num">12</td></tr>
+      <tr><td>חוקה, מגילת העצמאות וחוק הלאום</td><td class="num">21</td><td class="barcell"><span class="bar" style="width:50%"></span></td><td class="num">14</td></tr>
+      <tr><td>סיום הכיבוש, מאחזים וטרור מתנחלים</td><td class="num">20</td><td class="barcell"><span class="bar" style="width:48%"></span></td><td class="num">14</td></tr>
+      <tr><td>חרדים, לימודי ליבה ואוטונומיה</td><td class="num">21</td><td class="barcell"><span class="bar" style="width:50%"></span></td><td class="num">12</td></tr>
+      <tr><td>גיוס ושוויון בנטל</td><td class="num">20</td><td class="barcell"><span class="bar" style="width:48%"></span></td><td class="num">12</td></tr>
+      <tr><td>אזרחים ערבים — שוויון וייצוג</td><td class="num">18</td><td class="barcell"><span class="bar" style="width:43%"></span></td><td class="num">13</td></tr>
+      <tr><td>תיקון המשטר: מינויים, ועדות חקירה, כהונה</td><td class="num">20</td><td class="barcell"><span class="bar" style="width:48%"></span></td><td class="num">10</td></tr>
+      <tr><td>חתירה לשלום וחזון מדיני</td><td class="num">13</td><td class="barcell"><span class="bar" style="width:31%"></span></td><td class="num">10</td></tr>
+      <tr><td>ביטחון שוטף, גבולות ועוטף</td><td class="num">15</td><td class="barcell"><span class="bar" style="width:36%"></span></td><td class="num">9</td></tr>
+      <tr><td>תחבורה ציבורית ותשתיות</td><td class="num">18</td><td class="barcell"><span class="bar" style="width:43%"></span></td><td class="num">7</td></tr>
+      <tr><td>אופן הצגת המצע ותקשורת המפלגה</td><td class="num">25</td><td class="barcell"><span class="bar soft" style="width:60%"></span></td><td class="num">7</td></tr>
+      <tr><td>שחיתות וטוהר המידות</td><td class="num">14</td><td class="barcell"><span class="bar" style="width:33%"></span></td><td class="num">7</td></tr>
+      <tr><td>בריאות ובריאות הנפש</td><td class="num">9</td><td class="barcell"><span class="bar" style="width:21%"></span></td><td class="num">5</td></tr>
+      <tr><td>נכים ובעלי מוגבלויות</td><td class="num">8</td><td class="barcell"><span class="bar" style="width:19%"></span></td><td class="num">3</td></tr>
+      <tr><td>חקלאות וביטחון תזונתי</td><td class="num">7</td><td class="barcell"><span class="bar" style="width:17%"></span></td><td class="num">3</td></tr>
+      <tr><td>בטיחות בדרכים</td><td class="num">6</td><td class="barcell"><span class="bar" style="width:14%"></span></td><td class="num">1</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="n">בלשונם</span><h2>הפערים הגדולים, במילים של הפונים</h2></div>
+
+  <div class="gap">
+    <div class="gap-top"><h3>הסדר מדיני</h3><span class="count">25 פניות</span></div>
+    <p>הדרישה אחידה להפליא: לא "תסכימו איתי", אלא "תגידו מה אתם חושבים".</p>
+    <blockquote>אין תכנית מדינית לעתיד השטחים — מדינה פלסטינית? קונפדרציה? אוטונומיה? סיפוח? זה מאוד בולט ואני מבין שמנסים להימנע מכך אבל אי אפשר.<cite>פנייה 31</cite></blockquote>
+    <blockquote>זה לא מוזכר פה, כנראה משיקולים אלקטורליים. אני לא אוהב את זה, זה גורע מאמינות המפלגה.<cite>פנייה 255</cite></blockquote>
+    <p style="margin-top:1rem"><strong>הערה:</strong> שתיקת המצע כאן היא ככל הנראה החלטה מודעת ולא השמטה. הנתון שכדאי לשקול לפיו: מבין 268 הפונים — קהל הליבה — איש לא ביקש <em>פחות</em> אמירה מדינית. מחיר השתיקה משולם כאן בוודאות; התועלת שלה נמדדת אצל קהל שאינו פונה לטופס הזה.</p>
+  </div>
+
+  <div class="gap">
+    <div class="gap-top"><h3>המילה "שלום" נעדרת</h3><span class="count">5 פניות מפורשות</span></div>
+    <blockquote>היעדרות המילה שלום מהמצע בולטת וזועקת, אנחנו צריכים לחרוט אותה על דגלנו ולא להתקרנף.<cite>פנייה 50</cite></blockquote>
+    <p style="margin-top:.9rem">זהו הפער הזול ביותר לסגירה: מילה אחת בכותרת פרק, בלי לשנות אף התחייבות מעשית.</p>
+  </div>
+
+  <div class="gap">
+    <div class="gap-top"><h3>אזרחים ותיקים וקצבאות</h3><span class="count">29 פניות</span></div>
+    <blockquote>אני כבר 20 שנה אלמנה וגימלאית שרק השנה העלו לי את הקצבאות לסך של 4,080 ש"ח. כמוני יש רבות במדינה הזו.<cite>פנייה 209</cite></blockquote>
+    <blockquote>יש תכניות לשינוי הפנסיה של האזרח המבוגר, כדי שלא ימכור בקבוקים ריקים כתוספת להכנסה?<cite>פנייה 25</cite></blockquote>
+    <p style="margin-top:.9rem">הדרישה המדויקת ביותר, בשש פניות נפרדות: <strong>החזרת הצמדת קצבת הזקנה לשכר הממוצע במשק</strong> — עם נימוק פוליטי מוכן מראש, "עוד משהו שנתניהו הרס ואנחנו באים לתקן".</p>
+  </div>
+
+  <div class="gap">
+    <div class="gap-top"><h3>האזרחים הערבים</h3><span class="count">18 פניות</span></div>
+    <blockquote>לא מצאתי את המילה ערבים או פלסטינאים. רק פעם אחת "מיעוטים" ופעם אחת "טרור יהודי". נרשמתי למפלגה אבל עכשיו מתנדנדת.<cite>פנייה 41</cite></blockquote>
+    <blockquote>מספרם של ערביי ישראל אינו נופל מהמיעוט החרדי. חיזוק והבלטת הקשר של הדמוקרטים עם ערביי ישראל עשוי להיות game changer במערכת הבחירות הזו.<cite>פנייה 35</cite></blockquote>
+  </div>
+
+  <div class="gap">
+    <div class="gap-top"><h3>חוקה, מגילת העצמאות וחוק הלאום</h3><span class="count">21 פניות</span></div>
+    <p>"מה עם חוקה?????" חוזר שוב ושוב. ביקורת ספציפית: המצע מבטיח <em>לתקן</em> את חוק הלאום, ולפחות שלושה פונים דורשים <em>לבטלו</em> ולהחליפו בחוק יסוד: מגילת העצמאות.</p>
+    <blockquote>גם אם תתקנו אותו, השם "חוק הלאום" הוא במקורו סמל לאומני.<cite>פנייה 229</cite></blockquote>
+  </div>
+
+  <div class="gap">
+    <div class="gap-top"><h3>נושאים שנעדרים לגמרי, לפי הפונים</h3><span class="count">45 פניות</span></div>
+    <p>בריאות ובריאות הנפש (9) · נכים ובעלי מוגבלויות (8) · חקלאות (7) · תאונות דרכים ובטיחות (6) · בעלי חיים (5) · בינה מלאכותית ורגולציה (3) · נמל התעופה ברמת דוד (2, בעוצמה גבוהה) · תרבות · מבקשי מקלט · ישראלים ברילוקיישן · אנשי ביטחון בשירות קבע שאינם מילואימניקים.</p>
+    <blockquote>איך קורה שנושא הגנת הסביבה נמצא במצע, ותאונות הדרכים לא???<cite>פנייה 9</cite></blockquote>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="n">סיכון</span><h2>מי אמר במפורש שהקול שלו על הכף</h2></div>
+  <p style="color:var(--ink-2);font-size:.95rem;margin-bottom:1.1rem">שבע פניות מתנות הצבעה או מדווחות על התנדנדות. כולן מקהל הליבה. השמות הוסרו; המספרים מפנים לקובץ הפנימי.</p>
+  <div class="scroll">
+  <table class="risk">
+    <thead><tr><th>מספר הפנייה</th><th>התנאי</th></tr></thead>
+    <tbody>
+      <tr><td>פנייה 41</td><td>היעדר אזכור של ערבים — "נרשמתי למפלגה אבל עכשיו מתנדנדת"</td></tr>
+      <tr><td>פנייה 142</td><td>"אצביע לדמוקרטים אם תהיה התחייבות מפורשת למגר את הזוועות בגדה"</td></tr>
+      <tr><td>פנייה 203</td><td>"הקול הקטן שלי לא ילך לדמוקרטים אם לא אראה שנושאים אלה תופסים נפח"</td></tr>
+      <tr><td>פנייה 255</td><td>היעדר שתי המדינות — "גורע מאמינות המפלגה"</td></tr>
+      <tr><td>פנייה 28</td><td>חבר מפקד — "לא רציני"</td></tr>
+      <tr><td>פנייה 137</td><td>פסילת מועמדותו של מוסי רז — "הפסדתם את הקול שלי"</td></tr>
+      <tr><td>פנייה 213</td><td>מועמדת ספציפית ברשימה — "תוריד לכם קולות"</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="n">פעולה</span><h2>מה עושים עם זה</h2></div>
+  <div class="actions">
+
+    <div class="action"><span class="chip now">השבוע</span><div>
+      <p><strong>תיקון הבאג בסעיף 1.</strong> פונה אחד זיהה שהסעיף הוא העתק-הדבק של פסקת הפתיחה במקום פירוט הפתרונות. כדאי לבדוק ולתקן.</p></div></div>
+
+    <div class="action"><span class="chip now">השבוע</span><div>
+      <p><strong>מכתב מענה ל-140 הפונים.</strong> תודה, אישור שהמשוב נקרא, ולוח זמנים לעדכון המצע. גיליון "רשימת מענה" בקובץ המתויג מוכן לשימוש.</p></div></div>
+
+    <div class="action"><span class="chip now">השבוע</span><div>
+      <p><strong>מענה אישי לארבעה-עשר.</strong> שבעת מציעי הסיוע ושבעת המתנדנדים. אלה הפניות שבהן תשובה משנה תוצאה.</p></div></div>
+
+    <div class="action"><span class="chip soon">שבועיים</span><div>
+      <p><strong>"המצע בתמצית" — עמוד אחד, שבע נקודות.</strong> הדרישה החוזרת ביותר בפניות התקשורתיות.</p></div></div>
+
+    <div class="action"><span class="chip soon">שבועיים</span><div>
+      <p><strong>חבילת שיתוף.</strong> סרטונים של 60–90 שניות לפי נושא, וטקסטים שניתן להעתיק מהאתר.</p></div></div>
+
+    <div class="action"><span class="chip soon">שבועיים</span><div>
+      <p><strong>דף "מה עוד אמרנו".</strong> לכל פער נפוץ — חוקה, גמלאים, בריאות, תאונות דרכים — קישור לעמדה קיימת. חלק מהפערים הם ככל הנראה פערי נראות ולא פערי מדיניות.</p></div></div>
+
+    <div class="action"><span class="chip pol">הכרעה</span><div>
+      <p><strong>הסדר מדיני: עמימות או אמירה מפורשת.</strong> הדוח מתעד את מחיר העמימות בקרב הליבה בלבד — לא את הרווח שלה במרכז. ההכרעה פוליטית ושייכת למטה.</p></div></div>
+
+    <div class="action"><span class="chip pol">הכרעה</span><div>
+      <p><strong>המילה "שלום" בכותרת הפרק המדיני</strong>, ופרק ייעודי לאזרחים ותיקים עם הצמדת קצבת הזקנה לשכר הממוצע.</p></div></div>
+
+    <div class="action"><span class="chip pol">הכרעה</span><div>
+      <p><strong>אזכור מפורש של האזרחים הערבים בשמם</strong>, פרק על הפשיעה בחברה הערבית, ו"לבטל" מול "לתקן" בחוק הלאום.</p></div></div>
+
+    <div class="action"><span class="chip str">מבני</span><div>
+      <p><strong>תיקון רשימת הקטגוריות בטופס.</strong> להוסיף בריאות, רווחה וגיל שלישי, תחבורה וביטחון אישי; להסיר את מה שאינו בשימוש.</p></div></div>
+
+    <div class="action"><span class="chip str">מבני</span><div>
+      <p><strong>מצע דינמי.</strong> סבב עדכון קבוע לפי משוב, עם דיווח פומבי "מה שינינו בעקבותיכם". נכס תדמיתי בפני עצמו למפלגה ששמה את הדמוקרטיה על דגלה.</p></div></div>
+
+  </div>
+</section>
+
+<footer>
+  <p><strong>מתודולוגיה.</strong> כל 268 ההודעות נקראו במלואן. התיוג בוצע במנוע כללים על 39 נושאים, עם ביקורת ידנית של כל פנייה שלא סווגה ותיקון הכללים עד לכיסוי 267 מתוך 268. פנייה הנוגעת בכמה נושאים נספרת בכל אחד מהם. סיווג סוג הפנייה הוא היוריסטי — מדויק ברמת המגמה, לא ברמת השורה הבודדת. ציטוטים הובאו כלשונם.</p>
+  <p><strong>פרטיות.</strong> הפניות התקבלו בטופס משוב ולא נועדו לפרסום. שמות הפונים וכתובות האימייל שלהם אינם מופיעים בגרסה זו ואינם מתפרסמים בשום מקום.</p>
+</footer>
+
+</div>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>האנטומיה של קריסת המשמעת — עימות חיים כץ | דוח מחקר וניתוח שיח 2026</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJNJTZQF1F');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090e17;
+      --card-bg: #111a2e;
+      --card-bg-subtle: #0d1527;
+      --border-color: #1e293b;
+      --border-highlight: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --accent-emerald: #10b981;
+      --accent-purple: #a855f7;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Heebo', system-ui, -apple-system, sans-serif;
+    }
+    h1, h2, h3, h4, .font-rubik {
+      font-family: 'Rubik', sans-serif;
+    }
+    .metric-card {
+      background: linear-gradient(145deg, rgba(17, 26, 46, 0.95) 0%, rgba(13, 21, 39, 0.90) 100%);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(12px);
+    }
+    .accent-gradient {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .warning-gradient {
+      background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .table-container {
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #334155 #0b1120;
+    }
+    .table-container::-webkit-scrollbar {
+      height: 6px;
+    }
+    .table-container::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="p-3 sm:p-6 md:p-10 space-y-10 antialiased max-w-7xl mx-auto">
+
+  <!-- Sticky Header Bar -->
+  <nav class="sticky top-3 z-50 flex flex-wrap items-center justify-between gap-3 py-3 px-5 rounded-2xl bg-slate-900/95 border border-slate-700/80 shadow-2xl backdrop-blur-md text-xs text-slate-300">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+      <span class="font-bold text-slate-100 tracking-wide">דסק ניטור רשתות ומחקר פוליטי — בחירות 2026</span>
+    </div>
+
+    <!-- Section Anchors -->
+    <div class="hidden md:flex items-center gap-3 text-[12px] font-medium text-slate-300">
+      <a href="#macro" class="hover:text-cyan-400 transition-colors">מדדי מעורבות</a>
+      <span>•</span>
+      <a href="#matrix" class="hover:text-cyan-400 transition-colors">מטריצת 8 הקבוצות</a>
+      <span>•</span>
+      <a href="#split" class="hover:text-cyan-400 transition-colors">השבר בבייס הימין</a>
+      <span>•</span>
+      <a href="#chronology" class="hover:text-cyan-400 transition-colors">אפקט השעה הראשונה</a>
+      <span>•</span>
+      <a href="#strategy" class="text-amber-400 font-bold hover:underline">משמעויות אלקטורליות</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <span>חוקר: <strong class="text-slate-100 font-semibold">אמנון זוסמן</strong></span>
+      <span class="text-slate-500">|</span>
+      <span class="text-slate-400">7 בספטמבר 2026</span>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="metric-card rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-700/80 shadow-2xl relative overflow-hidden">
+    <div class="absolute -right-24 -top-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -left-24 -bottom-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="space-y-4 relative z-10">
+      <div class="flex flex-wrap items-center gap-2.5">
+        <span class="tag-pill bg-cyan-500/15 border border-cyan-500/40 text-cyan-400">
+          דוח מחקר אמפירי | פרסום עומק
+        </span>
+        <span class="tag-pill bg-red-500/15 border border-red-500/40 text-red-400">
+          מקרה בוחן: עמית סגל / עימות חיים כץ
+        </span>
+        <span class="tag-pill bg-slate-800 border border-slate-700 text-slate-400">
+          N = 1,437 תגובות כרונולוגיות
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+        האנטומיה של קריסת המשמעת:<br>
+        <span class="accent-gradient">ניתוח עומק של 361 אלף צפיות בעימות חיים כץ</span>
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-4xl leading-relaxed pt-2">
+        כאשר עמית סגל העלה לרשת את תיעוד העימות במסדרונות הכנסת בין שר התיירות חיים כץ לחובב דמארי (בן-זוגה של השרה גילה גמליאל), הוא הניע מגה-אירוע ויראלי. ניתוח מלא של כלל התגובות חושף שבר פנימי עמוק בבייס הימין, נטישה של הליכוד, וזליגה של רבע מהלייקים של הציבור המסורתי לעבר איתמר בן גביר.
+      </p>
+
+      <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-slate-400 border-t border-slate-800">
+        <div><span class="text-slate-200 font-bold">פלטפורמה:</span> פייסבוק (ערוץ עמית סגל)</div>
+        <div><span class="text-slate-200 font-bold">סך תגובות מנותחות:</span> 1,437 (1,207 ב-8 קבוצות המפתח)</div>
+        <div><span class="text-slate-200 font-bold">מתודולוגיה:</span> שכיחות מול משקל לייקים (Dual-Metric)</div>
+        <div><span class="text-slate-200 font-bold">סיווג אונומסטי:</span> מוצא משפחתי × שפת רישום שם</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Macro KPIs Grid -->
+  <section id="macro" class="space-y-4">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+        <span class="w-2 h-6 bg-cyan-400 rounded-full inline-block"></span>
+        מדדי מאקרו: היקף המעורבות בפוסט
+      </h2>
+      <span class="text-xs text-slate-400">נתוני אמת מאומתים</span>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+      <div class="metric-card p-5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <span class="text-xs font-semibold text-slate-400">צפיות בסרטון</span>
+        <div class="my-2">
+          <span class="text-2xl sm:text-4xl font-extrabold text-cyan-400 font-rubik">361K</span>
+        </div>
+        <span class="text-[11px] text-slate-400">חשיפה ארצית מסיבית</span>
+      </div>
+
+      <div class="metric-card p-5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <span class="text-xs font-semibold text-slate-400">לייקים לסרטון</span>
+        <div class="my-2">
+          <span class="text-2xl sm:text-4xl font-extrabold text-blue-400 font-rubik">~1,400</span>
+        </div>
+        <span class="text-[11px] text-slate-400">אינטראקציה ראשית</span>
+      </div>
+
+      <div class="metric-card p-5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <span class="text-xs font-semibold text-slate-400">תגובות שנאספו</span>
+        <div class="my-2">
+          <span class="text-2xl sm:text-4xl font-extrabold text-purple-400 font-rubik">1,437</span>
+        </div>
+        <span class="text-[11px] text-slate-400">רצף כרונולוגי שלם</span>
+      </div>
+
+      <div class="metric-card p-5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <span class="text-xs font-semibold text-slate-400">שיתופי וידאו</span>
+        <div class="my-2">
+          <span class="text-2xl sm:text-4xl font-extrabold text-amber-400 font-rubik">250</span>
+        </div>
+        <span class="text-[11px] text-slate-400">הפצה אורגנית ברשת</span>
+      </div>
+
+      <div class="col-span-2 lg:col-span-1 metric-card p-5 rounded-2xl border border-emerald-500/30 bg-emerald-950/20 flex flex-col justify-between">
+        <span class="text-xs font-semibold text-emerald-400">סך מעורבות אקטיבית</span>
+        <div class="my-2">
+          <span class="text-2xl sm:text-4xl font-extrabold text-emerald-300 font-rubik">5,502+</span>
+        </div>
+        <span class="text-[11px] text-emerald-400/80">כולל 2,452 לייקים לתגובות</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Insight Banner -->
+  <section class="metric-card p-6 sm:p-8 rounded-3xl border border-red-500/40 bg-gradient-to-r from-red-950/30 via-slate-900 to-amber-950/20 shadow-xl space-y-3">
+    <div class="flex items-center gap-3">
+      <span class="px-3 py-1 rounded-lg bg-red-500/20 border border-red-500/40 text-red-400 font-bold text-xs uppercase">
+        קונצנזוס שלילי חסר תקדים: 97%+
+      </span>
+      <span class="text-xs text-slate-400">היעדר מוחלט של מנגנוני הגנה מפלגתיים</span>
+    </div>
+    <h3 class="text-xl sm:text-2xl font-bold text-white">
+      אף קבוצה לא התייצבה להגן על חיים כץ או על הממשלה
+    </h3>
+    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+      בניגוד לפוסטים פוליטיים רגילים שבהם מתעוררת "מלחמת תגובות" בין מחנות, כאן נרשם שיתוק מוחלט של מכונת ההסברה הפנים-ליכודית. פחות מ-2.5% מהתגובות ניסו לגונן על מי מהצדדים. הוויכוח האמיתי לא היה על שאלת האשמה — אלא על <strong>המשמעות האלקטורלית</strong> ועל <strong>מידת המיאוס משיטת השריונים והעסקנות</strong>.
+    </p>
+  </section>
+
+  <!-- Matrix Table Section -->
+  <section id="matrix" class="space-y-4">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+          <span class="w-2 h-6 bg-cyan-400 rounded-full inline-block"></span>
+          מטריצת 8 הקבוצות: שכיחות מול משקל לייקים
+        </h2>
+        <p class="text-xs text-slate-400 pt-1">
+          חלוקת 1,207 תגובות מפוענחות לפי מוצא משפחתי ושפת רישום השם בפייסבוק
+        </p>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+        <span class="text-slate-300 font-medium">מודגש: נטישה לבן גביר / גוטליב</span>
+      </div>
+    </div>
+
+    <div class="metric-card rounded-2xl border border-slate-800 overflow-hidden shadow-2xl">
+      <div class="table-container">
+        <table class="w-full text-right text-xs sm:text-sm border-collapse">
+          <thead>
+            <tr class="bg-slate-900/90 border-b border-slate-700 text-slate-300 font-bold">
+              <th class="p-3 sm:p-4">קבוצה סוציו-לשונית</th>
+              <th class="p-3 sm:p-4 text-center">גודל מדגם ($N$)</th>
+              <th class="p-3 sm:p-4 text-center">% מהמדגם</th>
+              <th class="p-3 sm:p-4 text-center">סך לייקים שקיבלה</th>
+              <th class="p-3 sm:p-4">נרטיבים מובילים בשכיחות (% מהקבוצה)</th>
+              <th class="p-3 sm:p-4">נרטיבים מובילים בלייקים (% לייקים בקבוצה)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-200">
+
+            <!-- Row 1: Sephardic Hebrew (WITH BEN GVIR HIGHLIGHT) -->
+            <tr class="bg-amber-950/20 hover:bg-amber-900/30 transition-colors border-l-4 border-l-amber-500">
+              <td class="p-3 sm:p-4 font-bold text-amber-300 flex flex-col">
+                <span>1. עות'מאני / ספרדי (עברית)</span>
+                <span class="text-[11px] text-slate-400 font-normal">הבייס המסורתי הפנים-ליכודי</span>
+              </td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-semibold">329</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">27.3%</td>
+              <td class="p-3 sm:p-4 text-center font-rubik text-cyan-300">326</td>
+              <td class="p-3 sm:p-4 space-y-1">
+                <div>ביקורת על הליכוד: <strong class="text-slate-100">28.9%</strong> (95)</div>
+                <div>מתקפה אישית על כץ: <strong class="text-slate-100">13.4%</strong> (44)</div>
+                <div class="text-amber-400 font-bold bg-amber-500/15 px-2 py-0.5 rounded inline-block">
+                  ⚡ נטישה לבן גביר וגוטליב: 9.1% (30)
+                </div>
+              </td>
+              <td class="p-3 sm:p-4 space-y-1">
+                <div>מתקפה אישית על כץ: <strong class="text-cyan-300">68.1%</strong> (222)</div>
+                <div class="text-amber-400 font-bold bg-amber-500/15 px-2 py-0.5 rounded inline-block">
+                  ⚡ נטישה לבן גביר: 40.2% מהלייקים (131)
+                </div>
+                <div class="text-xs text-slate-400">ביקורת ליכוד: 47.5% (155)</div>
+              </td>
+            </tr>
+
+            <!-- Row 2: Sephardic Latin (EPICENTER OF POST) -->
+            <tr class="bg-cyan-950/20 hover:bg-cyan-900/30 transition-colors border-l-4 border-l-cyan-400">
+              <td class="p-3 sm:p-4 font-bold text-cyan-300 flex flex-col">
+                <span>2. עות'מאני / ספרדי (לעז)</span>
+                <span class="text-[11px] text-cyan-400/80 font-bold">מרכז הכובד הוויראלי (48.4% מהלייקים!)</span>
+              </td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-semibold">265</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">22.0%</td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-extrabold text-cyan-300 text-base">1,187</td>
+              <td class="p-3 sm:p-4 space-y-1">
+                <div>ביקורת על הליכוד: <strong class="text-slate-100">40.8%</strong> (108)</div>
+                <div>מתקפה על כץ: <strong class="text-slate-100">9.1%</strong> (24)</div>
+                <div class="text-slate-400 text-xs">זליגה לבן גביר: 4.2% (ללא לייקים)</div>
+              </td>
+              <td class="p-3 sm:p-4 space-y-1">
+                <div>ביקורת ליכוד והרחקה: <strong class="text-cyan-300">59.1%</strong> (701)</div>
+                <div class="text-purple-300 font-semibold">שבר בבייס הליכוד ובושה: 39.3% (466)</div>
+                <div class="text-emerald-400 text-xs">תגובת שיא: ליאור כהן (320 לייקים)</div>
+              </td>
+            </tr>
+
+            <!-- Row 3: Israeli Hebrew -->
+            <tr class="hover:bg-slate-850/40 transition-colors">
+              <td class="p-3 sm:p-4 font-semibold text-slate-200">
+                3. עברי-ישראלי (עברית)
+              </td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-semibold">85</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">7.0%</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">222</td>
+              <td class="p-3 sm:p-4">
+                ביקורת על הליכוד: <strong>37.6%</strong> (32)<br>
+                ביקורת על גמליאל וכץ: 7.1% (6)
+              </td>
+              <td class="p-3 sm:p-4">
+                <strong>91.4% (203 לייקים)</strong> קראו "שניהם הביתה" ומיאוס מעסקנות קבלנית (עמי ברוש)
+              </td>
+            </tr>
+
+            <!-- Row 4: Israeli Latin -->
+            <tr class="hover:bg-slate-850/40 transition-colors">
+              <td class="p-3 sm:p-4 font-semibold text-slate-200">
+                4. עברי-ישראלי (לעז)
+              </td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-semibold">219</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">18.1%</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">401</td>
+              <td class="p-3 sm:p-4">
+                ביקורת ממשלה: <strong>34.7%</strong> (76)<br>
+                סרקזם ואירוניה: 5.9% (13)
+              </td>
+              <td class="p-3 sm:p-4">
+                ביקורת ליכוד: 38.7% (155 לייקים)<br>
+                <span class="text-amber-300">סרקזם והתפכחות: 29.4%</span> (לירן הלוי: 112 לייקים)
+              </td>
+            </tr>
+
+            <!-- Row 5: Ashkenazi Hebrew -->
+            <tr class="hover:bg-slate-850/40 transition-colors">
+              <td class="p-3 sm:p-4 font-semibold text-slate-200">
+                5. מזרח/מרכז אירופה (עברית)
+              </td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-semibold">65</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">5.4%</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">23</td>
+              <td class="p-3 sm:p-4">
+                ביקורת על הליכוד: <strong>29.2%</strong> (19)<br>
+                סגירת חשבון עם גמליאל: 10.8% (7)
+              </td>
+              <td class="p-3 sm:p-4">
+                שבר בבייס הליכוד: <strong>73.9%</strong> (חיים וילשטיין: "זאת התמונה האמיתית")
+              </td>
+            </tr>
+
+            <!-- Row 6: Ashkenazi Latin -->
+            <tr class="hover:bg-slate-850/40 transition-colors">
+              <td class="p-3 sm:p-4 font-semibold text-slate-200">
+                6. מזרח/מרכז אירופה (לעז)
+              </td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-semibold">171</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">14.2%</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">184</td>
+              <td class="p-3 sm:p-4">
+                ביקורת על הליכוד: <strong>35.7%</strong> (61)<br>
+                מתקפה על כץ: 6.4% (11)
+              </td>
+              <td class="p-3 sm:p-4">
+                שאט נפש מוסרי מובנה: <strong>45.7%</strong> (84 לייקים, רן ריבלין: "פח אשפה. פני המדינה")
+              </td>
+            </tr>
+
+            <!-- Row 7: FSU Hebrew -->
+            <tr class="hover:bg-slate-850/40 transition-colors">
+              <td class="p-3 sm:p-4 font-semibold text-slate-200">
+                7. יוצאי ברה"מ / FSU (עברית)
+              </td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-semibold">30</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">2.5%</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">37</td>
+              <td class="p-3 sm:p-4">
+                ביקורת ליכוד: <strong>46.7%</strong> (14)<br>
+                מתקפה ישירה על כץ: 20.0% (6)
+              </td>
+              <td class="p-3 sm:p-4">
+                כץ והעסקנות מוגדרים כ"אסון למפלגה": <strong>32.4%</strong> (ישראל מנחם סיגלוב)
+              </td>
+            </tr>
+
+            <!-- Row 8: FSU Latin -->
+            <tr class="hover:bg-slate-850/40 transition-colors">
+              <td class="p-3 sm:p-4 font-semibold text-slate-200">
+                8. יוצאי ברה"מ / FSU (לעז)
+              </td>
+              <td class="p-3 sm:p-4 text-center font-rubik font-semibold">43</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">3.6%</td>
+              <td class="p-3 sm:p-4 text-center font-rubik">72</td>
+              <td class="p-3 sm:p-4">
+                ביקורת ליכוד וממשלה: <strong>44.2%</strong> (19)<br>
+                זליגה לימין אלטרנטיבי: 7.0% (3)
+              </td>
+              <td class="p-3 sm:p-4">
+                מסגור אידיאולוגי של שחיתות: <strong>81.9%</strong> (59 לייקים, דורון אברמוב: "כבוד, כוח, כסף")
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Sociological Breakdown: The Split Base -->
+  <section id="split" class="space-y-6">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+        <span class="w-2 h-6 bg-cyan-400 rounded-full inline-block"></span>
+        השבר בבייס הימין: הפיצול בין עברית ללעז
+      </h2>
+      <span class="text-xs text-slate-400">השוואת עומק</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Sephardic Hebrew Card -->
+      <div class="metric-card p-6 rounded-3xl border border-amber-500/40 bg-gradient-to-br from-amber-950/20 to-slate-900 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="tag-pill bg-amber-500/20 border border-amber-500/50 text-amber-300">
+            ספרדים בעברית ($N=329$)
+          </span>
+          <span class="text-xs text-amber-400 font-bold font-rubik">326 לייקים</span>
+        </div>
+
+        <h3 class="text-lg sm:text-xl font-bold text-white">
+          זעם פנימי, דחיית חיים כץ, ועריקה לבן גביר
+        </h3>
+
+        <p class="text-sm text-slate-300 leading-relaxed">
+          בקרב המגיבים המסורתיים בעברית, חיים כץ אינו נתפס רק כמנהיג שנכשל — אלא כעסקן זר שמחזיק את הליכוד כבן-ערובה. המגיבים מביעים תסכול עמוק מכך שקבלן קולות זוכה לשריון, והתגובה המעשית שלהם היא <strong>נטישה אלקטורלית ימינה לעבר איתמר בן גביר וטלי גוטליב</strong>.
+        </p>
+
+        <div class="space-y-2 pt-2">
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-700 text-xs sm:text-sm">
+            <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+              <span>אילן כהן</span>
+              <span class="bg-amber-500/20 px-2 py-0.5 rounded text-[11px]">114 לייקים</span>
+            </div>
+            <p class="text-slate-200">"גועל נפש רק בגלל חיים כץ אני הולך להצביע לבן גביר"</p>
+          </div>
+
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-700 text-xs sm:text-sm">
+            <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+              <span>ימית הלל</span>
+              <span class="bg-amber-500/20 px-2 py-0.5 rounded text-[11px]">83 לייקים</span>
+            </div>
+            <p class="text-slate-200">"חייבים להסיר לחיים כץ את השריון בושה לליכוד"</p>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800 text-xs text-slate-400">
+          <strong>משמעות:</strong> 40.2% ממשקל הלייקים של הקבוצה תמך בנטישה לבן גביר. זהו פוטנציאל זליגה מיידי.
+        </div>
+      </div>
+
+      <!-- Sephardic Latin Card -->
+      <div class="metric-card p-6 rounded-3xl border border-cyan-500/40 bg-gradient-to-br from-cyan-950/20 to-slate-900 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="tag-pill bg-cyan-500/20 border border-cyan-500/50 text-cyan-300">
+            ספרדים בלעז ($N=265$)
+          </span>
+          <span class="text-xs text-cyan-400 font-bold font-rubik">1,187 לייקים (48.4% מהפוסט!)</span>
+        </div>
+
+        <h3 class="text-lg sm:text-xl font-bold text-white">
+          בושה אזרחית קולקטיבית והכרזת נטישה כוללת
+        </h3>
+
+        <p class="text-sm text-slate-300 leading-relaxed">
+          הקבוצה הוויראלית ביותר בפוסט, שגרפה כמעט מחצית מכלל הלייקים, מייצגת פלח צעיר, מחובר ובורגני יותר. אצלם <strong>אין שום זליגה לבן גביר (0 לייקים)</strong>. במקום זאת, הם מביעים בושה צורבת מול התנהלות המפלגה, מצהירים כי הליכוד "מבייש אותם", ומודיעים על עזיבה גורפת של המפלגה.
+        </p>
+
+        <div class="space-y-2 pt-2">
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-700 text-xs sm:text-sm">
+            <div class="flex items-center justify-between text-cyan-400 font-bold mb-1">
+              <span>Lior Cohen</span>
+              <span class="bg-cyan-500/20 px-2 py-0.5 rounded text-[11px]">320 לייקים (השיא בפוסט)</span>
+            </div>
+            <p class="text-slate-200">"בגלל אנשים כאלה כל מצביעי הליכוד בורחים הם פשוט מביישים אותנו"</p>
+          </div>
+
+          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-700 text-xs sm:text-sm">
+            <div class="flex items-center justify-between text-cyan-400 font-bold mb-1">
+              <span>Or Hakmon</span>
+              <span class="bg-cyan-500/20 px-2 py-0.5 rounded text-[11px]">23 לייקים</span>
+            </div>
+            <p class="text-slate-200">"זה הליכוד של היום לא ימין אוסף של ברברים"</p>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800 text-xs text-slate-400">
+          <strong>משמעות:</strong> פלח זה אינו נוהר לקצוות. הוא מתרחק מהקלפי, נוטש את המחנה, או פתוח לאלטרנטיבות ממלכתיות.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Chronological Dynamic / First-Mover Advantage -->
+  <section id="chronology" class="space-y-4">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+        <span class="w-2 h-6 bg-cyan-400 rounded-full inline-block"></span>
+        האשליה הכרונולוגית: אפקט "השעה הראשונה" (First-Mover)
+      </h2>
+      <span class="text-xs text-slate-400">ניתוח 4 רבעונים כרונולוגיים</span>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      <div class="metric-card p-5 rounded-2xl border border-cyan-500/40 bg-cyan-950/20 space-y-2">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>רבעון 1 (תגובות 1–360)</span>
+          <span class="text-cyan-400 font-bold">השעה הראשונה</span>
+        </div>
+        <div class="text-3xl font-black text-cyan-300 font-rubik">2,437 לייקים</div>
+        <div class="text-xs text-slate-300 font-bold">99.4% מכלל הלייקים בפוסט!</div>
+        <p class="text-[11px] text-slate-400 pt-1">
+          קביעה מוחלטת של הנרטיב: המגיבים הראשונים גרפו את מלוא תשומת הלב של האלגוריתם.
+        </p>
+      </div>
+
+      <div class="metric-card p-5 rounded-2xl border border-slate-800 space-y-2 opacity-75">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>רבעון 2 (תגובות 361–720)</span>
+          <span class="text-slate-400">שעות 2–4</span>
+        </div>
+        <div class="text-3xl font-black text-slate-400 font-rubik">15 לייקים</div>
+        <div class="text-xs text-slate-400">0.6% מהלייקים</div>
+        <p class="text-[11px] text-slate-500 pt-1">
+          צניחה חדה בנראות. נרטיבים זהים לחלוטין (ביקורת 34%), אך ללא תגמול קהל.
+        </p>
+      </div>
+
+      <div class="metric-card p-5 rounded-2xl border border-slate-800 space-y-2 opacity-60">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>רבעון 3 (תגובות 721–1080)</span>
+          <span class="text-slate-400">שעות 5–10</span>
+        </div>
+        <div class="text-3xl font-black text-slate-500 font-rubik">0 לייקים</div>
+        <div class="text-xs text-slate-500">0.0% מהלייקים</div>
+        <p class="text-[11px] text-slate-500 pt-1">
+          מגיבים כותבים לתוך חלל ריק. האלגוריתם כבר אינו מקדם תגובות חדשות בראש הפיד.
+        </p>
+      </div>
+
+      <div class="metric-card p-5 rounded-2xl border border-slate-800 space-y-2 opacity-50">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>רבעון 4 (תגובות 1081–1437)</span>
+          <span class="text-slate-400">זנב ארוך</span>
+        </div>
+        <div class="text-3xl font-black text-slate-500 font-rubik">0 לייקים</div>
+        <div class="text-xs text-slate-500">0.0% מהלייקים</div>
+        <p class="text-[11px] text-slate-500 pt-1">
+          המשך זרימת מגיבים ספונטניים ללא השפעה תודעתית או ויראלית כלל.
+        </p>
+      </div>
+    </div>
+
+    <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 text-xs text-slate-300 leading-relaxed">
+      <strong>מסקנה מתודולוגית ופוליטית:</strong> שכיחות הנרטיבים נשמרה זהה לחלוטין לאורך כל 1,437 התגובות (כ-33% ביקורת ליכוד, 5% בן גביר). אולם מי שלא הגיב בשעה הראשונה איבד לחלוטין את היכולת להשפיע. כל ניהול משברים פוליטי המגיב לאחר שעתיים-שלוש הוא בבחינת "דיבור בבית קברות אלגוריתמי".
+    </div>
+  </section>
+
+  <!-- Strategic & Electoral Implications -->
+  <section id="strategy" class="metric-card p-6 sm:p-10 rounded-3xl border border-amber-500/30 bg-gradient-to-b from-slate-900 via-slate-900 to-amber-950/20 space-y-6">
+    <div class="flex items-center gap-2">
+      <span class="w-2.5 h-7 bg-amber-400 rounded-full inline-block"></span>
+      <h2 class="text-xl sm:text-3xl font-extrabold text-white">
+        משמעויות אלקטורליות לקראת בחירות 2026
+      </h2>
+    </div>
+    <span class="text-xs text-amber-400/80 uppercase tracking-widest font-semibold block">
+      ניתוח והערכה אסטרטגית (פרשנות מבוססת ממצאים)
+    </span>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+      
+      <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
+        <div class="text-amber-400 font-bold text-base flex items-center gap-2">
+          <span>1. מחיר השריון של חיים כץ</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          חיים כץ נחשב במשך שנים לנכס מנגנוני בזכות שליטתו בוועדים ובקבלנות הקולות. אולם במציאות הדיגיטלית של 2026, השריון המובטח שלו הפך לנטל אלקטורלי כבד. כל חשיפה של התנהלותו מרחיקה עשרות אלפי מצביעים חופשיים שמתקשים לשאת את העסקנות הכוחנית.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
+        <div class="text-amber-400 font-bold text-base flex items-center gap-2">
+          <span>2. המרוויח המיידי: בן גביר</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          הזליגה המוכחת של קולות מסורתיים בעברית לאיתמר בן גביר (40.2% מהלייקים בקבוצה) מוכיחה כי 'עוצמה יהודית' אינה שואבת רק ימין קיצוני, אלא קולטת אנשי ליכוד פגועים ומאוכזבים שמחפשים "ימין נקי מעסקנות מפא"יניקית ישנה".
+        </p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-3">
+        <div class="text-amber-400 font-bold text-base flex items-center gap-2">
+          <span>3. אובדן מעמד מפלגת השלטון</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          כאשר בוחרי ימין צעירים ומשכילים (ספרדים בלעז) כותבים באלפי לייקים "הם מביישים אותנו", הליכוד מאבד את הילת הממלכתיות והשלטון שלו. עבור ציבור זה, המעבר אינו לבן גביר — אלא הישארות בבית ביום הבחירות או חציית הקווים למפלגות מרכז-ימין ליברליות.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-xs text-slate-500 py-6 border-t border-slate-800 space-y-2">
+    <p>דוח מחקר וניתוח שיח דיגיטלי — מיזם בחירות 2026 | אמנון זוסמן</p>
+    <p class="text-slate-600">כל הנתונים מבוססים על איסוף אמפירי מלא ומעובד מקובץ התגובות הכרונולוגי של פוסט עמית סגל.</p>
+  </footer>
+
+</body>
+</html>

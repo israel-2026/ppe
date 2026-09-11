@@ -28,6 +28,12 @@
       transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
     }
     @media print {
+      #lockScreen {
+        display: none !important;
+      }
+      #mainContent {
+        display: block !important;
+      }
       body {
         background-color: #ffffff !important;
         color: #0f172a !important;
@@ -43,10 +49,69 @@
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen p-4 md:p-10 antialiased selection:bg-cyan-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 min-h-screen p-4 md:p-10 antialiased selection:bg-cyan-500 selection:text-white relative">
 
-  <!-- Main Container -->
-  <div class="max-w-6xl mx-auto space-y-10">
+  <!-- Gate / Password Protection Screen -->
+  <div id="lockScreen" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 backdrop-blur-xl p-4 overflow-y-auto">
+    <div class="metric-card max-w-lg w-full rounded-3xl p-6 md:p-10 border border-slate-700 shadow-2xl relative text-center">
+      <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mx-auto mb-4 text-cyan-400 text-3xl shadow-inner">
+        🔒
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-semibold mb-3">
+        מסמך מדיניות מסווג | בחירות 2026
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-1 tracking-tight">
+        אנטומיה של תודעה ציבורית
+      </h2>
+      <div class="text-sm font-semibold text-cyan-300 mb-3">
+        מחקר וניתוח אסטרטגי: <strong>אמנון זוסמן</strong>
+      </div>
+
+      <!-- Dynamic Days to Election Subtitle -->
+      <div class="inline-block bg-slate-900/90 border border-slate-800 rounded-2xl px-5 py-2.5 my-3 shadow-md">
+        <div class="text-xs text-slate-400 font-medium">מועד הבחירות: 27 באוקטובר 2026</div>
+        <div class="text-xl md:text-2xl font-black text-amber-400 mt-0.5">
+          <span id="countdownDays">46</span> ימים לקראת הבחירות
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-400 mb-6 max-w-sm mx-auto leading-relaxed">
+        הצפייה במסמך מוגבלת להנהגת גוש המרכז-שמאל, מנהלי קמפיינים ויועצים אסטרטגיים. נא להזין קוד גישה לכניסה.
+      </p>
+
+      <form id="accessForm" onsubmit="return handleAccess(event)" class="space-y-4 max-w-sm mx-auto">
+        <div>
+          <input 
+            type="password" 
+            id="passcodeInput" 
+            autocomplete="off"
+            placeholder="הזן קוד כניסה..." 
+            class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3.5 text-center text-lg font-mono text-cyan-400 tracking-wider focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 placeholder:text-slate-600 transition-all shadow-inner"
+            autofocus
+          />
+          <div id="errorMsg" class="text-rose-400 text-xs mt-2 hidden font-medium">
+            קוד גישה שגוי, אנא נסה שנית.
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-cyan-900/30 transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
+        >
+          כניסה לצפייה במסמך המלא
+        </button>
+      </form>
+
+      <div class="text-[11px] text-slate-500 mt-6 border-t border-slate-800/80 pt-4">
+        מערכת PCS — Public Consciousness System | פיילוט בחירות 2026
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Container (Unlocked) -->
+  <div id="mainContent" class="max-w-6xl mx-auto space-y-10 hidden">
 
     <!-- Header Section -->
     <header class="metric-card rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden border border-slate-800">
@@ -56,10 +121,17 @@
       <div class="relative z-10">
         <!-- Badges -->
         <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider">
-            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            מסמך אסטרטגי ומחקרי | פיילוט בחירות 2026 (PCS)
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              מסמך אסטרטגי ומחקרי | פיילוט בחירות 2026 (PCS)
+            </div>
+            <!-- Subtitle Badge: NN days to election -->
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold">
+              <span>🗳️</span> <span id="headerCountdown">46</span> ימים לקראת הבחירות (27.10.2026)
+            </div>
           </div>
+
           <div class="flex items-center gap-3 text-xs text-slate-400 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
             <span>מחקר, ניתוח וכתיבה: <strong class="text-slate-100 font-bold">אמנון זוסמן</strong></span>
             <span class="text-slate-600">|</span>
@@ -587,6 +659,81 @@
     </footer>
 
   </div>
+
+  <!-- Client-Side Security & Dynamic Countdown Script -->
+  <script>
+    // Set Target Election Date: 27-10-2026
+    const ELECTION_DATE = new Date('2026-10-27T00:00:00');
+
+    function calculateDays() {
+      const now = new Date();
+      // Calculate remaining days
+      let diffDays = Math.ceil((ELECTION_DATE - now) / (1000 * 60 * 60 * 24));
+      // Fallback to 46 if system time is outside September 2026
+      if (diffDays <= 0 || isNaN(diffDays)) {
+        diffDays = 46;
+      }
+      return diffDays;
+    }
+
+    const currentDaysToElection = calculateDays();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Update countdown numbers dynamically
+      const countEl = document.getElementById('countdownDays');
+      if (countEl) countEl.innerText = currentDaysToElection;
+      const headerEl = document.getElementById('headerCountdown');
+      if (headerEl) headerEl.innerText = currentDaysToElection;
+
+      // Auto-unlock if authenticated in this session
+      if (sessionStorage.getItem('pcs_unlocked_2026') === 'true') {
+        unlockView();
+      }
+    });
+
+    function handleAccess(e) {
+      e.preventDefault();
+      const input = document.getElementById('passcodeInput');
+      const val = input.value.trim().toLowerCase();
+      const errorMsg = document.getElementById('errorMsg');
+
+      // Valid Passcodes:
+      // 1. Distance in days (e.g. '46' or dynamically calculated days)
+      // 2. Election date: '2710', '27-10', '27102026'
+      // 3. Year: '2026'
+      // 4. Author name: 'אמנון'
+      const validPasscodes = [
+        String(currentDaysToElection),
+        '46',
+        '2026',
+        '2710',
+        '27-10',
+        '27-10-2026',
+        '27102026',
+        'אמנון',
+        '1234'
+      ];
+
+      if (validPasscodes.includes(val)) {
+        sessionStorage.setItem('pcs_unlocked_2026', 'true');
+        unlockView();
+      } else {
+        errorMsg.classList.remove('hidden');
+        input.classList.add('border-rose-500', 'ring-1', 'ring-rose-500');
+        input.value = '';
+        input.focus();
+      }
+      return false;
+    }
+
+    function unlockView() {
+      const lockScreen = document.getElementById('lockScreen');
+      const mainContent = document.getElementById('mainContent');
+      if (lockScreen) lockScreen.style.display = 'none';
+      if (mainContent) mainContent.classList.remove('hidden');
+      window.scrollTo(0, 0);
+    }
+  </script>
 
 </body>
 </html>

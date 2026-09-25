@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דו"ח חקר סוגיה: הסרט נזק אגבי</title>
+<style>
+:root {
+    --bg-dark: #0f141c;
+    --card-bg: #182232;
+    --border: #2a3a50;
+    --text-main: #f0f4f8;
+    --text-muted: #8fa0b5;
+    --accent: #2563eb;
+    --accent-light: #60a5fa;
+    --success: #10b981;
+    --warning: #f59e0b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 30px 20px;
+}
+.container { max-width: 1040px; margin: 0 auto; }
+.header-box {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+}
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(37, 99, 235, 0.2);
+    color: var(--accent-light);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+.meta-line { color: var(--text-muted); font-size: 14px; display: flex; gap: 18px; flex-wrap: wrap; }
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+h2 { font-size: 20px; font-weight: 700; color: var(--accent-light); margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+
+.macro-box {
+    background: rgba(15, 23, 42, 0.6);
+    border-right: 4px solid var(--accent-light);
+    padding: 18px;
+    border-radius: 6px;
+    font-size: 15.5px;
+    white-space: pre-wrap;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.kpi {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+.kpi-val { font-size: 26px; font-weight: 800; color: #fff; }
+.kpi-lbl { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+th, td { padding: 12px 10px; text-align: right; border-bottom: 1px solid var(--border); }
+th { color: var(--text-muted); font-weight: 600; background: rgba(0,0,0,0.2); }
+.badge { padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+.badge.high { background: rgba(16, 185, 129, 0.2); color: var(--success); }
+.badge.medium { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+
+.stat-bar-row { margin-bottom: 12px; }
+.stat-bar-label { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 4px; }
+.stat-bar-track { height: 10px; background: #0b1017; border-radius: 5px; overflow: hidden; }
+.stat-bar-fill { height: 100%; background: var(--accent); border-radius: 5px; }
+.stat-bar-fill.gender-bar { background: #ec4899; }
+
+.silent-box {
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px dashed rgba(239, 68, 68, 0.3);
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+.silent-box strong { color: #f87171; }
+
+.framing-list { list-style: none; }
+.framing-item { padding: 8px 0; border-bottom: 1px dotted var(--border); font-size: 14.5px; }
+.muted { color: var(--text-muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header-box">
+        <span class="tag">דו"ח חקר סוגיה מודיעיני</span>
+        <h1>הסרט נזק אגבי</h1>
+        <div class="meta-line">
+            <span>📅 תאריך הפקה: 2026-09-25 20:58:29</span>
+            <span>🎯 פריטים שנמצאו: 12</span>
+            <span>💬 תגובות שנותחו: 2,898</span>
+            <span>👥 מגיבים ייחודיים: 2,419</span>
+        </div>
+    </div>
+
+    <!-- חלק א': רקע מאקרו ורשתות (Grok) -->
+    <div class="card">
+        <h2>🌐 1. רקע המאקרו והסערה הציבורית (סיקור רשתי ותקשורתי)</h2>
+        <div class="macro-box">**סקירת רקע: הסרט "נזק אגבי" והסערה הציבורית סביבו**
+
+הסרט "נזק אגבי" (Collateral Damage) הוא סרט תיעודי ישראלי באורך מלא, בבימויו של גיא דוידוביץ' (במאי "האחים ואחיות" ו"שלום ירושלים") ובשיתוף פעולה עם העיתונאי והתחקירן אביב אברהם. הסרט הופק על ידי חברת "גם סרטים" ונתמך בין היתר על ידי קרן הקולנוע הישראלית, קרן גשר לקולנוע, וקרנות נוספות. הוא עוסק בהשלכות ארוכות הטווח של מלחמת לבנון השנייה (2006) על חיילי מילואים, ובפרט על נזקי הנפש (PTSD) והטראומה שהוסתרו או טופלו בצורה לקויה על ידי מערכת הביטחון.
+
+**האירוע המחולל את הסערה**  
+הסערה הציבורית פרצה בעקבות הקרנת הבכורה של הסרט בפסטיבל הסרטים הבינלאומי ירושלים (יולי 2024). לאחר ההקרנה, וביתר שאת לאחר שהסרט עלה לשידור בערוץ כאן 11 ובפלטפורמות VOD, הוא עורר תגובות קשות מצד גורמים פוליטיים וציבוריים. הפרסום הרחב של קטעים מהסרט, ובעיקר עדויות של חיילים שמתארים כיצד פיקוד בכיר ומערכת הבריאות הצבאית התעלמו מנזקיהם הנפשיים, הצית ויכוח סוער.
+
+**הטענות המרכזיות**
+
+**נגד הסרט:**
+- טענה מרכזית היא שהסרט "פוגע במורל", "מרתיע מילואימניקים" ומציג תמונה חד-צדדית ומעוותת של צה"ל.
+- חלק מהמבקרים, בהם חברי כנסת מהימין (כגון ח"כים מליכוד, עוצמה יהודית וציונות דתית), טענו כי הסרט משרת נרטיב "שמאלני-אנטי-צה"לי" ומשתמש בטראומה של חיילים לצרכים פוליטיים.
+- נטען כי הבמאי והתחקירן בחרו להתמקד רק בסיפורים הקשים ביותר תוך התעלמות מהטיפול המשמעותי שצה"ל משפר בשנים האחרונות בנושא בריאות הנפש.
+
+**בעד הסרט:**
+- יוצרי הסרט ותומכיו (בהם אנשי קולנוע, פסיכולוגים צבאיים לשעבר, וארגוני נפגעי מלחמה) טוענים שהסרט חושף מחדל אמיתי ומתמשך בטיפול בנפגעי PTSD בצה"ל, במיוחד במילואים.
+- הם מדגישים כי מדובר בסרט תיעודי עיתונאי-עדותי ולא סרט תעמולה, וכי השתקת הסיפורים הללו היא שפוגעת בחיילים.
+- גורמים בתרבות (איגוד הקולנוע הישראלי, במאים בכירים) טענו כי הניסיון להשתיק את הסרט מהווה פגיעה חמורה בחופש הביטוי ובחובתה של החברה הישראלית להתמודד עם מחירי המלחמות.
+
+**עיקרי הדיון הציבורי והתקשורתי**  
+הדיון התנהל בעיקר סביב השאלה האם סרטים תיעודיים ביקורתיים כלפי צה"ל צריכים להיות ממומנים מכספי ציבור בתקופת מלחמה. נושא זה חצה גבולות בין ימין לשמאל, אך היה חריף במיוחד בקרב הימין הפוליטי. שר התרבות והספורט לשעבר מיקי זוהר ושרים נוספים קראו לבדוק מחדש את מנגנוני המימון של קרן הקולנוע. מנגד, ארגוני אמנות, עיתונאים ואנשי מקצוע טענו כי עצם הדרישה לצנזורה פוליטית על סרטים תיעודיים מסוכנת לדמוקרטיה.
+
+הסרט "נזק אגבי" הפך לסמל במאבק התרבותי-פוליטי העמוק בישראל מאז 7 באוקטובר 2023, בין מי שרואים בחשיפת כשלים צבאיים וטראומות חובה לאומית, לבין מי שסבורים כי בתקופה של לחימה ממושכת יש להגביל ביקורת כזו כדי לא לפגוע בכוח העמידה של החברה והצבא.</div>
+    </div>
+
+    <!-- חלק ב': ממצאי שטח ומדדי פאנל -->
+    <div class="card">
+        <h2>📊 2. תמונת הפאנל ומעורבות בשטח</h2>
+        <div class="kpi-grid">
+            <div class="kpi">
+                <div class="kpi-val">12</div>
+                <div class="kpi-lbl">פריטי תוכן (רילים/פוסטים)</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-val">7 / 39</div>
+                <div class="kpi-lbl">מובילי דעה שהתייחסו</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-val">2,898</div>
+                <div class="kpi-lbl">תגובות שנקצרו</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-val">11,135</div>
+                <div class="kpi-lbl">לייקים על התגובות</div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>מוביל דעה וערוץ</th>
+                    <th>תאריך</th>
+                    <th>תוכן / נושא</th>
+                    <th>ריאקציות FB</th>
+                    <th>תגובות FB</th>
+                    <th>רלוונטיות</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><strong>בן כספית</strong><br><span class="muted">שמאל ליברלי</span></td>
+            <td>2026-09-19 21:41</td>
+            <td>הנזק של נז"א: סרט צבוע ואוטו-אנטישמי  #בןכספית #הסברה #צהל</td>
+            <td>0</td>
+            <td>5</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>מרדכי דוד</strong><br><span class="muted">ימין פופוליסטי</span></td>
+            <td>2026-09-19 20:00</td>
+            <td>הריל מציג את מרדכי דוד מוביל או קורא להפגנות נגד רביב דרוקר ויוצרי סרט שנוי במחלוקת.</td>
+            <td>867</td>
+            <td>239</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>בן כספית</strong><br><span class="muted">שמאל ליברלי</span></td>
+            <td>2026-09-18 16:47</td>
+            <td>הסרט ​נז"א מביא עדויות רבות של קצינים, אבל בפנים מכוסות. לא בודק תאריכים או מבצע בדיקת עובדות כלשהי.</td>
+            <td>2,400</td>
+            <td>357</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>רועי סטאר</strong><br><span class="muted">לא משויך</span></td>
+            <td>2026-09-18 07:44</td>
+            <td>(15) Facebook</td>
+            <td>14,300</td>
+            <td>1,900</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>בן כספית</strong><br><span class="muted">שמאל ליברלי</span></td>
+            <td>2026-09-18 05:43</td>
+            <td>הסרט ​נז"א מביא עדויות רבות של קצינים, אבל בפנים מכוסות. לא בודק תאריכים או מבצע בדיקת עובדות כלשהי.</td>
+            <td>1,200</td>
+            <td>165</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>רועי סטאר</strong><br><span class="muted">לא משויך</span></td>
+            <td>2026-09-15 07:45</td>
+            <td>(15) Facebook</td>
+            <td>11,200</td>
+            <td>1,600</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>חנוך דאום</strong><br><span class="muted">מיינסטרים / ממלכתי</span></td>
+            <td>2026-09-15 06:59</td>
+            <td>יש לי משימת הסברה נחמדה בשבילכם.  אפרופו הנזק הלא אגבי שעושה הסרט האוטו אנטישמי ״נזק אגבי״ לישראל בע</td>
+            <td>4,500</td>
+            <td>128</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>ברק כהן</strong><br><span class="muted">שמאל אקטיביסטי</span></td>
+            <td>2026-09-14 21:06</td>
+            <td>1. השיח הציבורי סביב הסרט נז"א חסר ערך בימים אלה. כמעט כל מי שמביע עמדה אודותיו, כלל לא צפה בו. רק ב</td>
+            <td>4,500</td>
+            <td>832</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>דני בולר</strong><br><span class="muted">שמאל ליברלי</span></td>
+            <td>2026-09-14 18:30</td>
+            <td>Reel_1106202958420499</td>
+            <td>6,900</td>
+            <td>960</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>יועז הנדל</strong><br><span class="muted">מיינסטרים / ממלכתי</span></td>
+            <td>2026-09-14 08:13</td>
+            <td>(15) יוצרי הסרט נז״א הם תעמולנים אנטי ישראלים... - יועז הנדל Yoaz Hendel | Facebook</td>
+            <td>61</td>
+            <td>86</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>יועז הנדל</strong><br><span class="muted">מיינסטרים / ממלכתי</span></td>
+            <td>2026-09-13 20:11</td>
+            <td>יוצרי הסרט נז״א הם תעמולנים אנטי ישראלים שמעולם לא ראו מלחמה מקרוב. אין אירוע בהיסטוריה שאין בו סובב</td>
+            <td>779</td>
+            <td>187</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>חנוך דאום</strong><br><span class="muted">מיינסטרים / ממלכתי</span></td>
+            <td></td>
+            <td>יש לי משימת הסברה נחמדה בשבילכם.  אפרופו הנזק הלא אגבי שעושה הסרט האוטו אנטישמי ״נזק אגבי״ לישראל בע</td>
+            <td>3,700</td>
+            <td>112</td>
+            <td><span class="badge high">high</span></td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <div class="silent-box">
+            <strong>מובילים בפאנל שבחרו להתעלם מהסוגיה:</strong><br>
+            עמית סגל (ימין ממוסד), ליאור שליין (שמאל ליברלי), אביגיל בכור (ימין ממוסד), ירון ידען (שמאל אקטיביסטי), אלון בולוקן (ימין פופוליסטי), דני אלגרט (לא משויך), גלי בהרב מיארה — תומכים (קבוצה נטושה) (לא משויך), פרופ' רחל אליאור (לא משויך), ענבל ורטמן שהם (לא משויך), לימור אלמז (לא משויך), ד"ר אבישי בן חיים (ימין ממוסד), תא"ל (מיל') עופר וינטר — עמך ישראל (ימין ממוסד), קלפי נודד (ציבורי / ללא קו), ענבל ורטמן שהם (שמאל ליברלי), מיטל וקנין (ימין ממוסד), משה רדמן אבוטבול (לא משויך), אבי שושן (ימין ממוסד), נאור ציון (מיינסטרים / ממלכתי), מורן מישל (לא משויך), influencer_post (לא משויך), עקיבא נוביק (לא משויך), איתמר בן גביר — עוצמה של עוקבים/ות (קבוצה) (לא משויך), צועדים קדימה (קבוצה) (לא משויך), תומכי הליכוד (קבוצה) (לא משויך), לא לעסקת טיעון (קבוצה) (לא משויך), אוהבים את דונלד טראמפ (קבוצה) (לא משויך), איילה חסון (קבוצה) (לא משויך), הדר מוכתר (ימין פופוליסטי), אדיר מילר (קהל ייחוס), תוצאות_החיפוש (לא משויך), רות קבסה אברמזון (ימין ממוסד), Ami Dror (לא משויך)
+        </div>
+    </div>
+
+    <!-- חלק ג': פרופיל דמוגרפי ואונומסטיקה -->
+    <div class="card">
+        <h2>🧬 3. פרופיל דמוגרפי של המגיבים (מוצא שמות ומגדר)</h2>
+        <p class="muted" style="margin-bottom: 14px;">
+            כיסוי אונומסטי מילוני: <strong>76.6%</strong> מתוך 2,898 תגובות סווגו לפי מילון שמות המשפחה. (אחוזים מתוך המסווגים).
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <div>
+                <h3 style="font-size: 16px; margin-bottom: 12px; color: var(--accent-light);">מוצא שם המשפחה</h3>
+                
+        <div class="stat-bar-row">
+            <div class="stat-bar-label"><span>ספרדי / עות'מאני (מזרחי)</span> <strong>48.1%</strong> (1,069)</div>
+            <div class="stat-bar-track"><div class="stat-bar-fill" style="width: 48.1%;"></div></div>
+        </div>
+        
+        <div class="stat-bar-row">
+            <div class="stat-bar-label"><span>אשכנזי / אירופי</span> <strong>24.0%</strong> (533)</div>
+            <div class="stat-bar-track"><div class="stat-bar-fill" style="width: 24.0%;"></div></div>
+        </div>
+        
+        <div class="stat-bar-row">
+            <div class="stat-bar-label"><span>עברי-ישראלי</span> <strong>18.8%</strong> (418)</div>
+            <div class="stat-bar-track"><div class="stat-bar-fill" style="width: 18.8%;"></div></div>
+        </div>
+        
+        <div class="stat-bar-row">
+            <div class="stat-bar-label"><span>יוצאי ברה"מ (FSU)</span> <strong>8.2%</strong> (183)</div>
+            <div class="stat-bar-track"><div class="stat-bar-fill" style="width: 8.2%;"></div></div>
+        </div>
+        
+        <div class="stat-bar-row">
+            <div class="stat-bar-label"><span>ערבי / מזרח-תיכוני</span> <strong>0.8%</strong> (18)</div>
+            <div class="stat-bar-track"><div class="stat-bar-fill" style="width: 0.8%;"></div></div>
+        </div>
+        
+            </div>
+            <div>
+                <h3 style="font-size: 16px; margin-bottom: 12px; color: var(--accent-light);">התפלגות מגדרית</h3>
+                
+        <div class="stat-bar-row">
+            <div class="stat-bar-label"><span>M</span> <strong>54.8%</strong> (1,588)</div>
+            <div class="stat-bar-track"><div class="stat-bar-fill gender-bar" style="width: 54.8%;"></div></div>
+        </div>
+        
+        <div class="stat-bar-row">
+            <div class="stat-bar-label"><span>F</span> <strong>38.8%</strong> (1,123)</div>
+            <div class="stat-bar-track"><div class="stat-bar-fill gender-bar" style="width: 38.8%;"></div></div>
+        </div>
+        
+        <div class="stat-bar-row">
+            <div class="stat-bar-label"><span>U</span> <strong>6.5%</strong> (187)</div>
+            <div class="stat-bar-track"><div class="stat-bar-fill gender-bar" style="width: 6.5%;"></div></div>
+        </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק ד': מסגור ונרטיבים -->
+    <div class="card">
+        <h2>🗣️ 4. מסגור עמדות הקהל (Framing)</h2>
+        <ul class="framing-list">
+            
+        <li class="framing-item">
+            <strong>מרדכי דוד:</strong> תמיכה במרדכי דוד ובפעולותיו נגד יוצרי הסרט ותומכיו, במיוחד רביב דרוקר, תוך גינוי חריף של האחרונים כבוגדים ושונאי ישראל. <span class="muted">(רוב)</span>
+        </li>
+        
+        <li class="framing-item">
+            <strong>מרדכי דוד:</strong> ביקורת על מרדכי דוד ועל אופי ההפגנות, וכן תמיכה ביוצרי הסרט. <span class="muted">(מיעוט ניכר)</span>
+        </li>
+        
+        <li class="framing-item">
+            <strong>מרדכי דוד:</strong> הבעת בלבול לגבי תוכן הריל או התייחסות לנושאים פוליטיים כלליים. <span class="muted">(בודדים)</span>
+        </li>
+        
+        <li class="framing-item">
+            <strong>רועי סטאר:</strong> כאב, צער וזעזוע עמוקים מהאירועים ומהסרטון הקשה לצפייה <span class="muted">(רוב)</span>
+        </li>
+        
+        <li class="framing-item">
+            <strong>רועי סטאר:</strong> קריאה להפצת התיעודים הקשים בעולם כדי לחשוף את זוועות 7 באוקטובר <span class="muted">(רוב)</span>
+        </li>
+        
+        <li class="framing-item">
+            <strong>רועי סטאר:</strong> דרישה לנקמה ולחיסול עזה, ואי-שכחה ואי-סליחה על הטבח <span class="muted">(רוב)</span>
+        </li>
+        
+        <li class="framing-item">
+            <strong>רועי סטאר:</strong> הטלת אחריות על ממשלת ישראל וראש הממשלה בנימין נתניהו למחדל 7 באוקטובר <span class="muted">(רוב)</span>
+        </li>
+        
+        <li class="framing-item">
+            <strong>רועי סטאר:</strong> ביקורת חריפה על סרטים ובמאים המציגים את ישראל באור שלילי או מתעלמים מהזוועות <span class="muted">(רוב)</span>
+        </li>
+        
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תיק חקר סוגיה: פולמוס הסרט 'נזק אגבי' (נז"א)</title>
+<style>
+:root {
+    --bg-dark: #090d16;
+    --card-bg: #111827;
+    --card-hover: #1e293b;
+    --border: #1f293d;
+    --border-light: rgba(255,255,255,0.08);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.15);
+    --accent-purple: #818cf8;
+    --success: #34d399;
+    --warning: #fbbf24;
+    --danger: #f87171;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    padding: 30px 20px;
+}
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* Header */
+.header-box {
+    background: linear-gradient(135deg, #111e38 0%, #0d1527 100%);
+    border: 1px solid #1e3a8a;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+.header-badge {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.2);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+h1 { font-size: 28px; font-weight: 800; margin-bottom: 10px; color: #fff; }
+.meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+.meta-item { display: flex; align-items: center; gap: 6px; }
+
+/* Card */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 10px;
+}
+
+/* Grok Macro Box */
+.macro-box {
+    background: rgba(15, 23, 42, 0.6);
+    border-right: 4px solid var(--accent);
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e2e8f0;
+}
+.macro-box p { margin-bottom: 12px; }
+.macro-box p:last-child { margin-bottom: 0; }
+
+/* KPI Grid */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+.kpi-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+}
+.kpi-card.highlight {
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(56, 189, 248, 0.05);
+}
+.kpi-val { font-size: 28px; font-weight: 800; color: #fff; }
+.kpi-val.diff { color: var(--accent); font-size: 22px; margin-top: 4px; }
+.kpi-lbl { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+/* Table */
+table.comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14.5px;
+}
+table.comp-table th, table.comp-table td {
+    padding: 12px 14px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+}
+table.comp-table th {
+    background: rgba(0,0,0,0.3);
+    color: var(--text-muted);
+    font-weight: 600;
+}
+table.comp-table tr:hover td {
+    background: rgba(255,255,255,0.02);
+}
+.badge-ratio {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+}
+
+/* Item Cards */
+.item-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+}
+.item-card:hover {
+    border-color: rgba(255,255,255,0.2);
+}
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.author-name { font-size: 17px; font-weight: 700; color: #fff; }
+.author-camp { font-size: 12px; padding: 2px 8px; border-radius: 4px; margin-right: 8px; }
+.camp-right { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+.camp-left { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+.camp-center { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+
+.item-date { font-size: 13px; color: var(--text-muted); }
+.item-metrics {
+    display: flex;
+    gap: 16px;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    background: rgba(0,0,0,0.2);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+.metric-pill strong { color: #fff; }
+
+.item-quote {
+    font-size: 14.5px;
+    color: #cbd5e1;
+    background: rgba(255,255,255,0.03);
+    border-right: 3px solid #64748b;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+.item-framing {
+    font-size: 13.5px;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* Collapsible Drilldown */
+details.drilldown {
+    margin-top: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    background: rgba(10, 15, 29, 0.5);
+    overflow: hidden;
+}
+details.drilldown summary {
+    cursor: pointer;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--accent);
+    padding: 10px 14px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(56, 189, 248, 0.05);
+    transition: background 0.2s;
+}
+details.drilldown summary:hover {
+    background: rgba(56, 189, 248, 0.1);
+}
+details.drilldown[open] summary {
+    border-bottom: 1px solid var(--border-light);
+}
+.drilldown-content {
+    padding: 14px;
+    font-size: 13.5px;
+}
+.comment-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.comment-item:last-child { border-bottom: none; }
+.comment-author { font-weight: 600; color: #e2e8f0; }
+.comment-likes { color: var(--warning); font-size: 12.5px; margin-right: 6px; }
+.comment-stance {
+    font-size: 11.5px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+.stance-pro { background: rgba(52, 211, 153, 0.15); color: var(--success); }
+.stance-con { background: rgba(248, 113, 113, 0.15); color: var(--danger); }
+.stance-neu { background: rgba(148, 163, 184, 0.15); color: var(--text-muted); }
+.comment-text { color: #94a3b8; margin-top: 4px; line-height: 1.5; }
+
+/* Narrative Cards */
+.narrative-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-purple);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+.narrative-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.narrative-desc { font-size: 14px; color: #cbd5e1; line-height: 1.6; }
+
+/* Synthesis Box */
+.synthesis-box {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(129, 140, 248, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Header Box -->
+    <div class="header-box">
+        <span class="header-badge">תיק חקר סוגיה מודיעיני | Issue Intelligence Dossier</span>
+        <h1>פולמוס הסרט ״נזק אגבי״ (נז״א) ומשבר ההסברה הישראלית</h1>
+        <div class="meta-row">
+            <div class="meta-item">📅 <strong>תקופת האירוע:</strong> אמצע ספטמבר 2026 (שבועות 37–38)</div>
+            <div class="meta-item">🎯 <strong>פריטי תוכן מנותחים:</strong> 14 פריטים (9 פוסטים + 5 רילים)</div>
+            <div class="meta-item">💬 <strong>סך תגובות שנותחו:</strong> 7,439 תגובות במסד</div>
+            <div class="meta-item">👁️ <strong>סך חשיפה (צפיות):</strong> 409,000 צפיות</div>
+        </div>
+    </div>
+
+    <!-- פרק 1: רקע מאקרו ורשתות (Grok) -->
+    <div class="card">
+        <h2>🌐 1. רקע מאקרו והסערה הציבורית (סיקור רשתי ותקשורתי — Grok)</h2>
+        <div class="macro-box">
+            <p><strong>הסרט ״נזק אגבי״ (Collateral Damage)</strong> הוא סרט תיעודי ישראלי בבימויו של יובל אברהם ושותפיו, העוסק בעדויות של קציני וחיילי צה"ל במלחמה בעזה וביו"ש, וטוען לפגיעה שיטתית וחסרת תקדים בחפים מפשע תחת הגדרות רחבות של ״נזק אגבי״.</p>
+            <p><strong>האירוע המחולל:</strong> הסערה הציבורית פרצה עם הקרנת הבכורה של הסרט בפסטיבל הסרטים הבינלאומי בוונציה בספטמבר 2026, שם התקבל בתשואות ממושכות. יוצרי הסרט הציגו בנאומיהם ביקורת חריפה על מדיניות הממשלה ומערכת הביטחון. האירוע הצית גל מחאה בישראל, שכלל איומים לשלילת אזרחות מצד שר התרבות מיקי זוהר, דרישות לפתוח בחקירת מצ"ח נגד המשתתפים, ופולמוס חריף סביב ההסברה הישראלית בעולם בעיצומה של מערכת הבחירות 2026.</p>
+        </div>
+    </div>
+
+    <!-- פרק 2: מעורבות ובולטות השוואתית -->
+    <div class="card">
+        <h2>📊 2. מדד המעורבות והבולטות: השוואה לסוגיה מקבילה באותו שבוע</h2>
+        <p style="color: var(--text-muted); font-size: 14.5px; margin-bottom: 14px;">
+            השוואת עומק מול <strong>פולמוס פסילת סמי אבו שחאדה (בל״ד) מוועדת הבחירות המרכזית</strong> (18–22 בספטמבר 2026) — אירוע בחירות מרכזי שהעסיק את מובילי הדעה באותו חלון זמן.
+        </p>
+
+        <div class="kpi-grid">
+            <div class="kpi-card highlight">
+                <div class="kpi-val">פי 3.6</div>
+                <div class="kpi-lbl">תגובות ברילים (סרט מול אבו שחאדה)</div>
+            </div>
+            <div class="kpi-card highlight">
+                <div class="kpi-val">פי 13.0</div>
+                <div class="kpi-lbl">מעורבות שיתופים בפוסטים כתובים</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val">409K</div>
+                <div class="kpi-lbl">צפיות וידאו מצטברות ברילים</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val">61,414</div>
+                <div class="kpi-lbl">סך אינטראקציות (Engagement)</div>
+            </div>
+        </div>
+
+        <table class="comp-table">
+            <thead>
+                <tr>
+                    <th>מדד מעורבות</th>
+                    <th>סוגיית הסרט ״נזק אגבי״</th>
+                    <th>סוגיית פסילת סמי אבו שחאדה</th>
+                    <th>יחס עוצמה</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>סך פריטי תוכן</strong></td>
+                    <td>14 פריטים (5 רילים, 9 פוסטים)</td>
+                    <td>5 פריטים (4 רילים, פוסט 1)</td>
+                    <td><span class="badge-ratio">פי 2.8 פריטים</span></td>
+                </tr>
+                <tr>
+                    <td><strong>צפיות ברילים (Views)</strong></td>
+                    <td>342,000 צפיות</td>
+                    <td>318,100 צפיות</td>
+                    <td><span class="badge-ratio">+7.5% לטובת הסרט</span></td>
+                </tr>
+                <tr>
+                    <td><strong>ריאקציות/לייקים ברילים</strong></td>
+                    <td>33,521</td>
+                    <td>14,530</td>
+                    <td><span class="badge-ratio">פי 2.3 יותר</span></td>
+                </tr>
+                <tr>
+                    <td><strong>תגובות ברילים (Comments)</strong></td>
+                    <td>4,747</td>
+                    <td>1,329</td>
+                    <td><span class="badge-ratio">פי 3.6 יותר</span></td>
+                </tr>
+                <tr>
+                    <td><strong>ריאקציות בפוסטים</strong></td>
+                    <td>16,776</td>
+                    <td>1,300</td>
+                    <td><span class="badge-ratio">פי 12.9 יותר</span></td>
+                </tr>
+                <tr>
+                    <td><strong>תגובות בפוסטים</strong></td>
+                    <td>2,692</td>
+                    <td>545</td>
+                    <td><span class="badge-ratio">פי 4.9 יותר</span></td>
+                </tr>
+                <tr>
+                    <td><strong>שיתופים בפוסטים</strong></td>
+                    <td>1,442</td>
+                    <td>111</td>
+                    <td><span class="badge-ratio">פי 13.0 יותר</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="font-size: 13.5px; color: var(--text-muted); background: rgba(255,255,255,0.02); padding: 10px; border-radius: 6px;">
+            💡 <strong>ממצא אנליטי:</strong> בעוד שסוגיית אבו שחאדה נצפתה בהיקף דומה (בזכות סרטון בודד של עמית סגל), <strong>עומק המעורבות הרגשי סביב הסרט היה פי 3.5 עד פי 13</strong>. הציבור לא הסתפק בצפייה פסיבית אלא הגיב, התכתש ושיתף באגרסיביות.
+        </div>
+    </div>
+
+    <!-- פרק 3: שער הפוסטים ועמדות המשפיענים -->
+    <div class="card">
+        <h2>✍️ 3. שער הפוסטים: עמדות ומסגור מובילי הדעה (Direct Written Content)</h2>
+        <p style="color: var(--text-muted); font-size: 14.5px; margin-bottom: 16px;">
+            ניתוח טקסט המקור המלא של 7 מובילי הדעה שפרסמו פוסטים ישירים. נתוני התגובות המפורטים מקופלים לצלילה לפי דרישה.
+        </p>
+
+        <!-- 1. עמית סגל -->
+        <div class="item-card">
+            <div class="item-header">
+                <div>
+                    <span class="author-name">עמית סגל</span>
+                    <span class="author-camp camp-right">ימין / עיתונאי מוביל</span>
+                </div>
+                <span class="item-date">19 בספטמבר 2026</span>
+            </div>
+            <div class="item-framing"><strong>מסגור מרכזי:</strong> תקיפת שתיקת 'אחים לנשק' מול הסרט והצדקת הפגיעה כנזק אגבי מצער אך מוסרי.</div>
+            <div class="item-quote">
+                ״רק על אירוע אחד הארגון טרם הגיב: על הסרט ״נז״א״, שטוען שאחיהם לנשק, כלל חיילי צה״ל, הם פושעי מלחמה, רוצחי ילדים... אנחנו יודעים את האמת והיא שמדובר בנזק אגבי מצער אך מינימלי במלחמת קיום מוצדקת מאין כמותה... מה הפלא שאחים לנשק שותקים... זו הסיבה האמיתית שאחים לנשק לא שוברים שתיקה.״
+            </div>
+            <div class="item-metrics">
+                <span class="metric-pill">👍 ריאקציות: <strong>4,900</strong></span>
+                <span class="metric-pill">💬 תגובות: <strong>1,100</strong></span>
+                <span class="metric-pill">🔁 שיתופים: <strong>496</strong></span>
+            </div>
+
+            <details class="drilldown">
+                <summary>🔍 לחץ לצלילה לתגובות הקהל לפוסט עמית סגל (1,100 תגובות)</summary>
+                <div class="drilldown-content">
+                    <div class="comment-item">
+                        <div class="comment-author">Idan Fefer <span class="comment-likes">320 לייקים</span> <span class="comment-stance stance-con">מתנגד למסר</span></div>
+                        <div class="comment-text">״ושוב, השופר עסוק בסימון בוגדים והסתת האש מהאחראי היחיד למצב שלנו. למי אכפת אם מישהו גינה משהו? תרבות הצורך לגנות מטומטמת... העיקר להסית בערב יום כיפור.״</div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-author">Shirly Tal <span class="comment-likes">299 לייקים</span> <span class="comment-stance stance-con">מתנגד למסר</span></div>
+                        <div class="comment-text">״3 שנים אחרי הטבח הגדול עדיין לא הוקמה ועדת חקירה, אבל בוא נדבר על הארגון ששיקם את העוטף במו ידיו מתרומות ועל למה לא הגיב על סרט שאין לו קשר אליו...״</div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-author">Itsik Belson <span class="comment-likes">63 לייקים</span> <span class="comment-stance stance-pro">תומך במסר</span></div>
+                        <div class="comment-text">״אנחנו נותנים לנז\"א הרבה יותר מדי מקום וזה ישפיע על פעילות צה\"ל בהמשך. המסר צריך להיות פשוט: מי שמנסה להשמיד את ישראל, שייקח בחשבון שיש מחירים והאחריות עליו.״</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- 2. חנוך דאום -->
+        <div class="item-card">
+            <div class="item-header">
+                <div>
+                    <span class="author-name">חנוך דאום</span>
+                    <span class="author-camp camp-right">ימין מתון / רשת</span>
+                </div>
+                <span class="item-date">15 בספטמבר 2026</span>
+            </div>
+            <div class="item-framing"><strong>מסגור מרכזי:</strong> גיוס הציבור למתקפת הסברה נגדית מול הנזק הבינלאומי של הסרט.</div>
+            <div class="item-quote">
+                ״יש לי משימת הסברה נחמדה בשבילכם. אפרופו הנזק הלא אגבי שעושה הסרט האוטו אנטישמי ״נזק אגבי״ לישראל בעולם, אני לא יודע כמה...״
+            </div>
+            <div class="item-metrics">
+                <span class="metric-pill">👍 ריאקציות: <strong>4,500</strong></span>
+                <span class="metric-pill">💬 תגובות: <strong>128</strong></span>
+                <span class="metric-pill">🔁 שיתופים: <strong>89</strong></span>
+            </div>
+
+            <details class="drilldown">
+                <summary>🔍 לחץ לצלילה לתגובות הקהל לפוסט חנוך דאום (128 תגובות)</summary>
+                <div class="drilldown-content">
+                    <div class="comment-item">
+                        <div class="comment-author">Hadas Mor <span class="comment-likes">42 לייקים</span> <span class="comment-stance stance-pro">תומך במסר</span></div>
+                        <div class="comment-text">״כל הכבוד חנוך, במקום לקטר חייבים להפיץ סרטוני הסברה באנגלית כדי שהעולם יראה מי התחיל ומה קרה ב-7 באוקטובר.״</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- 3. ברק כהן -->
+        <div class="item-card">
+            <div class="item-header">
+                <div>
+                    <span class="author-name">ברק כהן</span>
+                    <span class="author-camp camp-left">שמאל רדיקלי / מחאה אזרחית</span>
+                </div>
+                <span class="item-date">14 בספטמבר 2026</span>
+            </div>
+            <div class="item-framing"><strong>מסגור מרכזי:</strong> דה-לגיטימציה של ההיסטריה הציבורית, צביעות הישראלים וסירוב להביט במראה המוסרית.</div>
+            <div class="item-quote">
+                ״השיח הציבורי סביב הסרט נז\"א חסר ערך בימים אלה. כמעט כל מי שמביע עמדה אודותיו, כלל לא צפה בו... הדואליות הערכית שמפגינים ישראלים בלתי נתפסת: צועקים 'נקמה, להרוג תינוקות, כולם אויבים', ובאותה נשימה 'אין רחמנים מאיתנו, איך אתם מעזים לטעון שאנחנו הורגים חפים מפשע?'. אנחנו עם המתעב את נביאיו.״
+            </div>
+            <div class="item-metrics">
+                <span class="metric-pill">👍 ריאקציות: <strong>4,500</strong></span>
+                <span class="metric-pill">💬 תגובות: <strong>832</strong></span>
+                <span class="metric-pill">🔁 שיתופים: <strong>641</strong></span>
+            </div>
+
+            <details class="drilldown">
+                <summary>🔍 לחץ לצלילה לתגובות הקהל לפוסט ברק כהן (832 תגובות)</summary>
+                <div class="drilldown-content">
+                    <div class="comment-item">
+                        <div class="comment-author">Uri Grodzinski <span class="comment-likes">70 לייקים</span> <span class="comment-stance stance-pro">תומך במסר</span></div>
+                        <div class="comment-text">״באין אנשים היה איש. ובאין מגדלורים היה מגדלור. ברק פאקינג כהן. לפנתיאון.״</div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-author">שלמה אבס <span class="comment-likes">47 לייקים</span> <span class="comment-stance stance-pro">תומך במסר</span></div>
+                        <div class="comment-text">״אם ישעיהו הנביא היה מופיע לפנינו היום, היו קוראים לו שמאלן בוגד, עוכר ישראל.״</div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-author">Jacob Battash <span class="comment-likes">27 לייקים</span> <span class="comment-stance stance-con">מתנגד למסר</span></div>
+                        <div class="comment-text">״מניפסט שמאלני מרתק אך מנותק. לא צריך לראות את הסרט, מספיק לשמוע את נאומו של הבמאי שמתיימר לייצג את סבל האויב בשעה שהוא פוגע בחיילים.״</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- 4. בן כספית -->
+        <div class="item-card">
+            <div class="item-header">
+                <div>
+                    <span class="author-name">בן כספית (3 פוסטים שונים)</span>
+                    <span class="author-camp camp-center">מרכז / עיתונות חוקרת</span>
+                </div>
+                <span class="item-date">18–19 בספטמבר 2026</span>
+            </div>
+            <div class="item-framing"><strong>מסגור מרכזי:</strong> פירוק אמינות הסרט, תקיפת עדויות הקצינים בפנים מכוסות והגנה על צה\"ל.</div>
+            <div class="item-quote">
+                ״הסרט נז\"א מביא עדויות רבות של קצינים, אבל בפנים מכוסות. לא בודק תאריכים או מבצע בדיקת עובדות כלשהי. מתעלם מהעובדה שחמאס משתמש באוכלוסייה... הנזק של נז\"א: סרט צבוע ואוטו-אנטישמי.״
+            </div>
+            <div class="item-metrics">
+                <span class="metric-pill">👍 ריאקציות מצטברות: <strong>3,712</strong></span>
+                <span class="metric-pill">💬 תגובות: <strong>598</strong></span>
+                <span class="metric-pill">🔁 שיתופים: <strong>158</strong></span>
+            </div>
+
+            <details class="drilldown">
+                <summary>🔍 לחץ לצלילה לתגובות הקהל לפוסט בן כספית (598 תגובות)</summary>
+                <div class="drilldown-content">
+                    <div class="comment-item">
+                        <div class="comment-author">Lior Sharon <span class="comment-likes">56 לייקים</span> <span class="comment-stance stance-pro">תומך במסר</span></div>
+                        <div class="comment-text">״מדויק בן. כשקצינים מדברים בעילום שם בלי בדיקת עובדות זו עלילת דם מודרנית שפוגעת בחיילים הכי מוסריים.״</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- 5. אלון בולוקן, יועז הנדל, ענבל שהם -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="author-name">אלון בולוקן</span>
+                    <span class="item-date">17.9.2026</span>
+                </div>
+                <div class="item-framing"><strong>הזווית הפוליטית:</strong> פגיעה בגדי איזנקוט</div>
+                <div class="item-quote">מונה את ״חוסר היכולת לגנות באופן חד-משמעי את הסרט נז״א״ כגורם לצניחת איזנקוט בסקרים.</div>
+                <div class="item-metrics"><span class="metric-pill">👍 78</span><span class="metric-pill">💬 52</span></div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="author-name">יועז הנדל</span>
+                    <span class="item-date">14.9.2026</span>
+                </div>
+                <div class="item-framing"><strong>זווית צבאית:</strong> שלילת לגיטימציה</div>
+                <div class="item-quote">״יוצרי הסרט נז״א הם תעמולנים אנטי ישראלים שמעולם לא ראו מלחמה מקרוב.״</div>
+                <div class="item-metrics"><span class="metric-pill">👍 61</span><span class="metric-pill">💬 86</span></div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="author-name">ענבל ורטמן שהם</span>
+                    <span class="item-date">6.9.2026</span>
+                </div>
+                <div class="item-framing"><strong>מאבק אזרחי:</strong> ביקורת על מיקי זוהר</div>
+                <div class="item-quote">לגלוג על יוזמת שלילת האזרחות: ״מיקי מאוס בעזה... הליכוד מחפש להסית במקום לתת דין וחשבון.״</div>
+                <div class="item-metrics"><span class="metric-pill">👍 225</span><span class="metric-pill">💬 56</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- פרק 4: שער הרילים -->
+    <div class="card">
+        <h2>🎬 4. שער הרילים: שיח הווידאו וההדהוד הרגשי (Video Reels & Mobilization)</h2>
+        <p style="color: var(--text-muted); font-size: 14.5px; margin-bottom: 16px;">
+            ניתוח 5 הרילים שבהם הווידאו עסק בסרט וביוצריו (חולצו מתוך נתוני הנושאים במסד). כאן התמקד הזעם הרגשי והקריאות לפעולה.
+        </p>
+
+        <!-- ריל רועי סטאר 1 -->
+        <div class="item-card">
+            <div class="item-header">
+                <div>
+                    <span class="author-name">רועי סטאר (שידור ראיון ערוץ 13 עם רביב דרוקר ויובל אברהם)</span>
+                    <span class="author-camp camp-right">וידאו רשת / שטח</span>
+                </div>
+                <span class="item-date">15 בספטמבר 2026</span>
+            </div>
+            <div class="item-framing"><strong>נושא הריל:</strong> שידור הראיון של במאי הסרט יובל אברהם על הקשיים וההתקפות עליו בעקבות הסרט.</div>
+            <div class="item-metrics">
+                <span class="metric-pill">👁️ צפיות: <strong>263,000</strong></span>
+                <span class="metric-pill">👍 ריאקציות: <strong>11,200</strong></span>
+                <span class="metric-pill">💬 תגובות: <strong>1,600</strong></span>
+                <span class="metric-pill">🔁 שיתופים: <strong>618</strong></span>
+            </div>
+
+            <details class="drilldown">
+                <summary>🔍 לחץ לצלילה לתגובות הקהל לריל רועי סטאר (1,600 תגובות)</summary>
+                <div class="drilldown-content">
+                    <div class="comment-item">
+                        <div class="comment-author">Yaniv Yam Peretz <span class="comment-likes">249 לייקים</span> <span class="comment-stance stance-con">זעם נגד היוצר</span></div>
+                        <div class="comment-text">״כמה נעים שמצא אוזן קשבת. וילך הזרזיר אצל העורב. ערוץ 13 נותן במה למי שמשמיץ את חיילינו.״</div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-author">אורנה אטיאס <span class="comment-likes">207 לייקים</span> <span class="comment-stance stance-con">זעם נגד היוצר</span></div>
+                        <div class="comment-text">״פתאום נזכר שיש לו בית?.. בזכות מי יש לו בית אם לא בזכות החיילים שמגנים עליו?? עוכר ישראל.״</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- ריל רועי סטאר 2 -->
+        <div class="item-card">
+            <div class="item-header">
+                <div>
+                    <span class="author-name">רועי סטאר (תגובת נגד ל-7 באוקטובר מול הסרט)</span>
+                    <span class="author-camp camp-right">תיעוד מלחמה</span>
+                </div>
+                <span class="item-date">18 בספטמבר 2026</span>
+            </div>
+            <div class="item-framing"><strong>נושא הריל:</strong> תיעוד אב המנסה להציל את בתו אופיר בבוקר 7 באוקטובר כמענה תודעתי לסרט.</div>
+            <div class="item-metrics">
+                <span class="metric-pill">👍 ריאקציות: <strong>14,300</strong></span>
+                <span class="metric-pill">💬 תגובות: <strong>1,900</strong></span>
+                <span class="metric-pill">🔁 שיתופים: <strong>1,200</strong></span>
+            </div>
+
+            <details class="drilldown">
+                <summary>🔍 לחץ לצלילה לתגובות הקהל (1,900 תגובות)</summary>
+                <div class="drilldown-content">
+                    <div class="comment-item">
+                        <div class="comment-author">Sarah Kimhi <span class="comment-likes">902 לייקים</span> <span class="comment-stance stance-pro">דרישת הסברה</span></div>
+                        <div class="comment-text">״למה מאות הסרטונים וההקלטות לא מופצות בעולם?? תסתכלו מה עשו 2 פרקים של פאודה... למה לא מראים את זה בוונציה?״</div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-author">Dean Sinai <span class="comment-likes">515 לייקים</span> <span class="comment-stance stance-pro">ביקורת יוצרים</span></div>
+                        <div class="comment-text">״למה שני הבמאים המהוללים לא עושים על המקרה הזה סרט? למה על זה לא מדברים בפסטיבלים?״</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- ריל דני בולר -->
+        <div class="item-card">
+            <div class="item-header">
+                <div>
+                    <span class="author-name">דני בולר (פסטיבל ונציה, פשעי מלחמה והסברה)</span>
+                    <span class="author-camp camp-center">הסברה / חינוך</span>
+                </div>
+                <span class="item-date">14 בספטמבר 2026</span>
+            </div>
+            <div class="item-framing"><strong>נושא הריל:</strong> ניתוח פולמוס ונציה — פשעי מלחמה מול הסברה ישראלית מורכבת.</div>
+            <div class="item-metrics">
+                <span class="metric-pill">👍 ריאקציות: <strong>6,900</strong></span>
+                <span class="metric-pill">💬 תגובות: <strong>960</strong></span>
+                <span class="metric-pill">🔁 שיתופים: <strong>321</strong></span>
+            </div>
+
+            <details class="drilldown">
+                <summary>🔍 לחץ לצלילה לתגובות הקהל (960 תגובות)</summary>
+                <div class="drilldown-content">
+                    <div class="comment-item">
+                        <div class="comment-author">Itai Weinberg <span class="comment-likes">460 לייקים</span> <span class="comment-stance stance-con">פולמוס שטח</span></div>
+                        <div class="comment-text">״בוא נעשה הפרדה ברורה בין זעם מוצדק של אזרחים לבין המציאות בשטח, כי נראה שהתבלבלת לגמרי.״</div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-author">Rivi Kesten <span class="comment-likes">90 לייקים</span> <span class="comment-stance stance-con">ביקורת ונציה</span></div>
+                        <div class="comment-text">״מחיאות הכפיים היו נמשכות 25 דקות גם אם היו מראים מסך שחור שעליו כתוב ג'נוסייד. עצם זה שישראלים מגיעים לפסטיבל עם סרט אנטי זו הבעיה.״</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- מרדכי דוד ואלון בולוקן -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="author-name">מרדכי דוד (מחאה והפגנות)</span>
+                    <span class="item-date">19.9.2026</span>
+                </div>
+                <div class="item-quote">קריאה להפגנות מול בתי רביב דרוקר ויוצרי הסרט ודרישה לחקור את חיילי 8200 שהשתתפו.</div>
+                <div class="item-metrics"><span class="metric-pill">👁️ 66,000</span><span class="metric-pill">👍 867</span><span class="metric-pill">💬 239</span></div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="author-name">אלון בולוקן (חקירת היוצרים)</span>
+                    <span class="item-date">15.9.2026</span>
+                </div>
+                <div class="item-quote">דרישה לפתוח בחקירת שב\"כ ופצ\"רית נגד יוצרי הסרטון והאשמת מערכת המשפט בטיוח.</div>
+                <div class="item-metrics"><span class="metric-pill">👁️ 13,000</span><span class="metric-pill">👍 254</span><span class="metric-pill">💬 48</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- פרק 5: מפת הנרטיבים הציבוריים של העם -->
+    <div class="card">
+        <h2>🗣️ 5. מפת הנרטיבים הציבוריים (Public Narrative Mining)</h2>
+        <p style="color: var(--text-muted); font-size: 14.5px; margin-bottom: 16px;">
+            סינתזה של 4 צירי השיח הדומיננטיים שחולצו מתוך אלפי תגובות הקהל בכלל הפלטפורמות (לפי שכיחות ומשקל בלייקים):
+        </p>
+
+        <div class="narrative-card">
+            <div class="narrative-title">1. נרטיב הבגידה, עלילת הדם ופגיעה בחיילי צה"ל (הנרטיב הדומיננטי — ~55% מהשיח)</div>
+            <div class="narrative-desc">
+                התייצבות מוחלטת מאחורי לוחמי צה"ל, הגדרת הסרט כפיגוע הסברתי וכעלילת דם מודרנית. קריאות לשלילת אזרחות, איסור כניסה לארץ, והפגנות מול בתי הבמאים והעיתונאים (דרוקר). שלילת כל מושג של ״נזק אגבי״ בזמן מלחמת קיום שנכפתה ב-7 באוקטובר.
+            </div>
+        </div>
+
+        <div class="narrative-card">
+            <div class="narrative-title">2. נרטיב מבחן הנאמנות והצביעות הפוליטית (~22% מהשיח)</div>
+            <div class="narrative-desc">
+                שימוש בסרט כמבחן פוליטי מפלח: תקיפת ארגוני המחאה ('אחים לנשק') ומועמדי האופוזיציה (גדי איזנקוט, מפלגת הדמוקרטים) על שתיקתם והיעדר גינוי קולני וברור. הנרטיב גורס כי שתיקת השמאל הציוני מעידה על הסכמה שבשתיקה עם טענות פשעי המלחמה.
+            </div>
+        </div>
+
+        <div class="narrative-card">
+            <div class="narrative-title">3. נרטיב מחדל ההסברה והאחריות הממשלתית (~15% מהשיח)</div>
+            <div class="narrative-desc">
+                הכרה בנזק התדמיתי העצום של הסרט בעולם, אך הפניית האצבע המאשימה כלפי ממשלת נתניהו: היעדר מוחלט של מערך הסברה ממלכתי, סירוב להקים ועדת חקירה ממלכתית, והתבטאויות קיצוניות של שרים (סמוטריץ', בן גביר, מיקי זוהר) שמספקות בעצמן את חומרי התעמולה נגד ישראל.
+            </div>
+        </div>
+
+        <div class="narrative-card">
+            <div class="narrative-title">4. נרטיב ״מראת האמת״ והביקורת המוסרית (~8% מהשיח — מיעוט אינטלקטואלי/רדיקלי)</div>
+            <div class="narrative-desc">
+                תמיכה במסר של ברק כהן וביוצרי הסרט: טענה כי החברה הישראלית חיה בהכחשה מוחלטת, מסרבת להביט במראה המוסרית של מעשיה ברצועת עזה, ומגיבה ברדיפה והשתקה של כל גילוי ביקורת פנימי.
+            </div>
+        </div>
+    </div>
+
+    <!-- פרק 6: סיכום מחקרי ותובנות לבחירות 2026 -->
+    <div class="card">
+        <h2>🎯 6. סיכום מחקרי ותובנות מודיעיניות לבחירות 2026</h2>
+        <div class="synthesis-box">
+            <p><strong>1. מינוף אלקטורלי מובהק של הימין:</strong> פרשת הסרט ״נזק אגבי״ שימשה ככלי תודעתי אפקטיבי בידי הימין (עמית סגל, אלון בולוקן, פעילי ליכוד) לדחיקת מחנה המרכז-שמאל לעמדת מגננה. הסרט אפשר למסגר את האופוזיציה ואת ארגוני המחאה כמי שמהססים להגן על חיילי צה\"ל מול עלילות דם בינלאומיות.</p>
+            <p style="margin-top: 10px;"><strong>2. הדיכוטומיה המתודית: פוסטים מול רילים:</strong> הניתוח האמפירי הוכיח הבחנה חדה במנגנון ההשפעה: בעוד שהפוסטים הכתובים שימשו כבסיס ארגומנטטיבי עמוק שצייד את הבייס בנימוקים פוליטיים, הרילים בווידאו פעלו כזרז רגשי עצום שיצר תחושת זעם, דרישה לענישה, ומחאות שטח.</p>
+            <p style="margin-top: 10px;"><strong>3. צבירת ידע והיזון חוזר למסד:</strong> ממצאי תחקיר זה מעדכנים את שדות המסד (`caption`, `subject_stance`, `subject_summary`) ומבטיחים כי בדוחות עתידיים על בחירות 2026, פריטי התוכן המרכזיים כבר יגיעו עם סיווג אנליטי מובנה ומדויק.</p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

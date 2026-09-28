@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דו"ח מודיעין שבועי: סדר היום הפוליטי וניתוח נסיעת נתניהו לאו"ם (23-27 ספטמבר 2026)</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TJNJTZQF1F');
+</script>
+
+<style>
+:root {
+    --bg-dark: #0b0f17;
+    --card-bg: #131c2b;
+    --card-sub: #1a2638;
+    --border: #24344d;
+    --border-light: #324766;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --accent-glow: rgba(59, 130, 246, 0.15);
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --mizrahi: #f59e0b;
+    --hebrew: #10b981;
+    --ashkenazi: #8b5cf6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.65;
+    padding: 36px 20px;
+}
+.container { max-width: 1160px; margin: 0 auto; }
+
+/* Headers */
+.header-box {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px 36px;
+    margin-bottom: 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+.tag-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: var(--accent-glow);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: var(--accent-light);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+}
+h1 { font-size: 30px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.3; }
+.meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 14px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+}
+.meta-item { display: flex; align-items: center; gap: 6px; }
+.meta-item strong { color: var(--text-main); }
+
+/* Preamble Box */
+.preamble-box {
+    background: rgba(30, 41, 59, 0.5);
+    border-right: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: #e2e8f0;
+}
+.preamble-box p { margin-bottom: 10px; }
+.preamble-box p:last-child { margin-bottom: 0; }
+
+/* Cards & Sections */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+h2 {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin: 22px 0 12px 0;
+}
+
+/* KPI Grids */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.kpi-card {
+    background: var(--card-sub);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    text-align: center;
+}
+.kpi-val { font-size: 28px; font-weight: 800; color: #fff; }
+.kpi-val.accent { color: var(--accent-light); }
+.kpi-val.warning { color: var(--warning); }
+.kpi-val.success { color: var(--success); }
+.kpi-lbl { font-size: 13.5px; color: var(--text-muted); margin-top: 5px; font-weight: 500; }
+.kpi-sub { font-size: 11.5px; color: var(--text-dim); margin-top: 3px; }
+
+/* Tables */
+.table-wrapper { overflow-x: auto; margin: 16px 0; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: right;
+}
+th, td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--border);
+}
+th {
+    color: var(--text-muted);
+    font-weight: 600;
+    background: rgba(11, 15, 23, 0.6);
+    white-space: nowrap;
+}
+tr:hover td { background: rgba(255, 255, 255, 0.02); }
+.row-total {
+    background: rgba(59, 130, 246, 0.08) !important;
+    font-weight: 700;
+    border-top: 2px solid var(--accent);
+}
+.row-highlight {
+    background: rgba(245, 158, 11, 0.08) !important;
+    font-weight: 600;
+}
+.row-summary {
+    background: rgba(16, 185, 129, 0.08) !important;
+    font-weight: 700;
+}
+
+/* Badges & Tags */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.badge-blue { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+.badge-green { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; }
+.badge-amber { background: rgba(245, 158, 11, 0.2); color: #fcd34d; }
+.badge-purple { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; }
+.badge-red { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
+
+/* Script Indicator */
+.script-tag {
+    font-family: monospace;
+    font-size: 11.5px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+.script-heb { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+.script-lat { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+
+/* Content Blocks */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; } }
+
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+@media (max-width: 980px) { .grid-3 { grid-template-columns: 1fr; } }
+
+.cohort-card {
+    background: var(--card-sub);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    border-top: 4px solid var(--accent);
+}
+.cohort-card.mizrahi { border-top-color: var(--mizrahi); }
+.cohort-card.hebrew { border-top-color: var(--hebrew); }
+.cohort-card.ashkenazi { border-top-color: var(--ashkenazi); }
+
+.cohort-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analysis-text {
+    font-size: 14.5px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+.analysis-text strong { color: #fff; }
+
+.callout-box {
+    background: rgba(15, 23, 42, 0.6);
+    border-left: 3px solid var(--accent-light);
+    border-right: 3px solid var(--accent-light);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 14.5px;
+    color: #e2e8f0;
+}
+.callout-box.danger {
+    border-color: var(--danger);
+    background: rgba(239, 68, 68, 0.06);
+}
+.callout-box.warning {
+    border-color: var(--warning);
+    background: rgba(245, 158, 11, 0.06);
+}
+
+.speech-narrative-list { list-style: none; margin: 14px 0; }
+.speech-narrative-item {
+    background: var(--card-sub);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 14px;
+}
+.speech-num {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent-light);
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(59, 130, 246, 0.15);
+    border-radius: 50%;
+}
+.speech-content h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+.speech-content p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+
+footer {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12.5px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+    <!-- כותרת ראשית ומטא-דאטה -->
+    <div class="header-box">
+        <span class="tag-badge">דו"ח מודיעין שיח שבועי | סבב ניתוח רשתות</span>
+        <h1>סדר היום הפוליטי וניתוח נסיעת נתניהו לאו"ם</h1>
+        <p style="color: var(--text-muted); font-size: 15px; margin-top: 6px;">
+            מיפוי מאקרו של שמונת הנושאים המובילים, פילוח אונומסטי השוואתי תלת-מחנאי, וניתוח שחיקת אפקט הנאום בעצרת
+        </p>
+        <div class="meta-grid">
+            <div class="meta-item">✍️ <strong>חוקר ועורך הדוח:</strong> אמנון זוסמן</div>
+            <div class="meta-item">📅 <strong>תאריך פרסום הדוח:</strong> 28 בספטמבר 2026</div>
+            <div class="meta-item">⏱️ <strong>תקופת הניטור:</strong> 23–27 בספטמבר 2026</div>
+            <div class="meta-item">👥 <strong>מגיבים ייחודיים שנותחו:</strong> 23,273</div>
+            <div class="meta-item">💬 <strong>סך תגובות כולל:</strong> 41,471</div>
+            <div class="meta-item">👍 <strong>סך לייקים במדגם:</strong> 64,972</div>
+            <div class="meta-item">🎯 <strong>משפיענים פוליטיים מנוטרים:</strong> 26</div>
+        </div>
+    </div>
+
+    <!-- פתיח מנהלים -->
+    <div class="preamble-box">
+        <p>
+            <strong>תמצית מנהלים:</strong> הימים האחרונים בין ה-23 ל-27 לחודש, הדיונים הפוליטיים בפייסבוק עסקו במגוון נושאים מרכזיים: חלקם נושאים שוטפים ובולטים שיחזרו עד הבחירות בצורה מחזורית וסדורה, וחלקם נושאים ייחודיים לתקופה כמו ניצנים של אירוע חדש ומתגלגל של העדויות נגד התנהלותו של נתניהו לקראת ה-7 לאוקטובר, והאירוע המרכזי של נסיעתו של נתניהו ועוזריו לנאום בעצרת האו"ם והנאום עצמו.
+        </p>
+        <p style="margin-top: 8px; font-size: 15px; color: var(--text-muted);">
+            להלן מיפוי סדר היום המלא של התקופה, ולאחריו ניתוח עומק של נסיעת נתניהו לאו"ם, תוך הצלבה אונומסטית מלאה בין שלוש קבוצות המוצא (עבריים-ישראליים, עות'מאנים-מזרחיים, ואשכנזים-אירופיים) וזיהוי מאפייני שפת הרישום של הפרופילים.
+        </p>
+    </div>
+
+    <!-- חלק 1: מפת סדר היום הפוליטי השבועי -->
+    <div class="card">
+        <h2>📊 פרק א': מפת סדר היום הפוליטי השבועי (23–27 בספטמבר 2026)</h2>
+        <p class="analysis-text">
+            ניתוח השיח בתקופה זו חושף פיצול עמוק בין שני מוקדי מעורבות: מוקד של <strong>אקטיביזם חברתי/רחוב</strong> (הפודקאסט של הדר מוכתר ודני בולר, ועימותי הרחוב בהובלת מרדכי דוד) שריכזו את מרב הנפח הדיגיטלי, לצד <strong>אירועים פוליטיים-אידיאולוגיים ממסדיים</strong> (נסיעת נתניהו לאו"ם ותחקיר המקור על לשכת רה"מ וקטר) שמשכו שיח ממוקד, מחנאי וקוטבי במיוחד.
+        </p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 22%;">נושא / סערה</th>
+                        <th style="width: 18%;">מוקד המשפיענים</th>
+                        <th style="width: 12%; text-align: center;">מגיבים ייחודיים</th>
+                        <th style="width: 10%; text-align: center;">סך תגובות</th>
+                        <th style="width: 10%; text-align: center;">סך לייקים</th>
+                        <th style="width: 28%;">תמצית הסערה ומאפייני השיח</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. הדר מוכתר ודני בולר</strong><br><span class="badge badge-blue">כלכלי-חברתי / טיקטוק</span></td>
+                        <td>הדר מוכתר, דני בולר</td>
+                        <td style="text-align: center; font-weight: 700;">4,995</td>
+                        <td style="text-align: center;">8,508</td>
+                        <td style="text-align: center;">11,658</td>
+                        <td style="font-size: 13px; color: #cbd5e1;">שיח צעירים נרחב סביב מחירי הדיור, פופוליזם כלכלי, עימותי פודקאסט ומשבר יוקר המחיה.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. אקטיביזם שטח ועימותי רחוב</strong><br><span class="badge badge-amber">שטח / הפגנות</span></td>
+                        <td>מרדכי דוד, רועי סטאר</td>
+                        <td style="text-align: center; font-weight: 700;">3,542</td>
+                        <td style="text-align: center;">4,878</td>
+                        <td style="text-align: center;">6,806</td>
+                        <td style="font-size: 13px; color: #cbd5e1;">חיכוכי רחוב, תיעודי עימותים מול מפגינים, מחאות בצמתים ושיח מיליטנטי של פעילי ימין.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. יום כיפור, חללי צה"ל והנצחה</strong><br><span class="badge badge-purple">זהות / זיכרון</span></td>
+                        <td>חנוך דאום, עמית סגל</td>
+                        <td style="text-align: center; font-weight: 700;">2,434</td>
+                        <td style="text-align: center;">3,692</td>
+                        <td style="text-align: center;">2,563</td>
+                        <td style="font-size: 13px; color: #cbd5e1;">סיפורי גבורה של לוחמים שנפלו, תפילות יום כיפור, אחדות לאומית וחשבון נפש במלחמה.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. תחקיר 'המקור': לשכת רה"מ וקטר</strong><br><span class="badge badge-red">חקירות / שחיתות</span></td>
+                        <td>רביב דרוקר, יונתן אוריך</td>
+                        <td style="text-align: center; font-weight: 700;">1,699</td>
+                        <td style="text-align: center;">2,004</td>
+                        <td style="text-align: center;">6,473</td>
+                        <td style="font-size: 13px; color: #cbd5e1;">תחקיר על מימון חמאס, העברות הכספים הקטריות, מעורבות יועצי רה"מ ועדויות לקראת 7 באוקטובר.</td>
+                    </tr>
+                    <tr class="row-highlight">
+                        <td><strong>5. נסיעת נתניהו, המזוודות והאו"ם</strong><br><span class="badge badge-green">מדיני / ממשל</span></td>
+                        <td>עמי דרור, אביגיל בכור, אלון בולוקן</td>
+                        <td style="text-align: center; font-weight: 700; color: #f59e0b;">1,292</td>
+                        <td style="text-align: center; font-weight: 700;">1,534</td>
+                        <td style="text-align: center; font-weight: 700;">4,353</td>
+                        <td style="font-size: 13px; color: #cbd5e1;">סערת הפמליה והמזוודות ב'כנף ציון', נאום נתניהו בעצרת האו"ם, נטישת המשלחות והאולם הריק.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. חתונת נוער הגבעות ומשבר המחאה</strong><br><span class="badge badge-amber">פוליטי / התיישבות</span></td>
+                        <td>משה רדמן</td>
+                        <td style="text-align: center; font-weight: 700;">1,035</td>
+                        <td style="text-align: center;">1,137</td>
+                        <td style="text-align: center;">4,417</td>
+                        <td style="font-size: 13px; color: #cbd5e1;">פולמוס חתונת הימין הקיצוני/נוער הגבעות, ביקורת על אכיפה בררנית ותגובות תנועת המחאה.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7. פולמוס יצחק רבין ולקחי 7.10</strong><br><span class="badge badge-purple">היסטורי / אידיאולוגי</span></td>
+                        <td>אבישי בן חיים</td>
+                        <td style="text-align: center; font-weight: 700;">646</td>
+                        <td style="text-align: center;">895</td>
+                        <td style="text-align: center;">1,643</td>
+                        <td style="font-size: 13px; color: #cbd5e1;">תיאוריית 'ישראל הראשונה והשנייה', מורשת אוסלו, השוואות היסטוריות בין 1995 ל-2023.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>8. פולמוס הבחירות: בנט/ליברמן מול גולן</strong><br><span class="badge badge-blue">בחירות / מפלגות</span></td>
+                        <td>עופר וינטר</td>
+                        <td style="text-align: center; font-weight: 700;">441</td>
+                        <td style="text-align: center;">481</td>
+                        <td style="text-align: center;">878</td>
+                        <td style="font-size: 13px; color: #cbd5e1;">היערכות פוליטית, חלוקת הגושים באופוזיציה, ימין ממלכתי מול השמאל והתמודדות מול נתניהו.</td>
+                    </tr>
+                    <tr>
+                        <td><em>שאר הנושאים (שוטף, גיוס, תקציב וכו')</em></td>
+                        <td>כלל המשפיענים</td>
+                        <td style="text-align: center; color: var(--text-muted);">11,736</td>
+                        <td style="text-align: center; color: var(--text-muted);">18,917</td>
+                        <td style="text-align: center; color: var(--text-muted);">26,611</td>
+                        <td style="font-size: 13px; color: var(--text-dim);">דיונים שוטפים, אירועים נקודתיים, תגובות מבוזרות ומבזקי חדשות יומיים.</td>
+                    </tr>
+                    <tr class="row-summary">
+                        <td colspan="2"><strong>אחוז הכיסוי של 8 הנושאים המובילים (נטו ללא כפילויות)</strong></td>
+                        <td style="text-align: center; color: var(--success);"><strong>14,202 (61.0%)</strong></td>
+                        <td style="text-align: center; color: var(--success);"><strong>22,554 (54.4%)</strong></td>
+                        <td style="text-align: center; color: var(--success);"><strong>38,361 (59.0%)</strong></td>
+                        <td style="font-size: 12.5px; color: #6ee7b7;">8 הסוגיות ריכזו מעל 60% מכלל המשתתפים הייחודיים בשיח הפוליטי בשבוע הנידון.</td>
+                    </tr>
+                    <tr class="row-total">
+                        <td colspan="2"><strong>סה"כ לתקופה הנדונה (23–27 בספטמבר)</strong></td>
+                        <td style="text-align: center; font-size: 15px;"><strong>23,273</strong></td>
+                        <td style="text-align: center; font-size: 15px;"><strong>41,471</strong></td>
+                        <td style="text-align: center; font-size: 15px;"><strong>64,972</strong></td>
+                        <td style="font-size: 12.5px; color: var(--accent-light);">נפח השיח המלא ב-26 עמודי המשפיענים המנוטרים במערכת.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- חלק 2: ניתוח עומק - נסיעת נתניהו לאו"ם -->
+    <div class="card">
+        <h2>🌍 פרק ב': ניתוח עומק — נסיעת נתניהו לאו"ם והנאום בעצרת</h2>
+        
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-val accent">1,292</div>
+                <div class="kpi-lbl">מגיבים ייחודיים</div>
+                <div class="kpi-sub">100% מזוהי FB Profile ID</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val">1,534</div>
+                <div class="kpi-lbl">סך תגובות בסוגיה</div>
+                <div class="kpi-sub">יחס ממוצע של 1.19 תגובות למגיב</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val warning">4,353</div>
+                <div class="kpi-lbl">סך לייקים במדגם</div>
+                <div class="kpi-sub">אינטראקציות רגשיות</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val success">3</div>
+                <div class="kpi-lbl">מוקדי קיטוב מרכזיים</div>
+                <div class="kpi-sub">עמי דרור, אביגיל בכור, אלון בולוקן</div>
+            </div>
+        </div>
+
+        <p class="analysis-text">
+            סוגיית נסיעת ראש הממשלה לאו"ם לא התנהלה כאירוע מדיני קלאסי, אלא פוצלה לשלושה צירי שיח ביקורתיים ואינטנסיביים:
+        </p>
+
+        <ul class="speech-narrative-list">
+            <li class="speech-narrative-item">
+                <div class="speech-num">1</div>
+                <div class="speech-content">
+                    <h4>פולמוס 'מזוודות הכביסה', הפמליה והעלויות</h4>
+                    <p>נסיעת המותרות של הפמליה המורחבת במטוס 'כנף ציון', בליווי יונתן אוריך ויאיר נתניהו בעיצומה של מלחמת התשה, הוצגה בשיח המחאה כניתוק מוחלט, אטימות ציבורית ובזבוז כספי מדינה.</p>
+                </div>
+            </li>
+            <li class="speech-narrative-item">
+                <div class="speech-num">2</div>
+                <div class="speech-content">
+                    <h4>היציאה ההמונית (Walkout) והאולם המתרוקן</h4>
+                    <p>נטישת עשרות המשלחות הדיפלומטיות ברגע עלייתו של נתניהו לדוכן תועדה בהרחבה והפכה לויראלית. באופוזיציה הדגישו את הבידוד המדיני והשפל הבינלאומי, בעוד תומכיו טענו ל"צביעות אנטישמית" של האו"ם.</p>
+                </div>
+            </li>
+            <li class="speech-narrative-item">
+                <div class="speech-num">3</div>
+                <div class="speech-content">
+                    <h4>מחיאות הכפיים המבודדות (הדסק הישראלי והאתיופי)</h4>
+                    <p>התמקדות חדה בתמונות מתוך האולם, שבהן נראו מוחאים כפיים אך ורק חברי המשלחת הישראלית ושגריר אתיופיה. התמונות שימשו כסמל חזותי לבידוד בזירה העולמית.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- חלק 3: ניתוח אונומסטי השוואתי - שלוש הקבוצות -->
+    <div class="card">
+        <h2>🧬 פרק ג': פילוח אונומסטי השוואתי בין שלוש קבוצות המוצא</h2>
+        <p class="analysis-text">
+            בחינת המגיבים לפי מסווג המוצא האונומסטי (על בסיס מאגר השמות והסיווגים המדעי במערכת) מעלה הבדלים סוציולוגיים ודפוסי התנהגות מובהקים בין הקבוצות:
+        </p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>קבוצת מוצא</th>
+                        <th style="text-align: center;">גודל מאגר בסיס</th>
+                        <th style="text-align: center;">פילוח שפת רישום</th>
+                        <th style="text-align: center;">נטיית בסיס כללית</th>
+                        <th style="text-align: center;">התפלגות באירוע האו"ם</th>
+                        <th style="text-align: center;">שיעור חזרתיות</th>
+                        <th>מוקד השפעה ראשי</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong style="color: var(--hebrew);">עבריים-ישראליים</strong><br>
+                            <span style="font-size: 11.5px; color: var(--text-muted);">צבר, קיבוצי, חידושי שמות</span>
+                        </td>
+                        <td style="text-align: center;">8,235 מגיבים<br><span style="font-size: 11px; color: var(--text-dim);">19,168 תגובות</span></td>
+                        <td style="text-align: center;">
+                            <span class="script-tag script-lat">לטינית: 63.6%</span><br>
+                            <span class="script-tag script-heb">עברית: 36.4%</span>
+                        </td>
+                        <td style="text-align: center;">
+                            57.5% שמאל / ממלכתי<br>
+                            42.5% ימין
+                        </td>
+                        <td style="text-align: center; color: var(--accent-light); font-weight: 700;">
+                            72.0% מרכז-שמאל<br>
+                            <span style="font-size: 11.5px; font-weight: normal; color: var(--text-muted);">21.5% ימין | 6.5% אחר</span>
+                        </td>
+                        <td style="text-align: center;">
+                            שמאל: 24%-27%<br>
+                            ימין: 2.3%
+                        </td>
+                        <td>עמי דרור (60.5% מהתגובות)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong style="color: var(--mizrahi);">ספרדים / עות'מאנים (מזרחיים)</strong><br>
+                            <span style="font-size: 11.5px; color: var(--text-muted);">צפון אפריקה, בבל, תימן, בלקן</span>
+                        </td>
+                        <td style="text-align: center;">21,821 מגיבים<br><span style="font-size: 11px; color: var(--text-dim);">48,597 תגובות</span></td>
+                        <td style="text-align: center;">
+                            <span class="script-tag script-heb">עברית: 51.4%</span><br>
+                            <span class="script-tag script-lat">לטינית: 48.6%</span>
+                        </td>
+                        <td style="text-align: center;">
+                            65.2% ימין<br>
+                            34.8% מרכז-שמאל
+                        </td>
+                        <td style="text-align: center; color: var(--warning); font-weight: 700;">
+                            54.2% ימין<br>
+                            <span style="font-size: 11.5px; font-weight: normal; color: var(--text-muted);">45.7% מרכז-שמאל</span>
+                        </td>
+                        <td style="text-align: center;">
+                            ימין: 18%-22%<br>
+                            שמאל: 8%-12%
+                        </td>
+                        <td>אביגיל בכור (מובהקות ימין של 86%)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong style="color: var(--ashkenazi);">אשכנזים / אירופיים</strong><br>
+                            <span style="font-size: 11.5px; color: var(--text-muted);">מזרח ומערב אירופה</span>
+                        </td>
+                        <td style="text-align: center;">10,502 מגיבים<br><span style="font-size: 11px; color: var(--text-dim);">23,703 תגובות</span></td>
+                        <td style="text-align: center;">
+                            <span class="script-tag script-lat">לטינית: 68.1%</span><br>
+                            <span class="script-tag script-heb">עברית: 31.9%</span>
+                        </td>
+                        <td style="text-align: center;">
+                            60.8% מרכז-שמאל<br>
+                            39.2% ימין
+                        </td>
+                        <td style="text-align: center; color: var(--ashkenazi); font-weight: 700;">
+                            73.2% מרכז-שמאל<br>
+                            <span style="font-size: 11.5px; font-weight: normal; color: var(--text-muted);">20.4% ימין | 6.4% אחר</span>
+                        </td>
+                        <td style="text-align: center;">
+                            שמאל: 22%-26%<br>
+                            ימין: 3.1%
+                        </td>
+                        <td>עמי דרור (יחס שמאל/ימין של 9 ל-1)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout-box warning">
+            <strong>💡 ממצא מפתח — שפת כתיבת השם (עברית מול לטינית) כמנבא פוליטי:</strong><br>
+            הצלבת שפת רישום השם בפייסבוק (Script) מול השתייכות פוליטית מגלה מיתאם מובהק:
+            משתמשים ששמם כתוב באותיות <strong>לטיניות</strong> נוטים באופן גורף למחנה המרכז-שמאל (למעלה מ-70% בקרב אשכנזים ועבריים).
+            לעומת זאת, כתיבת השם ב<strong>אותיות עבריות</strong> נמצאה במיתאם ישיר ל<strong>נאמנות גבוהה יותר ולשיעורי חזרתיות (Recurrence) כפולים</strong> בכל המחנות הפוליטיים ללא יוצא מן הכלל.
+        </div>
+
+        <div class="grid-3">
+            <div class="cohort-card hebrew">
+                <div class="cohort-title">
+                    <span>קבוצת העבריים</span>
+                    <span class="badge badge-green">72% שמאל באו"ם</span>
+                </div>
+                <p class="analysis-text">
+                    התגייסות נרחבת בעמודי המחאה. שיעור המגיבים ששמם כתוב בלטינית עומד על 63.6%, ורובו מרוכז סביב עמי דרור. הימין בקרב העבריים כמעט לא הופיע בסוגיה זו (21.5% בלבד, עם שיעור חזרתיות אפסי של 2.3%).
+                </p>
+            </div>
+            <div class="cohort-card mizrahi">
+                <div class="cohort-title">
+                    <span>קבוצת המזרחיים</span>
+                    <span class="badge badge-amber">54% ימין באו"ם</span>
+                </div>
+                <p class="analysis-text">
+                    הקבוצה היחידה שבה נשמר רוב לימין גם בסוגיית האו"ם (54.2%). מוקד הפעילות העיקרי היה עמודה של אביגיל בכור, שבו נרשמה התייצבות חד-משמעית להגנת נתניהו עם עליונות מוחלטת לשמות בעברית (51.4%).
+                </p>
+            </div>
+            <div class="cohort-card ashkenazi">
+                <div class="cohort-title">
+                    <span>קבוצת האשכנזים</span>
+                    <span class="badge badge-purple">73% שמאל באו"ם</span>
+                </div>
+                <p class="analysis-text">
+                    שיא נרשם בשיעור השמות באותיות לטיניות (68.1%). באירוע האו"ם נרשמה דומיננטיות מוחצת של המרכז-שמאל (73.2%), כאשר בעמוד של עמי דרור נרשמו 274 מגיבי שמאל לעומת 30 מגיבי ימין בלבד (יחס של מעל 9:1).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק 4: שחיקת השפעת הנאום וקו ההגנה של תומכי נתניהו -->
+    <div class="card">
+        <h2>📉 פרק ד': שחיקת השפעת הנאום וקו ההגנה של תומכי נתניהו ("טיעון אייזנקוט")</h2>
+        
+        <p class="analysis-text">
+            בחינה השוואתית מול נאומי עבר של בנימין נתניהו באו"ם (נאום הציור של הפצצה האיראנית ב-2012, נאום הקלסרים, נאום השתיקה בת ה-44 שניות ב-2015) מצביעה על <strong>צניחה חדה בעוצמת ההשפעה הציבורית וההד התקשורתי</strong> של הנאום הנוכחי:
+        </p>
+
+        <div class="grid-2">
+            <div style="background: var(--card-sub); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+                <h3 style="color: #f87171; margin-top: 0;">1. שחיקת האפקט והתפוגגות הסערה תוך 48 שעות</h3>
+                <p class="analysis-text">
+                    בעבר, נאומי נתניהו בעצרת האו"ם היוו אירועי שיא מכוננים שהכתיבו את סדר היום הפוליטי והתקשורתי בישראל למשך שבועות, תוך שהם סוחפים קהלים רחבים מחוץ לבייס הפוליטי.
+                </p>
+                <p class="analysis-text">
+                    הפעם, נאומו של נתניהו <strong>התפוגג מן השיח הציבורי בתוך פחות מ-48 שעות</strong>. נתוני הניטור מראים כי למעט הגרעין האידיאולוגי הקשה ביותר של תומכיו, הציבור הרחב לא גילה עניין מתמשך בתוכן הנאום, והעיסוק ברשתות עבר במהירות חזרה לסוגיות יוקר המחיה (הדר מוכתר) ועימותי הרחוב.
+                </p>
+                <p class="analysis-text">
+                    הנסיעה החפוזה, המראות של האולם המתרוקן בעקבות יציאת המשלחות, והעובדה שמחיאות הכפיים נשמעו כמעט בלעדית משני שולחנות בלבד — <strong>הדסק הישראלי והדסק האתיופי</strong> — קיבעו בתודעת הרשת תחושה של אירוע מבודד שאיבד את כוחו המדיני.
+                </p>
+            </div>
+
+            <div style="background: var(--card-sub); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+                <h3 style="color: #fbbf24; margin-top: 0;">2. קו ההגנה הנגדי: שלילת האלטרנטיבה ("טיעון אייזנקוט")</h3>
+                <p class="analysis-text">
+                    בקרב מעגל התומכים הנאמן שהתייצב להגן על נתניהו (בעיקר בעמודי הימין המובהקים ובקרב הקהל המזרחי הכותב בעברית), זוהה שינוי עמוק באסטרטגיית הטיעון:
+                </p>
+                <div class="callout-box warning" style="margin-top: 10px;">
+                    <em>"במקום להלל את הישגי הנאום, המסגור המוביל התמקד בשלילת האלטרנטיבה: <strong>'דמיינו את גדי אייזנקוט עומד ונואם באנגלית רצוצה מול עצרת האו"ם במקום ביבי'</strong>".</em>
+                </div>
+                <p class="analysis-text">
+                    המעבר לטיעון השוואתי שלילי מעיד על כך שאפילו בקרב הבייס הקשה, היכולת לשווק את הנאום כניצחון דיפלומטי ישיר נשחקה. קו ההגנה נשען על עליונותו הרטורית והשפתית המוכחת של נתניהו באנגלית מול יריביו במחנה הממלכתי, ולא על תוצאות מדיניות בנות-קיימא.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק 5: סיכום מתודולוגי -->
+    <div class="card">
+        <h2>📌 פרק ה': דגשים מתודולוגיים ואימות נתונים</h2>
+        <div class="analysis-text">
+            <ul style="padding-right: 20px;">
+                <li style="margin-bottom: 8px;">
+                    <strong>זיהוי פרופילים חד-ערכי:</strong> כל 41,471 התגובות בתקופה זו (וכל 128,681 התגובות במסד הנתונים) משויכות ל-<code>author_id</code> ייחודי של פייסבוק (12.5% מזהה נומרי ישיר, 87.5% Vanity Slug ייחודי, 0% נפילה לשמות גנריים).
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <strong>עקרון שני המדדים (סעיף 11 בכללי המחקר):</strong> בכל פילוח הוצגו במקביל הן שכיחות התגובות (Total Comments) והן כמות המגיבים הייחודיים (Unique Authors), כדי למנוע הטיה הנובעת מ"מגיבים סדרתיים" (Spammers).
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <strong>סיווג אונומסטי מדעי בלבד:</strong> סיווגי המוצא נקבעו באופן בלעדי על פי מילון השמות המאושר (<code>engine/surname_dictionary.csv</code>) ללא שימוש במודלים גנרטיביים מנחשים.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- חתימת חוקר וסיום הדוח -->
+    <div class="card" style="background: linear-gradient(135deg, #182232 0%, #0f172a 100%); border: 1px solid var(--border); border-right: 4px solid var(--accent); margin-top: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div>
+                <div style="font-size: 16px; font-weight: 700; color: #fff;">מחקר, ניתוח ועריכה: אמנון זוסמן</div>
+                <div style="font-size: 13.5px; color: var(--text-muted); margin-top: 4px;">פרויקט מחקר שיח פוליטי וניתוח אונומסטי — בחירות 2026</div>
+            </div>
+            <div style="text-align: left; font-size: 14px; color: var(--accent-light); font-weight: 600;">
+                📅 28 בספטמבר 2026
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        מערכת ניטור ואיסוף נתוני פייסבוק — בחירות 2026 | חוקר: אמנון זוסמן | תאריך הפקה: 28 בספטמבר 2026 | PCS Research
+    </footer>
+
+</div>
+</body>
+</html>

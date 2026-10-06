@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דוח תודעה ודופק רשת | מבחן הלגיטימציה של 7 באוקטובר (05.10.2026)</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TJNJTZQF1F');
+</script>
+
+<style>
+:root {
+    --bg-dark: #0b0f17;
+    --card-bg: #131c2b;
+    --card-sub: #1a2638;
+    --border: #24344d;
+    --border-light: #324766;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --accent-glow: rgba(59, 130, 246, 0.15);
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --mizrahi: #f59e0b;
+    --hebrew: #10b981;
+    --ashkenazi: #8b5cf6;
+    --fsu: #06b6d4;
+    --arab: #ec4899;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header-box {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.brand-logo-title {
+    font-size: 2.1rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #60a5fa, #38bdf8, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.15;
+    margin-bottom: 6px;
+}
+
+.brand-meta-sub {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-company {
+    color: #e2e8f0;
+    font-weight: 700;
+}
+
+.brand-divider {
+    color: var(--border-light);
+}
+
+h1 {
+    font-size: 1.55rem;
+    font-weight: 800;
+    line-height: 1.35;
+    color: #ffffff;
+    margin-bottom: 12px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    border-right: 3px solid var(--accent);
+    padding-right: 12px;
+    margin-top: 10px;
+}
+
+/* 60s Fast Scan Box */
+.fast-scan {
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+.fast-scan-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+}
+.fast-scan-text {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+/* KPI Strip */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.15s ease;
+}
+
+.kpi-val {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    font-feature-settings: "tnum";
+}
+
+.kpi-val.accent { color: var(--accent-light); }
+.kpi-val.warning { color: var(--warning); }
+.kpi-val.success { color: var(--success); }
+
+.kpi-lbl {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.kpi-sub {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    margin-top: 4px;
+}
+
+/* Section Cards */
+.section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 18px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.narrative-lead {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* Tables */
+.table-wrap {
+    overflow-x: auto;
+    margin: 14px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+th {
+    background: var(--card-sub);
+    color: var(--text-muted);
+    padding: 10px 12px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-main);
+    white-space: nowrap;
+}
+
+tr:last-child td { border-bottom: none; }
+
+/* Subcards */
+.sub-card {
+    background: var(--card-sub);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+.sub-card:last-child { margin-bottom: 0; }
+
+.sub-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+}
+
+.pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 6px;
+}
+.pill-danger { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.pill-success { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.pill-warning { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+/* Accordions (Details) */
+details {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+details[open] {
+    border-color: var(--accent);
+}
+
+summary {
+    padding: 16px 18px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-sub);
+}
+
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+    content: "＋";
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+    content: "–";
+}
+
+.details-content {
+    padding: 18px;
+    font-size: 0.92rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+    border-top: 1px solid var(--border);
+}
+
+/* Distribution Bars */
+.bar-track {
+    background: #0f172a;
+    border-radius: 6px;
+    height: 12px;
+    display: flex;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.bar-segment { height: 100%; }
+
+/* Desktop Grid Enhancements */
+@media (min-width: 768px) {
+    body { padding: 40px 24px; }
+    h1 { font-size: 2.2rem; }
+    .subtitle { font-size: 1.15rem; }
+    .kpi-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .kpi-val { font-size: 2rem; }
+    .section-card { padding: 28px 24px; }
+    .desktop-two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header class="header-box">
+        <div class="brand-logo-title">דוח תודעה ודופק רשת</div>
+        <div class="brand-meta-sub">
+            <span class="brand-company">חברת סילברטל בע״מ</span>
+            <span class="brand-divider">|</span>
+            <span>תאריך הפקה: 6 באוקטובר 2026</span>
+            <span class="brand-divider">|</span>
+            <span>סבב ניטור וניתוח: 5 באוקטובר 2026</span>
+        </div>
+        <h1>מבחן הלגיטימציה של 7 באוקטובר: קווי השבר האונומסטיים של השיח הציבורי בישראל</h1>
+        <p class="subtitle">
+            ניתוח של למעלה מ-10,000 תגובות מציג התלכדות דמוגרפית מלאה אל מול קהל הייחוס הלאומי המבוקר, לצד תנועת עומק טקטונית: אירועי יום הזיכרון מבקעים את המשמעת הגושית בימין ומציפים מחדש את שאלת האחריות. במקביל, הזמנת נתניהו לעימות טלוויזיוני בידי גדי איזנקוט מייצרת גל דחייה חריג של כ-69% כלפיו, בעוד שחקני הסף של אחוז החסימה (וינטר והנדל) נאבקים על רלוונטיות בשיח המקוטב.
+        </p>
+    </header>
+
+    <!-- 60-Second Scan Box -->
+    <div class="fast-scan">
+        <div class="fast-scan-title">
+            <span>⏱️</span>
+            <span>תמצית מנהלים לקריאה ב-60 שניות (Executive Snapshot)</span>
+        </div>
+        <p class="fast-scan-text">
+            <strong>1. אירועי הר הרצל בקעו את חומת המשמעת:</strong> זעקת האב השכול יעקב גודו סחפה הזדהות עמוקה וחריגה בקרב קהל מזרחי ומסורתי (מעל 58% תמיכה), ובודדה את קווי ההגנה האוטומטיים.<br>
+            <strong>2. מדד הנגד של נתניהו ואיזנקוט:</strong> נתניהו רושם 75.9% סנטימנט שלילי/דחייה; יוזמת העימות של איזנקוט נתקלה ב-68.7% דחייה (הציבור תופס זאת כניסיון גריפת הון פוליטי על רקע חלקו בקונספציה).<br>
+            <strong>3. שחקני הסף:</strong> עופר וינטר ("עמך ישראל") השיג חשיפה ויראלית עצומה (1.79M צפיות) אך ספג 61.1% סנטימנט שלילי. יועז הנדל זוכה ליחס מאוזן אך סובל מחוסר חשיפה (230K צפיות בלבד).
+        </p>
+    </div>
+
+    <!-- Official Numbers & Sample -->
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <div class="kpi-val accent">7,922,533</div>
+            <div class="kpi-lbl">סך צפיות אורגניות</div>
+            <div class="kpi-sub">נתוני מוני פייסבוק רשמיים</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-val">90,676</div>
+            <div class="kpi-lbl">תגובות מדווחות ברשת</div>
+            <div class="kpi-sub">על פני 395 פוסטים ורילס</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-val success">11,209</div>
+            <div class="kpi-lbl">תגובות שנקצרו וסווגו</div>
+            <div class="kpi-sub">מדגם עומק אנליטי ואונומסטי</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-val warning">8,995</div>
+            <div class="kpi-lbl">מגיבים ייחודיים מפולחים</div>
+            <div class="kpi-sub">95.1% משתמשים פרטיים אותנטיים</div>
+        </div>
+    </div>
+
+    <!-- Section 1: Leading Arenas -->
+    <section class="section-card">
+        <h2 class="section-title">📍 מפת הזירות המובילות בשיח (טופ 10 מתוך 40 יוצרי תוכן וגופי מדיה מנוטרים)</h2>
+        <p class="narrative-lead">
+            פילוח עשר זירות התוכן המובילות לפי נפח מעורבות כולל (תגובות, צפיות, ריאקשנים ושיתופים) ביום 5 באוקטובר 2026:
+        </p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>יוצר תוכן / עמוד</th>
+                        <th>פריטים</th>
+                        <th>צפיות רשמיות</th>
+                        <th>לייקים וריאקשנים</th>
+                        <th>שיתופים</th>
+                        <th>תגובות פייסבוק (רשמי)</th>
+                        <th>תגובות נדגמו ונותחו</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>בנימין נתניהו</strong></td>
+                        <td>15</td>
+                        <td>1,388,000</td>
+                        <td>154,281</td>
+                        <td>3,659</td>
+                        <td><strong>29,683</strong></td>
+                        <td>742</td>
+                    </tr>
+                    <tr>
+                        <td><strong>חדשות 12 (N12)</strong></td>
+                        <td>28</td>
+                        <td>798,000</td>
+                        <td>44,443</td>
+                        <td>2,680</td>
+                        <td><strong>10,837</strong></td>
+                        <td>1,069</td>
+                    </tr>
+                    <tr>
+                        <td><strong>כאן חדשות</strong></td>
+                        <td>26</td>
+                        <td>789,800</td>
+                        <td>24,457</td>
+                        <td>1,602</td>
+                        <td><strong>6,926</strong></td>
+                        <td>254</td>
+                    </tr>
+                    <tr>
+                        <td><strong>אורי משגב</strong></td>
+                        <td>8</td>
+                        <td>122,900</td>
+                        <td>22,300</td>
+                        <td>2,522</td>
+                        <td><strong>4,453</strong></td>
+                        <td>1,513</td>
+                    </tr>
+                    <tr>
+                        <td><strong>הדר מוכתר</strong></td>
+                        <td>34</td>
+                        <td>557,600</td>
+                        <td>8,451</td>
+                        <td>530</td>
+                        <td><strong>4,043</strong></td>
+                        <td>260</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ynet</strong></td>
+                        <td>21</td>
+                        <td>278,000</td>
+                        <td>16,613</td>
+                        <td>925</td>
+                        <td><strong>3,822</strong></td>
+                        <td>984</td>
+                    </tr>
+                    <tr>
+                        <td><strong>וואלה! חדשות</strong></td>
+                        <td>34</td>
+                        <td>150,000</td>
+                        <td>6,444</td>
+                        <td>449</td>
+                        <td><strong>3,538</strong></td>
+                        <td>316</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ערוץ 14</strong></td>
+                        <td>22</td>
+                        <td>208,400</td>
+                        <td>8,549</td>
+                        <td>581</td>
+                        <td><strong>2,716</strong></td>
+                        <td>1,512</td>
+                    </tr>
+                    <tr>
+                        <td><strong>i24NEWS</strong></td>
+                        <td>25</td>
+                        <td>674,000</td>
+                        <td>16,508</td>
+                        <td>629</td>
+                        <td><strong>2,325</strong></td>
+                        <td>507</td>
+                    </tr>
+                    <tr>
+                        <td><strong>גדי איזנקוט</strong></td>
+                        <td>11</td>
+                        <td>205,600</td>
+                        <td>10,230</td>
+                        <td>747</td>
+                        <td><strong>2,135</strong></td>
+                        <td>480</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section 2: Core Narrative Topics -->
+    <section class="section-card">
+        <h2 class="section-title">🔥 מוקדי השיח ואירועי המפתח (נושאי הדיון המרכזיים)</h2>
+        <p class="narrative-lead">
+            לאחר שהסערה סביב "פליי דובאי" שככה, שני אירועים מרכזיים תפסו את מוקד השיח ביום שני, 5 באוקטובר: הטקס הממלכתי בהר הרצל, והזמנת נתניהו לעימות טלוויזיוני ישיר בידי גדי איזנקוט.
+        </p>
+
+        <!-- Topic A -->
+        <div class="sub-card">
+            <div class="sub-card-title">נושא א': הטקס בהר הרצל — זעקת האב השכול מול ההתנפלות על השופט עמית</div>
+            <p style="font-size: 0.95rem; margin-bottom: 12px; color: #e2e8f0;">
+                <strong>זעקת יעקב גודו:</strong> התפרצותו של האב השכול כלפי נתניהו יצרה שבר נרטיבי עמוק. האירוע סוקר בהבלטה ב<em>ישראל היום</em> (71.8K צפיות, 555 תגובות), ב<em>וואלה</em> (29.3K צפיות, 291 תגובות) וב<em>כיכר השבת</em> (12K צפיות, 91 תגובות), בעוד שנעדר לחלוטין מעמודי הפייסבוק של <em>Ynet</em> ומעמודי מובילי הימין (דוגמת אלון בולוקן).<br>
+                <strong>השבר האונומסטי:</strong> בקרב המגיבים ממוצא מזרחי נרשמה הזדהות רגשית יוצאת דופן (מעל 58% תמיכה בזעקת האב בערוצים הכלליים), שגברה על המשמעת הגושית המסורתית.
+            </p>
+            <p style="font-size: 0.95rem; color: #e2e8f0;">
+                <strong>ההתנפלות על השופט יצחק עמית:</strong> מוסגרה בריל ייעודי של <em>ערוץ 14</em> (106.2K צפיות, 1,000 תגובות פייסבוק, 509 נדגמו).<br>
+                <strong>בדיקת אותנטיות והרכב:</strong> 492 מגיבים ייחודיים (96.7% ייחודיות, 0 בוטים ספאמרים). פילוח אתני: 51.4% מזרחים, 8.1% אשכנזים, 7.9% עברי-ישראלי.<br>
+                <strong>ממצא נישואי התערובת:</strong> מתוך בעלי שמות משפחה אשכנזיים שכתבו בעברית — <strong>60.0% הן נשים</strong> (מזרחיות הנישאות לגברים אשכנזיים ושומרות על דפוס כתיבה עברי).
+            </p>
+        </div>
+
+        <!-- Topic B -->
+        <div class="sub-card">
+            <div class="sub-card-title">נושא ב': קרב העימות — גדי איזנקוט מול בנימין נתניהו</div>
+            <p style="font-size: 0.95rem; color: #e2e8f0; margin-bottom: 10px;">
+                הקריאה לעימות הציפה מחדש את שאלת האחריות המשותפת לאסון 7 באוקטובר:
+            </p>
+            <div class="desktop-two-col">
+                <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+                    <div style="font-weight: 700; color: #f87171; margin-bottom: 4px;">בנימין נתניהו (מדד הנגד: 75.9%)</div>
+                    <div style="font-size: 0.88rem; color: #cbd5e1;">
+                        2,521 תגובות נגד מול 802 תומכות. בפוסט ערוץ 14 על העימות נרשמה <strong>השתלטות עוינת</strong>: 3 התגובות המובילות בלייקים (314, 209, 132) היו תגובות מחאה תקיפות נגד נתניהו.
+                    </div>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+                    <div style="font-weight: 700; color: #fbbf24; margin-bottom: 4px;">גדי איזנקוט (מדד הנגד: 68.7%)</div>
+                    <div style="font-size: 0.88rem; color: #cbd5e1;">
+                        336 תגובות נגד מול 153 תומכות בלבד. הציבור הרחב והימני כאחד מייחס לו שותפות בתפיסת הקונספציה ומזהה את יוזמת העימות כניסיון לגריפת הון פוליטי.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Topic C & D in Grid -->
+        <div class="desktop-two-col">
+            <div class="sub-card">
+                <div class="sub-card-title">נושא ג': שחקני הסף של אחוז החסימה</div>
+                <p style="font-size: 0.9rem; color: #cbd5e1;">
+                    <strong>עופר וינטר ("עמך ישראל"):</strong> חשיפה ויראלית גבוהה (1.79M צפיות), אך <strong>61.1% סנטימנט שלילי</strong> המאשים אותו בפוליטיזציה של הצבא.<br><br>
+                    <strong>יועז הנדל ("ימין ממלכתי"):</strong> שיח מאוזן וענייני (38.7% בעד, 43.6% נגד), אך סובל מחוסר חשיפה קיצוני (230K צפיות בלבד).
+                </p>
+            </div>
+            <div class="sub-card">
+                <div class="sub-card-title">נושא ד': הזירה החרדית ביום הזיכרון</div>
+                <p style="font-size: 0.9rem; color: #cbd5e1;">
+                    <strong>כיכר השבת:</strong> בלט באימוץ קו ממלכתי-לאומי רחב: סיקור זעקת האב גודו, עדות איש זק"א מבארי (180.9K צפיות) וניצולת הנובה (96.4K צפיות).<br><br>
+                    <strong>בחדרי חרדים:</strong> התכנסות לשיח פנים-קהילתי ועולם הישיבות, ללא עיסוק בעימותים הפוליטיים של הטקס.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion 1: Why Facebook -->
+    <details>
+        <summary>
+            <span>🔍 נספח מתודולוגי א': מדוע פייסבוק היא הזירה המייצגת של השיח הפוליטי בישראל?</span>
+        </summary>
+        <div class="details-content">
+            <p style="margin-bottom: 12px;">
+                פייסבוק איננה רק פלטפורמה חברתית, אלא <strong>כיכר העיר האלקטורלית הראשית של ישראל</strong>. על פי נתוני איגוד האינטרנט הישראלי והלמ"ס:
+            </p>
+            <ul style="padding-right: 20px; margin-bottom: 12px;">
+                <li><strong>חדירה אוכלוסייתית:</strong> למעלה מ-<strong>77.1% מהציבור הבוגר בישראל</strong> פעיל בפייסבוק באופן שוטף.</li>
+                <li><strong>הלימה אלקטורלית (גילאי 30+):</strong> מעל 70% מבעלי זכות הבחירה הפעילים והמשפיעים אלקטורלית מרוכזים בפייסבוק, לעומת פלטפורמות וידאו קצר (טיקטוק/אינסטגרם) המתאפיינות בקהל צעיר מתחת לגיל ההצבעה.</li>
+                <li><strong>זהות אותנטית ומחויבות אישית:</strong> בניגוד לטוויטר (X) המאופיינת בבוטים ובאנונימיות, שיח הפייסבוק בישראל מבוסס על פרופילים פרטיים בעלי היסטוריה אותנטית, המאפשרים הצלבה אונומסטית ומחקרית אמינה.</li>
+            </ul>
+        </div>
+    </details>
+
+    <!-- Accordion 2: Demographic Representativeness -->
+    <details>
+        <summary>
+            <span>🧬 נספח מתודולוגי ב': תיקוף הייצוגיות הדמוגרפית וההתלכדות האונומסטית</span>
+        </summary>
+        <div class="details-content">
+            <p style="margin-bottom: 14px;">
+                השוואת ממוצע 3 ימי ניטור (3–5 באוקטובר 2026, מדגם של <strong>13,289 מגיבים מסווגים</strong>) אל מול מרשם האוכלוסין של הלמ"ס (5.75 מיליון בעלי זכות בחירה) ואל מול קהל הייחוס הלאומי המבוקר:
+            </p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>מוצא אונומסטי</th>
+                            <th>מדגם השיח (3–5 באוקטובר)</th>
+                            <th>מרשם האוכלוסין (למ"ס)</th>
+                            <th>קהל ייחוס לאומי מבוקר</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color: var(--mizrahi);">מזרחי</strong></td>
+                            <td><strong>50.4%</strong></td>
+                            <td>52.0%</td>
+                            <td>46.0%</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: var(--ashkenazi);">אשכנזי</strong></td>
+                            <td><strong>22.7%</strong></td>
+                            <td>26.6%</td>
+                            <td>22.4%</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: var(--hebrew);">עברי-ישראלי</strong></td>
+                            <td><strong>17.8%</strong></td>
+                            <td>14.4%</td>
+                            <td>15.0%</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: var(--fsu);">ברה"מ לשעבר</strong></td>
+                            <td><strong>6.0%</strong></td>
+                            <td>6.5%</td>
+                            <td>12.6%</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: var(--arab);">ערבי (מגיבים בעברית)</strong></td>
+                            <td><strong>3.1%</strong></td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-dim); margin-top: 8px;">
+                * הנתונים מציגים מתאם סטטיסטי גבוה במיוחד (מעל 96% התאמה) בין מדגם התגובות הפעיל לבין המבנה הדמוגרפי האמיתי של החברה הישראלית.
+            </p>
+        </div>
+    </details>
+
+    <!-- Executive Takeaways -->
+    <section class="section-card" style="border-right: 4px solid var(--accent); margin-bottom: 24px;">
+        <h2 class="section-title">💡 תובנות אסטרטגיות למקבלי החלטות</h2>
+        <div style="font-size: 0.95rem; color: #e2e8f0; line-height: 1.7;">
+            <p style="margin-bottom: 10px;">
+                <strong>1. שבירת חומת המשמעת של הבייס:</strong> אירועי יום הזיכרון בהר הרצל הוכיחו כי קדושת השכול וסוגיית האחריות המוסרית מבקעות את הסולידריות הגושית. ההזדהות של הציבור המזרחי המסורתי עם זעקת האב השכול מסמנת גבול ברור לנרטיב ההגנה האוטומטי.
+            </p>
+            <p style="margin-bottom: 10px;">
+                <strong>2. שחיקת מנופי הלגיטימציה של ההנהגה:</strong> מדד הנגד החריג של נתניהו (75.9% דחייה) מלווה בהשתלטות עוינת של תגובות מחאה אפילו בזירות הבית המובהקות ביותר שלו (ערוץ 14). עם זאת, הציבור דוחה באותה עוצמה (68.7%) ניסיונות מינוף של גורמים ביטחוניים מן העבר (איזנקוט) ומייחס להם שותפות באסון.
+            </p>
+            <p>
+                <strong>3. הפיצול החרדי בהשתלבות בשיח הלאומי:</strong> המעבר של <em>כיכר השבת</em> לסיקור נרחב של אירועי הגבורה והשכול הלאומיים לעומת ההתכנסות של <em>בחדרי חרדים</em> ממחיש את קווי השבר הפנימיים בחברה החרדית סביב השותפות בגורל הישראלי שלאחר 7 באוקטובר.
+            </p>
+        </div>
+    </section>
+
+    <!-- חתימת חוקר וסיום הדוח -->
+    <div style="background: linear-gradient(135deg, #182232 0%, #0f172a 100%); border: 1px solid var(--border); border-right: 4px solid var(--accent); border-radius: 12px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #ffffff;">מחקר, ניתוח ועריכה: אמנון זוסמן</div>
+                <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">פרויקט מחקר שיח פוליטי, ניטור רשתות וניתוח אונומסטי — בחירות 2026</div>
+                <div style="font-size: 0.82rem; color: var(--text-dim); margin-top: 2px;">סילברטל בע״מ (Silvertel Ltd.) | מחלקת מודיעין תודעתי</div>
+            </div>
+            <div style="text-align: left; display: flex; flex-direction: column; align-items: flex-end;">
+                <!-- חתימה גרפית מעוצבת -->
+                <div style="font-family: 'Brush Script MT', 'Segoe Script', cursive, sans-serif; font-size: 1.85rem; color: var(--accent-light); transform: rotate(-3deg); padding: 4px 10px; border-bottom: 1.5px solid rgba(96, 165, 250, 0.4); margin-bottom: 4px;">
+                    Amnon Zussman
+                </div>
+                <div style="font-size: 0.82rem; color: var(--text-dim);">
+                    חתימה אלקטרונית מאושרת
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; font-size: 0.8rem; color: var(--text-dim); padding: 12px 0 24px 0;">
+        מערכת ניטור ואיסוף נתוני פייסבוק — בחירות 2026 | חוקר: אמנון זוסמן | סילברטל בע״מ | PCS Research
+    </footer>
+
+</div>
+
+</body>
+</html>

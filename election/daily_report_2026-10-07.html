@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דוח תודעה ותהודה בפייסבוק — יום ד', 7 באוקטובר 2026</title>
+<style>
+:root {
+    --bg-dark: #0b0f17;
+    --card-bg: #131c2b;
+    --card-sub: #1a2638;
+    --border: #24344d;
+    --border-light: #324766;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --accent-glow: rgba(59, 130, 246, 0.15);
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --mizrahi: #f59e0b;
+    --hebrew: #10b981;
+    --ashkenazi: #8b5cf6;
+    --fsu: #06b6d4;
+    --arab: #ec4899;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header-box {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.brand-logo-title {
+    font-size: 2.1rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #60a5fa, #38bdf8, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.15;
+    margin-bottom: 6px;
+}
+
+.brand-meta-sub {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-company {
+    color: #e2e8f0;
+    font-weight: 700;
+}
+
+.brand-divider {
+    color: var(--border-light);
+}
+
+h1 {
+    font-size: 1.55rem;
+    font-weight: 800;
+    line-height: 1.35;
+    color: #ffffff;
+    margin-bottom: 12px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    border-right: 3px solid var(--accent);
+    padding-right: 12px;
+    margin-top: 10px;
+}
+
+/* 60s Fast Scan Box */
+.fast-scan {
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+.fast-scan-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+}
+.fast-scan-text {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+/* KPI Strip */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.15s ease;
+}
+
+.kpi-val {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    font-feature-settings: "tnum";
+}
+
+.kpi-val.accent { color: var(--accent-light); }
+.kpi-val.warning { color: var(--warning); }
+.kpi-val.success { color: var(--success); }
+
+.kpi-lbl {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.kpi-sub {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    margin-top: 4px;
+}
+
+/* Section Cards */
+.section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 18px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.narrative-lead {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* Tables */
+.table-wrap {
+    overflow-x: auto;
+    margin: 14px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+th {
+    background: var(--card-sub);
+    color: var(--text-muted);
+    padding: 10px 12px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-main);
+    white-space: nowrap;
+}
+
+tr:last-child td { border-bottom: none; }
+
+/* Subcards */
+.sub-card {
+    background: var(--card-sub);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+.sub-card:last-child { margin-bottom: 0; }
+
+.sub-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+}
+
+.pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 6px;
+}
+.pill-danger { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.pill-success { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.pill-warning { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+/* Accordions (Details) */
+details {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+details[open] {
+    border-color: var(--accent);
+}
+
+summary {
+    padding: 16px 18px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-sub);
+}
+
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+    content: "＋";
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+    content: "–";
+}
+
+.details-content {
+    padding: 18px;
+    font-size: 0.92rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+    border-top: 1px solid var(--border);
+}
+
+/* Distribution Bars */
+.bar-track {
+    background: #0f172a;
+    border-radius: 6px;
+    height: 12px;
+    display: flex;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.bar-segment { height: 100%; }
+
+/* Desktop Grid Enhancements */
+@media (min-width: 768px) {
+    body { padding: 40px 24px; }
+    h1 { font-size: 2.2rem; }
+    .subtitle { font-size: 1.15rem; }
+    .kpi-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .kpi-val { font-size: 2rem; }
+    .section-card { padding: 28px 24px; }
+    .desktop-two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+}
+
+/* ========================================================
+   Interactive Tables & Digital Marketing Metrics Styling
+   ======================================================== */
+.controls-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.poll-toggle-group, .scope-toggle-group {
+    display: inline-flex;
+    background: var(--card-sub);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.btn-ctrl {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-ctrl:hover { color: #ffffff; }
+.btn-ctrl.active { background: var(--accent); color: #ffffff; }
+
+.interactive-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.88rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.interactive-table th {
+    background: #162235;
+    color: var(--text-muted);
+    padding: 10px 12px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.interactive-table th:hover { background: #1e2e47; color: #ffffff; }
+.interactive-table th.sort-active { color: var(--accent-light); }
+.interactive-table th .sort-icon { font-size: 0.72rem; margin-right: 4px; display: inline-block; opacity: 0.6; }
+
+.interactive-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(36, 52, 77, 0.6);
+    color: var(--text-main);
+    background: var(--card-bg);
+}
+
+.interactive-table tr:hover td { background: rgba(59, 130, 246, 0.04); }
+
+.interactive-table th.sticky-col, .interactive-table td.sticky-col {
+    position: sticky;
+    right: 0;
+    z-index: 2;
+    box-shadow: -3px 0 6px rgba(0, 0, 0, 0.35);
+}
+
+.interactive-table th.sticky-col { background: #18263a; z-index: 3; }
+.interactive-table td.sticky-col { background: #131c2b; }
+.interactive-table tr:hover td.sticky-col { background: #182438; }
+
+.interactive-table tr.divider-row td {
+    background: #111a27;
+    color: var(--text-dim);
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-top: 1px dashed var(--border-light);
+    border-bottom: 1px dashed var(--border-light);
+}
+
+.interactive-table tr.inactive-row td { opacity: 0.65; }
+
+.leader-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 105px;
+}
+
+.leader-name-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.leader-name {
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.15;
+}
+
+.stance-ratio {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    direction: ltr;
+    display: inline-block;
+    font-family: var(--font-mono);
+}
+
+.stance-pos { color: #34d399; }
+.stance-neg { color: #f87171; }
+.stance-slash { color: rgba(255, 255, 255, 0.35); margin: 0 1px; }
+
+.mini-gauge {
+    display: flex;
+    height: 6px;
+    width: 68px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #090d14;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    cursor: help;
+}
+
+.mini-bar-pos { background: linear-gradient(90deg, #10b981, #34d399); height: 100%; }
+.mini-bar-neg { background: linear-gradient(90deg, #f87171, #ef4444); height: 100%; }
+.mini-gauge-none {
+    background: rgba(148, 163, 184, 0.15);
+    height: 6px;
+    width: 68px;
+    border-radius: 3px;
+}
+
+.mandate-badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #93c5fd;
+    font-weight: 800;
+    font-size: 0.92rem;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-feature-settings: "tnum";
+}
+
+.tnum { font-feature-settings: "tnum"; }
+
+/* Media & Influencers Pills & Layout */
+.pill-badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+.pill-media { background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.3); }
+.pill-left-act { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+.pill-left-lib { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+.pill-right-est { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.pill-right-pop { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.pill-center { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+.media-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 130px;
+}
+.media-name-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    white-space: nowrap;
+}
+.media-name {
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 0.92rem;
+    line-height: 1.2;
+}
+.media-sub-role {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+}
+.sentiment-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.stance-num-pill {
+    font-weight: 700;
+    font-size: 0.76rem;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-feature-settings: "tnum";
+}
+.stance-num-pos { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.stance-num-neg { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.stance-num-neutral { background: rgba(148, 163, 184, 0.12); color: var(--text-muted); }
+
+/* כפתורי הרחבה/צמצום לטבלאות */
+.btn-expand-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.btn-expand-table {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(30, 41, 59, 0.6) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #93c5fd;
+    font-size: 0.84rem;
+    font-weight: 700;
+    padding: 7px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.btn-expand-table:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(30, 41, 59, 0.8) 100%);
+    border-color: #60a5fa;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Identity Politics & Pie Charts Styling */
+.pie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.pie-box {
+    background: var(--card-sub);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pie-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+}
+
+.pie-box-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pie-box-badge {
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-feature-settings: "tnum";
+}
+
+.pie-box-badge.bibi {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.pie-box-badge.eisen {
+    background: rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.chart-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.pie-svg-container {
+    width: 170px;
+    height: 170px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.pie-center-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.pie-center-val {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    font-feature-settings: "tnum";
+}
+
+.pie-center-sub {
+    font-size: 0.68rem;
+    color: var(--text-dim);
+}
+
+.pie-legend {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.legend-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.legend-color-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-right {
+    font-weight: 700;
+    color: #f1f5f9;
+    font-feature-settings: "tnum";
+    direction: ltr;
+}
+
+.pie-insight-box {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    border-right: 3px solid var(--accent);
+    margin-top: auto;
+}
+
+.arrow{font-size:.78rem;font-weight:800;margin-inline-start:4px;white-space:nowrap;cursor:help}
+.arrow.up{color:#34d399}.arrow.down{color:#f87171}.arrow.eq{color:var(--text-dim)}
+.kpi-arrow{display:block;margin-top:4px;font-size:.78rem}
+.note{font-size:.78rem;color:var(--text-dim);margin-top:8px;line-height:1.6}
+.window-tag{font-size:.75rem;font-weight:600;color:var(--text-dim);margin-inline-start:6px}
+.empty-val{color:var(--text-dim);font-size:.78rem}
+.coverage-strip{background:var(--card-sub);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:.84rem;color:#cbd5e1;margin:-8px 0 24px}
+.interp{font-size:.82rem;color:var(--warning);font-weight:600;margin-bottom:10px}
+.trend-verdict{font-weight:700}
+.verdict-none{color:var(--text-muted)}.verdict-up{color:#f87171}.verdict-down{color:#34d399}
+.words{font-size:.84rem;color:#cbd5e1}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header-box">
+  <div class="brand-logo-title">דוח תודעה ותהודה בפייסבוק — יום ד', 7 באוקטובר 2026</div>
+  <div class="brand-meta-sub">
+    <span class="brand-company">אמנון זוסמן</span><span class="brand-divider">|</span>
+    <span>תאריך הפקה: 8 באוקטובר 2026</span><span class="brand-divider">|</span>
+    <span>נתונים נכונים ל-08.10 15:20</span><span class="brand-divider">|</span>
+    <span>יום הדוח: 7.10, 00:00–24:00 שעון ישראל</span>
+  </div>
+  <h1>יום השנה השלישי ל-7 באוקטובר: הודעת הליכוד נגד ערוץ 12 והיעדרות נתניהו מהטקסים הובילו את השיח הפוליטי</h1>
+  <p class="subtitle">
+    475 פריטים של 42 משפיענים וגופי תקשורת שפורסמו ביום רביעי, 7 באוקטובר 2026 — יום השנה השלישי לטבח, 20 יום לפני הבחירות:
+    7.5 מיליון צפיות, כ-397 אלף רגשונים, כ-34 אלף שיתופים, ו-15,128 תגובות שנקצרו מ-12,046 מגיבים.
+    המוקד הפוליטי של היום היה הודעת הליכוד שתקפה את ערוץ 12 ואת בכירי מערכת הביטחון, לצד הדיווח שנתניהו לא משתתף בטקסים:
+    87.3% מהמגיבים בפריטים האלה שהביעו עמדה כלפי נתניהו — נגדו (N=985).
+  </p>
+</header>
+
+<div class="fast-scan">
+  <div class="fast-scan-title"><span>⏱️</span><span>תמצית מנהלים לקריאה ב-60 שניות</span></div>
+  <p class="fast-scan-text">
+    <strong>1. הודעת הליכוד ביום הזיכרון:</strong> 6 פריטים, 1,338 תגובות של 1,180 מגיבים. 87.3% מהמגיבים שהביעו בהם עמדה כלפי נתניהו — נגדו (N=985).
+      על ההודעה עצמה, בעמוד של נתניהו, 245 תגובות התנגדו למסר ו-23 תמכו בו. המוקד קיבל 8.8% מהתגובות של היום ו-21.4% מהלייקים.<br>
+    <strong>2. ההתנגדות לנתניהו ביום כולו לא זזה:</strong> 75.9% נגד מתוך 3,659 אנשים שהביעו עמדה — בתוך הטווח של 4–6.10.
+      מזרחים בקידוד עברי: 51.7% נגד (N=536); מזרחים בקידוד לטיני: 70.5% (N=638).<br>
+    <strong>3. מי מתנגד למי:</strong> בקרב מתנגדי אייזנקוט 64.7% מזרחים (מתוך 334 מסווגים), לעומת 49.0% בכלל מגיבי היום.
+      בקרב מתנגדי נתניהו 33.2% מזרחים ו-34.7% אשכנזים (מתוך 2,193).
+  </p>
+</div>
+
+
+<div class="kpi-grid">
+  <div class="kpi-card"><div class="kpi-val accent">7,485,239</div><div class="kpi-lbl">צפיות</div>
+    <div class="kpi-sub">193 סרטונים מתוך 475 פריטים</div><span class="kpi-arrow"><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 5,359,011 (3 ימים); הפרש +5%">▲5%</span></span></div>
+  <div class="kpi-card"><div class="kpi-val">396,852</div><div class="kpi-lbl">רגשונים</div>
+    <div class="kpi-sub">לייקים, לבבות ושאר הרגשונים</div><span class="kpi-arrow"><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 310,527 (3 ימים); הפרש -21%">▼21%</span></span></div>
+  <div class="kpi-card"><div class="kpi-val warning">33,529</div><div class="kpi-lbl">שיתופים</div>
+    <div class="kpi-sub">בלי 7 מונים חשודים</div><span class="kpi-arrow"><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 26,240 (3 ימים); הפרש -19%">▼19%</span></span></div>
+  <div class="kpi-card"><div class="kpi-val success">15,128</div><div class="kpi-lbl">תגובות שנקצרו</div>
+    <div class="kpi-sub">12,046 מגיבים ייחודיים</div><span class="kpi-arrow"><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 16,066 (3 ימים); הפרש -27%">▼27%</span></span></div>
+</div>
+<div class="coverage-strip">
+  <strong>475 פריטים</strong> של 42 משפיענים וגופי תקשורת. תגובות בפייסבוק לפריטים האלה: <strong>92,851</strong>;
+  נקצרו 15,128 (16%) מ-86 פריטים.
+  מתחת לסף (פחות מ-12 תגובות): 153 פריטים. מעל הסף ולא נאספו (מונים בלבד): 236 פריטים.
+  <div class="note">החצים: 38 המשפיענים שנקצרו מ-4.10 (היום: 383 פריטים) מול ממוצע 4–6.10 אצל אותם משפיענים.
+  <strong>המונים נקראו בגיל שונה:</strong> היום בחציון כ-17 שעות אחרי הפרסום, ב-5–6.10 כ-24 שעות וב-4.10 כ-47 שעות — לכן החצים בצפיות, ברגשונים ובשיתופים מוטים כלפי מטה.
+  מספר התגובות שנקצרו תלוי גם בשער הקציר ובתקרה, ולא רק בהיקף השיח.</div>
+</div>
+
+<section class="section-card">
+  <h2 class="section-title">🥊 שני מתאבקים: מי מתנגד לנתניהו ומי מתנגד לאייזנקוט <span class="window-tag">7.10 · באנשים</span></h2>
+  <p class="narrative-lead">ההתנגדות נמדדת באנשים: כל מגיב נספר פעם אחת, לפי רוב התגובות שלו כלפי הדמות. מוצא — מתוך המגיבים שמוצא שם המשפחה שלהם סווג.
+    הדוח מודד התנגדות ולא רק תמיכה, כי היא מנוע מרכזי בבחירות האלה: "רק לא ביבי" מצד אחד ו"אייזנקוט לא מתאים" מהצד השני.</p>
+  <div class="pie-grid"><div class="pie-box"><div class="pie-box-header"><div class="pie-box-title"><span>🔴</span><span>מתנגדי נתניהו</span></div>
+      <span class="pie-box-badge bibi">2,778 אנשים נגד</span></div>
+      <div style="font-size:.86rem;color:#cbd5e1;margin-bottom:10px">בעד מול נגד: <strong>75.9% נגד</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 72.8% (3 ימים); הפרש +3.1 נק&#x27;">▲3.1</span>
+       מתוך 3,659 אנשים שהביעו עמדה (881 בעד, 41 מעורב).</div>
+      <div style="font-weight:700;font-size:.9rem;margin:6px 0">מוצא שם המשפחה של המתנגדים</div>
+      <div class="chart-wrapper"><div class="pie-svg-container"><svg width="170" height="170" viewBox="0 0 170 170"><path d="M 85.00 17.00 A 68 68 0 0 1 144.28 118.32 L 124.23 107.05 A 45 45 0 0 0 85.00 40.00 Z" fill="#f59e0b" stroke="#131c2b" stroke-width="1.5"><title>מזרחי: 33.2% (727 אנשים)</title></path><path d="M 144.28 118.32 A 68 68 0 0 1 23.66 114.35 L 44.41 104.42 A 45 45 0 0 0 124.23 107.05 Z" fill="#8b5cf6" stroke="#131c2b" stroke-width="1.5"><title>אשכנזי: 34.7% (762 אנשים)</title></path><path d="M 23.66 114.35 A 68 68 0 0 1 57.02 23.02 L 66.49 43.99 A 45 45 0 0 0 44.41 104.42 Z" fill="#10b981" stroke="#131c2b" stroke-width="1.5"><title>עברי-ישראלי: 25.4% (556 אנשים)</title></path><path d="M 57.02 23.02 A 68 68 0 0 1 78.00 17.36 L 80.37 40.24 A 45 45 0 0 0 66.49 43.99 Z" fill="#06b6d4" stroke="#131c2b" stroke-width="1.5"><title>יוצאי ברה"מ: 5.1% (112 אנשים)</title></path><path d="M 78.00 17.36 A 68 68 0 0 1 85.00 17.00 L 85.00 40.00 A 45 45 0 0 0 80.37 40.24 Z" fill="#ec4899" stroke="#131c2b" stroke-width="1.5"><title>ערבי: 1.6% (36 אנשים)</title></path></svg><div class="pie-center-label"><div class="pie-center-val">33.2%</div><div class="pie-center-sub">מזרחים</div></div></div><div class="pie-legend"><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#f59e0b"></span>מזרחי</div><div class="legend-right">33.2% <span class="empty-val">(727)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#8b5cf6"></span>אשכנזי</div><div class="legend-right">34.7% <span class="empty-val">(762)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#10b981"></span>עברי-ישראלי</div><div class="legend-right">25.4% <span class="empty-val">(556)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#06b6d4"></span>יוצאי ברה"מ</div><div class="legend-right">5.1% <span class="empty-val">(112)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#ec4899"></span>ערבי</div><div class="legend-right">1.6% <span class="empty-val">(36)</span></div></div></div></div>
+      <div class="note">מזרחים מתוך 2,193 המתנגדים שמוצאם סווג<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 35.5% (3 ימים); הפרש -2.3 נק&#x27;">▼2.3</span>; בכלל מגיבי היום: 49.0%. לא סווגו או כינוי: 585.</div>
+      <div style="font-weight:700;font-size:.9rem;margin:12px 0 6px">קידוד השם של המתנגדים</div>
+      <div class="chart-wrapper"><div class="pie-svg-container"><svg width="170" height="170" viewBox="0 0 170 170"><path d="M 85.00 17.00 A 68 68 0 0 1 151.19 100.60 L 128.80 95.33 A 45 45 0 0 0 85.00 40.00 Z" fill="#10b981" stroke="#131c2b" stroke-width="1.5"><title>קידוד עברי: 28.7% (796 אנשים)</title></path><path d="M 151.19 100.60 A 68 68 0 1 1 85.00 17.00 L 85.00 40.00 A 45 45 0 1 0 128.80 95.33 Z" fill="#3b82f6" stroke="#131c2b" stroke-width="1.5"><title>קידוד לטיני: 71.3% (1,979 אנשים)</title></path></svg><div class="pie-center-label"><div class="pie-center-val">28.7%</div><div class="pie-center-sub">קידוד עברי</div></div></div><div class="pie-legend"><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#10b981"></span>קידוד עברי</div><div class="legend-right">28.7% <span class="empty-val">(796)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#3b82f6"></span>קידוד לטיני</div><div class="legend-right">71.3% <span class="empty-val">(1,979)</span></div></div></div></div>
+    </div><div class="pie-box"><div class="pie-box-header"><div class="pie-box-title"><span>🔵</span><span>מתנגדי אייזנקוט</span></div>
+      <span class="pie-box-badge eisen">440 אנשים נגד</span></div>
+      <div style="font-size:.86rem;color:#cbd5e1;margin-bottom:10px">בעד מול נגד: <strong>72.8% נגד</strong><span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 74.6% (3 ימים); הפרש -1.8 נק&#x27;">≈</span>
+       מתוך 604 אנשים שהביעו עמדה (164 בעד).</div>
+      <div style="font-weight:700;font-size:.9rem;margin:6px 0">מוצא שם המשפחה של המתנגדים</div>
+      <div class="chart-wrapper"><div class="pie-svg-container"><svg width="170" height="170" viewBox="0 0 170 170"><path d="M 85.00 17.00 A 68 68 0 1 1 30.83 126.10 L 49.15 112.20 A 45 45 0 1 0 85.00 40.00 Z" fill="#f59e0b" stroke="#131c2b" stroke-width="1.5"><title>מזרחי: 64.7% (216 אנשים)</title></path><path d="M 30.83 126.10 A 68 68 0 0 1 19.87 65.45 L 41.90 72.06 A 45 45 0 0 0 49.15 112.20 Z" fill="#8b5cf6" stroke="#131c2b" stroke-width="1.5"><title>אשכנזי: 15.0% (50 אנשים)</title></path><path d="M 19.87 65.45 A 68 68 0 0 1 57.65 22.74 L 66.90 43.80 A 45 45 0 0 0 41.90 72.06 Z" fill="#10b981" stroke="#131c2b" stroke-width="1.5"><title>עברי-ישראלי: 13.8% (46 אנשים)</title></path><path d="M 57.65 22.74 A 68 68 0 0 1 81.16 17.11 L 82.46 40.07 A 45 45 0 0 0 66.90 43.80 Z" fill="#06b6d4" stroke="#131c2b" stroke-width="1.5"><title>יוצאי ברה"מ: 5.7% (19 אנשים)</title></path><path d="M 81.16 17.11 A 68 68 0 0 1 85.00 17.00 L 85.00 40.00 A 45 45 0 0 0 82.46 40.07 Z" fill="#ec4899" stroke="#131c2b" stroke-width="1.5"><title>ערבי: 0.9% (3 אנשים)</title></path></svg><div class="pie-center-label"><div class="pie-center-val">64.7%</div><div class="pie-center-sub">מזרחים</div></div></div><div class="pie-legend"><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#f59e0b"></span>מזרחי</div><div class="legend-right">64.7% <span class="empty-val">(216)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#8b5cf6"></span>אשכנזי</div><div class="legend-right">15.0% <span class="empty-val">(50)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#10b981"></span>עברי-ישראלי</div><div class="legend-right">13.8% <span class="empty-val">(46)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#06b6d4"></span>יוצאי ברה"מ</div><div class="legend-right">5.7% <span class="empty-val">(19)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#ec4899"></span>ערבי</div><div class="legend-right">0.9% <span class="empty-val">(3)</span></div></div></div></div>
+      <div class="note">מזרחים מתוך 334 המתנגדים שמוצאם סווג<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 65.2% (3 ימים); הפרש -0.5 נק&#x27;">≈</span>; בכלל מגיבי היום: 49.0%. לא סווגו או כינוי: 106.</div>
+      <div style="font-weight:700;font-size:.9rem;margin:12px 0 6px">קידוד השם של המתנגדים</div>
+      <div class="chart-wrapper"><div class="pie-svg-container"><svg width="170" height="170" viewBox="0 0 170 170"><path d="M 85.00 17.00 A 68 68 0 0 1 87.91 152.94 L 86.93 129.96 A 45 45 0 0 0 85.00 40.00 Z" fill="#10b981" stroke="#131c2b" stroke-width="1.5"><title>קידוד עברי: 49.3% (217 אנשים)</title></path><path d="M 87.91 152.94 A 68 68 0 1 1 85.00 17.00 L 85.00 40.00 A 45 45 0 1 0 86.93 129.96 Z" fill="#3b82f6" stroke="#131c2b" stroke-width="1.5"><title>קידוד לטיני: 50.7% (223 אנשים)</title></path></svg><div class="pie-center-label"><div class="pie-center-val">49.3%</div><div class="pie-center-sub">קידוד עברי</div></div></div><div class="pie-legend"><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#10b981"></span>קידוד עברי</div><div class="legend-right">49.3% <span class="empty-val">(217)</span></div></div><div class="legend-item"><div class="legend-left"><span class="legend-color-dot" style="background:#3b82f6"></span>קידוד לטיני</div><div class="legend-right">50.7% <span class="empty-val">(223)</span></div></div></div></div>
+    </div></div>
+  <div class="note">בכלל מגיבי היום: 49.0% מזרחים (מתוך 9,170 מסווגים), 39.4% בקידוד עברי. החצים: מול ממוצע 4–6.10, אצל המשפיענים שפרסמו היום.
+    "נגד" כולל כל סנטימנט שלילי כלפי הדמות — עוינות, האשמה, ספק ביכולת או בסיכוי — לפי אותו כלל לשתי הדמויות. בבקרה עיוורת (6.10): "נגד נתניהו" נכון ב-82%, "נגד אייזנקוט" ב-88%.</div>
+</section>
+
+<section class="section-card">
+  <h2 class="section-title">📈 מגמות סביב אירועי היום <span class="window-tag">7.10 מול 4–6.10</span></h2>
+  <p class="narrative-lead">לכל מדד שלושה מספרים: <strong>בולטות</strong> — כמה מהמגיבים התייחסו לדמות; <strong>כיוון</strong> — אחוז ה"נגד" מתוך מי שהביע עמדה (באנשים);
+    <strong>משקל לייקים</strong> — אחוז הלייקים שקיבלו תגובות ה"נגד" מתוך הלייקים של כל התגובות שהביעו עמדה. שינוי נקבע רק כשהיום יוצא מטווח הימים הקודמים בשבוע.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>מדד</th><th>קבוצה</th><th>אנשים עם עמדה</th><th>בולטות</th><th>כיוון (% נגד)</th><th>משקל לייקים</th><th>מסקנה</th></tr></thead>
+    <tbody><tr><td><strong>נגד נתניהו</strong></td><td>כלל המגיבים</td><td class="tnum">3,659</td><td class="tnum">30.7%<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 31.4% (3 ימים); הפרש -0.7 נק&#x27;">≈</span><div class="empty-val">שבוע: 20.2–37.8</div></td><td class="tnum">75.9%<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 72.8% (3 ימים); הפרש +3.1 נק&#x27;">▲3.1</span><div class="empty-val">שבוע: 63.6–80.9</div></td><td class="tnum">87.2%<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 83.9% (3 ימים); הפרש +3.3 נק&#x27;">▲3.3</span><div class="empty-val">שבוע: 75.4–95.0</div></td><td><span class="verdict-none">אין שינוי — בתוך טווח השבוע</span></td></tr>
+<tr><td><strong>נגד נתניהו</strong></td><td>מזרחים — קידוד עברי</td><td class="tnum">536</td><td class="tnum">22.7%<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 27.9% (3 ימים); הפרש -5.2 נק&#x27;">▼5.2</span><div class="empty-val">שבוע: 19.6–32.3</div></td><td class="tnum">51.7%<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 48.9% (3 ימים); הפרש +2.8 נק&#x27;">▲2.8</span><div class="empty-val">שבוע: 36.9–61.4</div></td><td class="tnum">58.0%<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 57.5% (3 ימים); הפרש +0.5 נק&#x27;">≈</span><div class="empty-val">שבוע: 43.1–81.7</div></td><td><span class="verdict-none">אין שינוי — בתוך טווח השבוע</span></td></tr>
+<tr><td><strong>נגד נתניהו</strong></td><td>מזרחים — קידוד לטיני</td><td class="tnum">638</td><td class="tnum">30.4%<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 30.8% (3 ימים); הפרש -0.4 נק&#x27;">≈</span><div class="empty-val">שבוע: 18.8–38.5</div></td><td class="tnum">70.5%<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 71.6% (3 ימים); הפרש -1.1 נק&#x27;">≈</span><div class="empty-val">שבוע: 62.8–79.4</div></td><td class="tnum">88.4%<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 90.6% (3 ימים); הפרש -2.2 נק&#x27;">▼2.2</span><div class="empty-val">שבוע: 83.3–94.8</div></td><td><span class="verdict-none">אין שינוי — בתוך טווח השבוע</span></td></tr>
+<tr><td><strong>נגד אייזנקוט</strong></td><td>כלל המגיבים</td><td class="tnum">604</td><td class="tnum">5.0%<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 5.1% (3 ימים); הפרש -0.1 נק&#x27;">≈</span><div class="empty-val">שבוע: 4.2–5.7</div></td><td class="tnum">72.8%<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 74.6% (3 ימים); הפרש -1.8 נק&#x27;">≈</span><div class="empty-val">שבוע: 66.5–81.7</div></td><td class="tnum">46.2%<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 72.5% (3 ימים); הפרש -26.3 נק&#x27;">▼26.3</span><div class="empty-val">שבוע: 48.8–93.8</div></td><td><span class="verdict-none">אין שינוי — בתוך טווח השבוע</span></td></tr>
+<tr><td><strong>נגד אייזנקוט</strong></td><td>מזרחים — קידוד עברי</td><td class="tnum">157</td><td class="tnum">6.6%<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 8.0% (3 ימים); הפרש -1.4 נק&#x27;">≈</span><div class="empty-val">שבוע: 5.3–10.5</div></td><td class="tnum">83.4%<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 86.2% (3 ימים); הפרש -2.8 נק&#x27;">▼2.8</span><div class="empty-val">שבוע: 79.2–91.2</div></td><td class="tnum">62.0%<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 75.0% (3 ימים); הפרש -13.0 נק&#x27;">▼13.0</span><div class="empty-val">שבוע: 58.5–92.9</div></td><td><span class="verdict-none">אין שינוי — בתוך טווח השבוע</span></td></tr>
+<tr><td><strong>נגד אייזנקוט</strong></td><td>מזרחים — קידוד לטיני</td><td class="tnum">113</td><td class="tnum">5.3%<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 5.8% (3 ימים); הפרש -0.5 נק&#x27;">≈</span><div class="empty-val">שבוע: 3.8–7.5</div></td><td class="tnum">75.2%<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 78.6% (3 ימים); הפרש -3.4 נק&#x27;">▼3.4</span><div class="empty-val">שבוע: 67.9–84.9</div></td><td class="tnum">81.1%<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 76.8% (3 ימים); הפרש +4.3 נק&#x27;">▲4.3</span><div class="empty-val">שבוע: 36.2–98.8</div></td><td><span class="verdict-none">אין שינוי — בתוך טווח השבוע</span></td></tr></tbody></table></div>
+  <div class="note">הבסיס: 4–6.10, אצל אותם משפיענים שפרסמו ב-7.10 (מנהיגי המפלגות — מ-5.10). מזרחים — קידוד עברי: קבוצת הביקורת; מזרחים — קידוד לטיני: קבוצת ההשוואה.
+    מ-8.10 התקרה היא 150 תגובות ראשיות לקוטב במקום 250 — צפויה קפיצה של כנקודה בסדרה.</div>
+</section>
+
+<section class="section-card">
+  <h2 class="section-title">📊 מפת הזירות <span class="window-tag">7.10</span></h2>
+  <div class="controls-bar"><span style="font-weight:800;font-size:1.05rem;color:#fff">🗳️ טבלה 1: מנהיגי המפלגות</span></div>
+  <div class="table-wrap"><table class="interactive-table"><thead><tr>
+    <th class="sticky-col">מנהיג <div style="font-size:.68rem;font-weight:normal;color:var(--text-dim)">(תומך / מתנגד למסר, %)</div></th>
+    <th>מנדטים</th><th>פריטים</th><th>ממוצע צפיות לסרטון</th><th>ממוצע שיתופים</th><th>ממוצע תגובות בפייסבוק</th><th>רגשונים</th><th>תגובות שנקצרו</th>
+  </tr></thead><tbody><tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">נתניהו</span><span class="stance-ratio">(<span class="stance-pos">12</span><span class="stance-slash">/</span><span class="stance-neg">84</span>)</span></div>
+      <div class="mini-gauge" title="תומך במסר 12% | מתנגד למסר 84% (N=551)"><div class="mini-bar-pos" style="width:11.6%"></div><div class="mini-bar-neg" style="width:84.2%"></div></div><div class="media-sub-role">הליכוד</div></div></td>
+      <td><span class="mandate-badge">20</span></td>
+      <td class="tnum">5<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 9 (2 ימים); הפרש -44%">▼44%</span></td>
+      <td class="tnum">50,100<span class="empty-val"> (3)</span><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 72,564 (2 ימים); הפרש -31%">▼31%</span></td>
+      <td class="tnum"><strong>179</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 254 (2 ימים); הפרש -30%">▼30%</span></td>
+      <td class="tnum">1,567<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 2,813 (2 ימים); הפרש -44%">▼44%</span></td>
+      <td class="tnum">11,300<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 181,390 (2 ימים); הפרש -94%">▼94%</span></td>
+      <td class="tnum">551</td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">אייזנקוט</span><span class="stance-ratio">(<span class="stance-pos">36</span><span class="stance-slash">/</span><span class="stance-neg">51</span>)</span></div>
+      <div class="mini-gauge" title="תומך במסר 36% | מתנגד למסר 51% (N=687)"><div class="mini-bar-pos" style="width:36.4%"></div><div class="mini-bar-neg" style="width:51.1%"></div></div><div class="media-sub-role">ישר!</div></div></td>
+      <td><span class="mandate-badge">20</span></td>
+      <td class="tnum">14<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 7 (2 ימים); הפרש +100%">▲100%</span></td>
+      <td class="tnum">117,425<span class="empty-val"> (8)</span><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 43,971 (2 ימים); הפרש +167%">▲167%</span></td>
+      <td class="tnum"><strong>130</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 54 (2 ימים); הפרש +139%">▲139%</span></td>
+      <td class="tnum">178<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 160 (2 ימים); הפרש +11%">▲11%</span></td>
+      <td class="tnum">11,964<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 5,802 (2 ימים); הפרש +106%">▲106%</span></td>
+      <td class="tnum">687</td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">בנט</span><span class="stance-ratio">(<span class="stance-pos">21</span><span class="stance-slash">/</span><span class="stance-neg">53</span>)</span></div>
+      <div class="mini-gauge" title="תומך במסר 21% | מתנגד למסר 53% (N=152)"><div class="mini-bar-pos" style="width:21.1%"></div><div class="mini-bar-neg" style="width:52.6%"></div></div><div class="media-sub-role">ביחד</div></div></td>
+      <td><span class="mandate-badge">12</span></td>
+      <td class="tnum">13<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 7 (2 ימים); הפרש +86%">▲86%</span></td>
+      <td class="tnum">18,429<span class="empty-val"> (7)</span><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 35,966 (2 ימים); הפרש -49%">▼49%</span></td>
+      <td class="tnum"><strong>58</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 102 (2 ימים); הפרש -43%">▼43%</span></td>
+      <td class="tnum">134<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 298 (2 ימים); הפרש -55%">▼55%</span></td>
+      <td class="tnum">21,117<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 10,418 (2 ימים); הפרש +103%">▲103%</span></td>
+      <td class="tnum">152</td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">לפיד</span><span class="stance-ratio">(<span class="stance-pos">61</span><span class="stance-slash">/</span><span class="stance-neg">26</span>)</span></div>
+      <div class="mini-gauge" title="תומך במסר 61% | מתנגד למסר 26% (N=241)"><div class="mini-bar-pos" style="width:61.4%"></div><div class="mini-bar-neg" style="width:26.1%"></div></div><div class="media-sub-role">ביחד</div></div></td>
+      <td><span class="mandate-badge">12</span></td>
+      <td class="tnum">15<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 11 (2 ימים); הפרש +36%">▲36%</span></td>
+      <td class="tnum">36,000<span class="empty-val"> (1)</span><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 16,400 (2 ימים); הפרש +120%">▲120%</span></td>
+      <td class="tnum"><strong>163</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 54 (2 ימים); הפרש +199%">▲199%</span></td>
+      <td class="tnum">294<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 104 (2 ימים); הפרש +181%">▲181%</span></td>
+      <td class="tnum">25,111<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 6,410 (2 ימים); הפרש +292%">▲292%</span></td>
+      <td class="tnum">241</td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">גולן</span><span class="stance-ratio">(<span class="stance-pos">27</span><span class="stance-slash">/</span><span class="stance-neg">64</span>)</span></div>
+      <div class="mini-gauge" title="תומך במסר 27% | מתנגד למסר 64% (N=525)"><div class="mini-bar-pos" style="width:26.7%"></div><div class="mini-bar-neg" style="width:63.6%"></div></div><div class="media-sub-role">הדמוקרטים</div></div></td>
+      <td><span class="mandate-badge">10</span></td>
+      <td class="tnum">13<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 12 (2 ימים); הפרש +4%">≈</span></td>
+      <td class="tnum">22,212<span class="empty-val"> (8)</span><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 37,822 (2 ימים); הפרש -41%">▼41%</span></td>
+      <td class="tnum"><strong>108</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 152 (2 ימים); הפרש -29%">▼29%</span></td>
+      <td class="tnum">1,164<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 179 (2 ימים); הפרש +550%">▲550%</span></td>
+      <td class="tnum">10,884<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 12,111 (2 ימים); הפרש -10%">▼10%</span></td>
+      <td class="tnum">525</td></tr>
+<tr class="inactive-row"><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">טיבי</span></div><div class="media-sub-role">הרשימה המשותפת</div></div></td><td><span class="mandate-badge">9</span></td><td colspan="5"><span class="empty-val">לא פרסם ב-7.10 (ממוצע השבוע: 4.0 פריטים ליום)</span></td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">ליברמן</span></div>
+      <div class="mini-gauge-none" title="אין תגובות שנקצרו"></div><div class="media-sub-role">ישראל ביתנו</div></div></td>
+      <td><span class="mandate-badge">8</span></td>
+      <td class="tnum">17<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 16 (2 ימים); הפרש +10%">▲10%</span></td>
+      <td class="tnum">8,233<span class="empty-val"> (3)</span><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 72,650 (2 ימים); הפרש -89%">▼89%</span></td>
+      <td class="tnum"><strong>141</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 204 (2 ימים); הפרש -31%">▼31%</span></td>
+      <td class="tnum">201<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 224 (2 ימים); הפרש -10%">▼10%</span></td>
+      <td class="tnum">16,442<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 11,720 (2 ימים); הפרש +40%">▲40%</span></td>
+      <td class="tnum"><span class="empty-val">לא נאסף</span></td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">בן גביר</span><span class="stance-ratio">(<span class="stance-pos">50</span><span class="stance-slash">/</span><span class="stance-neg">33</span>)</span></div>
+      <div class="mini-gauge" title="תומך במסר 50% | מתנגד למסר 33% (N=1,054)"><div class="mini-bar-pos" style="width:50.5%"></div><div class="mini-bar-neg" style="width:32.8%"></div></div><div class="media-sub-role">עוצמה יהודית</div></div></td>
+      <td><span class="mandate-badge">8</span></td>
+      <td class="tnum">6<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 2 (2 ימים); הפרש +140%">▲140%</span></td>
+      <td class="tnum">94,733<span class="empty-val"> (3)</span><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 258,000 (1 ימים); הפרש -63% — בסיס של יום אחד">▼63%</span></td>
+      <td class="tnum"><strong>444</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 228 (2 ימים); הפרש +95%">▲95%</span></td>
+      <td class="tnum">1,406<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 1,040 (2 ימים); הפרש +35%">▲35%</span></td>
+      <td class="tnum">47,200<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 12,612 (2 ימים); הפרש +274%">▲274%</span></td>
+      <td class="tnum">1,054</td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">דרעי</span></div>
+      <div class="mini-gauge-none" title="אין תגובות שנקצרו"></div><div class="media-sub-role">ש"ס <span class="empty-val" title="נקצר מ-7.10 בלבד">(אין בסיס)</span></div></div></td>
+      <td><span class="mandate-badge">7</span></td>
+      <td class="tnum">2</td>
+      <td class="tnum">—</td>
+      <td class="tnum"><strong>50</strong></td>
+      <td class="tnum">742</td>
+      <td class="tnum">2,533</td>
+      <td class="tnum"><span class="empty-val">לא נאסף</span></td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">סמוטריץ'</span><span class="stance-ratio">(<span class="stance-pos">24</span><span class="stance-slash">/</span><span class="stance-neg">38</span>)</span></div>
+      <div class="mini-gauge" title="תומך במסר 24% | מתנגד למסר 38% (N=184)"><div class="mini-bar-pos" style="width:23.9%"></div><div class="mini-bar-neg" style="width:37.5%"></div></div><div class="media-sub-role">הציונות הדתית וזהות</div></div></td>
+      <td><span class="mandate-badge">7</span></td>
+      <td class="tnum">3<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 3 (2 ימים); הפרש +0%">≈</span></td>
+      <td class="tnum">29,767<span class="empty-val"> (3)</span></td>
+      <td class="tnum"><strong>104</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 34 (2 ימים); הפרש +206%">▲206%</span></td>
+      <td class="tnum">331<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 588 (2 ימים); הפרש -44%">▼44%</span></td>
+      <td class="tnum">2,756<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 4,528 (2 ימים); הפרש -39%">▼39%</span></td>
+      <td class="tnum">184</td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">עבאס</span></div>
+      <div class="mini-gauge-none" title="אין תגובות שנקצרו"></div><div class="media-sub-role">רע"ם</div></div></td>
+      <td><span class="mandate-badge">6</span></td>
+      <td class="tnum">4<span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 4 (2 ימים); הפרש +0%">≈</span></td>
+      <td class="tnum">2,200<span class="empty-val"> (1)</span><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 155,200 (1 ימים); הפרש -99% — בסיס של יום אחד">▼99%</span></td>
+      <td class="tnum"><strong>6</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 8 (1 ימים); הפרש -25% — בסיס של יום אחד">▼25%</span></td>
+      <td class="tnum">19<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 7 (2 ימים); הפרש +171%">▲171%</span></td>
+      <td class="tnum">783<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 456 (2 ימים); הפרש +72%">▲72%</span></td>
+      <td class="tnum"><span class="empty-val">לא נאסף</span></td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">וינטר</span><span class="stance-ratio">(<span class="stance-pos">36</span><span class="stance-slash">/</span><span class="stance-neg">44</span>)</span></div>
+      <div class="mini-gauge" title="תומך במסר 36% | מתנגד למסר 44% (N=317)"><div class="mini-bar-pos" style="width:35.6%"></div><div class="mini-bar-neg" style="width:43.5%"></div></div><div class="media-sub-role">עמך ישראל</div></div></td>
+      <td><span class="mandate-badge">5</span></td>
+      <td class="tnum">6<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 3 (3 ימים); הפרש +125%">▲125%</span></td>
+      <td class="tnum">5,340<span class="empty-val"> (5)</span><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 22,714 (2 ימים); הפרש -76%">▼76%</span></td>
+      <td class="tnum"><strong>22</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 30 (2 ימים); הפרש -28%">▼28%</span></td>
+      <td class="tnum">198<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 302 (2 ימים); הפרש -34%">▼34%</span></td>
+      <td class="tnum">3,629<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 2,162 (3 ימים); הפרש +68%">▲68%</span></td>
+      <td class="tnum">317</td></tr>
+<tr><td class="sticky-col"><div class="leader-cell"><div class="leader-name-wrap"><span class="leader-name">הנדל</span></div>
+      <div class="mini-gauge-none" title="אין תגובות שנקצרו"></div><div class="media-sub-role">המילואימניקים והכלכלית</div></div></td>
+      <td><span class="empty-val">מתחת לחסימה (2.9%)</span></td>
+      <td class="tnum">8<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 4 (3 ימים); הפרש +118%">▲118%</span></td>
+      <td class="tnum">3,313<span class="empty-val"> (3)</span><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 3,925 (2 ימים); הפרש -16%">▼16%</span></td>
+      <td class="tnum"><strong>14</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 20 (3 ימים); הפרש -31%">▼31%</span></td>
+      <td class="tnum">25<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 69 (3 ימים); הפרש -64%">▼64%</span></td>
+      <td class="tnum">1,669<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 805 (3 ימים); הפרש +107%">▲107%</span></td>
+      <td class="tnum"><span class="empty-val">לא נאסף</span></td></tr></tbody></table></div>
+  <div class="note"><strong>מנדטים:</strong> סקר חדשות 13, 7.10.2026, 20:35 (מדגם, בשיתוף סטטנט, פרויקט המדגם, אסקריה ו-Hive; 1,013 משיבים, טעות דגימה 2.5%).
+    בנט ולפיד רצים יחד ברשימת "ביחד" (12). יהדות התורה (8) לא במעקב. ממוצע צפיות — רק סרטונים (בסוגריים: מספר הסרטונים). ממוצע שיתופים — בלי מונים חשודים.
+    החצים: מול ממוצע הימים הקודמים בשבוע שבהם המנהיג נקצר (מ-5.10); מעבר עם העכבר מציג את הבסיס.</div>
+
+  <div class="controls-bar" style="margin-top:28px"><span style="font-weight:800;font-size:1.05rem;color:#fff">📡 טבלה 2: גופי תקשורת ומובילי דעה — 5 + 5 לפי רגשונים</span></div>
+  <div class="table-wrap"><table class="interactive-table"><thead><tr>
+    <th class="sticky-col">גוף / מוביל דעה</th><th>סוג</th><th>פריטים</th><th>ממוצע צפיות לסרטון</th><th>ממוצע שיתופים</th><th>תגובות בפייסבוק</th><th>רגשונים</th><th>תגובות שנקצרו</th><th>טון הקהל</th>
+  </tr></thead><tbody><tr><td class="sticky-col"><div class="media-cell"><span class="media-name">ישראל היום</span>
+          <span class="media-sub-role">אתר חדשות</span></div></td>
+          <td><span class="pill-badge pill-media">גוף תקשורת</span></td>
+          <td class="tnum">38<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 26 (3 ימים); הפרש +44%">▲44%</span></td>
+          <td class="tnum">156,556<span class="empty-val"> (9)</span></td>
+          <td class="tnum">80</td>
+          <td class="tnum">6,180</td>
+          <td class="tnum"><strong style="color:#93c5fd">40,617</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 7,110 (3 ימים); הפרש +471%">▲471%</span></td>
+          <td class="tnum">1,687</td>
+          <td><div class="sentiment-cell"><span class="stance-num-pill stance-num-neutral">+0.03</span><div class="mini-gauge" title="חיובי 46% | שלילי 41% (N=1,687)"><div class="mini-bar-pos" style="width:45.6%"></div><div class="mini-bar-neg" style="width:40.6%"></div></div><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: -20.0% (2 ימים); הפרש +23.0 נק&#x27;">▲23.0</span></div></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">כאן חדשות</span>
+          <span class="media-sub-role">ערוץ טלוויזיה / רדיו</span></div></td>
+          <td><span class="pill-badge pill-media">גוף תקשורת</span></td>
+          <td class="tnum">26<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 33 (3 ימים); הפרש -20%">▼20%</span></td>
+          <td class="tnum">34,384<span class="empty-val"> (19)</span></td>
+          <td class="tnum">38</td>
+          <td class="tnum">3,991</td>
+          <td class="tnum"><strong style="color:#93c5fd">13,475</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 34,864 (3 ימים); הפרש -61%">▼61%</span></td>
+          <td class="tnum">997</td>
+          <td><div class="sentiment-cell"><span class="stance-num-pill stance-num-neg">−0.26</span><div class="mini-gauge" title="חיובי 28% | שלילי 63% (N=997)"><div class="mini-bar-pos" style="width:28.0%"></div><div class="mini-bar-neg" style="width:63.3%"></div></div><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: -44.0% (3 ימים); הפרש +18.0 נק&#x27;">▲18.0</span></div></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">מעריב</span>
+          <span class="media-sub-role">אתר חדשות</span></div></td>
+          <td><span class="pill-badge pill-media">גוף תקשורת</span></td>
+          <td class="tnum">35<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 29 (3 ימים); הפרש +19%">▲19%</span></td>
+          <td class="tnum">2,600<span class="empty-val"> (1)</span></td>
+          <td class="tnum">19</td>
+          <td class="tnum">8,261</td>
+          <td class="tnum"><strong style="color:#93c5fd">12,043</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 18,907 (3 ימים); הפרש -36%">▼36%</span></td>
+          <td class="tnum">1,146</td>
+          <td><div class="sentiment-cell"><span class="stance-num-pill stance-num-neg">−0.23</span><div class="mini-gauge" title="חיובי 26% | שלילי 62% (N=1,146)"><div class="mini-bar-pos" style="width:26.1%"></div><div class="mini-bar-neg" style="width:62.5%"></div></div><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 17.0% (2 ימים); הפרש -40.0 נק&#x27;">▼40.0</span></div></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">ynet</span>
+          <span class="media-sub-role">אתר חדשות</span></div></td>
+          <td><span class="pill-badge pill-media">גוף תקשורת</span></td>
+          <td class="tnum">26<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 37 (3 ימים); הפרש -30%">▼30%</span></td>
+          <td class="tnum">11,986<span class="empty-val"> (7)</span></td>
+          <td class="tnum">23</td>
+          <td class="tnum">3,669</td>
+          <td class="tnum"><strong style="color:#93c5fd">11,937</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 31,450 (3 ימים); הפרש -62%">▼62%</span></td>
+          <td class="tnum">1,544</td>
+          <td><div class="sentiment-cell"><span class="stance-num-pill stance-num-neg">−0.24</span><div class="mini-gauge" title="חיובי 28% | שלילי 65% (N=1,544)"><div class="mini-bar-pos" style="width:27.9%"></div><div class="mini-bar-neg" style="width:65.0%"></div></div><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: -22.0% (3 ימים); הפרש -2.0 נק&#x27;">▼2.0</span></div></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">כיכר השבת</span>
+          <span class="media-sub-role">אתר חדשות</span></div></td>
+          <td><span class="pill-badge pill-media">גוף תקשורת</span></td>
+          <td class="tnum">19<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 7 (3 ימים); הפרש +159%">▲159%</span></td>
+          <td class="tnum">33,449<span class="empty-val"> (14)</span></td>
+          <td class="tnum">31</td>
+          <td class="tnum">1,072</td>
+          <td class="tnum"><strong style="color:#93c5fd">9,182</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 3,338 (3 ימים); הפרש +175%">▲175%</span></td>
+          <td class="tnum">287</td>
+          <td><div class="sentiment-cell"><span class="stance-num-pill stance-num-pos">+0.34</span><div class="mini-gauge" title="חיובי 72% | שלילי 21% (N=287)"><div class="mini-bar-pos" style="width:72.5%"></div><div class="mini-bar-neg" style="width:21.3%"></div></div><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: -37.0% (2 ימים); הפרש +71.0 נק&#x27;">▲71.0</span></div></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">אורי משגב</span>
+          <span class="media-sub-role">עיתונאי / פרשן</span></div></td>
+          <td><span class="pill-badge pill-center">שמאל אקטיביסטי</span></td>
+          <td class="tnum">14<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 15 (3 ימים); הפרש -7%">▼7%</span></td>
+          <td class="tnum">44,800<span class="empty-val"> (1)</span></td>
+          <td class="tnum">297</td>
+          <td class="tnum">4,004</td>
+          <td class="tnum"><strong style="color:#93c5fd">45,200</strong><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 51,351 (3 ימים); הפרש -12%">▼12%</span></td>
+          <td class="tnum">1,573</td>
+          <td><div class="sentiment-cell"><span class="stance-num-pill stance-num-neutral">+0.08</span><div class="mini-gauge" title="חיובי 51% | שלילי 41% (N=1,573)"><div class="mini-bar-pos" style="width:51.3%"></div><div class="mini-bar-neg" style="width:41.2%"></div></div><span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 7.0% (2 ימים); הפרש +1.0 נק&#x27;">≈</span></div></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">בן כספית</span>
+          <span class="media-sub-role">עיתונאי / פרשן</span></div></td>
+          <td><span class="pill-badge pill-center">שמאל ליברלי</span></td>
+          <td class="tnum">17<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 7 (3 ימים); הפרש +143%">▲143%</span></td>
+          <td class="tnum">20,082<span class="empty-val"> (11)</span></td>
+          <td class="tnum">142</td>
+          <td class="tnum">4,520</td>
+          <td class="tnum"><strong style="color:#93c5fd">20,549</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 9,083 (3 ימים); הפרש +126%">▲126%</span></td>
+          <td class="tnum">1,130</td>
+          <td><div class="sentiment-cell"><span class="stance-num-pill stance-num-neg">−0.28</span><div class="mini-gauge" title="חיובי 26% | שלילי 64% (N=1,130)"><div class="mini-bar-pos" style="width:26.2%"></div><div class="mini-bar-neg" style="width:63.7%"></div></div><span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 4.0% (2 ימים); הפרש -32.0 נק&#x27;">▼32.0</span></div></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">דני אלגרט</span>
+          <span class="media-sub-role">אקטיביסט / תנועת מחאה</span></div></td>
+          <td><span class="pill-badge pill-center">שמאל אקטיביסטי</span></td>
+          <td class="tnum">5<span class="arrow down" title="ממוצע הימים הקודמים בשבוע: 6 (3 ימים); הפרש -17%">▼17%</span></td>
+          <td class="tnum">3,400<span class="empty-val"> (2)</span></td>
+          <td class="tnum">591</td>
+          <td class="tnum">1,682</td>
+          <td class="tnum"><strong style="color:#93c5fd">14,566</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 3,254 (3 ימים); הפרש +348%">▲348%</span></td>
+          <td class="tnum">—</td>
+          <td><span class="empty-val">לא נאסף</span></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">חנוך דאום</span>
+          <span class="media-sub-role">יוצר תוכן / סאטירה</span></div></td>
+          <td><span class="pill-badge pill-center">ציבורי / ללא קו</span></td>
+          <td class="tnum">7<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 4 (3 ימים); הפרש +91%">▲91%</span></td>
+          <td class="tnum">—</td>
+          <td class="tnum">55</td>
+          <td class="tnum">744</td>
+          <td class="tnum"><strong style="color:#93c5fd">11,375</strong><span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 11,192 (3 ימים); הפרש +2%">≈</span></td>
+          <td class="tnum">125</td>
+          <td><div class="sentiment-cell"><span class="stance-num-pill stance-num-pos">+0.61</span><div class="mini-gauge" title="חיובי 95% | שלילי 2% (N=125)"><div class="mini-bar-pos" style="width:95.2%"></div><div class="mini-bar-neg" style="width:2.4%"></div></div><span class="arrow eq" title="ממוצע הימים הקודמים בשבוע: 62.0% (1 ימים); הפרש -1.0 נק&#x27; — בסיס של יום אחד">≈</span></div></td></tr>
+<tr><td class="sticky-col"><div class="media-cell"><span class="media-name">דני בולר</span>
+          <span class="media-sub-role">יוצר תוכן / סאטירה</span></div></td>
+          <td><span class="pill-badge pill-center">שמאל ליברלי</span></td>
+          <td class="tnum">1<span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 0 (3 ימים); הפרש +203%">▲203%</span></td>
+          <td class="tnum">185,000<span class="empty-val"> (1)</span></td>
+          <td class="tnum">1,800</td>
+          <td class="tnum">1,700</td>
+          <td class="tnum"><strong style="color:#93c5fd">11,000</strong><span class="arrow up" title="ממוצע הימים הקודמים בשבוע: 867 (3 ימים); הפרש +1169%">▲1169%</span></td>
+          <td class="tnum">—</td>
+          <td><span class="empty-val">לא נאסף</span></td></tr></tbody></table></div>
+  <div class="note"><strong>טון הקהל:</strong> ממוצע ציון העמדה של התגובות (−1 עד +1), ובפס: אחוז החיוביות (מעל +0.15) והשליליות (מתחת ל−0.15).
+    <strong>חור בנתונים:</strong> ערוץ 12 לא נקצר ל-7.10 (אין פריטים מהיום); ערוץ 14 נקצר חלקית (פריטי הבוקר בלבד). שניהם חסרים בטבלה — לא בגלל היקף.</div>
+</section>
+
+<section class="section-card">
+  <h2 class="section-title">🔥 מוקדי השיח <span class="window-tag">7.10</span></h2>
+  <p class="narrative-lead">חמישה מוקדים, לפי נושא הפריט. "תומך / מתנגד למסר" — יחס התגובות למה שהפריט אומר. "טון" — ציון העמדה הממוצע של התגובות (−1 עד +1).
+    מזרחים ואשכנזים — ממוצע לאדם, באנשים.</p>
+  <div class="sub-card"><div class="sub-card-title">מוקד א': הודעת הליכוד נגד ערוץ 12 והיעדרות נתניהו מהטקסים</div>
+      <p style="font-size:.92rem;color:#e2e8f0;margin-bottom:10px">הודעת הליכוד ביום הזיכרון, שתקפה את ערוץ 12 ואת בכירי מערכת הביטחון, הדיווח על כך שנתניהו לא משתתף בטקסים, ותגובות לפיד ומשגב.</p>
+      <p style="font-size:.9rem;color:#cbd5e1;margin-bottom:10px"><strong>6</strong> פריטים עם תגובות שנקצרו, <strong>1,338</strong> תגובות של
+       <strong>1,180</strong> מגיבים. 8.8% מתגובות היום ו-21.4% מהלייקים (יחס הגברה 2.43).
+       טון ממוצע −0.28: 64.9% שלילי, 27.5% חיובי. נגד נתניהו: <strong>87.3%</strong> מתוך 985 אנשים שהביעו עמדה כלפיו. </p>
+      <div class="table-wrap"><table><thead><tr><th>עמוד</th><th>הפריט</th><th>תגובות</th><th>תומך / מתנגד למסר</th><th>טון</th></tr></thead><tbody><tr><td>בן כספית</td><td style="white-space:normal;max-width:420px">תגובת לפיד להודעת הליכוד…</td><td class="tnum">280</td><td class="tnum">177 / 55</td><td class="tnum">−0.13</td></tr><tr><td>בנימין נתניהו</td><td style="white-space:normal;max-width:420px">הודעת הליכוד: כולנו מרכי…</td><td class="tnum">276</td><td class="tnum">23 / 245</td><td class="tnum">−0.61</td></tr><tr><td>ynet</td><td style="white-space:normal;max-width:420px">נתניהו לא משתתף בטקסי הי…</td><td class="tnum">262</td><td class="tnum">217 / 39</td><td class="tnum">−0.69</td></tr><tr><td>אורי משגב</td><td style="white-space:normal;max-width:420px">7 באוקטובר. שלוש שנים אח…</td><td class="tnum">206</td><td class="tnum">126 / 39</td><td class="tnum">+0.03</td></tr><tr><td>אורי משגב</td><td style="white-space:normal;max-width:420px">כולם: מציינים את ה-7.10 …</td><td class="tnum">158</td><td class="tnum">104 / 31</td><td class="tnum">−0.22</td></tr><tr><td>יאיר לפיד</td><td style="white-space:normal;max-width:420px">זוכרים ביחד, נתקן ביחד. …</td><td class="tnum">156</td><td class="tnum">88 / 47</td><td class="tnum">+0.21</td></tr></tbody></table></div>
+      <div class="desktop-two-col" style="margin-top:8px">
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--mizrahi);font-weight:700">מזרחים</span>: טון ממוצע לאדם −0.31 (n=333)</div>
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--ashkenazi);font-weight:700">אשכנזים</span>: טון ממוצע לאדם −0.24 (n=294)</div>
+      </div><div class="words" style="margin-top:8px"><strong>בדיקת רזולוציה</strong> (הפער בטון קטן מ-0.1): המילים הנפוצות — מזרחים: ראש, ביבי, ישראל, נתניהו, הממשלה, המדינה; אשכנזים: נתניהו, ישראל, אחריות, ראש, ביבי, שלך.</div></div>
+<div class="sub-card"><div class="sub-card-title">מוקד ב': האחריות ל-7 באוקטובר — "מה ידע נתניהו"</div>
+      <p style="font-size:.92rem;color:#e2e8f0;margin-bottom:10px">עדות המזכיר הצבאי לשעבר אבי גיל, הדיווח שלפיו עדכון של נתניהו היה משנה את התמונה, עדות חטוף ששוחרר על אחריות הממשלה ופוסטים על האחריות.</p>
+      <p style="font-size:.9rem;color:#cbd5e1;margin-bottom:10px"><strong>8</strong> פריטים עם תגובות שנקצרו, <strong>1,659</strong> תגובות של
+       <strong>1,470</strong> מגיבים. 11.0% מתגובות היום ו-9.3% מהלייקים (יחס הגברה 0.85).
+       טון ממוצע −0.23: 62.6% שלילי, 31.0% חיובי. נגד נתניהו: <strong>69.0%</strong> מתוך 1,020 אנשים שהביעו עמדה כלפיו. נגד אייזנקוט: <strong>65.3%</strong> מתוך 193. </p>
+      <div class="table-wrap"><table><thead><tr><th>עמוד</th><th>הפריט</th><th>תגובות</th><th>תומך / מתנגד למסר</th><th>טון</th></tr></thead><tbody><tr><td>ישראל היום</td><td style="white-space:normal;max-width:420px">ההתרעות, תיאוריות ה”בגיד…</td><td class="tnum">272</td><td class="tnum">77 / 155</td><td class="tnum">−0.39</td></tr><tr><td>וואלה</td><td style="white-space:normal;max-width:420px">עוד הוסיפו כי &quot;אם ראש המ…</td><td class="tnum">266</td><td class="tnum">95 / 158</td><td class="tnum">−0.67</td></tr><tr><td>אורי משגב</td><td style="white-space:normal;max-width:420px">זה יותר מחצי שנה שראש ממ…</td><td class="tnum">264</td><td class="tnum">231 / 22</td><td class="tnum">+0.22</td></tr><tr><td>ynet</td><td style="white-space:normal;max-width:420px">החטוף ששוחרר במבצע צבאי:…</td><td class="tnum">263</td><td class="tnum">22 / 225</td><td class="tnum">−0.49</td></tr><tr><td>בן כספית</td><td style="white-space:normal;max-width:420px">כשאנחנו מציינים מדי שנה …</td><td class="tnum">215</td><td class="tnum">90 / 69</td><td class="tnum">−0.14</td></tr><tr><td>גדי אייזנקוט</td><td style="white-space:normal;max-width:420px">״תחנות דייגו. קבלו פרש ט…</td><td class="tnum">188</td><td class="tnum">63 / 101</td><td class="tnum">−0.20</td></tr></tbody></table></div>
+      <div class="desktop-two-col" style="margin-top:8px">
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--mizrahi);font-weight:700">מזרחים</span>: טון ממוצע לאדם −0.33 (n=546)</div>
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--ashkenazi);font-weight:700">אשכנזים</span>: טון ממוצע לאדם −0.17 (n=282)</div>
+      </div></div>
+<div class="sub-card"><div class="sub-card-title">מוקד ג': יהודים וערבים ביום הזיכרון — עבאס, רע"ם והמרצה מבר-אילן</div>
+      <p style="font-size:.92rem;color:#e2e8f0;margin-bottom:10px">משגב ציטט את הודעת מנסור עבאס מ-7.10.23; בן גביר תקף את רע"מ על רוכבי אופנועים עם דגלי התנועה האיסלאמית; כתב אישום נגד מרצה מבר-אילן שתכנן פיגועים נגד ערבים.</p>
+      <p style="font-size:.9rem;color:#cbd5e1;margin-bottom:10px"><strong>4</strong> פריטים עם תגובות שנקצרו, <strong>907</strong> תגובות של
+       <strong>867</strong> מגיבים. 6.0% מתגובות היום ו-11.6% מהלייקים (יחס הגברה 1.93).
+       טון ממוצע +0.04: 46.3% שלילי, 47.9% חיובי. </p>
+      <div class="table-wrap"><table><thead><tr><th>עמוד</th><th>הפריט</th><th>תגובות</th><th>תומך / מתנגד למסר</th><th>טון</th></tr></thead><tbody><tr><td>אורי משגב</td><td style="white-space:normal;max-width:420px">7 באוקטובר. שלוש שנים אח…</td><td class="tnum">269</td><td class="tnum">170 / 74</td><td class="tnum">+0.20</td></tr><tr><td>איתמר בן גביר</td><td style="white-space:normal;max-width:420px">בטח ראיתם את התיעוד של ה…</td><td class="tnum">266</td><td class="tnum">162 / 55</td><td class="tnum">+0.29</td></tr><tr><td>כאן חדשות</td><td style="white-space:normal;max-width:420px">ניתן לפרסם: פרופ&#x27; שחר נב…</td><td class="tnum">213</td><td class="tnum">86 / 96</td><td class="tnum">−0.16</td></tr><tr><td>i24NEWS</td><td style="white-space:normal;max-width:420px">פרופסור שחר נבו הוא המרצ…</td><td class="tnum">159</td><td class="tnum">94 / 48</td><td class="tnum">−0.36</td></tr></tbody></table></div>
+      <div class="desktop-two-col" style="margin-top:8px">
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--mizrahi);font-weight:700">מזרחים</span>: טון ממוצע לאדם +0.14 (n=291)</div>
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--ashkenazi);font-weight:700">אשכנזים</span>: טון ממוצע לאדם +0.10 (n=129)</div>
+      </div><div class="words" style="margin-top:8px"><strong>בדיקת רזולוציה</strong> (הפער בטון קטן מ-0.1): המילים הנפוצות — מזרחים: בן, גביר, הכבוד, ישראל, כמה, תודה; אשכנזים: מנהיג, בדיוק, יותר, ישראל, בן, עבאס.</div></div>
+<div class="sub-card"><div class="sub-card-title">מוקד ד': סיפורי הנרצחים והנופלים</div>
+      <p style="font-size:.92rem;color:#e2e8f0;margin-bottom:10px">כתבות זיכרון אישיות (ניר עוז, בארי, אופקים, רעים), ביקורי מנהיגים במקומות הטבח.</p>
+      <p style="font-size:.9rem;color:#cbd5e1;margin-bottom:10px"><strong>17</strong> פריטים עם תגובות שנקצרו, <strong>2,698</strong> תגובות של
+       <strong>2,397</strong> מגיבים. 17.8% מתגובות היום ו-7.5% מהלייקים (יחס הגברה 0.42).
+       טון ממוצע +0.27: 23.9% שלילי, 65.8% חיובי. נגד נתניהו: <strong>82.2%</strong> מתוך 303 אנשים שהביעו עמדה כלפיו. נגד אייזנקוט: <strong>71.6%</strong> מתוך 116. </p>
+      <div class="table-wrap"><table><thead><tr><th>עמוד</th><th>הפריט</th><th>תגובות</th><th>תומך / מתנגד למסר</th><th>טון</th></tr></thead><tbody><tr><td>ישראל היום</td><td style="white-space:normal;max-width:420px">⁨ נויה תושבת כיסופים על …</td><td class="tnum">265</td><td class="tnum">228 / 11</td><td class="tnum">+0.46</td></tr><tr><td>ynet</td><td style="white-space:normal;max-width:420px">&quot;בלילה אני נשארת לבד, וה…</td><td class="tnum">257</td><td class="tnum">219 / 12</td><td class="tnum">+0.59</td></tr><tr><td>ישראל היום</td><td style="white-space:normal;max-width:420px">מתי וייס ז״ל בת ה-69 מבא…</td><td class="tnum">254</td><td class="tnum">182 / 16</td><td class="tnum">+0.26</td></tr><tr><td>גדי אייזנקוט</td><td style="white-space:normal;max-width:420px">הבוקר, בשעה 06:29, הגעתי…</td><td class="tnum">241</td><td class="tnum">108 / 87</td><td class="tnum">−0.07</td></tr><tr><td>כאן חדשות</td><td style="white-space:normal;max-width:420px">שלי משל-יוגב, אימה של לי…</td><td class="tnum">204</td><td class="tnum">150 / 5</td><td class="tnum">+0.29</td></tr><tr><td>ישראל היום</td><td style="white-space:normal;max-width:420px">&#x27;&#x27;ערפו לו את הראש וניסו …</td><td class="tnum">159</td><td class="tnum">130 / 16</td><td class="tnum">+0.35</td></tr></tbody></table></div>
+      <div class="desktop-two-col" style="margin-top:8px">
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--mizrahi);font-weight:700">מזרחים</span>: טון ממוצע לאדם +0.30 (n=1,000)</div>
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--ashkenazi);font-weight:700">אשכנזים</span>: טון ממוצע לאדם +0.26 (n=378)</div>
+      </div><div class="words" style="margin-top:8px"><strong>בדיקת רזולוציה</strong> (הפער בטון קטן מ-0.1): המילים הנפוצות — מזרחים: ברוך, יהי, הלב, זכרו, ישראל, אישה; אשכנזים: ברוך, יהי, הלב, זכרו, ישראל, זכרם.</div></div>
+<div class="sub-card"><div class="sub-card-title">מוקד ה': שובן של מלי וליאל יהלומי</div>
+      <p style="font-size:.92rem;color:#e2e8f0;margin-bottom:10px">האם והבת שנעלמו לפני חודשיים, דווח בטעות על מעצרן באפריקה, ונחתו בישראל. מוקד לא פוליטי — מוצג בגלל היקפו.</p>
+      <p style="font-size:.9rem;color:#cbd5e1;margin-bottom:10px"><strong>8</strong> פריטים עם תגובות שנקצרו, <strong>1,439</strong> תגובות של
+       <strong>1,325</strong> מגיבים. 9.5% מתגובות היום ו-6.0% מהלייקים (יחס הגברה 0.63).
+       טון ממוצע −0.39: 78.5% שלילי, 7.4% חיובי. </p>
+      <div class="table-wrap"><table><thead><tr><th>עמוד</th><th>הפריט</th><th>תגובות</th><th>תומך / מתנגד למסר</th><th>טון</th></tr></thead><tbody><tr><td>ישראל היום</td><td style="white-space:normal;max-width:420px">פרסום ראשון: מלי וליאל י…</td><td class="tnum">266</td><td class="tnum">108 / 81</td><td class="tnum">−0.29</td></tr><tr><td>ynet</td><td style="white-space:normal;max-width:420px">מלי וליאל נחתו בנתב&quot;ג: &quot;…</td><td class="tnum">261</td><td class="tnum">14 / 182</td><td class="tnum">−0.40</td></tr><tr><td>וואלה</td><td style="white-space:normal;max-width:420px">אחרי שנעלמו באירופה ואות…</td><td class="tnum">259</td><td class="tnum">18 / 165</td><td class="tnum">−0.35</td></tr><tr><td>ynet</td><td style="white-space:normal;max-width:420px">בבגדים תואמים - ובלי לומ…</td><td class="tnum">256</td><td class="tnum">6 / 228</td><td class="tnum">−0.52</td></tr><tr><td>מעריב</td><td style="white-space:normal;max-width:420px">אחרי שזוהו בטעות בנמיביה…</td><td class="tnum">133</td><td class="tnum">12 / 82</td><td class="tnum">−0.37</td></tr><tr><td>מעריב</td><td style="white-space:normal;max-width:420px">אחרי שזוהו בטעות בנמיביה…</td><td class="tnum">102</td><td class="tnum">10 / 67</td><td class="tnum">−0.32</td></tr></tbody></table></div>
+      <div class="desktop-two-col" style="margin-top:8px">
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--mizrahi);font-weight:700">מזרחים</span>: טון ממוצע לאדם −0.38 (n=522)</div>
+        <div style="background:rgba(0,0,0,.25);padding:10px;border-radius:8px"><span style="color:var(--ashkenazi);font-weight:700">אשכנזים</span>: טון ממוצע לאדם −0.36 (n=210)</div>
+      </div><div class="words" style="margin-top:8px"><strong>בדיקת רזולוציה</strong> (הפער בטון קטן מ-0.1): המילים הנפוצות — מזרחים: מעניין, מעניינות, עשו, אותנו, הכסף, אותם; אשכנזים: מעניין, מעניינות, הכסף, בכלל, אותן, אותנו.</div></div>
+</section>
+
+<details><summary><span>🔍 נספח א': למה פייסבוק</span></summary><div class="details-content">
+  <p>פייסבוק היא הרשת שבה נמצא הקהל הבוגר בישראל, בגילים שמצביעים בשיעורים הגבוהים, ובה הפרופילים הם ברובם בשם אמיתי —
+  מה שמאפשר לסווג את מוצא שם המשפחה ואת קידוד השם. מגיבים אינם כלל הציבור: הם מי שהתוכן הניע להגיב.</p>
+</div></details>
+
+<details><summary><span>🧬 נספח ב': מי הגיב היום — מול קהל הייחוס והלמ"ס</span></summary><div class="details-content">
+  <p style="margin-bottom:12px">12,046 מגיבים ייחודיים ב-7.10; מוצא שם המשפחה סווג אצל 9,170 (76%). האחוזים מתוך המסווגים.</p>
+  <div class="table-wrap"><table><thead><tr><th>מוצא שם המשפחה</th><th>מגיבי 7.10</th><th>קהל הייחוס</th><th>יחס</th><th>למ"ס (תמיכה)</th></tr></thead><tbody><tr><td><strong style="color:#f59e0b">מזרחי</strong></td><td><strong>49.0%</strong> (4,495)</td><td>46.0%</td><td>×1.07</td><td>52.0%</td></tr><tr><td><strong style="color:#8b5cf6">אשכנזי</strong></td><td><strong>23.2%</strong> (2,123)</td><td>22.4%</td><td>×1.03</td><td>26.6%</td></tr><tr><td><strong style="color:#10b981">עברי-ישראלי</strong></td><td><strong>19.2%</strong> (1,758)</td><td>15.0%</td><td>×1.28</td><td>14.4%</td></tr><tr><td><strong style="color:#06b6d4">יוצאי ברה"מ</strong></td><td><strong>5.4%</strong> (493)</td><td>12.6%</td><td>×0.43</td><td>6.5%</td></tr><tr><td><strong style="color:#ec4899">ערבי</strong></td><td><strong>3.3%</strong> (301)</td><td>3.9%</td><td>×0.84</td><td>0.4%</td></tr></tbody></table></div>
+  <div class="note">קהל הייחוס: מגיבי הרגשונים של סטנדאפיסטים לא פוליטיים (אדיר מילר, דניאל כהן). יחס מעל 1.15 = ייצוג יתר, מתחת ל-0.85 = ייצוג חסר.
+    קידוד השם: 4,723 בעברית, 7,259 בלעז. מגדר (לפי השם הפרטי): 5,753 גברים, 5,595 נשים, 698 לא ידוע.
+    הסיווג לפי שם משפחה כולל שיעור שגיאה (נישואין, שינויי שם, שמות משותפים לכמה קבוצות).</div>
+</div></details>
+
+<details><summary><span>⚖️ נספח ג': נרטיבים — שכיחות מול משקל לייקים</span></summary><div class="details-content">
+  <p style="margin-bottom:12px">15,128 תגובות של 7.10, 61,635 לייקים. יחס הגברה = % הלייקים ÷ % התגובות. מעל 1 — הקוראים מגבירים את הנרטיב.</p>
+  <div class="table-wrap"><table><thead><tr><th>נרטיב</th><th>תגובות</th><th>שכיחות</th><th>לייקים</th><th>משקל לייקים</th><th>יחס הגברה</th></tr></thead><tbody><tr><td><strong>פוליטיקה של אישים</strong></td><td class="tnum">4,288</td><td class="tnum">28.3%</td><td class="tnum">23,051</td><td class="tnum">37.4%</td><td class="tnum"><strong>1.32</strong></td></tr><tr><td><strong>מלחמה, ביטחון וחטופים</strong></td><td class="tnum">3,996</td><td class="tnum">26.4%</td><td class="tnum">14,448</td><td class="tnum">23.4%</td><td class="tnum"><strong>0.89</strong></td></tr><tr><td><strong>ענייני / אחר</strong></td><td class="tnum">2,905</td><td class="tnum">19.2%</td><td class="tnum">4,704</td><td class="tnum">7.6%</td><td class="tnum"><strong>0.40</strong></td></tr><tr><td><strong>אמינות התקשורת והנדסת תודעה</strong></td><td class="tnum">1,524</td><td class="tnum">10.1%</td><td class="tnum">11,251</td><td class="tnum">18.3%</td><td class="tnum"><strong>1.81</strong></td></tr><tr><td><strong>הסתה ובגידה פנימית</strong></td><td class="tnum">877</td><td class="tnum">5.8%</td><td class="tnum">2,995</td><td class="tnum">4.9%</td><td class="tnum"><strong>0.84</strong></td></tr><tr><td><strong>אחדות וממלכתיות</strong></td><td class="tnum">619</td><td class="tnum">4.1%</td><td class="tnum">2,375</td><td class="tnum">3.9%</td><td class="tnum"><strong>0.94</strong></td></tr><tr><td><strong>שסע עדתי והגמוניה</strong></td><td class="tnum">356</td><td class="tnum">2.4%</td><td class="tnum">1,329</td><td class="tnum">2.2%</td><td class="tnum"><strong>0.92</strong></td></tr><tr><td><strong>משילות ומערכת המשפט</strong></td><td class="tnum">274</td><td class="tnum">1.8%</td><td class="tnum">667</td><td class="tnum">1.1%</td><td class="tnum"><strong>0.60</strong></td></tr><tr><td><strong>שוויון בנטל ודת</strong></td><td class="tnum">172</td><td class="tnum">1.1%</td><td class="tnum">237</td><td class="tnum">0.4%</td><td class="tnum"><strong>0.34</strong></td></tr><tr><td><strong>כלכלה ויוקר מחיה</strong></td><td class="tnum">117</td><td class="tnum">0.8%</td><td class="tnum">578</td><td class="tnum">0.9%</td><td class="tnum"><strong>1.21</strong></td></tr></tbody></table></div>
+</div></details>
+
+<details><summary><span>📐 נספח ד': שיטה ומגבלות</span></summary><div class="details-content">
+  <ul style="padding-right:20px">
+    <li><strong>מקור וחלון:</strong> פריטים שפורסמו ב-7.10 (00:00–24:00 שעון ישראל) בעמודי 42 משפיענים, מנהיגי מפלגות וגופי תקשורת. נתונים נכונים ל-2026-10-08 15:20.</li>
+    <li><strong>מונים:</strong> צפיות, רגשונים ושיתופים — כפי שנקראו בקציר הלילה שאחרי יום הפרסום. צפיות רק לסרטונים. 7 מונים חשודים (מעל 50 שיתופים ל-1,000 צפיות) הוצאו מסכום השיתופים: אביגדור ליברמן (1,500 צפיות, 160 שיתופים); אורלי בר לב (68 צפיות, 39 שיתופים); אורלי בר לב (16 צפיות, 41 שיתופים); אורלי בר לב (45 צפיות, 27 שיתופים); אורלי בר לב (10 צפיות, 6 שיתופים); יאיר גולן (117,400 צפיות, 117,000 שיתופים); יאיר גולן (12,600 צפיות, 12,000 שיתופים).</li>
+    <li><strong>תגובות:</strong> 15,128 תגובות שנקצרו (16% מ-92,851 התגובות בפייסבוק), כל תגובה פעם אחת לפי המזהה של פייסבוק. 12,046 מגיבים ייחודיים.
+      הקציר אוסף עד 250 תגובות ראשיות לכל אחד משני סדרי המיון ("הכי רלוונטיות" ו"החדשות ביותר"); פריטים מתחת ל-12 תגובות — מונים בלבד.</li>
+    <li><strong>אנשים ולא תגובות:</strong> מוצא, קידוד השם, מגדר ועמדה כלפי דמות — לפי מגיב ייחודי. לאדם עם תגובות בעד ונגד באותה מידה: "מעורב". בתכונות של אדם אין משקל לייקים.</li>
+    <li><strong>חורים:</strong> ערוץ 12 לא נקצר ל-7.10, ערוץ 14 חלקית. יום שהוחמץ לא מושלם.</li>
+    <li><strong>מגבלה:</strong> מגיבים ברשתות אינם מדגם מייצג של הציבור, אלא מי שהתוכן הניע להגיב. הסיווגים (עמדה, נרטיב, טון) נעשו במודל שפה ונבדקו בבקרה עיוורת במדגם.</li>
+  </ul>
+</div></details>
+
+<section class="section-card" style="border-right:4px solid var(--accent);margin-bottom:24px">
+  <h2 class="section-title">💡 תובנות</h2>
+  <div class="interp">זו פרשנות ולא ממצא ישיר. כל תובנה מפנה למספר בדוח.</div>
+  <div style="font-size:.95rem;color:#e2e8f0;line-height:1.7">
+    <p style="margin-bottom:10px"><strong>1. ביום הזיכרון, מתקפה על התקשורת עלתה ביוקר:</strong> הודעת הליכוד נגד ערוץ 12 קיבלה בעמוד של נתניהו עצמו 245 תגובות מתנגדות מול 23 תומכות.
+      בכל הפריטים בעמוד שלו ביום הזה 84% מהתגובות התנגדו למסר, לעומת 59% בממוצע 5–6.10 (טבלה 1).
+      ביום אבל לאומי, מסר מחנאי נתקל בהתנגדות גם בעמוד של מי שפרסם אותו (מוקד א').</p>
+    <p style="margin-bottom:10px"><strong>2. ההתנגדות לנתניהו יציבה — גם ביום כזה:</strong> 75.9% נגד, בתוך טווח השבוע. המוקד הפוליטי של היום חידד את ההתנגדות בפריטים שעסקו בו, ולא שינה את התמונה הכוללת (מגמות).
+      הפער בין מזרחים בקידוד עברי (52%) לבין מזרחים בקידוד לטיני (70%) נשמר, וקידוד השם מבחין בתוך המזרחים יותר מהמוצא עצמו.</p>
+    <p><strong>3. אייזנקוט מותקף מהבסיס המזרחי:</strong> 65% ממתנגדיו מזרחים, יותר מחלקם בקרב כלל המגיבים (49%), וחצי מהם בקידוד עברי.
+      ההתנגדות לנתניהו, לעומת זאת, מתחלקת כמעט שווה בין מזרחים לאשכנזים. מועמד מזרחי שאינו מזוהה עם הימין אינו נהנה מזהות המוצא שלו בקהל הזה (שני מתאבקים).</p>
+  </div>
+</section>
+
+<div style="background:linear-gradient(135deg,#182232 0%,#0f172a 100%);border:1px solid var(--border);border-right:4px solid var(--accent);border-radius:12px;padding:20px 24px;margin-bottom:20px">
+  <div style="font-size:1.1rem;font-weight:700;color:#fff">מחקר, ניתוח ועריכה: אמנון זוסמן</div>
+  <div style="font-size:.88rem;color:var(--text-muted);margin-top:4px">מחקר שיח ודעת קהל — בחירות 2026</div>
+</div>
+<footer style="text-align:center;font-size:.8rem;color:var(--text-dim);padding:12px 0 24px">PCS Research | אמנון זוסמן</footer>
+</div>
+<script>
+// הנתונים שמהם נבנה הדוח (מפרט: docs/SPEC_daily_report.md). אגרגטים בלבד — בלי שמות מגיבים ובלי טקסט תגובות.
+const REPORT_DATA = {"cut": "2026-10-08 15:20", "kpi": {"items": 475, "views": 7485239, "videos": 193, "reactions": 396852, "shares": 33529, "susp": 7, "fb_comments": 92851, "comments": 15128, "people": 12046, "below": 153, "notcol": 236, "withc": 86}, "kpi_panel": {"items": 383, "views": 5652439, "videos": 156, "reactions": 246762, "shares": 21240, "susp": 4, "fb_comments": 46850, "comments": 11734, "people": 9585, "below": 145, "notcol": 170, "withc": 68}, "kpi_base": {"2026-10-04": {"items": 460, "views": 7117719, "videos": 114, "reactions": 338979, "shares": 30807, "susp": 8, "fb_comments": 73198, "comments": 24697, "people": 18461, "below": 148, "notcol": 173, "withc": 139}, "2026-10-05": {"items": 505, "views": 5334518, "videos": 157, "reactions": 376459, "shares": 33262, "susp": 6, "fb_comments": 89473, "comments": 17135, "people": 13249, "below": 143, "notcol": 252, "withc": 110}, "2026-10-06": {"items": 319, "views": 3624796, "videos": 100, "reactions": 216144, "shares": 14652, "susp": 0, "fb_comments": 41993, "comments": 6365, "people": 5243, "below": 100, "notcol": 182, "withc": 37}}, "trends": {"nb": {"D": {"all": {"asked": 12046, "stance_people": 3659, "mixed": 41, "anti": 2778, "pro": 881, "salience": 30.7, "direction": 75.9, "likes_anti": 21941, "likes_pro": 3217, "like_weight": 87.2}, "miz_heb": {"asked": 2375, "stance_people": 536, "mixed": 4, "anti": 277, "pro": 259, "salience": 22.7, "direction": 51.7, "likes_anti": 1241, "likes_pro": 900, "like_weight": 58.0}, "miz_lat": {"asked": 2120, "stance_people": 638, "mixed": 6, "anti": 450, "pro": 188, "salience": 30.4, "direction": 70.5, "likes_anti": 4466, "likes_pro": 586, "like_weight": 88.4}}, "base": {"2026-10-04": {"all": {"asked": 13132, "stance_people": 2632, "mixed": 26, "anti": 1675, "pro": 957, "salience": 20.2, "direction": 63.6, "likes_anti": 11644, "likes_pro": 2678, "like_weight": 81.3}, "miz_heb": {"asked": 2563, "stance_people": 502, "mixed": 1, "anti": 185, "pro": 317, "salience": 19.6, "direction": 36.9, "likes_anti": 774, "likes_pro": 1023, "like_weight": 43.1}, "miz_lat": {"asked": 2368, "stance_people": 441, "mixed": 5, "anti": 277, "pro": 164, "salience": 18.8, "direction": 62.8, "likes_anti": 2945, "likes_pro": 195, "like_weight": 93.8}}, "2026-10-05": {"all": {"asked": 13698, "stance_people": 5122, "mixed": 51, "anti": 3781, "pro": 1341, "salience": 37.8, "direction": 73.8, "likes_anti": 29016, "likes_pro": 9464, "like_weight": 75.4}, "miz_heb": {"asked": 2375, "stance_people": 746, "mixed": 9, "anti": 361, "pro": 385, "salience": 31.8, "direction": 48.4, "likes_anti": 2363, "likes_pro": 2584, "like_weight": 47.8}, "miz_lat": {"asked": 2264, "stance_people": 862, "mixed": 10, "anti": 626, "pro": 236, "salience": 38.5, "direction": 72.6, "likes_anti": 7930, "likes_pro": 1590, "like_weight": 83.3}}, "2026-10-06": {"all": {"asked": 4097, "stance_people": 1469, "mixed": 10, "anti": 1189, "pro": 280, "salience": 36.1, "direction": 80.9, "likes_anti": 5116, "likes_pro": 269, "like_weight": 95.0}, "miz_heb": {"asked": 569, "stance_people": 184, "mixed": 0, "anti": 113, "pro": 71, "salience": 32.3, "direction": 61.4, "likes_anti": 290, "likes_pro": 65, "like_weight": 81.7}, "miz_lat": {"asked": 702, "stance_people": 243, "mixed": 3, "anti": 193, "pro": 50, "salience": 35.0, "direction": 79.4, "likes_anti": 806, "likes_pro": 44, "like_weight": 94.8}}}}, "ne": {"D": {"all": {"asked": 12046, "stance_people": 604, "mixed": 0, "anti": 440, "pro": 164, "salience": 5.0, "direction": 72.8, "likes_anti": 1242, "likes_pro": 1449, "like_weight": 46.2}, "miz_heb": {"asked": 2375, "stance_people": 157, "mixed": 0, "anti": 131, "pro": 26, "salience": 6.6, "direction": 83.4, "likes_anti": 285, "likes_pro": 175, "like_weight": 62.0}, "miz_lat": {"asked": 2120, "stance_people": 113, "mixed": 0, "anti": 85, "pro": 28, "salience": 5.3, "direction": 75.2, "likes_anti": 240, "likes_pro": 56, "like_weight": 81.1}}, "base": {"2026-10-04": {"all": {"asked": 13132, "stance_people": 541, "mixed": 5, "anti": 409, "pro": 132, "salience": 4.2, "direction": 75.6, "likes_anti": 994, "likes_pro": 333, "like_weight": 74.9}, "miz_heb": {"asked": 2563, "stance_people": 136, "mixed": 1, "anti": 124, "pro": 12, "salience": 5.3, "direction": 91.2, "likes_anti": 226, "likes_pro": 160, "like_weight": 58.5}, "miz_lat": {"asked": 2368, "stance_people": 88, "mixed": 1, "anti": 73, "pro": 15, "salience": 3.8, "direction": 83.0, "likes_anti": 161, "likes_pro": 2, "like_weight": 98.8}}, "2026-10-05": {"all": {"asked": 13698, "stance_people": 779, "mixed": 7, "anti": 518, "pro": 261, "salience": 5.7, "direction": 66.5, "likes_anti": 864, "likes_pro": 906, "like_weight": 48.8}, "miz_heb": {"asked": 2375, "stance_people": 197, "mixed": 1, "anti": 156, "pro": 41, "salience": 8.3, "direction": 79.2, "likes_anti": 289, "likes_pro": 104, "like_weight": 73.5}, "miz_lat": {"asked": 2264, "stance_people": 140, "mixed": 1, "anti": 95, "pro": 45, "salience": 6.2, "direction": 67.9, "likes_anti": 187, "likes_pro": 329, "like_weight": 36.2}}, "2026-10-06": {"all": {"asked": 4097, "stance_people": 218, "mixed": 3, "anti": 178, "pro": 40, "salience": 5.4, "direction": 81.7, "likes_anti": 361, "likes_pro": 24, "like_weight": 93.8}, "miz_heb": {"asked": 569, "stance_people": 59, "mixed": 1, "anti": 52, "pro": 7, "salience": 10.5, "direction": 88.1, "likes_anti": 105, "likes_pro": 8, "like_weight": 92.9}, "miz_lat": {"asked": 702, "stance_people": 53, "mixed": 0, "anti": 45, "pro": 8, "salience": 7.5, "direction": 84.9, "likes_anti": 42, "likes_pro": 2, "like_weight": 95.5}}}}}, "wrestlers": {"nb": {"origin": {"n": 2778, "dist": [["אשכנזי / אירופי", 762], ["ספרדי / עות'מאני (מזרחי)", 727], ["עברי-ישראלי", 556], ["אחר / לא מסווג", 317], ["כינוי / פרופיל פיקטיבי", 268], ["יוצאי ברה\"מ (FSU)", 112], ["ערבי / מזרח-תיכוני", 36]]}, "script": {"n": 2778, "dist": [["לעז", 1979], ["עברית", 796], ["ערבית", 3]]}, "gender": {"n": 2778, "dist": [["F", 1330], ["M", 1295], ["U", 153]]}}, "ne": {"origin": {"n": 440, "dist": [["ספרדי / עות'מאני (מזרחי)", 216], ["אחר / לא מסווג", 60], ["אשכנזי / אירופי", 50], ["כינוי / פרופיל פיקטיבי", 46], ["עברי-ישראלי", 46], ["יוצאי ברה\"מ (FSU)", 19], ["ערבי / מזרח-תיכוני", 3]]}, "script": {"n": 440, "dist": [["לעז", 223], ["עברית", 217]]}, "gender": {"n": 440, "dist": [["M", 305], ["F", 106], ["U", 29]]}}}, "foci": {"likud_statement": {"items": 9, "items_c": 6, "infl": ["ynet", "אורי משגב", "בן כספית", "בנימין נתניהו", "יאיר לפיד"], "comments": 1338, "people": 1180, "likes": 13166, "stance": -0.28, "neg": 64.9, "pos": 27.5, "share_comments": 8.8, "share_likes": 21.4, "miz": {"n": 333, "stance": -0.31}, "ash": {"n": 294, "stance": -0.24}, "fb_views": 1999, "fb_reactions": 23595, "fb_comments": 6607, "nb": {"asked": 1180, "stance_people": 985, "mixed": 3, "anti": 860, "pro": 125, "salience": 83.7, "direction": 87.3, "likes_anti": 11984, "likes_pro": 309, "like_weight": 97.5}, "ne": {"asked": 1180, "stance_people": 17, "mixed": 0, "anti": 11, "pro": 6, "salience": 1.4, "direction": 64.7, "likes_anti": 6, "likes_pro": 287, "like_weight": 2.0}}, "yahalomi": {"items": 19, "items_c": 8, "infl": ["ynet", "וואלה", "ישראל היום", "מעריב"], "comments": 1439, "people": 1325, "likes": 3668, "stance": -0.39, "neg": 78.5, "pos": 7.4, "share_comments": 9.5, "share_likes": 6.0, "miz": {"n": 522, "stance": -0.38}, "ash": {"n": 210, "stance": -0.36}, "fb_views": 60000, "fb_reactions": 3319, "fb_comments": 2575, "nb": {"asked": 1325, "stance_people": 29, "mixed": 0, "anti": 24, "pro": 5, "salience": 2.2, "direction": 82.8, "likes_anti": 41, "likes_pro": 0, "like_weight": 100.0}, "ne": {"asked": 1325, "stance_people": 0, "mixed": 0, "anti": 0, "pro": 0, "salience": 0.0, "direction": null, "likes_anti": 0, "likes_pro": 0, "like_weight": null}}, "arabs": {"items": 4, "items_c": 4, "infl": ["i24NEWS", "אורי משגב", "איתמר בן גביר", "כאן חדשות"], "comments": 907, "people": 867, "likes": 7144, "stance": 0.04, "neg": 46.3, "pos": 47.9, "share_comments": 6.0, "share_likes": 11.6, "miz": {"n": 291, "stance": 0.14}, "ash": {"n": 129, "stance": 0.1}, "fb_views": 0, "fb_reactions": 26890, "fb_comments": 4723, "nb": {"asked": 867, "stance_people": 53, "mixed": 0, "anti": 45, "pro": 8, "salience": 6.1, "direction": 84.9, "likes_anti": 345, "likes_pro": 10, "like_weight": 97.2}, "ne": {"asked": 867, "stance_people": 6, "mixed": 0, "anti": 6, "pro": 0, "salience": 0.7, "direction": 100.0, "likes_anti": 110, "likes_pro": 0, "like_weight": 100.0}}, "accountability": {"items": 14, "items_c": 8, "infl": ["ynet", "אורי משגב", "בן כספית", "גדי אייזנקוט", "וואלה", "יאיר לפיד", "ישראל היום"], "comments": 1659, "people": 1470, "likes": 5714, "stance": -0.23, "neg": 62.6, "pos": 31.0, "share_comments": 11.0, "share_likes": 9.3, "miz": {"n": 546, "stance": -0.33}, "ash": {"n": 282, "stance": -0.17}, "fb_views": 338200, "fb_reactions": 16801, "fb_comments": 4491, "nb": {"asked": 1470, "stance_people": 1020, "mixed": 3, "anti": 704, "pro": 316, "salience": 69.6, "direction": 69.0, "likes_anti": 2217, "likes_pro": 1056, "like_weight": 67.7}, "ne": {"asked": 1470, "stance_people": 193, "mixed": 0, "anti": 126, "pro": 67, "salience": 13.1, "direction": 65.3, "likes_anti": 285, "likes_pro": 308, "like_weight": 48.1}}, "memorial": {"items": 63, "items_c": 17, "infl": ["ynet", "אורלי בר לב", "בן כספית", "גדי אייזנקוט", "חנוך דאום", "יאיר גולן", "ישראל היום", "כאן חדשות", "כיכר השבת", "תא\"ל (מיל') עופר וינטר — עמך ישראל"], "comments": 2698, "people": 2397, "likes": 4651, "stance": 0.27, "neg": 23.9, "pos": 65.8, "share_comments": 17.8, "share_likes": 7.5, "miz": {"n": 1000, "stance": 0.3}, "ash": {"n": 378, "stance": 0.26}, "fb_views": 1814096, "fb_reactions": 64166, "fb_comments": 6800, "nb": {"asked": 2397, "stance_people": 303, "mixed": 0, "anti": 249, "pro": 54, "salience": 12.6, "direction": 82.2, "likes_anti": 744, "likes_pro": 53, "like_weight": 93.4}, "ne": {"asked": 2397, "stance_people": 116, "mixed": 0, "anti": 83, "pro": 33, "salience": 4.8, "direction": 71.6, "likes_anti": 152, "likes_pro": 113, "like_weight": 57.4}}}};
+</script>
+</body>
+</html>

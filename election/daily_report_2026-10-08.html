@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>דוח תודעה ותהודה בפייסבוק — מהדורה מיוחדת: סערת ראיון אבי גיל (8.10.2026)</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --card-inner: #162032;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.2);
+      --red: #ef4444;
+      --green: #10b981;
+      --amber: #f59e0b;
+      --blue: #3b82f6;
+      --purple: #a855f7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
+    body { background-color: var(--bg); color: var(--text); padding: 12px; line-height: 1.5; font-size: 14px; }
+    .container { max-width: 860px; margin: 0 auto; width: 100%; }
+
+    /* Header */
+    .report-header {
+      background: linear-gradient(180deg, #131d33 0%, var(--card-bg) 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px; }
+    .special-badge {
+      background: linear-gradient(90deg, #ef4444, #dc2626);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .date-badge {
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .link-badge {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .link-badge:hover { background: rgba(168, 85, 247, 0.25); }
+
+    h1 {
+      font-size: 1.35rem;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+    .meta-line {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .header-summary {
+      font-size: 13px;
+      color: #d1d5db;
+      border-right: 3px solid var(--accent);
+      padding-right: 10px;
+      line-height: 1.5;
+    }
+
+    /* Section Cards */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px 14px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .section-title span.tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: #1f2937;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-right: auto;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .kpi-box {
+      background: var(--card-inner);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+    .kpi-lbl { font-size: 11px; color: var(--text-muted); font-weight: 600; margin-bottom: 2px; }
+    .kpi-val { font-size: 1.25rem; font-weight: 900; color: #fff; line-height: 1.2; }
+    .kpi-sub { font-size: 10px; color: var(--text-muted); margin-top: 3px; }
+
+    /* Fast Scan (60 sec) */
+    .fast-scan {
+      background: rgba(56, 189, 248, 0.06);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    .scan-item { margin-bottom: 8px; font-size: 12.5px; line-height: 1.45; }
+    .scan-item:last-child { margin-bottom: 0; }
+    .scan-item strong { color: var(--accent); }
+
+    /* Google Trends Histogram Widget */
+    .trends-widget {
+      background: var(--card-inner);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 14px 10px 10px;
+      margin-top: 10px;
+    }
+    .trends-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .trends-title { font-size: 12px; font-weight: 800; color: #e2e8f0; }
+    .toggle-group { display: inline-flex; background: #0f172a; border-radius: 6px; padding: 2px; border: 1px solid #334155; }
+    .toggle-btn { background: transparent; border: none; color: #94a3b8; font-size: 10.5px; font-weight: 700; padding: 3px 8px; border-radius: 4px; cursor: pointer; }
+    .toggle-btn.active { background: var(--blue); color: #fff; }
+
+    /* Chart */
+    .chart-box {
+      position: relative;
+      height: 180px;
+      display: flex;
+      align-items: flex-end;
+      border-bottom: 1px solid #334155;
+      padding-right: 28px;
+      margin-bottom: 8px;
+    }
+    .y-axis {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      bottom: 0;
+      width: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #64748b;
+      font-size: 9px;
+      font-weight: 700;
+      text-align: left;
+    }
+    .grid-line {
+      position: absolute;
+      left: 0;
+      right: 28px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.06);
+      pointer-events: none;
+    }
+    .clusters-row {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 4px;
+    }
+    .cluster-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+      position: relative;
+    }
+    .bars-set {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      gap: 2px;
+      height: 100%;
+    }
+    .bar {
+      width: 100%;
+      max-width: 10px;
+      border-radius: 3px 3px 0 0;
+      transition: height 0.3s ease;
+    }
+    .bar.avi { background: var(--blue); box-shadow: 0 0 8px rgba(59, 130, 246, 0.4); }
+    .bar.bibi { background: var(--amber); }
+    .bar.ch12 { background: var(--green); }
+    .bar.ch14 { background: var(--red); }
+    .bar-lbl {
+      margin-top: 6px;
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #94a3b8;
+      text-align: center;
+      direction: ltr;
+    }
+    .peak-tag {
+      position: absolute;
+      top: -18px;
+      background: var(--red);
+      color: #fff;
+      font-size: 8.5px;
+      font-weight: 800;
+      padding: 1px 4px;
+      border-radius: 3px;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    /* Legend */
+    .mini-legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-top: 6px;
+    }
+    .leg-item { display: flex; align-items: center; gap: 4px; }
+    .dot { width: 8px; height: 8px; border-radius: 2px; }
+
+    /* Tables (Mobile Responsive) */
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 8px -14px;
+      padding: 0 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      min-width: 580px;
+    }
+    th, td {
+      padding: 8px 6px;
+      text-align: right;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    th {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    tr:hover td { background: rgba(255, 255, 255, 0.02); }
+    .num-col { text-align: left; direction: ltr; font-weight: 600; }
+    .badge-sup { color: var(--green); font-weight: 700; }
+    .badge-opp { color: var(--red); font-weight: 700; }
+
+    /* Collapsible Rows & Action Buttons */
+    .table-expand-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      color: var(--accent);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .table-expand-btn:hover {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: var(--accent);
+    }
+    .table-expand-btn svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.2s;
+    }
+    .table-expand-btn.expanded svg {
+      transform: rotate(180deg);
+    }
+    .row-hidden {
+      display: none !important;
+    }
+
+    /* Two Wrestlers Compact Cards */
+    .wrestlers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .wrestler-card {
+      background: var(--card-inner);
+      border-radius: 10px;
+      padding: 10px;
+      border-top: 3px solid var(--accent);
+    }
+    .wrestler-card.bibi { border-top-color: var(--amber); }
+    .wrestler-card.eisen { border-top-color: var(--blue); }
+    .wrestler-name { font-size: 13px; font-weight: 800; margin-bottom: 2px; }
+    .wrestler-sub { font-size: 10.5px; color: var(--text-muted); margin-bottom: 8px; }
+    
+    .pie-bars { display: flex; flex-direction: column; gap: 5px; font-size: 11px; }
+    .p-row { display: flex; align-items: center; justify-content: space-between; }
+    .p-bar-bg { background: rgba(255,255,255,0.08); height: 6px; border-radius: 3px; flex: 1; margin: 0 6px; overflow: hidden; }
+    .p-bar-fill { height: 100%; border-radius: 3px; }
+
+    /* Arena Cards Grid (6 Deep Dive Arenas) */
+    .arenas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .arena-box {
+      background: var(--card-inner);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 10px;
+      position: relative;
+    }
+    .arena-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+    .arena-title { font-size: 12px; font-weight: 800; color: #fff; line-height: 1.3; }
+    .arena-meta { font-size: 10px; color: var(--text-muted); }
+    .arena-metric-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      padding: 3px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    }
+    .arena-metric-row:last-child { border-bottom: none; }
+    .arena-val { font-weight: 700; direction: ltr; }
+
+    /* Quotes & Highlight list */
+    .quote-box {
+      background: rgba(255, 255, 255, 0.03);
+      border-right: 3px solid #64748b;
+      padding: 8px 10px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .quote-box strong { color: #f8fafc; font-weight: 700; }
+    .quote-box.bibi-side { border-right-color: var(--amber); }
+    .quote-box.eisen-side { border-right-color: var(--blue); }
+
+    /* Footnotes */
+    .footer-note {
+      font-size: 10.5px;
+      color: #64748b;
+      line-height: 1.4;
+      text-align: center;
+      padding: 14px 0 24px;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 8px; font-size: 13px; }
+      h1 { font-size: 1.2rem; }
+      .wrestlers-grid { grid-template-columns: 1fr; }
+      .arenas-grid { grid-template-columns: 1fr; }
+      .kpi-val { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- 1. Header -->
+  <header class="report-header">
+    <div class="badge-row">
+      <span class="special-badge">⚡ מהדורה מיוחדת</span>
+      <span class="date-badge">8 באוקטובר 2026</span>
+      <span class="date-badge">יום D: 00:00–24:00 שעון ישראל</span>
+      <a href="http://localhost:8080/lab_google_trends.html" target="_blank" class="link-badge">
+        <span>📊 אנליטיקס Trends</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </a>
+    </div>
+    <h1>סערת ראיון אבי גיל וזיוף הפרוטוקולים: משיא חיפושים בגוגל ועד לקרב הבכורה ברשתות</h1>
+    <div class="meta-line">אמנון זוסמן · מיפוי התודעה הפוליטית לקראת בחירות 2026 · ניתוח עומק מבוקר</div>
+    <div class="header-summary">
+      עדות המזכיר הצבאי לשעבר, האלוף (מיל') אבי גיל, הציתה ב-8.10 אירוע תודעתי דו-ראשי: שיא חיפושים חסר תקדים בגוגל (פיק 100), מול קמפיין תגובת בזק של נתניהו נגד גדי איזנקוט וליברמן ("מדינה פלסטינית לפני GTA 6"), בצל אסון נפילת סרן צפלמוס ז"ל בדרום לבנון. הדוח ממפה את תגובת כלל הזירות — כולל חדשות 12, ערוץ 14, סטטוסים מצייצים ודפי המנהיגים.
+    </div>
+  </header>
+
+  <!-- 2. Fast Scan 60s -->
+  <section class="section-card">
+    <div class="section-title">⚡ תמצית מנהלים (60 שניות)</div>
+    <div class="fast-scan">
+      <div class="scan-item">
+        <strong>1. מנוע החיפוש מס' 1 בישראל:</strong> אבי גיל זינק לציון <strong>100 ב-Google Trends ב-21:40 בערב</strong> ועקף את נתניהו בממוצע היממתי (15.0 מול 14.6) ואת ערוצי הטלוויזיה 12 ו-14.
+      </div>
+      <div class="scan-item">
+        <strong>2. זינוק קצב המעורבות (Velocity):</strong> מנורמל לשעות חשיפה, קצב הרגשונים לשעה אחרי 20:30 זינק ב-<strong>+130%</strong> (חציון 17.5 מול 7.6) וקצב התגובות זינק ב-<strong>+170%</strong> (4.6 מול 1.7 לשעה).
+      </div>
+      <div class="scan-item">
+        <strong>3. הבייס הימני בערוץ 14 נסדק:</strong> בניגוד לשגרה, בדיקת עומק של 658 תגובות לפוסט ערוץ 14 נגד אבי גיל העלתה כי <strong>74.9% מבעלי העמדה התייצבו נגד נתניהו</strong> (284 נגד מול 95 בעד), לצד זעם על "תקיפת קצין צה"ל במקום לקחת אחריות".
+      </div>
+      <div class="scan-item">
+        <strong>4. איזנקוט כמטרה הבלעדית של קמפיין הליכוד:</strong> בעקבות סקר 13 (20 מנדטים), נתניהו הפעיל את קמפיין GTA 6 ואת עדות האלוף יוסי בכר כדי להדוף את הסחף הביטחוני, מה שהקפיץ את ההתנגדות לאיזנקוט בקבוצת הבדיקה (מזרחים לעז) מ-69.6% ל-76.2%.
+      </div>
+    </div>
+
+    <!-- Grouped Histogram Trends Widget -->
+    <div class="trends-widget">
+      <div class="trends-header">
+        <div class="trends-title">📊 מגמות עניין בגוגל סביב שידור הראיון (ישראל)</div>
+        <div class="toggle-group">
+          <button class="toggle-btn active" id="btn-2h" onclick="renderView('2h')">מקטעי שעתיים</button>
+          <button class="toggle-btn" id="btn-1h" onclick="renderView('1h')">שעתי (12 ש')</button>
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <div class="y-axis">
+          <span>100</span>
+          <span>50</span>
+          <span>0</span>
+        </div>
+        <div class="grid-line" style="top: 10px;"></div>
+        <div class="grid-line" style="top: 50%;"></div>
+        <div class="grid-line" style="bottom: 0;"></div>
+
+        <div class="clusters-row" id="clusters-row"></div>
+      </div>
+
+      <div class="mini-legend">
+        <div class="leg-item"><div class="dot" style="background:var(--blue)"></div><span>אבי גיל</span></div>
+        <div class="leg-item"><div class="dot" style="background:var(--amber)"></div><span>בנימין נתניהו</span></div>
+        <div class="leg-item"><div class="dot" style="background:var(--green)"></div><span>חדשות 12</span></div>
+        <div class="leg-item"><div class="dot" style="background:var(--red)"></div><span>ערוץ 14</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Key Day Metrics KPI -->
+  <section class="section-card">
+    <div class="section-title">
+      📈 מספרי היום הכוללים (8.10)
+      <span class="tag">כלל המאגר</span>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi-box">
+        <div class="kpi-lbl">פריטי תוכן שפורסמו</div>
+        <div class="kpi-val">532</div>
+        <div class="kpi-sub">216 סרטונים · 316 פוסטים</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-lbl">סך צפיות בסרטונים</div>
+        <div class="kpi-val">7.40M</div>
+        <div class="kpi-sub">ממוצע: 34,430 לסרטון</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-lbl">רגשונים (Reactions)</div>
+        <div class="kpi-val">475K</div>
+        <div class="kpi-sub">ממוצע: 893 לפריט</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-lbl">תגובות בפייסבוק</div>
+        <div class="kpi-val">99.5K</div>
+        <div class="kpi-sub">14,615 נקצרו במסד (11,590 אנשים)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Normalized Velocity Table: Before vs After -->
+  <section class="section-card">
+    <div class="section-title">
+      ⏱️ אנטומיה של שינוי קצב: לפני הראיון מול אחריו
+      <span class="tag">מנורמל לשעת חשיפה</span>
+    </div>
+    <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">
+      הנרמול מנטרל את פער הזמן (23.2 ש' לפריטי יום מול 10.1 ש' לפריטי לילה) ומודד קצב צבירה לשעה (Velocity):
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>מדד לשעה</th>
+            <th>לפני 20:30 (ממוצע)</th>
+            <th>לפני 20:30 (חציון)</th>
+            <th>אחרי 20:30 (ממוצע)</th>
+            <th>אחרי 20:30 (חציון)</th>
+            <th>זינוק בחציון</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🎯 רגשונים/שעה</td>
+            <td class="num-col">40.0</td>
+            <td class="num-col">7.6</td>
+            <td class="num-col">44.5</td>
+            <td class="num-col">17.5</td>
+            <td class="num-col badge-sup">+130% (פי 2.3)</td>
+          </tr>
+          <tr>
+            <td>💬 תגובות/שעה</td>
+            <td class="num-col">8.5</td>
+            <td class="num-col">1.7</td>
+            <td class="num-col">12.9</td>
+            <td class="num-col">4.6</td>
+            <td class="num-col badge-sup">+170% (פי 2.7)</td>
+          </tr>
+          <tr>
+            <td>🔄 שיתופים/שעה</td>
+            <td class="num-col">2.63</td>
+            <td class="num-col">0.46</td>
+            <td class="num-col">4.29</td>
+            <td class="num-col">0.95</td>
+            <td class="num-col badge-sup">+106% (פי 2.1)</td>
+          </tr>
+          <tr>
+            <td>👁️ צפיות/שעה</td>
+            <td class="num-col">1,873</td>
+            <td class="num-col">297</td>
+            <td class="num-col">2,524</td>
+            <td class="num-col">872</td>
+            <td class="num-col badge-sup">+194% (פי 2.9)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:10px;">
+      <div style="font-size:12px; font-weight:700; margin-bottom:4px; color:#e2e8f0;">פריטי מפתח ששברו את הבנצ'מרק אחרי 20:30:</div>
+      <div class="quote-box">
+        <strong>ynet (21:21):</strong> אסון לבנון — <strong>291.5 רגשונים/שעה (פי 7.3 מהבנצ'מרק)</strong>, 49.4 תגובות/שעה.
+      </div>
+      <div class="quote-box eisen-side">
+        <strong>אורלי בר לב (23:24):</strong> עדות אבי גיל וחקירה פלילית — <strong>58.98 שיתופים/שעה (פי 22.4 מהבנצ'מרק!)</strong>, 248 רגשונים/שעה.
+      </div>
+      <div class="quote-box eisen-side">
+        <strong>יאיר גולן (23:38):</strong> "רעידת אדמה בעקבות אבי גיל" — <strong>157.0 רגשונים/שעה (פי 3.9)</strong>, 26 תגובות/שעה.
+      </div>
+      <div class="quote-box bibi-side">
+        <strong>בנימין נתניהו (23:03):</strong> פוסט לילה — <strong>54.4 תגובות/שעה (פי 6.4 מהבנצ'מרק)</strong>, 144.5 רגשונים/שעה.
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Six Deep Dive Arenas: Event Focus -->
+  <section class="section-card">
+    <div class="section-title">
+      🔍 פוקוס עומק: השוואת 6 הזירות המרכזיות סביב האירוע
+      <span class="tag">סיווג LLM מלא</span>
+    </div>
+    <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">
+      ניתוח מבוקר של 6 פריטי הליבה שסביבם התנהל המאבק התודעתי באותו ערב, ממוינים לפי זירות המאבק:
+    </p>
+
+    <div class="arenas-grid">
+      <!-- 1. C14 Avi Gil -->
+      <div class="arena-box" style="border-top:3px solid var(--red);">
+        <div class="arena-header">
+          <div class="arena-title">ערוץ 14 — תגובת הנגד לאבי גיל</div>
+          <div class="arena-meta">658 תגובות (603 אנשים)</div>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד נתניהו</span>
+          <span class="arena-val badge-opp">74.9% נגד (284 מול 95)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>סנטימנט בולט</span>
+          <span style="font-size:10.5px; color:#cbd5e1;">זעם על תקיפת קצין צה"ל</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>פילוח מזרחי</span>
+          <span class="arena-val">49.6% מזרחים (227 אנשים)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>קבוצת בדיקה (מזרחים לעז)</span>
+          <span class="arena-val badge-opp">73.3% נגד ביבי (55 מול 20)</span>
+        </div>
+      </div>
+
+      <!-- 2. Statusim Avi Gil -->
+      <div class="arena-box" style="border-top:3px solid var(--purple);">
+        <div class="arena-header">
+          <div class="arena-title">סטטוסים מצייצים — אבי גיל</div>
+          <div class="arena-meta">1,040 תגובות (920 אנשים)</div>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד נתניהו</span>
+          <span class="arena-val badge-opp">62.5% נגד (468 מול 281)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>קרב מחנות</span>
+          <span style="font-size:10.5px; color:#cbd5e1;">בייס ימני פשט לתקוף את הדף</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>פילוח מזרחי</span>
+          <span class="arena-val">49.1% מזרחים (341 אנשים)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>קבוצת בדיקה (מזרחים לעז)</span>
+          <span class="arena-val badge-opp">59.1% נגד ביבי (81 מול 56)</span>
+        </div>
+      </div>
+
+      <!-- 3. N12 Avi Gil -->
+      <div class="arena-box" style="border-top:3px solid var(--green);">
+        <div class="arena-header">
+          <div class="arena-title">חדשות 12 — הראיון המלא</div>
+          <div class="arena-meta">170 תגובות (159 אנשים)</div>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד נתניהו</span>
+          <span class="arena-val" style="color:#e2e8f0;">50.4% נגד (67 מול 66 שקול)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד איזנקוט</span>
+          <span class="arena-val badge-opp">72.4% נגד (42 מול 16)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>פילוח מזרחי</span>
+          <span class="arena-val">51.3% מזרחים (61 אנשים)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>קבוצת בדיקה (מזרחים לעז)</span>
+          <span class="arena-val badge-opp">73.3% נגד איזנקוט (11 מול 4)</span>
+        </div>
+      </div>
+
+      <!-- 4. Bibi GTA 6 -->
+      <div class="arena-box" style="border-top:3px solid var(--amber);">
+        <div class="arena-header">
+          <div class="arena-title">נתניהו — סרטון GTA 6 נגד איזנקוט</div>
+          <div class="arena-meta">516 תגובות (513 אנשים)</div>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד נתניהו</span>
+          <span class="arena-val badge-opp">76.3% נגד (238 מול 74)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד איזנקוט</span>
+          <span class="arena-val badge-opp">71.9% נגד (64 מול 25)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>ביקורת פנימית</span>
+          <span style="font-size:10.5px; color:#cbd5e1;">זלזול בבייס עם תעמולת AI</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>קבוצת בדיקה (מזרחים לעז)</span>
+          <span class="arena-val badge-opp">77.1% נגד ביבי (54 מול 16)</span>
+        </div>
+      </div>
+
+      <!-- 5. Bibi Bachar -->
+      <div class="arena-box" style="border-top:3px solid var(--amber);">
+        <div class="arena-header">
+          <div class="arena-title">נתניהו — עדות יוסי בכר מבארי</div>
+          <div class="arena-meta">244 תגובות (211 אנשים)</div>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד נתניהו</span>
+          <span class="arena-val badge-opp">80.3% נגד (118 מול 29)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד איזנקוט</span>
+          <span class="arena-val badge-opp">71.2% נגד (37 מול 15)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>תגובת נגד</span>
+          <span style="font-size:10.5px; color:#cbd5e1;">מחאה על שימוש פוליטי בשכול</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>קבוצת בדיקה (מזרחים לעז)</span>
+          <span class="arena-val badge-opp">79.3% נגד ביבי (23 מול 6)</span>
+        </div>
+      </div>
+
+      <!-- 6. Caspit Bachar -->
+      <div class="arena-box" style="border-top:3px solid var(--blue);">
+        <div class="arena-header">
+          <div class="arena-title">בן כספית — סנגוריה מול בכר</div>
+          <div class="arena-meta">158 תגובות (129 אנשים)</div>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד נתניהו</span>
+          <span class="arena-val badge-opp">66.0% נגד (33 מול 17)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>מדד איזנקוט</span>
+          <span class="arena-val badge-opp">68.5% נגד (50 מול 23)</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>פשיטת ימין</span>
+          <span style="font-size:10.5px; color:#cbd5e1;">אימוץ דברי בכר: "איזנקוט שמאל"</span>
+        </div>
+        <div class="arena-metric-row">
+          <span>קבוצת בדיקה (מזרחים לעז)</span>
+          <span class="arena-val badge-opp">76.9% נגד איזנקוט (10 מול 3)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Two Wrestlers -->
+  <section class="section-card">
+    <div class="section-title">
+      🥊 שני מתאבקים: נתניהו מול איזנקוט
+      <span class="tag">כלל המאגר (11,590 אנשים ב-8.10)</span>
+    </div>
+
+    <div class="wrestlers-grid">
+      <!-- Netanyahu Opponents -->
+      <div class="wrestler-card bibi">
+        <div class="wrestler-name" style="color:var(--amber);">מתנגדי נתניהו (69.9%)</div>
+        <div class="wrestler-sub">2,489 אנשים (מול 1,073 בעד)</div>
+        <div class="pie-bars">
+          <div class="p-row">
+            <span>מזרחי</span>
+            <div class="p-bar-bg"><div class="p-bar-fill" style="width:34.8%; background:var(--amber);"></div></div>
+            <span>34.8% (653)</span>
+          </div>
+          <div class="p-row">
+            <span>אשכנזי</span>
+            <div class="p-bar-bg"><div class="p-bar-fill" style="width:33.4%; background:#94a3b8;"></div></div>
+            <span>33.4% (627)</span>
+          </div>
+          <div class="p-row">
+            <span>עברי-ישראלי</span>
+            <div class="p-bar-bg"><div class="p-bar-fill" style="width:23.9%; background:var(--accent);"></div></div>
+            <span>23.9% (448)</span>
+          </div>
+          <div class="p-row">
+            <span>ברה"מ (FSU)</span>
+            <div class="p-bar-bg"><div class="p-bar-fill" style="width:6.7%; background:#a855f7;"></div></div>
+            <span>6.7% (126)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eisenkot Opponents -->
+      <div class="wrestler-card eisen">
+        <div class="wrestler-name" style="color:var(--blue);">מתנגדי איזנקוט (71.5%)</div>
+        <div class="wrestler-sub">308 אנשים (מול 123 בעד)</div>
+        <div class="pie-bars">
+          <div class="p-row">
+            <span>מזרחי</span>
+            <div class="p-bar-bg"><div class="p-bar-fill" style="width:70.6%; background:var(--blue);"></div></div>
+            <span style="font-weight:700; color:#60a5fa;">70.6% (166)</span>
+          </div>
+          <div class="p-row">
+            <span>אשכנזי</span>
+            <div class="p-bar-bg"><div class="p-bar-fill" style="width:13.6%; background:#94a3b8;"></div></div>
+            <span>13.6% (32)</span>
+          </div>
+          <div class="p-row">
+            <span>עברי-ישראלי</span>
+            <div class="p-bar-bg"><div class="p-bar-fill" style="width:12.3%; background:var(--accent);"></div></div>
+            <span>12.3% (29)</span>
+          </div>
+          <div class="p-row">
+            <span>ברה"מ (FSU)</span>
+            <div class="p-bar-bg"><div class="p-bar-fill" style="width:3.4%; background:#a855f7;"></div></div>
+            <span>3.4% (8)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:11.5px; color:var(--text-muted); line-height:1.45;">
+      💡 <strong>ממצא דמוגרפי:</strong> מתנגדי איזנקוט מורכבים ברוב מוחץ וחסר תקדים (<strong>70.6%</strong>) ממגיבים מזרחיים (הבייס המסורתי שגויס ע"י קמפיין נתניהו ויוסי בכר), בעוד מתנגדי נתניהו מפוזרים באופן שוויוני לחלוטין (35% מזרחים, 33% אשכנזים).
+    </div>
+    <div style="margin-top:8px; padding:8px 10px; background:rgba(168, 85, 247, 0.08); border-right:3px solid var(--purple); border-radius:0 6px 6px 0; font-size:11.5px; line-height:1.45;">
+      🔬 <strong>קבוצת הבדיקה (מזרחים בקידוד לטיני — 1,966 אנשים):</strong> שיעור ההתנגדות לנתניהו עמד על <strong>68.1%</strong> (386 נגד מול 181 בעד). לאחר שידור הראיון ב-20:30, ההתנגדות לנתניהו בקבוצה זו חזרה לרמת השיא השבועית (67.9%–68.9%), בעוד ההתנגדות לאיזנקוט עלתה ל-<strong>76.2%</strong> כתוצאה ממתקפת בכר וערוץ 14.
+    </div>
+  </section>
+
+  <!-- 7. Arena Map: Leaders (Table 1) -->
+  <section class="section-card">
+    <div class="section-title">
+      🏛️ מפת מנהיגי המפלגות (8.10)
+      <span class="tag">סקר חדשות 13 מ-7.10</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>מנהיג</th>
+            <th>מפלגה</th>
+            <th>מנדטים</th>
+            <th>פריטים</th>
+            <th>צפיות/סרטון</th>
+            <th>שיתופים</th>
+            <th>תגובות</th>
+            <th>רגשונים</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>גדי אייזנקוט</strong></td>
+            <td>ישר!</td>
+            <td class="num-col" style="color:var(--accent); font-weight:800;">20</td>
+            <td class="num-col">18</td>
+            <td class="num-col">179,771</td>
+            <td class="num-col">157</td>
+            <td class="num-col">242</td>
+            <td class="num-col">33K</td>
+          </tr>
+          <tr>
+            <td><strong>בנימין נתניהו</strong></td>
+            <td>הליכוד</td>
+            <td class="num-col" style="color:var(--amber); font-weight:800;">20</td>
+            <td class="num-col">9</td>
+            <td class="num-col">67,116</td>
+            <td class="num-col">210</td>
+            <td class="num-col">1,717</td>
+            <td class="num-col">22K</td>
+          </tr>
+          <tr>
+            <td><strong>נפתלי בנט</strong></td>
+            <td>ביחד</td>
+            <td class="num-col">12</td>
+            <td class="num-col">15</td>
+            <td class="num-col">30,900</td>
+            <td class="num-col">57</td>
+            <td class="num-col">139</td>
+            <td class="num-col">23K</td>
+          </tr>
+          <tr>
+            <td><strong>יאיר לפיד</strong></td>
+            <td>ביחד</td>
+            <td class="num-col">12</td>
+            <td class="num-col">21</td>
+            <td class="num-col">152,300</td>
+            <td class="num-col">166</td>
+            <td class="num-col">400</td>
+            <td class="num-col">38K</td>
+          </tr>
+          <tr class="t1-row row-hidden">
+            <td><strong>יאיר גולן</strong></td>
+            <td>הדמוקרטים</td>
+            <td class="num-col">10</td>
+            <td class="num-col">13</td>
+            <td class="num-col">26,357</td>
+            <td class="num-col">230</td>
+            <td class="num-col">364</td>
+            <td class="num-col">20K</td>
+          </tr>
+          <tr class="t1-row row-hidden">
+            <td><strong>איתמר בן גביר</strong></td>
+            <td>עוצמה יהודית</td>
+            <td class="num-col">8</td>
+            <td class="num-col">7</td>
+            <td class="num-col">101,000</td>
+            <td class="num-col">429</td>
+            <td class="num-col">1,655</td>
+            <td class="num-col">78K</td>
+          </tr>
+          <tr class="t1-row row-hidden">
+            <td><strong>אביגדור ליברמן</strong></td>
+            <td>ישראל ביתנו</td>
+            <td class="num-col">8</td>
+            <td class="num-col">19</td>
+            <td class="num-col">31,600</td>
+            <td class="num-col">52</td>
+            <td class="num-col">40</td>
+            <td class="num-col">7K</td>
+          </tr>
+          <tr class="t1-row row-hidden">
+            <td><strong>בצלאל סמוטריץ'</strong></td>
+            <td>הציונות הדתית</td>
+            <td class="num-col">7</td>
+            <td class="num-col">3</td>
+            <td class="num-col">31,733</td>
+            <td class="num-col">144</td>
+            <td class="num-col">398</td>
+            <td class="num-col">3K</td>
+          </tr>
+          <tr class="t1-row row-hidden">
+            <td><strong>עופר וינטר</strong></td>
+            <td>עמך ישראל</td>
+            <td class="num-col">5</td>
+            <td class="num-col">6</td>
+            <td class="num-col">6,560</td>
+            <td class="num-col">28</td>
+            <td class="num-col">191</td>
+            <td class="num-col">3K</td>
+          </tr>
+          <tr class="t1-row row-hidden">
+            <td><strong>אריה דרעי</strong></td>
+            <td>ש"ס</td>
+            <td class="num-col">7</td>
+            <td class="num-col">3</td>
+            <td class="num-col">—</td>
+            <td class="num-col">34</td>
+            <td class="num-col">524</td>
+            <td class="num-col">2K</td>
+          </tr>
+          <tr class="t1-row row-hidden">
+            <td><strong>מנסור עבאס</strong></td>
+            <td>רע"ם</td>
+            <td class="num-col">6</td>
+            <td class="num-col">5</td>
+            <td class="num-col">3,100</td>
+            <td class="num-col">5</td>
+            <td class="num-col">18</td>
+            <td class="num-col">1K</td>
+          </tr>
+          <tr class="t1-row row-hidden">
+            <td><strong>יועז הנדל</strong></td>
+            <td>המילואימניקים</td>
+            <td class="num-col">2.9%</td>
+            <td class="num-col">10</td>
+            <td class="num-col">3,600</td>
+            <td class="num-col">13</td>
+            <td class="num-col">25</td>
+            <td class="num-col">1K</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="table-expand-btn" id="btn-toggle-t1" onclick="toggleTable('t1-row', 'btn-toggle-t1', 'הצג את כל 12 המנהיגים', 'צמצם ל-4 המובילים')">
+      <span>הצג את כל 12 המנהיגים (עוד 8 שורות)</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+  </section>
+
+  <!-- 8. Media & Top 10 (Table 2) -->
+  <section class="section-card">
+    <div class="section-title">
+      📡 תקשורת ומובילי דעה מובילים (8.10)
+      <span class="tag">Top 5 בכל קבוצה</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ערוץ / מוביל</th>
+            <th>קבוצה</th>
+            <th>פריטים</th>
+            <th>רגשונים</th>
+            <th>צפיות/סרטון</th>
+            <th>שיתופים</th>
+            <th>תגובות</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>אורי משגב</strong></td>
+            <td>מוביל דעה</td>
+            <td class="num-col">18</td>
+            <td class="num-col">64K</td>
+            <td class="num-col">42,750</td>
+            <td class="num-col">345</td>
+            <td class="num-col">286</td>
+          </tr>
+          <tr>
+            <td><strong>בן כספית</strong></td>
+            <td>מוביל דעה</td>
+            <td class="num-col">21</td>
+            <td class="num-col">32K</td>
+            <td class="num-col">22,863</td>
+            <td class="num-col">139</td>
+            <td class="num-col">218</td>
+          </tr>
+          <tr>
+            <td><strong>ynet</strong></td>
+            <td>גוף תקשורת</td>
+            <td class="num-col">47</td>
+            <td class="num-col">30K</td>
+            <td class="num-col">17,041</td>
+            <td class="num-col">27</td>
+            <td class="num-col">217</td>
+          </tr>
+          <tr>
+            <td><strong>חדשות 12</strong></td>
+            <td>גוף תקשורת</td>
+            <td class="num-col">17</td>
+            <td class="num-col">25K</td>
+            <td class="num-col">212,600</td>
+            <td class="num-col">54</td>
+            <td class="num-col">218</td>
+          </tr>
+          <tr class="t2-row row-hidden">
+            <td><strong>אורלי בר לב</strong></td>
+            <td>מוביל דעה</td>
+            <td class="num-col">39</td>
+            <td class="num-col">19K</td>
+            <td class="num-col">8,124</td>
+            <td class="num-col">84</td>
+            <td class="num-col">32</td>
+          </tr>
+          <tr class="t2-row row-hidden">
+            <td><strong>מעריב</strong></td>
+            <td>גוף תקשורת</td>
+            <td class="num-col">56</td>
+            <td class="num-col">19K</td>
+            <td class="num-col">3,300</td>
+            <td class="num-col">17</td>
+            <td class="num-col">235</td>
+          </tr>
+          <tr class="t2-row row-hidden">
+            <td><strong>כאן חדשות</strong></td>
+            <td>גוף תקשורת</td>
+            <td class="num-col">32</td>
+            <td class="num-col">16K</td>
+            <td class="num-col">53,627</td>
+            <td class="num-col">34</td>
+            <td class="num-col">251</td>
+          </tr>
+          <tr class="t2-row row-hidden">
+            <td><strong>חנוך דאום</strong></td>
+            <td>מוביל דעה</td>
+            <td class="num-col">9</td>
+            <td class="num-col">13K</td>
+            <td class="num-col">—</td>
+            <td class="num-col">54</td>
+            <td class="num-col">91</td>
+          </tr>
+          <tr class="t2-row row-hidden">
+            <td><strong>דני בולר</strong></td>
+            <td>מוביל דעה</td>
+            <td class="num-col">1</td>
+            <td class="num-col">11K</td>
+            <td class="num-col">204,000</td>
+            <td class="num-col">1,900</td>
+            <td class="num-col">1,800</td>
+          </tr>
+          <tr class="t2-row row-hidden">
+            <td><strong>ערוץ 14</strong></td>
+            <td>גוף תקשורת</td>
+            <td class="num-col">13</td>
+            <td class="num-col">9K</td>
+            <td class="num-col">—</td>
+            <td class="num-col">40</td>
+            <td class="num-col">117</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="table-expand-btn" id="btn-toggle-t2" onclick="toggleTable('t2-row', 'btn-toggle-t2', 'הצג את כל 10 הזירות המובילות', 'צמצם ל-4 המובילים')">
+      <span>הצג את כל 10 הזירות המובילות (עוד 6 שורות)</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+  </section>
+
+  <!-- 9. Key Insights -->
+  <section class="section-card">
+    <div class="section-title">💡 תובנות מחקריות ואינטגרציה</div>
+    <div style="font-size:12.5px; line-height:1.6; color:#e2e8f0;">
+      <p style="margin-bottom:8px;">
+        • <strong>הסדק בבייס הימני (הממצא המרכזי של ערוץ 14):</strong> קציר העומק של ערוץ 14 (658 תגובות) חשף תופעה נדירה: גם בזירת הבית המובהקת ביותר של הימין, 74.9% מבעלי העמדה התייצבו נגד נתניהו בעקבות עדות אבי גיל. חלק ניכר מהמגיבים הביעו מחאה על הניסיון "להכפיש קצין שלחם ב-7 באוקטובר במקום לתת תשובות עובדתיות על ההתרעות".
+      </p>
+      <p style="margin-bottom:8px;">
+        • <strong>קמפיין הבזק כנגד איזנקוט — הצלחה טקטית מול מחיר אסטרטגי:</strong> מתקפת הנגד המהירה של נתניהו ויוסי בכר הצליחה לצרוב את איזנקוט כאיש "שמאל והכלה" בקרב הבייס המסורתי (70.6% ממתנגדי איזנקוט הם מזרחים). עם זאת, המחיר היה כבד: בפוסטים של נתניהו עצמו (GTA 6 ובכר) נרשמה התנגדות של 76%–80%, עם טענות על "זלזול באינטליגנציה ושימוש פוליטי בשכול מבארי".
+      </p>
+      <p style="margin-bottom:8px;">
+        • <strong>"סטטוסים מצייצים" כברומטר של המרכז הרחב:</strong> 1,040 התגובות שנאספו לראשונה מסטטוסים מצייצים מציגות התפלגות עדתית מדויקת לממוצע הארצי (48% מזרחים), כאשר מדד ההתנגדות לנתניהו עומד על 62.5% — קרוב מאוד למדד הכלל-ארצי, עם נוכחות בולטת של שמות עבריים-ישראליים (22.1%).
+      </p>
+      <p>
+        • <strong>הפער בין סדר היום הציבורי למנגנון הפוליטי:</strong> נתוני Google Trends הוכיחו כי הציבור חיפש את האמת על אירועי הלילה וזיוף הפרוטוקולים (שיא 100 לאבי גיל), בעוד המנגנון הפוליטי ניסה למסגר את האירוע כעימות בחירות בין גושים.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer-note">
+    דוח תודעה ותהודה בפייסבוק · מהדורה מיוחדת 8.10.2026 · הופק ע"י אמנון זוסמן (מנוע המחקר PCS) · נתונים סופיים ומבוקרים
+  </footer>
+
+</div>
+
+<script>
+  const data2h = [
+    { label: '14–16', avi: 6.0, bibi: 10.2, ch12: 8.8, ch14: 6.0 },
+    { label: '16–18', avi: 5.1, bibi: 11.5, ch12: 11.0, ch14: 8.3 },
+    { label: '18–20', avi: 6.9, bibi: 12.0, ch12: 14.4, ch14: 9.8 },
+    { label: '20–22', avi: 44.5, bibi: 18.0, ch12: 18.9, ch14: 12.6, peak: 'שיא 100' },
+    { label: '22–00', avi: 32.4, bibi: 20.8, ch12: 14.6, ch14: 9.1 },
+    { label: '00–02', avi: 23.5, bibi: 18.9, ch12: 9.6, ch14: 6.5 }
+  ];
+
+  const data1h = [
+    { label: '14:00', avi: 6.3, bibi: 9.7, ch12: 8.0, ch14: 5.7 },
+    { label: '15:00', avi: 5.8, bibi: 10.8, ch12: 9.5, ch14: 6.2 },
+    { label: '16:00', avi: 4.2, bibi: 11.5, ch12: 11.2, ch14: 7.5 },
+    { label: '17:00', avi: 6.0, bibi: 11.5, ch12: 10.8, ch14: 9.2 },
+    { label: '18:00', avi: 7.0, bibi: 10.0, ch12: 11.7, ch14: 9.0 },
+    { label: '19:00', avi: 6.8, bibi: 14.0, ch12: 17.2, ch14: 10.5 },
+    { label: '20:00', avi: 27.8, bibi: 15.0, ch12: 19.2, ch14: 13.0 },
+    { label: '21:00', avi: 61.2, bibi: 21.0, ch12: 18.5, ch14: 12.2, peak: '100' },
+    { label: '22:00', avi: 33.7, bibi: 20.7, ch12: 15.7, ch14: 10.0 },
+    { label: '23:00', avi: 31.0, bibi: 20.8, ch12: 13.5, ch14: 8.2 },
+    { label: '00:00', avi: 26.0, bibi: 20.8, ch12: 9.0, ch14: 8.2 },
+    { label: '01:00', avi: 21.0, bibi: 17.0, ch12: 10.2, ch14: 4.8 }
+  ];
+
+  function renderView(mode) {
+    document.getElementById('btn-2h').classList.toggle('active', mode === '2h');
+    document.getElementById('btn-1h').classList.toggle('active', mode === '1h');
+    
+    const wrapper = document.getElementById('clusters-row');
+    const dataset = mode === '2h' ? data2h : data1h;
+    
+    wrapper.innerHTML = dataset.map(item => {
+      const hAvi = Math.min(100, Math.max(3, item.avi));
+      const hBibi = Math.min(100, Math.max(3, item.bibi));
+      const hCh12 = Math.min(100, Math.max(3, item.ch12));
+      const hCh14 = Math.min(100, Math.max(3, item.ch14));
+      const peakTag = item.peak ? `<div class="peak-tag">${item.peak}</div>` : '';
+
+      return `
+        <div class="cluster-col">
+          ${peakTag}
+          <div class="bars-set">
+            <div class="bar avi" style="height: ${hAvi}%;"></div>
+            <div class="bar bibi" style="height: ${hBibi}%;"></div>
+            <div class="bar ch12" style="height: ${hCh12}%;"></div>
+            <div class="bar ch14" style="height: ${hCh14}%;"></div>
+          </div>
+          <div class="bar-lbl">${item.label}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  renderView('2h');
+
+  function toggleTable(rowClass, btnId, textExpand, textCollapse) {
+    const rows = document.querySelectorAll('.' + rowClass);
+    const btn = document.getElementById(btnId);
+    const isHidden = rows.length > 0 && rows[0].classList.contains('row-hidden');
+
+    rows.forEach(r => {
+      if (isHidden) {
+        r.classList.remove('row-hidden');
+      } else {
+        r.classList.add('row-hidden');
+      }
+    });
+
+    if (isHidden) {
+      btn.classList.add('expanded');
+      btn.querySelector('span').textContent = textCollapse;
+    } else {
+      btn.classList.remove('expanded');
+      const count = rows.length;
+      btn.querySelector('span').textContent = `${textExpand} (עוד ${count} שורות)`;
+    }
+  }
+</script>
+
+</body>
+</html>

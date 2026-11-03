@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCS | מסמך תדרוך אסטרטגי ומבחן היתכנות לפגישת שותפות</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJNJTZQF1F');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card-bg: #151f32;
+      --border-color: #22324e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+    }
+    .article-card {
+      background: linear-gradient(135deg, rgba(21, 31, 50, 0.95) 0%, rgba(11, 17, 32, 0.9) 100%);
+      border: 1px solid var(--border-color);
+    }
+    .metric-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+    .num { font-variant-numeric: tabular-nums; }
+    blockquote {
+      border-right: 3px solid #38bdf8;
+      padding-right: 1.25rem;
+      margin: 1.5rem 0;
+      color: #cbd5e1;
+      background: rgba(56, 189, 248, 0.04);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    @media print {
+      body { background: white !important; color: black !important; }
+      .article-card, .metric-card { background: white !important; color: black !important; border: 1px solid #ccc !important; }
+      .text-white { color: black !important; }
+      .text-slate-300, .text-slate-400 { color: #444 !important; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body class="p-4 sm:p-8 md:p-12 max-w-5xl mx-auto space-y-10 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- כותרת ראשית ומטא-דאטה -->
+  <header class="article-card rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
+        <span class="px-3 py-1 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30 font-semibold tracking-wide">מסמך מנהלים לדיון עסקי · סודי ומסחרי</span>
+        <span>•</span>
+        <span>גרסה 1.0</span>
+        <span>•</span>
+        <span>נובמבר 2026</span>
+      </div>
+      <button onclick="window.print()" class="no-print text-xs text-slate-400 hover:text-sky-300 transition-colors border border-slate-700 hover:border-sky-500/50 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+        <span>🖨️</span> הדפסה / שמירה כ-PDF
+      </button>
+    </div>
+
+    <div class="space-y-4">
+      <div class="inline-block px-3.5 py-1 rounded-md bg-slate-800 text-sky-400 font-mono text-sm tracking-wider uppercase border border-slate-700">
+        PCS (Political Consciousness System)
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight tracking-tight">
+        סוכן אוטונומי למחקר מרחב התודעה הפוליטית בישראל
+      </h1>
+      <p class="text-lg font-mono text-sky-300 tracking-wide">
+        Autonomous Agent for Israeli Political Consciousness Research
+      </p>
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed pt-2">
+        מסמך תדרוך אסטרטגי, הגדרת נכסי דאטה ומתודולוגיה לבחינת היתכנות שותפות וקידום מסחרי לקראת מערכת הבחירות 2026.
+      </p>
+    </div>
+  </header>
+
+  <!-- מדדי אמת של הנכס (נתונים מוכחים) -->
+  <section class="space-y-4">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        היקף הנכס המוכח במסד הנתונים (נתוני אמת)
+      </h2>
+      <span class="text-xs text-slate-400 font-mono">סגירת מחזור קציר 2026</span>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="metric-card rounded-2xl p-5 text-center space-y-1">
+        <div class="text-3xl sm:text-4xl font-black text-sky-400 num">1,165,459</div>
+        <div class="text-xs text-slate-300 font-medium">תגובות ואינטראקציות</div>
+        <div class="text-[11px] text-slate-500">מנותחות ברמת הפריט הבודד</div>
+      </div>
+      <div class="metric-card rounded-2xl p-5 text-center space-y-1">
+        <div class="text-3xl sm:text-4xl font-black text-sky-400 num">300,000+</div>
+        <div class="text-xs text-slate-300 font-medium">אזרחים ייחודיים מאומתים</div>
+        <div class="text-[11px] text-slate-500">243,737 מגיבים + רשומים</div>
+      </div>
+      <div class="metric-card rounded-2xl p-5 text-center space-y-1">
+        <div class="text-3xl sm:text-4xl font-black text-sky-400 num">71</div>
+        <div class="text-xs text-slate-300 font-medium">זירות ומשפיעני מפתח</div>
+        <div class="text-[11px] text-slate-500">100% כיסוי של מפת הכוחות</div>
+      </div>
+      <div class="metric-card rounded-2xl p-5 text-center space-y-1">
+        <div class="text-3xl sm:text-4xl font-black text-sky-400 num">23,928</div>
+        <div class="text-xs text-slate-300 font-medium">פריטי תוכן (סרטונים ופוסטים)</div>
+        <div class="text-[11px] text-slate-500">מעקב אורכי מלא לאורך הזמן</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- היתרון התחרותי מול השוק -->
+  <section class="article-card rounded-3xl p-6 sm:p-10 shadow-xl space-y-6">
+    <div class="space-y-2">
+      <h2 class="text-2xl font-bold text-white">היתרון התחרותי: מדוע אין לזה תחליף בשוק?</h2>
+      <p class="text-sm text-slate-300 leading-relaxed">
+        שוק הניטור והמחקר הפוליטי בישראל מפוצל כיום בין סקרי עמדות מסורתיים לבין כלי ניטור רשת סטנדרטיים. PCS מגשר על הפער ומספק מודיעין התנהגותי שאינו בר-השגה באף כלי אחר.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-right border-collapse">
+        <thead>
+          <tr class="border-b border-slate-700 text-xs text-slate-400 uppercase tracking-wider">
+            <th class="py-3 px-3">פרמטר מודיעיני</th>
+            <th class="py-3 px-3 text-slate-400">סקר דעת קהל מסורתי</th>
+            <th class="py-3 px-3 text-slate-400">חברות ניטור רשת (Social Listening)</th>
+            <th class="py-3 px-3 text-sky-400 font-bold bg-sky-500/10 rounded-t-lg">סוכן PCS</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 text-xs sm:text-sm">
+          <tr>
+            <td class="py-3 px-3 font-semibold text-white">גודל ועוצמת המדגם</td>
+            <td class="py-3 px-3 text-slate-400">500–1,000 נשאלים בטלפון/אינטרנט</td>
+            <td class="py-3 px-3 text-slate-400">מיליוני מילים (ללא סינון בוטים ורעש)</td>
+            <td class="py-3 px-3 font-bold text-sky-300 bg-sky-500/10">300,000+ משתמשי אמת ישראליים ייחודיים</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-3 font-semibold text-white">זיהוי אתנו-דמוגרפי</td>
+            <td class="py-3 px-3 text-slate-400">הצהרה עצמית בלבד (מדגם מוגבל)</td>
+            <td class="py-3 px-3 text-slate-400">עיוורון דמוגרפי מוחלט (לא קיים)</td>
+            <td class="py-3 px-3 font-bold text-sky-300 bg-sky-500/10">מדד האלכסון הייחודי (מוצא השם × כתב השם)</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-3 font-semibold text-white">עומק פענוח סמנטי</td>
+            <td class="py-3 px-3 text-slate-400">שאלות סגורות מראש (כן/לא/דירוג)</td>
+            <td class="py-3 px-3 text-slate-400">ספירת מילים שטחית (חיובי/שלילי כללי)</td>
+            <td class="py-3 px-3 font-bold text-sky-300 bg-sky-500/10">פענוח נרטיבים, סרקזם, מושא תקיפה ועמדה</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-3 font-semibold text-white">תנועת קהלים וקולות צפים</td>
+            <td class="py-3 px-3 text-slate-400">לא ניתן למעקב אורגני</td>
+            <td class="py-3 px-3 text-slate-400">מדידה ברמת הפוסט הבודד בלבד</td>
+            <td class="py-3 px-3 font-bold text-sky-300 bg-sky-500/10">מעקב רציף אחר מעבר אנשים בין משפיענים שונים</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-3 font-semibold text-white">עלות תפעול שולית</td>
+            <td class="py-3 px-3 text-slate-400">עשרות אלפי שקלים לכל סקר</td>
+            <td class="py-3 px-3 text-slate-400">דמי מנוי חודשיים כבדים לחברות ענן</td>
+            <td class="py-3 px-3 font-bold text-sky-300 bg-sky-500/10">0 ₪ תפעול שוטף (ארכיטקטורה מקומית חסכונית)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 4 ערוצי מוצר מסחריים מניבי הכנסה -->
+  <section class="space-y-4">
+    <div class="space-y-1">
+      <h2 class="text-2xl font-bold text-white">ארבעה ערוצי מוצר מסחריים מניבי הכנסה</h2>
+      <p class="text-sm text-slate-300">חבילות שירות מוכנות להפצה מיידית ללקוחות קצה בעלי תקציב:</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="article-card rounded-2xl p-6 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30">מוצר 01 · קמפיינים</span>
+          <span class="text-xs text-slate-400">B2B פוליטי ואסטרטגי</span>
+        </div>
+        <h3 class="text-lg font-bold text-white">מודיעין עומק לקמפיינים ולמפלגות</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          זיהוי מוקדם של נרטיבים מנצחים מול נרטיבים כושלים, איתור קולות צפים לפי חיתוך אתנו-דמוגרפי ומעקב מעבר בין זירות, והתרעה על משברים 48–72 שעות לפני שהם משתקפים בסקרים.
+        </p>
+      </div>
+
+      <div class="article-card rounded-2xl p-6 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-sky-500/15 text-sky-300 border border-sky-500/30">מוצר 02 · ריטיינר</span>
+          <span class="text-xs text-slate-400">חודשי / תקופתי</span>
+        </div>
+        <h3 class="text-lg font-bold text-white">דוחות מודיעין בלעדיים (Strategic Briefs)</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          דוח תודעה שבועי/חודשי בלעדי לגופי ייעוץ אסטרטגי, שגרירויות, קרנות השקעה ומכוני מחקר בינלאומיים הממפה תנודות עומק, מדדי קיטוב ומפת השנאה החברתית בישראל.
+        </p>
+      </div>
+
+      <div class="article-card rounded-2xl p-6 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">מוצר 03 · בזמן אמת</span>
+          <span class="text-xs text-slate-400">ניהול משברים</span>
+        </div>
+        <h3 class="text-lg font-bold text-white">מערכת ניהול משברים ואירועי שיא (Crisis Radar)</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          הפקת מפת נרטיבים מלאה (Event Mind Map) תוך שעתיים מרגע התפרצות אירוע חדשותי או פוליטי גדול, המראה בדיוק כיצד כל מחנה ומוצא מגיב לאירוע ומי מוביל את השיח.
+        </p>
+      </div>
+
+      <div class="article-card rounded-2xl p-6 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-purple-500/15 text-purple-300 border border-purple-500/30">מוצר 04 · פלטפורמה</span>
+          <span class="text-xs text-slate-400">SaaS / API Licensing</span>
+        </div>
+        <h3 class="text-lg font-bold text-white">רישוי גישה לפלטפורמה ולדשבורד המחקר</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          מתן גישה מבוקרת ומאובטחת למערכת הדשבורד עבור מערכות חדשות, ערוצי טלוויזיה ומחלקות מחקר פוליטי לצורך הפקת גרפים וניתוחים בזמן אמת לשידור ולפרסום.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- מבחן ההתרשמות והרצינות של הגוף המקדם -->
+  <section class="article-card rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8 border-2 border-sky-500/40">
+    <div class="space-y-2">
+      <div class="inline-block px-3 py-1 rounded-md bg-sky-500/20 text-sky-300 text-xs font-bold uppercase tracking-wide">
+        כלי עבודה פנימי לפגישה
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-black text-white">
+        מבחן ההתרשמות: 5 שאלות לבחינת רצינות הגוף המקדם
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed">
+        מטרת הפגישה היא להעביר את נטל ההוכחה אל הצד השני: לבדוק האם מדובר בשותף אסטרטגי בעל ערך אמיתי (גישה ללקוחות משלמים וסגירת עסקאות), או בגוף תיווך המבקש לגבות תשלום עבור עצות.
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      
+      <!-- שאלה 1 -->
+      <div class="metric-card rounded-2xl p-5 space-y-2 border-r-4 border-r-sky-400">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-sky-400 font-mono">מבחן 01</span>
+          <span class="text-xs text-slate-400 font-medium">גישה ללקוחות קצה (Go-To-Market)</span>
+        </div>
+        <div class="text-base font-bold text-white">
+          "לאיזה 3 לקוחות קצה ספציפיים אתם מסוגלים להציג את הנכס הזה כבר בשבועיים הקרובים?"
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          <strong class="text-emerald-400">אינדיקטור חיובי:</strong> ציון שמות מוגדרים של מנהלי קמפיינים, חברות ייעוץ אסטרטגי מובילות או קרנות שהם כבר מייצגים או עובדים מולם ישירות.<br/>
+          <strong class="text-rose-400">נורת אזהרה:</strong> תשובות מעורפלות וכלליות נוסח "נפנה לכולם", "נעשה בדיקת שוק" או "נכין קודם רשימות".
+        </p>
+      </div>
+
+      <!-- שאלה 2 -->
+      <div class="metric-card rounded-2xl p-5 space-y-2 border-r-4 border-r-amber-400">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-amber-400 font-mono">מבחן 02</span>
+          <span class="text-xs text-slate-400 font-medium">מודל התגמול (Skin In The Game)</span>
+        </div>
+        <div class="text-base font-bold text-white">
+          "הנכס מוכן, עובד ומבוסס. האם מודל ההתקשרות שלכם מבוסס על שותפות בתוצאות (Revenue Share / Success Fee)?"
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          <strong class="text-emerald-400">אינדיקטור חיובי:</strong> ביטחון עצמי ביכולתם לסגור עסקאות ורצון להרוויח אחוזים משמעותיים מכל עסקה שתמומש.<br/>
+          <strong class="text-rose-400">נורת אזהרה קריטית:</strong> דרישת תשלום מראש, מקדמה או דמי טיפול חודשיים עבור "בניית מצגות/קידום". גוף שדורש כסף מהחוקר הוא ספק שירותים, לא שותף.
+        </p>
+      </div>
+
+      <!-- שאלה 3 -->
+      <div class="metric-card rounded-2xl p-5 space-y-2 border-r-4 border-r-purple-400">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-purple-400 font-mono">מבחן 03</span>
+          <span class="text-xs text-slate-400 font-medium">הבנת השוק והתאמת המוצר (Product-Market Fit)</span>
+        </div>
+        <div class="text-base font-bold text-white">
+          "איזה מבין 4 ערוצי המוצר אתם רואים כבעל פוטנציאל המכירה המהיר ביותר ברשת הקשרים שלכם, ובאיזה טווח תמחור?"
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          <strong class="text-emerald-400">אינדיקטור חיובי:</strong> ניתוח חד של התקציבים הקיימים בשוק הישראלי, הבנת צרכי המפלגות והתאמת המוצר הנכון ללקוח הנכון.<br/>
+          <strong class="text-rose-400">נורת אזהרה:</strong> חוסר הבנה של הפוליטיקה הישראלית או ניסיון לשווק את הנכס כ"כלי דיגיטל רגיל".
+        </p>
+      </div>
+
+      <!-- שאלה 4 -->
+      <div class="metric-card rounded-2xl p-5 space-y-2 border-r-4 border-r-emerald-400">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-emerald-400 font-mono">מבחן 04</span>
+          <span class="text-xs text-slate-400 font-medium">לוח זמנים ואבני דרך (Milestones)</span>
+        </div>
+        <div class="text-base font-bold text-white">
+          "שנת 2026 היא שנת בחירות וחלון ההזדמנויות פתוח כעת. מהו לוח הזמנים שלכם לסגירת העסקה או הפיילוט הממומן הראשון?"
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          <strong class="text-emerald-400">אינדיקטור חיובי:</strong> התחייבות ליעדי 30–60 יום להבאת תוצאות ראשונות, תוך הגדרת תקופת בחינה הדדית.<br/>
+          <strong class="text-rose-400">נורת אזהרה:</strong> בקשה לבלעדיות ארוכת טווח (חצי שנה ומעלה) ללא אבני דרך מחייבות להכנסות בפועל.
+        </p>
+      </div>
+
+      <!-- שאלה 5 -->
+      <div class="metric-card rounded-2xl p-5 space-y-2 border-r-4 border-r-rose-400">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-rose-400 font-mono">מבחן 05</span>
+          <span class="text-xs text-slate-400 font-medium">שמירה מוחלטת על קניין רוחני (IP Protection)</span>
+        </div>
+        <div class="text-base font-bold text-white">
+          "הקוד, מסד הנתונים, המילונים האתניים והמתודולוגיה נשארים בבעלותי הבלעדית. השותפות היא על ייצוג ומכירת התוצרים בלבד."
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          <strong class="text-emerald-400">תנאי ברזל:</strong> שום קוד, גישה למסד הנתונים הגולמי או מפתח API אינם נמסרים. הצד השני מקבל אך ורק תוצרים מוגמרים, דוחות וממשק משתמש מסונן.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- סיכום עמדה לפגישה -->
+  <footer class="article-card rounded-3xl p-6 sm:p-10 shadow-xl space-y-4">
+    <h3 class="text-xl font-bold text-white">השורה התחתונה לעמדת המיקוח שלך</h3>
+    <p class="text-sm text-slate-300 leading-relaxed">
+      אתה מגיע לפגישה כבעלים של **נכס מודיעיני מוכח, ענק וייחודי ביותר בישראל**, שכבר פועל ומחזיק בנתוני אמת של מעל 300,000 איש ו-1.16 מיליון אינטראקציות. 
+      אינך מבקש "סיוע", אלא מציע הזדמנות מסחרית מוכנה לגוף שיודע לסגור עסקאות. אם הם מביאים לקוחות משלמים ומתחלקים בתוצאות – זוהי שותפות מנצחת; אם הם דורשים כסף מראש כדי "לקדם" – יש לעצור את המהלך מיד.
+    </p>
+    <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+      <span>PCS Research Agent · 2026</span>
+      <span>Confidential Strategic Briefing</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מבחן מציאות: פרוטוקול לפגישת שותפות ונטרול חנופה | PCS</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #121927;
+      --border-color: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.75;
+    }
+    .panel {
+      background: linear-gradient(145deg, rgba(18, 25, 39, 0.95) 0%, rgba(10, 15, 26, 0.95) 100%);
+      border: 1px solid var(--border-color);
+    }
+    .callout-amber {
+      background: rgba(245, 158, 11, 0.06);
+      border-right: 4px solid #f59e0b;
+    }
+    .callout-rose {
+      background: rgba(244, 63, 94, 0.06);
+      border-right: 4px solid #f43f5e;
+    }
+    .callout-emerald {
+      background: rgba(16, 185, 129, 0.06);
+      border-right: 4px solid #10b981;
+    }
+    .callout-sky {
+      background: rgba(56, 189, 248, 0.06);
+      border-right: 4px solid #38bdf8;
+    }
+    .num { font-variant-numeric: tabular-nums; }
+    @media print {
+      body { background: white !important; color: black !important; }
+      .panel { background: white !important; color: black !important; border: 1px solid #ccc !important; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body class="p-4 sm:p-8 md:p-12 max-w-5xl mx-auto space-y-10 antialiased">
+
+  <!-- כותרת ראשית -->
+  <header class="panel rounded-3xl p-6 sm:p-10 shadow-2xl space-y-5">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <div class="flex flex-wrap items-center gap-2 text-xs text-slate-400">
+        <span class="px-3 py-1 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold tracking-wide">מדריך פנימי לחוקר · לא להפצה</span>
+        <span>•</span>
+        <span>פרוטוקול בדיקת נאותות ומבחן מציאות</span>
+        <span>•</span>
+        <span>נובמבר 2026</span>
+      </div>
+      <button onclick="window.print()" class="no-print text-xs text-slate-400 hover:text-sky-300 transition-colors border border-slate-700 hover:border-sky-500/50 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+        <span>🖨️</span> הדפסה / PDF
+      </button>
+    </div>
+
+    <div class="space-y-3">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
+        מבחן מציאות (Reality Check):<br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400">
+          איך לחוש בפגישה מה יש ביד ולנטרל מחמאות סרק
+        </span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
+        גופים שבאים "לקדם" מתפרנסים לעיתים קרובות ממכירת שירותים לחוקר עצמו ולא ממכירת הנכס לשוק. 
+        דף זה מרכז את העובדות הקרות, את מנגנון סינון החנופה, ואת שאלות הלחץ שיחשפו מיד האם יש לפניהם שותף אמיתי או סוחר אשליות.
+      </p>
+    </div>
+  </header>
+
+  <!-- פרק 1: הפרדת עובדות מפנטזיות -->
+  <section class="panel rounded-3xl p-6 sm:p-10 shadow-xl space-y-6">
+    <div class="space-y-2">
+      <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+        <span>⚖️</span>
+        <span>פרק 1: בדיקת מציאות קרה — מה עובדה מוצקה ומה עדיין השערה?</span>
+      </h2>
+      <p class="text-sm text-slate-300">
+        כדי לא ליפול בפנטזיות, חשוב לשים קו גבול חד בין מה שכבר קיים ובדוק במסד הנתונים לבין מה שעדיין לא הוכח בשוק המסחרי:
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      
+      <!-- עובדות מוצקות -->
+      <div class="callout-emerald rounded-2xl p-5 space-y-3">
+        <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+          <span>✅</span>
+          <span>עובדות הנדסיות קיימות (זה לא פנטזיה):</span>
+        </div>
+        <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+          <li><strong>מאגר של 1.16 מיליון תגובות:</strong> יושב בדיסק, מאורגן, עם תאריכים, לייקים ומספרי פוסטים.</li>
+          <li><strong>מעל 300,000 אנשים אמיתיים:</strong> כל אדם עם היסטוריית תגובות מרובת-עמודים (Cross-Arena).</li>
+          <li><strong>מדד האלכסון האתנו-דמוגרפי:</strong> קורלציה סטטיסטית מובהקת בין מוצא השם (עברית/לועזית) לבין המחנה הפוליטי. זהו ממצא מדעי בדוק.</li>
+          <li><strong>עלות אפסית:</strong> המערכת פועלת במחשב מקומי ב-0 ₪. אינך תלוי בתקציב ענן חודשי כדי להמשיך להחזיק אותה.</li>
+        </ul>
+      </div>
+
+      <!-- השערות שטרם הוכחו -->
+      <div class="callout-amber rounded-2xl p-5 space-y-3">
+        <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+          <span>⚠️</span>
+          <span>מה שעדיין בגדר השערה (וטרם הוכח מסחרית):</span>
+        </div>
+        <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+          <li><strong>האם לקוח קצה ישראלי ישלם על זה?</strong> מפלגות וקמפיינים בישראל מקובעים על סקרים קלאסיים ומשרדי פרסום. האם מנהל קמפיין יסכים להוציא 30,000 ₪ על תובנות רשת? עדיין לא הוכח.</li>
+          <li><strong>פער ה-UI:</strong> יש לך דשבורד מחקרי מורכב, אך אין עדיין "מוצר מדף בקליק אחד" שמנהל קמפיין שאינו טכנולוג יכול להבין ב-5 שניות.</li>
+          <li><strong>בלעדיות לפייסבוק:</strong> המערכת קוצרת פייסבוק בלבד (הזירה הפוליטית המבוגרת והמשפיעה בישראל), אך אינה מכסה טיקטוק או אינסטגרם.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- פרק 2: מילון נטרול החנופה -->
+  <section class="panel rounded-3xl p-6 sm:p-10 shadow-xl space-y-6">
+    <div class="space-y-2">
+      <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+        <span>🛡️</span>
+        <span>פרק 2: מסנן החנופה — מה הם אומרים, מה הם רוצים, ומה אתה עונה</span>
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed">
+        גופים מסחריים שרוצים לגבות כסף עבור "קידום" או "ייעוץ" משתמשים במחמאות מופרזות כדי לרכך אותך לקראת הצעת המחיר שלהם. הנה איך לפרק את המלכודת בזמן אמת:
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      
+      <!-- מלכודת 1 -->
+      <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/60 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+          <span class="text-xs font-mono font-bold text-rose-400">מלכודת החנופה 01: הניפוח הרגשי</span>
+          <span class="text-xs text-slate-500">טקטיקת ריכוך קלאסית</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="space-y-1">
+            <span class="text-slate-400 font-semibold">מה שהם אומרים:</span>
+            <p class="text-slate-200 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+              "זה גאוני! מטורף! אין דברים כאלה בארץ, אתה יושב על מכרה זהב של מיליונים!"
+            </p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-amber-400 font-semibold">מה שהם באמת מתכוונים:</span>
+            <p class="text-slate-300 bg-amber-500/5 p-2.5 rounded-lg border border-amber-500/20">
+              "אנחנו מנפחים לך את האגו כדי שתרגיש שהנכס שווה המון, ואז תסכים לשלם לנו 15,000 ₪ בחודש כדי 'לקדם' אותו."
+            </p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-emerald-400 font-semibold">התגובה המדויקת שלך (חיתוך קר):</span>
+            <p class="text-white bg-emerald-500/10 p-2.5 rounded-lg border border-emerald-500/30 font-medium">
+              "עזבו סופרלטיבים. בואו נדבר ביזנס קר: מי הלקוח הראשון שיקנה את זה החודש ובכמה? יש לכם שם קונקרטי?"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- מלכודת 2 -->
+      <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/60 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+          <span class="text-xs font-mono font-bold text-rose-400">מלכודת החנופה 02: הצעת שירות בתשלום מצידך</span>
+          <span class="text-xs text-slate-500">הפיכת היוצרות (אתה הופך ללקוח שלהם)</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="space-y-1">
+            <span class="text-slate-400 font-semibold">מה שהם אומרים:</span>
+            <p class="text-slate-200 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+              "כדי להביא לזה קונים, צריך להכין מצגת משקיעים מקצועית, אריזה מיתוגית ותוכנית שיווק. זה יעלה סכום צנוע..."
+            </p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-amber-400 font-semibold">מה שהם באמת מתכוונים:</span>
+            <p class="text-slate-300 bg-amber-500/5 p-2.5 rounded-lg border border-amber-500/20">
+              "אין לנו לקוחות קצה בטוחים. המודל העסקי שלנו הוא להתפרנס מחוקרים ומפתחים תמימים שמשלמים לנו על שירותי מעטפת."
+            </p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-emerald-400 font-semibold">התגובה המדויקת שלך (חיתוך קר):</span>
+            <p class="text-white bg-emerald-500/10 p-2.5 rounded-lg border border-emerald-500/30 font-medium">
+              "אני לא קונה שירותי ייעוץ. אם אתם מאמינים בנכס – תשקיעו את המיתוג שלכם, וקחו 30% מכל עסקה שתיסגר. בלי תשלום מראש."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- מלכודת 3 -->
+      <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/60 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+          <span class="text-xs font-mono font-bold text-rose-400">מלכודת החנופה 03: בקשת בלעדיות ללא התחייבות</span>
+          <span class="text-xs text-slate-500">כבילת ידיים חינמית</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="space-y-1">
+            <span class="text-slate-400 font-semibold">מה שהם אומרים:</span>
+            <p class="text-slate-200 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+              "אנחנו רוצים בלעדיות לייצג אותך לחצי שנה קדימה מול כל המפלגות והמטות."
+            </p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-amber-400 font-semibold">מה שהם באמת מתכוונים:</span>
+            <p class="text-slate-300 bg-amber-500/5 p-2.5 rounded-lg border border-amber-500/20">
+              "ננעל אותך כדי שלא תוכל לפנות לאחרים, וננסה לזרוק חכות בלי שום סיכון מצידנו."
+            </p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-emerald-400 font-semibold">התגובה המדויקת שלך (חיתוך קר):</span>
+            <p class="text-white bg-emerald-500/10 p-2.5 rounded-lg border border-emerald-500/30 font-medium">
+              "אין בלעדיות כללית. יש בלעדיות רק על לקוחות ספציפיים שאתם מביאים בכתב, עם יעד של 45 יום לסגירת פיילוט ממומן."
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- פרק 3: ארבע שאלות הלחץ לחשיפת האמת -->
+  <section class="panel rounded-3xl p-6 sm:p-10 shadow-xl space-y-6">
+    <div class="space-y-2">
+      <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+        <span>🎯</span>
+        <span>פרק 3: ארבע שאלות הלחץ שיגלו תוך 10 דקות אם הם רציניים</span>
+      </h2>
+      <p class="text-sm text-slate-300">
+        הנח את ארבע השאלות האלה על השולחן. תשובותיהם יספקו לך את התשובה האמיתית לשאלה "האם יש לי משהו ביד":
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      <div class="callout-sky rounded-2xl p-4 sm:p-5 space-y-1.5">
+        <div class="text-xs font-mono font-bold text-sky-400">שאלה 1 · הוכחת קשרים</div>
+        <div class="text-base font-bold text-white">"עם איזה מנהל קמפיין או יועץ אסטרטגי דיברתם בשבועיים האחרונים שיש לו כרגע תקציב פתוח?"</div>
+        <p class="text-xs text-slate-300">אם הם שותפים אמיתיים, הם יידעו לציין מיד את מידת הרעב של לקוחות מסוימים למידע כזה.</p>
+      </div>
+
+      <div class="callout-sky rounded-2xl p-4 sm:p-5 space-y-1.5">
+        <div class="text-xs font-mono font-bold text-sky-400">שאלה 2 · שאלת הביקורת (מבחן העין המקצועית)</div>
+        <div class="text-base font-bold text-white">"ראיתם את הדאטה. מה לדעתכם חסר פה כדי שלקוח יפתח ארנק מחר בבוקר?"</div>
+        <p class="text-xs text-slate-300">מי שמחמיא בלי הפסקה – לא מבין או מורח. גוף מקצועי אמיתי יגיד לך מיד: "חסרה לנו מצגת פשוטה", "צריך ממשק קל יותר", או "צריך להראות השוואה לסקר שפורסם אתמול".</p>
+      </div>
+
+      <div class="callout-sky rounded-2xl p-4 sm:p-5 space-y-1.5">
+        <div class="text-xs font-mono font-bold text-sky-400">שאלה 3 · מבחן הפיילוט הקצר</div>
+        <div class="text-base font-bold text-white">"בואו ניקח אירוע פוליטי אחד שקורה השבוע. אני מפיק דוח עומק של PCS, אתם מציגים אותו ללקוח. אם הוא רוצה המשך – חותמים. מתאים?"</div>
+        <p class="text-xs text-slate-300">מבחן מעשי מהיר שמנטרל דיבורים באוויר ומעביר את הפרויקט מיד לפסים של בדיקת שוק אמיתית.</p>
+      </div>
+
+      <div class="callout-sky rounded-2xl p-4 sm:p-5 space-y-1.5">
+        <div class="text-xs font-mono font-bold text-sky-400">שאלה 4 · חלוקת הסיכון (The Ultimate Filter)</div>
+        <div class="text-base font-bold text-white">"אני מביא נכס דאטה מוכן שאין לאף אחד. מה אתם מסכנים בעסקה הזו?"</div>
+        <p class="text-xs text-slate-300">שותף אמיתי מסכן את הזמן, המוניטין ורשת הקשרים שלו כדי לסגור עסקה. גוף שרוצה כסף ממך – לא מסכן כלום.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- פרק 4: איך לפענח את סיום הפגישה (מדד השורה התחתונה) -->
+  <section class="panel rounded-3xl p-6 sm:p-10 shadow-xl space-y-5">
+    <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+      <span>🏁</span>
+      <span>פרק 4: איך לדעת בסיום הפגישה האם יש פה הזדמנות או מלכודת?</span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
+      
+      <div class="callout-emerald rounded-2xl p-5 space-y-2">
+        <div class="font-bold text-emerald-400 text-sm">תרחיש א': שותף אמיתי ✅</div>
+        <p class="text-slate-300 leading-relaxed">
+          מזהה חולשות מקצועיות, מצביע על לקוח קונקרטי, ומסכים לעבוד על בסיס הצלחה או פיילוט קצר.  
+          <br/><strong class="text-white">המשמעות: יש לך נכס אמיתי עם שותף רציני.</strong>
+        </p>
+      </div>
+
+      <div class="callout-rose rounded-2xl p-5 space-y-2">
+        <div class="font-bold text-rose-400 text-sm">תרחיש ב': גוף מתווך שמחפש לקוח ❌</div>
+        <p class="text-slate-300 leading-relaxed">
+          מרעיף מחמאות ללא הפסקה, ואז מגיש לך הצעה שבה אתה משלם להם תשלום חודשי עבור "ליווי/שיווק".  
+          <br/><strong class="text-white">המשמעות: הם רואים בך את הלקוח המשלם. לחתוך בנימוס.</strong>
+        </p>
+      </div>
+
+      <div class="callout-amber rounded-2xl p-5 space-y-2">
+        <div class="font-bold text-amber-400 text-sm">תרחיש ג': גוף שלא מבין את התחום ⚠️</div>
+        <p class="text-slate-300 leading-relaxed">
+          מדבר בסיסמאות של היי-טק או דיגיטל כללי, מתקשה להבין מה זה ציר האלכסון או למה פייסבוק קריטי לבחירות בישראל.  
+          <br/><strong class="text-white">המשמעות: חוסר התאמה. לא לבזבז זמן.</strong>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- הודעת סיום -->
+  <footer class="panel rounded-3xl p-6 sm:p-8 text-center space-y-2">
+    <div class="text-base font-bold text-white">
+      תזכורת לעצמך בכניסה לחדר:
+    </div>
+    <p class="text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
+      הנתונים אצלך במחשב הם אמיתיים, מדויקים וייחודיים – זה מוכח. 
+      אינך צריך להוכיח להם כלום; תפקידם בפגישה הוא להוכיח לך שהם מסוגלים להביא שקל ראשון מהשוק מבלי לבקש ממך אגורה.
+    </p>
+  </footer>
+
+</body>
+</html>

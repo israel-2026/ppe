@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCS™ | תדריך לבדיקת היתכנות</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJNJTZQF1F');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --paper: #ffffff;
+      --ink: #1c2230;
+      --muted: #5b6475;
+      --line: #e3e1da;
+      --accent: #1f5f8b;
+      --accent-soft: #e8f0f6;
+      --note-bg: #fbf5e6;
+      --note-line: #e2cf9a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #10141c;
+        --paper: #171c26;
+        --ink: #e9ecf2;
+        --muted: #9aa3b2;
+        --line: #2a3140;
+        --accent: #7db7e0;
+        --accent-soft: #1d2a38;
+        --note-bg: #2a2516;
+        --note-line: #5c4d24;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #10141c;
+      --paper: #171c26;
+      --ink: #e9ecf2;
+      --muted: #9aa3b2;
+      --line: #2a3140;
+      --accent: #7db7e0;
+      --accent-soft: #1d2a38;
+      --note-bg: #2a2516;
+      --note-line: #5c4d24;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+    .page {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 48px 56px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    header { border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 32px; }
+    .brand {
+      text-align: right; font-size: 30px; font-weight: 800; letter-spacing: .01em;
+      color: var(--accent); line-height: 1.2; margin-bottom: 14px;
+    }
+    .brand sup { font-size: 14px; font-weight: 700; }
+    .brand span { font-size: 18px; font-weight: 500; color: var(--muted); }
+    .kicker { color: var(--accent); font-weight: 700; font-size: 14px; letter-spacing: .02em; }
+    h1 { margin: 6px 0 4px; font-size: 36px; font-weight: 800; line-height: 1.25; }
+    .sub { color: var(--muted); font-size: 18px; margin: 0; }
+    .byline { margin-top: 14px; color: var(--muted); font-size: 14px; }
+    .byline b { color: var(--ink); font-weight: 700; }
+
+    section { margin-bottom: 40px; }
+    h2 {
+      display: flex; align-items: baseline; gap: 12px;
+      font-size: 24px; font-weight: 800; margin: 0 0 6px;
+    }
+    h2 .n {
+      flex: none;
+      display: inline-grid; place-items: center;
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--accent); color: var(--paper);
+      font-size: 17px; font-weight: 800;
+    }
+    .q { color: var(--muted); font-size: 15px; margin: 0 0 16px; padding-right: 46px; }
+    p { margin: 0 0 12px; }
+
+    .facts {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+      margin: 18px 0 20px;
+    }
+    .fact {
+      background: var(--accent-soft); border-radius: 10px; padding: 12px 10px; text-align: center;
+    }
+    .fact .v { font-size: 22px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+    .fact .l { font-size: 13px; color: var(--muted); line-height: 1.4; }
+    .facts-note { font-size: 15px; color: var(--muted); margin: -6px 0 20px; }
+
+    ul.points { list-style: none; padding: 0; margin: 0; }
+    ul.points li {
+      position: relative; padding: 10px 18px 10px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    ul.points li:last-child { border-bottom: 0; }
+    ul.points li::before {
+      content: ""; position: absolute; right: 0; top: 21px;
+      width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+    }
+    ul.points b { font-weight: 700; }
+
+    .group { margin-top: 22px; }
+    .group h3 { font-size: 17px; font-weight: 800; margin: 0 0 8px; color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th, td { text-align: right; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 13px; color: var(--muted); font-weight: 700; }
+    td.name { font-weight: 700; white-space: nowrap; }
+    td.name span { display: block; font-weight: 400; font-size: 13px; color: var(--muted); }
+
+    .note {
+      background: var(--note-bg); border: 1px solid var(--note-line);
+      border-radius: 10px; padding: 14px 18px; margin-top: 22px; font-size: 15px;
+    }
+    .note b { font-weight: 700; }
+
+    footer {
+      border-top: 1px solid var(--line); padding-top: 14px; margin-top: 8px;
+      color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    }
+
+    @media (max-width: 700px) {
+      body { font-size: 16px; }
+      .page { margin: 0; padding: 28px 16px; border: 0; border-radius: 0; }
+      h1 { font-size: 28px; }
+      .facts { grid-template-columns: repeat(2, 1fr); }
+      .q { padding-right: 0; }
+      table, thead, tbody, tr, th, td { display: block; }
+      thead { display: none; }
+      tr { border-bottom: 1px solid var(--line); padding: 8px 0; }
+      td { border: 0; padding: 2px 0; }
+      td.name { white-space: normal; }
+    }
+    @media print {
+      body { background: #fff; font-size: 13pt; }
+      .page { margin: 0; padding: 0; border: 0; max-width: none; }
+      section { break-inside: avoid-page; }
+      tr { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <header>
+      <div class="brand" dir="ltr">PCS<sup>™</sup> <span>(Political Consciousness System)</span></div>
+      <div class="kicker">מסמכי שיווק וגיוס · לצוות האנליסטים</div>
+      <h1>תדריך לבדיקת היתכנות</h1>
+      <p class="sub">הבעיה, הפתרון והמתחרים: תשובות לשאלון הפתיחה של סקירת השוק</p>
+      <div class="byline"><b>אמנון זוסמן</b> · מחקר שיח ודעת קהל, בחירות 2026 · 3 בנובמבר 2026</div>
+    </header>
+
+    <section>
+      <h2><span class="n">1</span>הבעיה</h2>
+      <p class="q">מה הבעיה שקיימת כיום, אותה המוצר נועד לפתור?</p>
+      <p>
+        כיום מי שמנהל מסר ציבורי, כמו פוליטיקאי, קמפיין, גוף תקשורת או ארגון, יודע מה עונים בסקר ומה מדברים ברשת. הוא לא יודע <b>מי</b> מגיב בפועל.
+        הסקר איטי ויקר, ונשען על כמה מאות נשאלים שעונים על שאלה שנשאלו. כלי הניטור ברשתות סופרים אזכורים ו"סנטימנט",
+        ובתוך המספר מתערבבים בוטים, הקצה הקולני ומתנגדים.
+      </p>
+      <p>
+        בלי לדעת איזו אוכלוסייה הגיבה לאיזה מסר, ואיך המחנות זזים מיום ליום, החלטות על מסרים מתקבלות לפי תחושת בטן.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span>הפתרון</h2>
+      <p class="q">מה הפתרון המוצע?</p>
+
+      <div class="facts">
+        <div class="fact"><div class="v">1.16 מיליון</div><div class="l">תגובות במאגר</div></div>
+        <div class="fact"><div class="v">כ-240 אלף</div><div class="l">מגיבים ייחודיים מזוהים</div></div>
+        <div class="fact"><div class="v">כ-24 אלף</div><div class="l">סרטונים ופוסטים</div></div>
+        <div class="fact"><div class="v">55</div><div class="l">עמודים ציבוריים עם תגובות</div></div>
+      </div>
+      <p class="facts-note">
+        המאגר נבנה עד היום סביב בחירות 2026, במשך כ-30 יום, וימשיך לגדול בהתאם לאירועים הפוליטיים השוטפים בישראל.
+        אפשר להרחיב אותו גם לפי הצרכים של לקוח מסוים.
+      </p>
+
+      <ul class="points">
+        <li><b>ניטור יומי</b> של השיח הציבורי בפייסבוק סביב דמויות ציבוריות, ראשי מפלגות וגופי תקשורת. המערכת אוספת מונים, תגובות ומגיבים.</li>
+        <li><b>אפיון של כל מגיב</b> לפי תכונות נצפות: מוצא שם המשפחה, כתב השם, מגדר, מחנה ויחס למסר. הנתונים מושווים לקו בסיס של הלמ"ס ולקהל ייחוס קבוע ולא פוליטי.</li>
+        <li><b>שני מדדים נפרדים:</b> כמה <b>אנשים</b> הגיבו, ומה <b>משקל</b> הלייקים שקיבלו. כך הקצה הקולני לא נראה כמו הרוב. חשבונות חשודים כבוטים מסומנים.</li>
+        <li><b>התוצרים:</b> דוח יומי ודוח שבועי עם מגמות, ותיק אירוע: מה קרה סביב אירוע מסוים, מי הגיב, מי שתק ואיך זה השתנה לאורך זמן.</li>
+        <li><b>פרטיות מובנית:</b> הלקוח מקבל אגרגטים בלבד, בלי שמות ובלי ציטוטים, דרך פורטל שבודק כל תשובה לפני שהיא יוצאת.</li>
+        <li><b>מפת הדרכים:</b> היום המערכת פועלת בפייסבוק. השלב הבא הוא הרחבה לפלטפורמות נוספות: אינסטגרם, טיקטוק, טלגרם ורשת X.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">3</span>מתחרים לחקור</h2>
+      <p class="q">אילו מתחרים קונקרטיים מתעסקים בתחום וכדאי לחקור?</p>
+
+      <div class="group">
+        <h3>ניטור רשתות: בינלאומי</h3>
+        <table>
+          <thead><tr><th>שם</th><th>מה עושים</th><th>הפער מול המיזם</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Brandwatch</td><td>ניטור אזכורים, סנטימנט ומגמות בהיקף רחב</td><td>מודד מה נאמר, לא מי אמר</td></tr>
+            <tr><td class="name">Talkwalker</td><td>ניטור רשתות ותקשורת, ניתוח מגמות</td><td>כנ"ל</td></tr>
+            <tr><td class="name">Meltwater</td><td>ניטור תקשורת ורשתות ליחסי ציבור</td><td>ממוקד בחשיפה תקשורתית</td></tr>
+            <tr><td class="name">Sprinklr</td><td>פלטפורמה ארגונית לניהול לקוחות וניטור</td><td>מוצר שירות לקוחות, לא מחקר קהל</td></tr>
+            <tr><td class="name">YouScan</td><td>ניטור רשתות עם זיהוי תמונה</td><td>מודד אזכורים ומותגים</td></tr>
+            <tr><td class="name">Pulsar</td><td>ניטור עם פילוח קהלים</td><td>הקרוב ביותר בגישה, כדאי לחקור לעומק</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="group">
+        <h3>ניטור רשתות ותקשורת: ישראל</h3>
+        <table>
+          <thead><tr><th>שם</th><th>מה עושים</th><th>הפער מול המיזם</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Buzzilla</td><td>ניטור רשתות ושיח ברשת בעברית</td><td>המתחרה המקומי הישיר ביותר בניטור</td></tr>
+            <tr><td class="name">יפעת</td><td>ניטור תקשורת ופרסום</td><td>ממוקד בתקשורת הממוסדת</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="group">
+        <h3>זיהוי פרופילים מזויפים ורשתות השפעה</h3>
+        <table>
+          <thead><tr><th>שם</th><th>מה עושים</th><th>הפער מול המיזם</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Cyabra<span>ישראל</span></td><td>זיהוי פרופילים מזויפים וקמפייני דיסאינפורמציה</td><td>מתמקד במי לא אמיתי, לא בהרכב הקהל האמיתי</td></tr>
+            <tr><td class="name">Graphika</td><td>מיפוי רשתות השפעה</td><td>ממוקד ברשתות ובמבצעי השפעה</td></tr>
+            <tr><td class="name">FakeReporter<span>ישראל</span></td><td>ארגון לחשיפת רשתות בוטים</td><td>לא מתחרה, פועל בתחום הבוטים</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="group">
+        <h3>דעת קהל וסקרים</h3>
+        <table>
+          <thead><tr><th>שם</th><th>מה עושים</th><th>הפער מול המיזם</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Zencity<span>ישראל</span></td><td>סנטימנט ציבורי לשלטון מקומי</td><td>מודל קרוב, אבל הלקוח הוא עירייה</td></tr>
+            <tr><td class="name">מדגם · פאנלים פוליטיים · Direct Polls · iPanel</td><td>סקרים פוליטיים בישראל</td><td>מתחרים וגם משלימים</td></tr>
+            <tr><td class="name">Morning Consult · Civiqs</td><td>סקרי מעקב יומיים בעולם</td><td>מעקב רציף, אבל דרך סקרים</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <b>הקשר שוק:</b> ב-2024 Meta סגרה את CrowdTangle, הכלי הנגיש לנתוני פייסבוק, והחליפה אותו בספרייה שפתוחה בעיקר לאקדמיה.
+        זה פער בשוק, וגם נקודת סיכון שכדאי לבחון בסקירה.
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 כל הזכויות שמורות לחברת סילברטל און ליין. <bdi>PCS™</bdi> הוא סימן מסחרי של החברה.</span>
+      <span>נתוני המאגר נכונים ל-3.11.2026</span>
+    </footer>
+
+  </main>
+</body>
+</html>

@@ -300,6 +300,100 @@
       color: var(--light-muted);
     }
 
+    /* Stats Grid & Data Asset Section */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin: 28px 0 36px;
+    }
+
+    .stat-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--card-shadow-lg);
+    }
+
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 4px;
+      background: var(--accent);
+    }
+
+    .stat-card.c1::before { background: #0284c7; }
+    .stat-card.c2::before { background: #6366f1; }
+    .stat-card.c3::before { background: #0d9488; }
+    .stat-card.c4::before { background: #ea580c; }
+    .stat-card.c5::before { background: #8b5cf6; }
+
+    .stat-num {
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 2px;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--accent-dark);
+      margin-bottom: 4px;
+    }
+
+    .stat-sub {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    .data-layers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .data-layer-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .data-layer-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .data-layer-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
     /* Sections */
     section {
       margin-bottom: 64px;
@@ -862,10 +956,177 @@
       </div>
     </div>
 
-    <!-- SECTION 1: THE TWIN ENGINES -->
+    <!-- SECTION 1: THE DATA ASSET & EMPIRICAL DEPTH -->
     <section>
       <div class="section-header">
         <div class="section-num">1</div>
+        <h2>
+          <span class="content-he">נכס הנתונים הקיים ועושר המאגר (The Living Data Asset)</span>
+          <span class="content-en">The Living Data Asset: Empirical Footprint & Schema Wealth</span>
+        </h2>
+      </div>
+
+      <div style="font-size: 16px; color: var(--muted); text-align: center; max-width: 860px; margin: 0 auto 24px;">
+        <span class="content-he">
+          עוצמתו של סוכן <strong>PCS™</strong> איננה רק באלגוריתמיקה, אלא בנכס המידע האמפירי העצום שכבר נצבר וממשיך להתרחב מדי יום. 
+          המאגר כולל סדרות זמן רציפות הממפות את התנהגותם האורגנית של מאות אלפי אזרחים ישראלים בזירות השיח המובילות.
+        </span>
+        <span class="content-en">
+          The true strength of the <strong>PCS™</strong> agent lies not only in its algorithms, but in its massive empirical data asset continuously accumulated 24/7. 
+          The living database maps the organic behavioral discourse of hundreds of thousands of Israeli citizens across all major political flashpoints.
+        </span>
+      </div>
+
+      <!-- Live Metric Cards -->
+      <div class="stats-grid">
+        <div class="stat-card c1">
+          <div class="stat-num">1.16M+</div>
+          <div class="stat-label">
+            <span class="content-he">תגובות מעובדות</span>
+            <span class="content-en">Analyzed Comments</span>
+          </div>
+          <div class="stat-sub">
+            <span class="content-he">טקסטים מלאים ומפוענחים</span>
+            <span class="content-en">Full texts multi-vector classified</span>
+          </div>
+        </div>
+
+        <div class="stat-card c2">
+          <div class="stat-num">300K+</div>
+          <div class="stat-label">
+            <span class="content-he">אזרחים ייחודיים</span>
+            <span class="content-en">Unique Citizens</span>
+          </div>
+          <div class="stat-sub">
+            <span class="content-he">משתמשי פייסבוק מובחנים</span>
+            <span class="content-en">Distinct individuals (No dupes)</span>
+          </div>
+        </div>
+
+        <div class="stat-card c3">
+          <div class="stat-num">24,000+</div>
+          <div class="stat-label">
+            <span class="content-he">פריטי תוכן וסרטונים</span>
+            <span class="content-en">Reels & Posts</span>
+          </div>
+          <div class="stat-sub">
+            <span class="content-he">רילים, פוסטים ותמלולים</span>
+            <span class="content-en">Viral videos, captions & transcripts</span>
+          </div>
+        </div>
+
+        <div class="stat-card c4">
+          <div class="stat-num">71</div>
+          <div class="stat-label">
+            <span class="content-he">משפיענים וזירות</span>
+            <span class="content-en">Monitored Figures</span>
+          </div>
+          <div class="stat-sub">
+            <span class="content-he">מנהיגי מפלגות, ערוצים וייחוס</span>
+            <span class="content-en">Party leaders, media & baselines</span>
+          </div>
+        </div>
+
+        <div class="stat-card c5">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">
+            <span class="content-he">סדרת זמן רציפה</span>
+            <span class="content-en">Longitudinal Stream</span>
+          </div>
+          <div class="stat-sub">
+            <span class="content-he">ללא חורים וללא דילוגים</span>
+            <span class="content-en">Continuous daily sampling</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 Schema Depth Layers -->
+      <div style="margin-top: 36px;">
+        <h3 style="font-size: 20px; font-weight: 800; color: var(--primary); text-align: center; margin-bottom: 20px;">
+          <span class="content-he">עושר הנתונים הרב-שכבתי (The Multi-Layered Schema)</span>
+          <span class="content-en">Six Dimensional Data Layers (Schema Wealth)</span>
+        </h3>
+
+        <div class="data-layers-grid">
+          <div class="data-layer-box">
+            <div class="data-layer-title">
+              <span>🧬</span>
+              <span class="content-he">01 · רובד דמוגרפי ואונומסטי</span>
+              <span class="content-en">01 · Demographic & Onomastic Layer</span>
+            </div>
+            <div class="data-layer-desc">
+              <span class="content-he">מוצא עדתי דטרמיניסטי (מזרחי, אשכנזי, יוצאי ברה"מ, עברי-ישראלי, ערבי), שפת כתב השם (עברית מול לועזית — ציר האלכסון הסוציולוגי), מגדר ומדדי צעירות/גיל.</span>
+              <span class="content-en">Deterministic ethnic surname origin (Mizrahi, Ashkenazi, FSU, Hebrew-Israeli, Arab), script encoding (Hebrew vs. Latin script diagonal), gender, and name-age indices.</span>
+            </div>
+          </div>
+
+          <div class="data-layer-box">
+            <div class="data-layer-title">
+              <span>🎯</span>
+              <span class="content-he">02 · רובד עמדות ונטיות מחנאיות</span>
+              <span class="content-en">02 · Stance & Tribal Camp Layer</span>
+            </div>
+            <div class="data-layer-desc">
+              <span class="content-he">נטייה פוליטית (ימין, מרכז-שמאל, ערבי), יחס למסר הספציפי (תומך, מתנגד, מורכב), עמדה אישית כלפי בעל העמוד, ומוקד יריבות (ממשלה, צבא, תקשורת, בג"ץ).</span>
+              <span class="content-en">Political leaning (Right, Center-Left, Arab), message stance (support, oppose, reserved), influencer-level affinity, and target rivalry focus (Government, IDF, Media, High Court).</span>
+            </div>
+          </div>
+
+          <div class="data-layer-box">
+            <div class="data-layer-title">
+              <span>👑</span>
+              <span class="content-he">03 · רובד דופק מנהיגים לאומי</span>
+              <span class="content-en">03 · Real-Time Leader Stance</span>
+            </div>
+            <div class="data-layer-desc">
+              <span class="content-he">חילוץ עמדות פרטניות מתמשכות כלפי ראשי המערכת הפוליטית: בנימין נתניהו, גדי אייזנקוט, נפתלי בנט, איתמר בן גביר, יאיר לפיד ומנהיגי מפלגות נוספים.</span>
+              <span class="content-en">Granular sentiment tracking toward key national leaders: Benjamin Netanyahu, Gadi Eisenkot, Naftali Bennett, Itamar Ben-Gvir, Yair Lapid, and party figures.</span>
+            </div>
+          </div>
+
+          <div class="data-layer-box">
+            <div class="data-layer-title">
+              <span>📜</span>
+              <span class="content-he">04 · רובד נרטיבים עמוק וסגנון שיח</span>
+              <span class="content-en">04 · Deep Narrative & Style Layer</span>
+            </div>
+            <div class="data-layer-desc">
+              <span class="content-he">קידוד נרטיבי שורש (מחדל 7.10, שסע עדתי, שוויון בנטל, הסתה ובגידה) ואפיון לשוני (מתלהם/תוקפני, ענייני ומנומק, תפילה/ברכה, או אמוג'י בלבד).</span>
+              <span class="content-en">Core narrative classification (Oct 7 failure, ethnic divide, draft equality, treason) and linguistic style (combative, substantive, religious blessing, or emoji-only).</span>
+            </div>
+          </div>
+
+          <div class="data-layer-box">
+            <div class="data-layer-title">
+              <span>👍</span>
+              <span class="content-he">05 · רובד מעורבות ומשקל לייקים</span>
+              <span class="content-en">05 · Engagement & Amplification</span>
+            </div>
+            <div class="data-layer-desc">
+              <span class="content-he">לייקים מדודים לכל תגובה, תגובות-משנה (sub-comments), שרשורי דיון, וזיהוי מגיבים חוזרים מול מזדמנים המאפשרים למדוד את מה שהציבור מתגמל ומגביר.</span>
+              <span class="content-en">Measured Facebook likes per comment, nested reply threads, and repeat commenter ratios enabling precise calculation of crowd amplification weight.</span>
+            </div>
+          </div>
+
+          <div class="data-layer-box">
+            <div class="data-layer-title">
+              <span>⚖️</span>
+              <span class="content-he">06 · קו בסיס אובייקטיבי (Reference Baseline)</span>
+              <span class="content-en">06 · Empirical Reference Baseline</span>
+            </div>
+            <div class="data-layer-desc">
+              <span class="content-he">קהל ייחוס מדוד של עשרות אלפי מתרגשים מדמויות בידור וסטנדאפ לא-פוליטיות, המאפשר להבחין בין שינוי עמדות אמיתי לבין שינוי בהרכב הדמוגרפי של הזירה.</span>
+              <span class="content-en">Objective reference baseline composed of tens of thousands of reactors to non-political entertainment figures, disaggregating stance shifts from demographic drift.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE TWIN ENGINES -->
+    <section>
+      <div class="section-header">
+        <div class="section-num">2</div>
         <h2>
           <span class="content-he">צמד מנועי ההנעה של הסוכן (The Twin Engines)</span>
           <span class="content-en">The Twin Powerplants of the Agent</span>
@@ -1098,10 +1359,10 @@
       </div>
     </section>
 
-    <!-- SECTION 2: THE DUAL SCREENS & COPILOT -->
+    <!-- SECTION 3: THE DUAL SCREENS & COPILOT -->
     <section>
       <div class="section-header">
-        <div class="section-num">2</div>
+        <div class="section-num">3</div>
         <h2>
           <span class="content-he">צמד מסכי הבקרה וסוכן השיח (The Dual Cockpit & Copilot)</span>
           <span class="content-en">Dual Cockpit Displays & Conversational Copilot</span>
@@ -1218,10 +1479,10 @@
       </div>
     </section>
 
-    <!-- SECTION 3: COMPARISON TABLE -->
+    <!-- SECTION 4: COMPARISON TABLE -->
     <section>
       <div class="section-header">
-        <div class="section-num">3</div>
+        <div class="section-num">4</div>
         <h2>
           <span class="content-he">השוואה תחרותית: מול כלי מדף וסקרי עבר</span>
           <span class="content-en">Competitive Advantage: PCS™ vs. Legacy Approaches</span>

@@ -1,0 +1,461 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJNJTZQF1F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TJNJTZQF1F');
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="author" content="אמנון זוסמן"><meta name="description" content="מאמר ראשון בטרילוגיה על הביטחון האסטרטגי של ישראל: היחס לאזרחי ישראל הערבים, אמון, השתלבות ומטריצת תורת המשחקים"><title>ומה אם ראש הממשלה טועה? | אמנון זוסמן</title><style>
+    :root {
+      --ink: #1a2635;
+      --muted: #536278;
+      --navy: #101f36;
+      --navy2: #1a3452;
+      --bg: #f4f7fa;
+      --white: #ffffff;
+      --line: #dbe3eb;
+      --teal: #117b73;
+      --blue: #2765a6;
+      --orange: #aa6525;
+      --rose: #a34d5d;
+      --shadow: 0 20px 60px rgba(14, 36, 57, .09);
+      --radius: 19px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font: 17px/1.7 'Segoe UI', Arial, 'Noto Sans Hebrew', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page { max-width: 1140px; margin: 0 auto; padding: 32px 24px 55px; }
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      background: linear-gradient(120deg, #101f36 0%, #163658 68%, #1b465d 100%);
+      color: white; border-radius: 26px; padding: 48px 52px 50px;
+      box-shadow: 0 20px 50px rgba(19, 45, 74, .16);
+    }
+    .hero::before {
+      content: ''; position: absolute; z-index: -1;
+      width: 400px; height: 400px; border-radius: 100%;
+      background: radial-gradient(circle, rgba(43,184,166,.18), transparent 70%);
+      left: -110px; top: -210px;
+    }
+    .eyebrow { letter-spacing: .04em; color: #91dcd0; font-size: .83rem; font-weight: 750; margin: 0 0 18px; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.65rem); line-height: 1.17; letter-spacing: -.04em; margin: 0 0 16px; font-weight: 800; }
+    .hero-subtitle { color: #d6e5ee; font-size: clamp(1.02rem, 2vw, 1.22rem); max-width: 770px; margin: 0; }
+    .section-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; padding: 36px 4px 21px; }
+    .section-intro h2 { margin: 0 0 7px; font-size: 1.5rem; line-height: 1.35; letter-spacing: -.025em; }
+    .section-intro p { margin: 0; color: var(--muted); max-width: 710px; font-size: .99rem; }
+    .tag { flex-shrink: 0; color: #336172; background: #e1efed; border: 1px solid #c6e2dc; border-radius: 999px; font-size: .78rem; font-weight: 750; padding: 7px 13px; }
+
+    .matrix-shell { border-radius: 23px; background: white; border: 1px solid var(--line); box-shadow: var(--shadow); padding: 22px; }
+    .matrix-note { display: flex; align-items: center; gap: 9px; color: #617287; font-size: .82rem; font-weight: 650; padding: 0 5px 14px; }
+    .matrix-note .dot { display: inline-block; width: 9px; height: 9px; background: var(--teal); border-radius: 50%; }
+    .matrix-scroller { overflow-x: auto; padding-bottom: 3px; }
+    .matrix { display: grid; grid-template-columns: 170px minmax(225px, 1fr) minmax(225px, 1fr); gap: 11px; min-width: 670px; }
+    .corner, .column-label, .row-label, .cell { border-radius: 15px; }
+    .corner { display:flex; align-items:center; justify-content:center; text-align: center; background: #eef3f6; color: #61758a; font-size: .82rem; font-weight: 750; padding: 13px; min-height: 87px; }
+    .column-label { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 87px; padding: 12px 14px; text-align: center; gap: 2px; }
+    .column-label strong { font-size: 1.06rem; }
+    .column-label small { font-size: .8rem; opacity: .85; }
+    .inclusive { background: #e8f5f2; color: #13645d; border: 1px solid #c9e9e1; }
+    .exclusive { background: #fff3e9; color: #91511d; border: 1px solid #f4dec9; }
+    .row-label { background: #f0f4f8; border: 1px solid #e2e9ef; padding: 17px 18px; display:flex; flex-direction:column; align-items: flex-start; justify-content:center; gap:5px; }
+    .row-label .row-index { font-size: .69rem; font-weight: 850; letter-spacing: .08em; color: #7d8da0; }
+    .row-label strong { font-size: .96rem; line-height: 1.5; }
+    .row-label small { font-size: .76rem; line-height: 1.5; color: #66778c; }
+    .cell { border: 1px solid transparent; padding: 21px 22px; min-height: 213px; display:flex; flex-direction:column; gap: 10px; position:relative; transition: transform .16s ease, box-shadow .16s ease, outline-color .16s ease; cursor:pointer; text-align:right; font:inherit; width:100%; }
+    .cell:hover, .cell:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(27, 48, 68, .1); }
+    .cell:focus-visible { outline: 3px solid #315a9e; outline-offset: 3px; }
+    .cell[aria-pressed="true"] { outline: 2px solid currentColor; outline-offset: 2px; }
+    .cell-a { background: #eef9f6; color: #175e56; border-color:#d0e9e2; }
+    .cell-b { background: #fff6e9; color: #925923; border-color:#f5e0c0; }
+    .cell-c { background: #eef5fe; color: #295b99; border-color:#d6e4f7; }
+    .cell-d { background: #fff0f1; color: #985164; border-color:#f2d8de; }
+    .cell-top { display:flex; justify-content:space-between; align-items:center; }
+    .letter { display:flex; align-items:center; justify-content:center; width: 32px; height: 32px; border-radius: 10px; background: #ffffffbf; font-size: .92rem; font-weight: 850; direction:ltr; }
+    .chip { font-size: .69rem; font-weight: 780; border: 1px solid currentColor; opacity: .8; padding: 3px 9px; border-radius: 100px; }
+    .cell h3 { font-size: 1.22rem; line-height: 1.35; margin: 3px 0 0; letter-spacing: -.025em; }
+    .cell p { font-size: .91rem; line-height: 1.65; color: #384a5c; margin:0; }
+    .cell .more { margin-top:auto; font-size: .74rem; font-weight: 700; opacity:.85; }
+    .under-matrix { padding: 16px 5px 0; font-size: .79rem; color:#607186; line-height:1.65; }
+    .interpretation { margin-top: 23px; display:grid; grid-template-columns: 1.05fr .95fr; gap:18px; }
+    .panel { border: 1px solid var(--line); border-radius: 19px; background: white; padding: 25px 28px; box-shadow: 0 7px 24px rgba(20,48,70,.035); }
+    .panel h2 { font-size: 1.1rem; margin: 0 0 10px; line-height:1.35; }
+    .panel p { margin:0; color:#4d5e71; font-size:.92rem; }
+    .panel-focus { border-right: 4px solid #19887f; }
+    .panel-focus p strong { color: #224153; }
+    .mini-label { display: inline-block; margin-bottom: 10px; font-size: .74rem; font-weight: 800; letter-spacing:.03em; color:#62798a; }
+    .detail { min-height: 165px; }
+    .detail-title { font-weight:800; font-size:1rem; margin-bottom:6px; color:var(--ink); }
+    .keypoint { background: #edf4f8; border-radius: 18px; margin-top: 24px; padding: 30px 36px; border-right:5px solid #256f93; }
+    .keypoint .mini-label { color: #315a73; }
+    .keypoint p { font-size: clamp(1.12rem,2.1vw,1.35rem); line-height:1.7; font-weight:650; letter-spacing:-.015em; margin:0; max-width:850px; }
+    .footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; padding: 23px 4px 0; color:#6c7e8c; font-size:.78rem; }
+    .footer strong { color:#50657b; }
+    @media (max-width: 790px) {
+      .page { padding: 14px 12px 35px; }
+      .hero { border-radius: 18px; padding: 34px 25px 36px; }
+      .section-intro { display:block; padding:27px 5px 18px; }
+      .section-intro .tag { display:inline-block; margin-top:15px; }
+      .matrix-shell { padding:13px; border-radius:17px; }
+      .interpretation { grid-template-columns:1fr; }
+      .panel { padding:21px 22px; }
+      .keypoint { padding:25px 24px; }
+    }
+    @media print {
+      @page { size: A4 landscape; margin: 12mm; }
+      body { background:white; font-size:14px; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+      .page { max-width:unset; padding:0; }
+      .hero { box-shadow:none; padding:25px 35px; border-radius:15px; }
+      h1 { font-size:2.35rem; }
+      .section-intro { padding:17px 0 12px; }
+      .matrix-shell { box-shadow:none; padding:13px; }
+      .matrix { grid-template-columns:145px 1fr 1fr; gap:9px; min-width:0; }
+      .cell { min-height:155px; padding:13px; }
+      .cell h3 { font-size:1.08rem; }
+      .cell p { font-size:.8rem; }
+      .row-label { padding:13px; }
+      .interpretation { margin-top:13px; gap:12px; }
+      .panel { padding:14px 17px; }
+      .detail { min-height:0; }
+      .keypoint { margin-top:13px; padding:16px 23px; }
+      .footer { padding-top:10px; }
+    }
+  
+
+:root { --gold:#e8b979; --gold-dark:#a66e2a; --paper:#fffefa; }
+body { background:#f3f5f7; color:#1b2838; }
+.page { padding-top:24px; max-width:1150px; }
+.topline { display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:15px; color:#607186;font-size:.79rem;font-weight:700; letter-spacing:.015em; }
+.topline .series { display:inline-flex;gap:8px;align-items:center; }
+.topline .rule { display:block;background:var(--gold-dark);width:10px;height:10px;border-radius:2px; transform:rotate(45deg); }
+.article-hero { color:white; border-radius:23px; background:linear-gradient(116deg,#101f36 0%,#18354d 75%,#254c58 100%); padding:52px 58px 49px;position:relative;overflow:hidden;box-shadow:0 17px 43px #12273e23; }
+.article-hero:after { content:'01';position:absolute;left:28px;top:-62px;font-size:260px;line-height:1;font-weight:900;color:#ffffff09;pointer-events:none;direction:ltr; }
+.article-hero .kicker {font-size:.84rem;color:#efcd9e;font-weight:760;margin:0 0 15px;max-width:760px;}
+.article-hero h1 {max-width:800px;font-size:clamp(2.2rem,4.6vw,3.8rem);letter-spacing:-.043em;margin:0 0 22px;line-height:1.15;}
+.article-hero .sub {font-size:clamp(1rem,1.7vw,1.2rem);line-height:1.65;max-width:800px;color:#dae7eb;margin:0;}
+.meta-line {display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:29px;color:#d5e3e7;font-size:.82rem;}
+.meta-line .sep {border-right:1px solid #ffffff47;height:15px;}
+.article-tools { display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin:18px 3px 15px;}
+.article-tools button {border:1px solid #d4dde4;background:#fff;border-radius:30px;padding:9px 16px;font:700 .85rem inherit; font-family:inherit;cursor:pointer;color:#1f4860;}
+.article-tools button:hover {background:#e6edf3;}
+.content-card {background:var(--paper);border:1px solid #e1e4e7;border-radius:20px;box-shadow:0 14px 36px #263c5212;padding:15px 0 38px;}
+.prose { max-width:790px; margin-inline:auto;padding:0 28px; }
+.prose h2 {margin:51px 0 15px;color:#19384a;font-size:clamp(1.34rem,2.2vw,1.68rem);line-height:1.3;letter-spacing:-.026em;position:relative;}
+.prose h2:before {content:'';position:absolute;right:0;bottom:-8px;width:37px;height:3px;border-radius:4px;background:#c18d4d;}
+.prose p {font-size:1.06rem;line-height:1.96; margin:17px 0;color:#25384a;}
+.prose strong {color:#132c40;}
+.prose .lede {font-size:1.19rem;line-height:1.88;font-weight:510;margin-top:26px;color:#1b3648;}
+.prose .lead-in {font-weight:750;color:#173a50;}
+.prose .quote {border-right:4px solid #c49355;background:#f6f2e9;padding:25px 29px;margin:32px 0;border-radius:14px 0 0 14px;font-size:1.36rem;font-weight:760;line-height:1.68;color:#233d4e;}
+.prose .divider {height:1px;background:#e0e6e9;margin:44px 0;}
+.reader-note {margin:37px auto 0;max-width:790px;padding:20px 28px;border-right:3px solid #9caebe;background:#f2f6f9;color:#46566a;line-height:1.8;font-size:.93rem;border-radius:12px 0 0 12px;}
+.reader-note strong {color:#263f54;}
+.matrix-wide {margin:45px -1px 48px;padding:22px 28px 28px;background:#f4f7f9;border-block:1px solid #dce6eb;}
+.matrix-wide .section-intro {padding-top:15px;}
+.matrix-wide .section-intro h2 {font-size:1.56rem;}
+.matrix-wide .under-matrix {margin-top:9px;}
+.matrix-wide .interpretation {margin-top:15px;}
+.matrix-wide .panel {box-shadow:none;}
+.milestones {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:25px 0 5px;}
+.milestones .step {border:1px solid #dbe4ea;border-top:3px solid #3a7784;background:#f8fbfc;border-radius:13px;padding:15px 14px;}
+.milestones strong {display:block;font-size:.9rem;color:#1d5265;}
+.milestones span {display:block;font-size:.79rem;line-height:1.5;color:#617184;margin-top:6px;}
+.conclusion {margin:40px 0 10px;padding:32px 35px;border-radius:17px;background:#17344b;color:#fff;}
+.conclusion h2 {color:#fff;margin:0 0 16px;}
+.conclusion h2:before {display:none;}
+.conclusion p {color:#e5ebef;}
+.conclusion strong {color:white;}
+.references {padding:19px 29px 2px;margin-top:26px;border-top:1px solid #e0e5e9;font-size:.8rem;color:#637286;line-height:1.8;}
+.references h3{margin:0 0 5px;font-size:.9rem;color:#52687b;}
+.prose .footnote {font-size:.89rem;color:#66778b;}
+.article-bottom {display:flex;justify-content:space-between;gap:10px;max-width:790px;padding:22px 28px 0;margin:auto;color:#7c8995;font-size:.8rem;}
+#matrix .keypoint {margin-top:19px;}
+#matrix .interpretation {display:grid;}
+@media(max-width:790px){
+ .page{padding:12px 9px 30px;}
+ .topline{padding:0 5px;font-size:.7rem;}
+ .article-hero{padding:35px 26px 36px;border-radius:18px;}
+ .article-hero:after{font-size:180px;top:-20px;left:7px;}
+ .meta-line{gap:10px;}
+ .content-card{border-radius:16px;padding-top:4px;}
+ .prose{padding:0 21px;}
+ .prose p{font-size:1.015rem;line-height:1.86;}
+ .prose .lede{font-size:1.1rem;}
+ .prose h2{margin-top:35px;}
+ .prose .quote{font-size:1.16rem;padding:20px 21px;}
+ .matrix-wide{padding:21px 14px 24px;margin-top:32px;}
+ .matrix-wide .section-intro h2{font-size:1.35rem;}
+ .milestones{grid-template-columns:repeat(2,1fr);gap:9px;}
+ .milestones .step{padding:13px 12px;}
+ .conclusion{padding:25px 23px;}
+ .reader-note{margin-inline:17px;padding:17px 18px;}
+}
+@media print {
+ @page{size:A4 portrait;margin:15mm;}
+ body{background:white!important;print-color-adjust:exact;-webkit-print-color-adjust:exact;}
+ .page{max-width:100%;padding:0;}
+ .article-hero{border-radius:0;padding:20px 27px;box-shadow:none;}
+ .article-hero h1{font-size:2rem;}
+ .article-hero .sub{font-size:.94rem;}
+ .article-tools,.topline{display:none;}
+ .content-card{border:0;box-shadow:none;padding:0;}
+ .prose{max-width:none;padding:0 2mm;}
+ .prose p{font-size:10.5pt;line-height:1.62;margin:9px 0;}
+ .prose .lede{font-size:11pt;}
+ .prose h2{font-size:15pt;margin:20px 0 12px;break-after:avoid;}
+ .prose .quote{font-size:13pt;}
+ .matrix-wide{padding:8px 0; margin:15px 0;break-inside:avoid;}
+ .matrix-shell{padding:8px;}
+ .matrix{grid-template-columns:125px 1fr 1fr;gap:6px;min-width:0;}
+ .column-label{min-height:52px;padding:7px;}
+ .row-label{padding:8px;}
+ .cell{min-height:135px;padding:10px;}
+ .cell h3{font-size:11pt;}
+ .cell p{font-size:9pt;}
+ .cell .more,.matrix-note{display:none;}
+ .interpretation{display:none!important;}
+ .keypoint{padding:11px 16px;}
+ .milestones{grid-template-columns:repeat(4,1fr);}
+ .conclusion{padding:18px 22px;break-inside:avoid;}
+ .reader-note{break-inside:avoid;}
+ .references{page-break-before:auto;}
+}
+
+
+/* פירוט תרחיש נפתח בתוך התא עצמו: עובד גם כשהדפדפן חוסם JavaScript */
+.matrix details.cell { display:block; min-height:213px; padding:0; overflow:visible; }
+.matrix details.cell > summary {
+  cursor:pointer; list-style:none; display:flex; flex-direction:column;
+  gap:10px; min-height:213px; padding:21px 22px;
+}
+.matrix details.cell > summary::-webkit-details-marker {display:none;}
+.matrix details.cell > summary::marker {content:"";}
+.matrix details.cell[open] { outline:2px solid currentColor; outline-offset:2px; }
+.matrix details.cell[open] > summary {min-height:0;}
+.matrix details.cell .more {margin-top:auto; display:block;}
+.matrix details.cell .more::after {content:"  ＋"; font-size:1.05rem; font-weight:900;}
+.matrix details.cell[open] .more::after {content:"  −";}
+.matrix details.cell .cell-expanded {
+  background:rgba(255,255,255,.79); margin:0 14px 16px;
+  padding:13px 15px; border-radius:11px; border-right:3px solid currentColor;
+  font-size:.89rem; line-height:1.75; color:#263849;
+}
+.matrix details.cell .cell-expanded strong {display:block; margin-bottom:5px; color:#243748;}
+.matrix details.cell .cell-expanded p {font-size:.88rem; line-height:1.75; margin:0; color:#263849;}
+.matrix details.cell > summary:focus-visible {outline:3px solid #315a9e; outline-offset:2px; border-radius:12px;}
+.matrix .cell-top {gap:7px; flex-wrap:wrap;}
+.matrix-note {font-size:.86rem;}
+.matrix .cell .more {text-decoration:underline; text-underline-offset:3px;}
+.interpretation.interpretation-one {grid-template-columns:minmax(0,1fr);}
+@media (max-width: 700px) {
+ .matrix {grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-width:0;gap:8px;}
+ .matrix .corner, .matrix .row-label {grid-column:1 / -1; min-height:0;}
+ .matrix .corner {padding:8px 12px;}
+ .matrix .row-label {padding:11px 14px;}
+ .matrix .column-label {padding:8px;min-height:72px;}
+ .matrix .column-label strong {font-size:.87rem;}
+ .matrix .column-label small {font-size:.71rem;}
+ .matrix details.cell {min-width:0;min-height:185px;}
+ .matrix details.cell > summary {padding:14px 12px;min-height:185px;gap:9px;}
+ .matrix details.cell h3 {font-size:1.02rem;}
+ .matrix details.cell p {font-size:.83rem;line-height:1.55;}
+ .matrix details.cell .chip {font-size:.65rem;}
+ .matrix details.cell .cell-expanded {margin:0 7px 10px;padding:12px 10px;}
+}
+@media print {
+ .matrix details.cell > summary {min-height:0;padding:10px;}
+ .matrix details.cell {min-height:0;break-inside:avoid;}
+ .matrix details.cell .cell-expanded {display:none;}
+ .matrix details.cell .more {display:none;}
+}
+
+/* הערת המחבר בסוף המאמר */
+.prose .author-note {font-size:.88rem;line-height:1.75;color:#6f7d8a;margin:38px 0 0;padding-top:16px;border-top:1px solid #e0e5e9;}
+
+/* תיבת "בקצרה" */
+.prose .tldr {margin:28px 0 10px;padding:20px 26px 14px;background:#eef4f6;border-right:4px solid #2f7480;border-radius:14px 0 0 14px;}
+.prose .tldr .mini-label {color:#2f6274;margin-bottom:4px;font-size:.95rem;}
+.prose .tldr ul {margin:0;padding-right:20px;}
+.prose .tldr li {font-size:1.02rem;line-height:1.8;margin:7px 0;color:#22394b;}
+.prose .tldr li::marker {color:#2f7480;}
+
+/* פרקים מתקפלים עם תקציר */
+.prose .chapters-intro {font-size:.95rem;color:#5d6e80;margin:34px 0 14px;}
+.prose details.chapter {margin:14px 0;border:1px solid #e0e5e9;border-radius:16px;background:#fff;transition:box-shadow .16s ease;}
+.prose details.chapter:hover {box-shadow:0 8px 22px #1f3b5512;}
+.prose details.chapter > summary {list-style:none;cursor:pointer;display:block;padding:22px 26px 18px;border-radius:16px;}
+.prose details.chapter > summary::-webkit-details-marker {display:none;}
+.prose details.chapter > summary::marker {content:"";}
+.prose details.chapter > summary:focus-visible {outline:3px solid #315a9e;outline-offset:2px;}
+.prose details.chapter h2 {margin:0 0 18px;}
+.prose details.chapter .chapter-summary {display:block;font-size:1rem;line-height:1.85;color:#475a6d;}
+.prose details.chapter .chapter-toggle {display:inline-block;margin-top:12px;font-size:.86rem;font-weight:750;color:#1f6070;text-decoration:underline;text-underline-offset:3px;}
+.prose details.chapter .chapter-toggle .t-open::after {content:"  ＋";font-weight:900;text-decoration:none;}
+.prose details.chapter .chapter-toggle .t-close::after {content:"  −";font-weight:900;}
+.prose details.chapter .t-close {display:none;}
+.prose details.chapter[open] .t-open {display:none;}
+.prose details.chapter[open] .t-close {display:inline;}
+.prose details.chapter[open] .chapter-summary {display:none;}
+.prose details.chapter[open] > summary {padding-bottom:4px;}
+.prose details.chapter .chapter-body {padding:0 26px 10px;}
+@media(max-width:790px){
+ .prose .tldr {padding:17px 18px 11px;}
+ .prose details.chapter > summary {padding:18px 18px 15px;}
+ .prose details.chapter .chapter-body {padding:0 18px 8px;}
+}
+@media print {
+ .prose .tldr {break-inside:avoid;}
+ .prose .chapters-intro {display:none;}
+ .prose details.chapter {border:0;margin:0;background:none;box-shadow:none;}
+ .prose details.chapter > summary {padding:0;}
+ .prose details.chapter h2 {margin:20px 0 12px;}
+ .prose details.chapter .chapter-summary, .prose details.chapter .chapter-toggle {display:none!important;}
+ .prose details.chapter .chapter-body {padding:0;}
+}
+
+</style></head><body><main class="page">
+<div class="topline"><span class="series"><span class="rule"></span> טרילוגיה: הביטחון האסטרטגי של ישראל ועוצמתה כעוגן לעם היהודי</span><span>מאמר ראשון מתוך שלושה</span></div>
+<header class="article-hero">
+  <p class="kicker">בחינת מדיניות הביטחון בתקופת שלטונו המאוחר של בנימין נתניהו · 2015–2026</p>
+  <h1>ומה אם ראש הממשלה טועה?</h1>
+  <p class="sub">היחס לאזרחי ישראל הערבים כמקרה מבחן: האם מדיניות של חשדנות והדרה מצמצמת איומים, או עלולה לייצר את אלה שהיא מבקשת למנוע?</p>
+  <div class="meta-line"><span><strong>אמנון זוסמן</strong></span><span class="sep"></span><span>11 בנובמבר 2026</span><span class="sep"></span><span>מאמר דעה וניתוח אסטרטגי</span></div>
+</header>
+<div class="article-tools"><button type="button" onclick="window.print()" aria-label="הדפסת המאמר">הדפסה / שמירה כ־PDF</button><button type="button" onclick="document.getElementById('matrix').scrollIntoView({behavior:'smooth'})">למטריצת ארבעת המצבים</button></div>
+<div class="content-card">
+<div class="prose">
+<p class="lede">ב־10 בנובמבר 2026, במעמד השבעת הכנסת ה־26, נשא בנימין נתניהו נאום שבו הטיל ספק בכוונותיהן של המפלגות הערביות המבקשות להשתלב בפוליטיקה הישראלית. השאלה שמעניינת אותי פשוטה: <strong>האם האסטרטגיה שהוא מציג טובה לביטחונה של ישראל לאורך זמן?</strong> מה מניע אותו, ומה הוא חושב על ערבים, פחות חשוב לי כאן.</p>
+<aside class="tldr" aria-label="המאמר בקצרה">
+<span class="mini-label">בקצרה</span>
+<ul>
+<li>אני בודק אם מדיניות של חשדנות והדרה משפרת את ביטחונה של ישראל לאורך זמן.</li>
+<li>גם אם החשד כלפי חלק מהמנהיגים הערבים נכון, הדרה לא בהכרח מועילה. ואם החשד שגוי, המחיר שלה כבד.</li>
+<li>החלופה שאני מציע היא שוויון ושותפות פוליטית, יחד עם אכיפה נגד מי שפועל נגד המדינה. ההבחנה צריכה להיות לפי מעשים ולא לפי זהות.</li>
+</ul>
+</aside>
+<h2>מדיניות ביטחון חייבת לעמוד גם במבחן הטעות</h2>
+<p>זה המאמר הראשון מתוך שלושה על הביטחון האסטרטגי של ישראל ועל מקומה כעוגן לעם היהודי, בשנות שלטונו של נתניהו מאז 2015. המאמר השני יעסוק בחזית החיצונית, מניהול הסכסוך ועד סיסמת ״הניצחון המוחלט״. השלישי יעסוק באופן שבו מתקבלות החלטות, ובשאלה אם המוסדות עוד מסוגלים לבקר מנהיג ולתקן את טעויותיו.</p>
+<p>בשלושתם אני בודק את אותם דברים: את הנחות היסוד, את התוצאות ואת החלופות. מנהיג יכול לזהות סיכון אמיתי ולהגיב עליו לא נכון. הוא יכול גם לטעות בזיהוי הסיכון עצמו. מדיניות טובה צריכה להחזיק מעמד בשני המקרים.</p>
+<div class="quote">קל לזהות אויבים. קשה יותר להימנע מלהפוך שותפים אפשריים לאויבים.</div>
+<h2>מ־2015 ועד אתמול: מהפחד מן הקול הערבי לחשד בשותפות הערבית</h2>
+<p>ביום הבחירות ב־2015 הזהיר נתניהו מפני המצביעים הערבים הנוהרים לקלפיות. אחת־עשרה שנים אחר כך, בנאום אתמול, הוא הלך צעד נוסף. לטענתו, גם כשנציגים ערבים מדברים על השתלבות ושותפות, ייתכן שהם מסתירים כוונה לפגוע בישראל כמדינה יהודית.</p>
+<p>חשוב לי לדייק. נתניהו הבחין בין האזרחים הערבים לבין המפלגות והמנהיגים שאותם תקף. אבל בפועל ההבחנה הזאת מגיעה מהר לגבול שלה. אם עצם ההצהרה על רצון להשתלב נחשבת להסוואה אפשרית, איך יכול נציג ערבי להוכיח שהוא מתכוון לזה? הצהרה מתונה תיחשד כתרגיל, ואמירה קיצונית תוצג כהוכחה לכוונה האמיתית. טענה כזאת כמעט אי־אפשר להפריך.</p>
+<p>ובכל זאת, אני לא רוצה להתעכב כאן על השאלה אם החשד מוצדק. <strong>בואו נניח לרגע שהוא נכון.</strong></p>
+<h2>נניח שנתניהו צודק. מה צריכה המדינה לעשות?</h2>
+<p>נניח שחלק מן המנהיגים הערבים מבקשים לקדם בעתיד שינוי עמוק בזהותה של ישראל, מסתירים את כוונותיהם ומנסים לצבור כוח פוליטי. האם מכאן נובע שיש להרחיק מראש את המפלגות הערביות ממוקדי קבלת ההחלטות?</p>
+<p>אפשרות אחת היא הדרה: לשלול מראש את הלגיטימיות של שותפות פוליטית, גם כשהיא מוצעת במסגרת החוק. זה עשוי להגביל את הגישה שלהם לעמדות כוח, אבל זה גם משדר שאין טעם להתנהג כשותף. האפשרות השנייה היא הכלה: שוויון אזרחי, נכונות לשותפות פוליטית על בסיס הסכמות, מתן אחריות, ואכיפה נגד מי שפועל בפועל נגד המדינה. כך אפשר להרחיב את מעגל המחויבים למוסדות המדינה, אבל צריך גם פיקוח והגנות מפני ניצול לרעה.</p>
+<p>עכשיו נהפוך את ההנחה. מה אם המנהיג הערבי באמת רוצה שותפות? אז הדרה על סמך חשד שלא הוכח דוחה אנשים שמוכנים לפעול בתוך המערכת, ופוגעת באמון בלי רווח ביטחוני ברור.</p>
+<p>שתי הדרכים מתמודדות עם אותה בעיה: אנחנו לא יודעים בוודאות מה הצד השני מתכוון לעשות. השאלה היא איזו מהן מתמודדת איתה טוב יותר.</p>
+</div>
+<div class="matrix-wide" id="matrix">
+<section aria-labelledby="matrix-heading">
+<div class="section-intro">
+<div>
+<h2 id="matrix-heading">מטריצת האמון וההדרה</h2>
+<p>השוואה עקרונית בין שילוב פוליטי לבין הדרה פוליטית, תחת שתי הנחות חלופיות על כוונותיהם של נציגים פוליטיים ערבים. כל תא מתאר תוצאות אפשריות, ולא קביעה על ציבור שלם.</p>
+</div>
+<span class="tag">מודל מחשבתי 2×2</span>
+</div>
+<div class="matrix-shell">
+<div class="matrix-note"><span class="dot"></span> לחצו על תא כלשהו כדי להציג פירוט בתוך התא. לחיצה נוספת תסגור את הפירוט</div>
+<div aria-label="מטריצת ארבעת המצבים, ניתן לגלול אופקית במסכים צרים" class="matrix-scroller" tabindex="0">
+<div class="matrix">
+<div class="corner">כוונות ההנהגה ↓<br/>אסטרטגיית המדינה ←</div>
+<div class="column-label inclusive"><strong>שילוב, אמון ואחריות</strong><small>שותפות פוליטית בכפוף לחוק ולפיקוח</small></div>
+<div class="column-label exclusive"><strong>הדרה וחשדנות</strong><small>דחיית שותפות פוליטית על בסיס החשד</small></div>
+<div class="row-label"><span class="row-index">אפשרות 01</span><strong>כוונת השתלבות כנה</strong><small>נכונות ממשית לשותפות אזרחית ופוליטית</small></div>
+<details class="cell cell-a" data-id="A"><summary aria-label="פתח פירוט על מצב A"><span class="cell-top"><span class="letter">A</span><span class="chip">הזדמנות לשותפות</span></span><h3>אמון שיכול להתחזק</h3><p>אחריות משותפת עשויה לחזק שייכות, שיתוף פעולה ויציבות אזרחית.</p><span class="more">לפתיחת הפירוט</span></summary><div class="cell-expanded"><strong>השתלבות כנה + שילוב</strong><p>כאשר הרצון להשתלב כנה, שותפות ואחריות פוליטית עשויות לחזק את המחויבות למוסדות המדינה. עם זאת, גם במקרה הזה יש למדוד תוצאות ולא להסתפק בהצהרות.</p></div></details>
+<details class="cell cell-b" data-id="B"><summary aria-label="פתח פירוט על מצב B"><span class="cell-top"><span class="letter">B</span><span class="chip">מחיר ההחמצה</span></span><h3>דחיית שותפים אפשריים</h3><p>הדרה עלולה לייצר ניכור ולצמצם את התמריץ להשתלב במדינה.</p><span class="more">לפתיחת הפירוט</span></summary><div class="cell-expanded"><strong>השתלבות כנה + הדרה</strong><p>כאשר השותפות כנה, הדרה עשויה לפגוע באמון קיים, להגביר תסכול ולגרוע ממאגר השותפים האפשריים של המדינה, בלי תועלת ביטחונית ברורה.</p></div></details>
+<div class="row-label"><span class="row-index">אפשרות 02</span><strong>כוונות עוינות מוסתרות</strong><small>הנחה היפותטית על חלק מן הנציגים, לא על כלל הציבור</small></div>
+<details class="cell cell-c" data-id="C"><summary aria-label="פתח פירוט על מצב C"><span class="cell-top"><span class="letter">C</span><span class="chip">הזדמנות לצד סיכון</span></span><h3>מבחן השילוב</h3><p>שיתוף עשוי ליצור תמריץ להתמתנות, אך עלול גם לאפשר ניצול של כוח פוליטי.</p><span class="more">לפתיחת הפירוט</span></summary><div class="cell-expanded"><strong>כוונות עוינות + שילוב</strong><p>גם לנוכח עוינות, השתלבות עשויה ליצור תמריצים להתמתנות ולהקנות אחריות. אך היא עלולה גם לאפשר ניצול של השפעה פוליטית. השאלה האמפירית היא מהו מאזן הסיכון והתועלת לאורך זמן.</p></div></details>
+<details class="cell cell-d" data-id="D"><summary aria-label="פתח פירוט על מצב D"><span class="cell-top"><span class="letter">D</span><span class="chip">בלימה לצד מחיר</span></span><h3>מבחן ההדרה</h3><p>צמצום ערוצי השפעה מסוימים עשוי לבוא יחד עם החרפת הניכור והעוינות.</p><span class="more">לפתיחת הפירוט</span></summary><div class="cell-expanded"><strong>כוונות עוינות + הדרה</strong><p>הדרה עשויה להגביל גישה לעמדות כוח, אבל גם להחריף ניכור ולעודד מעגל חוזר של חשדנות. יש לבדוק אם התועלת המיידית אכן גוברת על המחיר העתידי.</p></div></details>
+</div>
+</div>
+<p class="under-matrix">הבהרה: ״הדרה״ כאן פירושה סירוב לשותפות פוליטית, לא שלילת זכויות בחירה או אזרחות. ״שילוב״ אינו מחייב ויתור על אכיפת החוק או על מנגנוני הגנה. המודל מפשט מציאות מורכבת לצורך בחינה אסטרטגית.</p>
+</div>
+</section>
+<section aria-label="פירוש המודל" class="interpretation interpretation-one">
+
+<article class="panel panel-focus">
+<span class="mini-label">השאלה המחקרית</span>
+<h2>האם מדיניות אחת יכולה להצליח בשני המצבים?</h2>
+<p>כדי לטעון ששילוב עדיף באופן אסטרטגי, יש להראות שלאורך זמן יתרונותיו עולים על הסיכונים <strong>גם כאשר קיימות כוונות עוינות</strong>. המטריצה עצמה לא מוכיחה את זה. היא רק מראה מה צריך לבדוק.</p>
+</article>
+</section>
+</div>
+<div class="prose">
+<h2>תן אמון — קבל אמון</h2>
+<p>ניסיון חיים ארוך לימד אותי עיקרון פשוט: <strong>״תן אמון — קבל אמון״.</strong> לא כל אמון נענה באמון, אבל ברוב המקרים השיטה עובדת. במסקנה זו אני נשען על ניסיוני שלי ועל ניסיונם של רבים אחרים. אמון גם משפיע על ההתנהגות של מי שמקבל אותו. כשנותנים לאדם אחריות, הכרה והזדמנות, יש לו סיבה לשמור על המערכת שאפשרה לו להשתלב בה.</p>
+<p>אין בכך תחליף למנגנוני ביטחון. העיקרון מוכר מחינוך, מניהול ומשיקום, ואני יודע שאי אפשר להעביר אותו כמו שהוא לסכסוך לאומי. לכן כדאי להסתכל על מה שכבר קורה בישראל עצמה.</p>
+<p class="chapters-intro">בארבעת הפרקים הבאים יש דוגמאות והרחבות. לכל פרק יש תקציר קצר, ולחיצה עליו פותחת את הטקסט המלא.</p>
+<details class="chapter" data-chapter="israeli_experiment"><summary><h2>הניסוי הישראלי שכבר מתקיים</h2><span class="chapter-summary">בבתי החולים, באקדמיה ובכלכלה יהודים וערבים כבר עובדים יחד ונושאים באחריות משותפת. זה לא מוכיח דבר על כוונות פוליטיות, אבל זה מאפשר לבדוק אם שותפות מחזקת את תחושת השייכות.</span><span class="chapter-toggle"><span class="t-open">להמשך קריאה</span><span class="t-close">סגירת הפרק</span></span></summary><div class="chapter-body">
+<p>בבתי החולים בישראל, יהודים מקבלים טיפול מרופאים ואחיות ערבים; רוקחים ערבים ממלאים תפקידים חיוניים; אזרחים ערבים פועלים במוסדות אקדמיים, בעסקים, בתעשייה ובמינהל הציבורי. השותפות הזאת לא מבטלת את המחלוקות הלאומיות. ובכל זאת היא מראה שמסגרת משותפת יכולה לייצר אחריות מקצועית ואמון בין אנשים.</p>
+<p>ברור שרופא ערבי מצליח לא מוכיח דבר על כוונותיו של חבר כנסת ערבי. אבל הניסיון הרחב הזה מאפשר לשאול אם אחריות משותפת מחזקת שייכות והזדהות עם המוסדות, ואם הדרה פוגעת בהן.</p>
+</div></details>
+<details class="chapter" data-chapter="haredi_arab_paradox"><summary><h2>הפרדוקס החרדי־ערבי</h2><span class="chapter-summary">מפלגות חרדיות שאינן מזדהות עם הציונות יושבות בממשלות כבר עשרות שנים. מפלגות ערביות נחשדות גם כשהן אומרות שהן רוצות להשתלב. האם אותו קריטריון חל על כולם?</span><span class="chapter-toggle"><span class="t-open">להמשך קריאה</span><span class="t-close">סגירת הפרק</span></span></summary><div class="chapter-body">
+<p>יש בישראל השוואה מעניינת. חלקים מן הציבור החרדי אינם מזדהים עם הציונות, וחלקם מבקשים בפועל לשמור על התבדלות מוסדית וקהילתית. אף על פי כן, מפלגות חרדיות שותפות זה עשרות שנים לממשלות ולקבלת החלטות לאומיות. השתתפות זו אינה מחייבת אותן לאמץ אידאולוגיה ציונית.</p>
+<p>מנגד, מנהיגים ערבים המציגים רצון להשתלבות בשלטון נתקלים לעיתים בחשד שההשתלבות היא רק מסווה. <strong>במקרה אחד, אי־הזדהות עם הציונות אינה שוללת שותפות; במקרה האחר, אפילו הצהרת השתלבות עלולה שלא להספיק.</strong></p>
+<p>כמובן, לא כל החרדים שוללים את המדינה, ולא כל המפלגות הערביות זהות בעמדותיהן. גם הנסיבות ההיסטוריות שונות. אבל ההשוואה מעלה שאלה: אם הקריטריון הוא מחויבות לפעולה חוקית ונכונות לשאת באחריות שלטונית, האם הוא חל על כולם באותה מידה? ההשתתפות של רע״ם בקואליציה בשנים 2021–2022 היא מקרה שכדאי לבחון לעומק.</p>
+</div></details>
+<details class="chapter" data-chapter="arab_citizen_view"><summary><h2>ומה אם גם האזרח הערבי חושש לעתידה של ישראל?</h2><span class="chapter-summary">גם אזרח ערבי דואג לעתיד. אם המדינה אומרת לו שאפילו שותפות גלויה לא מספיקה, הוא עלול להתרחק, והחשד מגשים את עצמו.</span><span class="chapter-toggle"><span class="t-open">להמשך קריאה</span><span class="t-close">סגירת הפרק</span></span></summary><div class="chapter-body">
+<p>דיון באמון לא יכול להתנהל רק מנקודת מבטו של הרוב היהודי. גם אזרח ערבי עוקב אחר מלחמות ישראל, אחר המתיחות הפנימית ואחר יציבותה של המדינה שבה הוא מגדל את ילדיו.</p>
+<p>נניח שהוא מעוניין להשתלב במערכת השלטונית, אך חושש מתרחיש קיצוני של התמוטטות המדינה או שינוי משטר יסודי. האם שלטון עתידי, עוין למדינת ישראל כפי שהיא כיום, עלול לראות בו ״משתף פעולה״ משום ששירת את מוסדותיה? אין לי נתונים על כמה נפוץ חשש כזה, ואני לא צופה שישראל תיעלם. אני שואל איך אנשים מתנהגים כשהעתיד לא ברור.</p>
+<p>הדילמה מחריפה אם המדינה של היום אומרת לאותו אזרח שגם שותפות גלויה ושמירה על החוק לא מספיקות כדי שיראו בו שותף. אז הוא עלול להרגיש ששני העתידים מסוכנים לו, ושעדיף לו לא להיחשף פוליטית ולא להתחייב בגלוי.</p>
+<p>וכך נוצרת נבואה שמגשימה את עצמה. החשד גורם לאזרח להתרחק, ההתרחקות נראית כמו הוכחה לחשד, והאמון משני הצדדים נשחק.</p>
+</div></details>
+<details class="chapter" data-chapter="october_7"><summary><h2>7 באוקטובר: הפחד מובן, אבל צריך לבדוק את הדרך</h2><span class="chapter-summary">הפחד שאחרי הטבח מובן. אבל ההנהגה צריכה לבדוק אם המדיניות שלה מקטינה אותו או מגדילה אותו. כאן אני מציע ארבע נקודות זמן לבדיקה.</span><span class="chapter-toggle"><span class="t-open">להמשך קריאה</span><span class="t-close">סגירת הפרק</span></span></summary><div class="chapter-body">
+<p>מתקפת חמאס ב־7 באוקטובר 2023 יצרה טראומה לאומית עמוקה. אפשר להבין מדוע פחדים מפני אלימות ועוינות גברו בעקבותיה. אבל מהנהגה מצפים ליותר מלבטא את הפחד. היא צריכה לבדוק אם המדיניות שלה מקטינה אותו או מעמיקה אותו לאורך זמן.</p>
+<p>כדי לטעון שהרטוריקה הפוליטית פגעה באמון בין יהודים לערבים, צריך נתונים ולא רק תחושות. צריך להפריד בין השפעת הטבח והמלחמה לבין השפעת המסרים, ולא לערבב בין הציבור הערבי, נציגיו הפוליטיים ומי שפועל באלימות.</p>
+<p>כדי לבדוק את זה באופן מסודר, אפשר להסתכל על ארבע נקודות זמן:</p>
+<div class="milestones" aria-label="ארבע תחנות זמן למחקר">
+ <div class="step"><strong>אוקטובר 2023</strong><span>טראומה וירידה אפשרית באמון</span></div>
+ <div class="step"><strong>אוקטובר 2025</strong><span>בחינת שינויי העמדות לאורך המלחמה</span></div>
+ <div class="step"><strong>נובמבר 2026</strong><span>בחינת המדיניות והשיח הנוכחיים</span></div>
+ <div class="step"><strong>אוקטובר 2028</strong><span>תרחישים עתידיים, לא עובדות</span></div>
+</div>
+</div></details>
+<h2>מה יכולה הנהגה ישראלית לבחור אחרת?</h2>
+<p>לא מדובר באמון עיוור. החלופה שאני מציע לבחון כוללת שוויון זכויות מלא, אפשרות אמיתית לשותפות פוליטית, אחריות ציבורית והתחייבויות מוסדיות. לצד זה, אכיפת החוק ופעולה נגד איומים ממשיים, על סמך מעשים וראיות ולא על סמך זהות לאומית.</p>
+<p>הזכות לבחור ולהיבחר אינה מותנית בהזדהות עם הציונות. השתתפות בממשלה תלויה בהסכמות פוליטיות ובחוק, ואף מפלגה לא חייבת להיות מוזמנת לכל קואליציה. אבל ויכוח לגיטימי על מדיניות הוא דבר אחד, ופסילה מראש של כל שותפות בגלל חשד גורף היא דבר אחר.</p>
+<p>כדי להגיע למסקנה של ממש צריך למדוד אמון הדדי, שיעורי השתתפות, שיתוף פעולה בין מוסדות, התנהגות בפועל, השפעה של מסרים פוליטיים ואת המחיר של סיכונים מוחשיים. רק אז אפשר יהיה להשוות בין שתי הדרכים ולשפוט איזו מהן טובה יותר למדינה לאורך זמן.</p>
+<div class="conclusion">
+<h2>מבחן הביטחון האסטרטגי</h2>
+<p>הנאום מאתמול מעלה שאלה שאפשר לדון בה בלי לדעת מה מניע את נתניהו, ובלי להכריע מה מסתתר בלבם של מנהיגים ערבים: <strong>האם מדיניות של חשדנות והדרה מקטינה את האיום, או שלאורך זמן היא יוצרת יותר ניכור, יותר עוינות ופחות שותפים למדינה?</strong></p>
+<p>גם אם החשש נכון בחלק מהמקרים, זה לא אומר שהתגובה שנבחרה היא הטובה ביותר. ומדיניות אחראית צריכה לקחת בחשבון גם את המחיר הכבד של טעות באבחנה.</p>
+<p><strong>ביטחונה של ישראל, כעוגן לעם היהודי, תלוי גם בשאלה אם כל אזרחיה ירגישו שההצלחה שלה היא גם ההצלחה שלהם.</strong></p>
+</div>
+<p class="author-note">הערת המחבר: המחשבות, הידיעות וההבנה המובאות כאן הן שלי. בהעברתן לכתב נעזרתי בכלי בינה מלאכותית, שסייעו לי בעיצוב המאמר ובניסוח הדברים.</p>
+</div>
+<div class="article-bottom"><span>אמנון זוסמן · מאמר ראשון בטרילוגיה</span><span>11.11.2026</span></div>
+</div>
+</main>
+<script>
+(function () {
+  var chapters = document.querySelectorAll('details.chapter');
+  // דיווח ל־Google Analytics על פתיחת פרק
+  chapters.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (d.open && typeof gtag === 'function') {
+        gtag('event', 'chapter_open', { chapter_name: d.dataset.chapter });
+      }
+    });
+  });
+  // בהדפסה ובשמירה כ־PDF: פותחים את כל הפרקים, ואחר כך מחזירים את המצב הקודם
+  var wasClosed = [];
+  window.addEventListener('beforeprint', function () {
+    wasClosed = [];
+    chapters.forEach(function (d) { if (!d.open) { wasClosed.push(d); d.open = true; } });
+  });
+  window.addEventListener('afterprint', function () {
+    wasClosed.forEach(function (d) { d.open = false; });
+  });
+})();
+</script>
+</body></html>
